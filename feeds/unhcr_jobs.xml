@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss version="2.0">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>UNHCR – UN Refugee Agency – Job Vacancies</title>
     <link>https://unjobs.org/organizations/unhcr</link>
     <description>Latest job vacancies for UNHCR – UN Refugee Agency sourced from UNjobs.org. JPO positions are excluded.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 27 Feb 2026 11:21:27 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Feb 2026 11:54:59 +0000</lastBuildDate>
+    <atom:link href="https://cinfoposte.github.io/mo-jobs/feeds/unhcr_jobs.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

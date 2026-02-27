@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss version="2.0">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>UNDP – United Nations Development Programme – Job Vacancies</title>
     <link>https://unjobs.org/organizations/undp</link>
     <description>Latest job vacancies for UNDP – United Nations Development Programme sourced from UNjobs.org. JPO positions are excluded.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 27 Feb 2026 11:21:02 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Feb 2026 11:54:34 +0000</lastBuildDate>
+    <atom:link href="https://cinfoposte.github.io/mo-jobs/feeds/undp_jobs.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
