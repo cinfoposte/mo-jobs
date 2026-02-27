@@ -69,10 +69,10 @@ bank_ifc:
 bank_adb:
   # Include TI grades (Technical/International)
   include_patterns:
-    - 'Position Grade:\s*TI'
+    - 'Position Grade\s*:\s*TI'
     - '\bTI\d?\b'
   exclude_patterns:
-    - 'Position Grade:\s*TL'
+    - 'Position Grade\s*:\s*TL'
     - '\bIntern\b'
     - '\bConsultant\b'
     - '\bConsultancy\b'

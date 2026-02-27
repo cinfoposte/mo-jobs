@@ -290,13 +290,79 @@ def apply_filter(text_for_filter: str, filter_profile_name: str,
 # Scraping - listing pages
 # ---------------------------------------------------------------------------
 
+def _save_listing_debug_snippet(org_key: str, html_text: str) -> None:
+    """Save first 200 KB of a listing page HTML for offline debugging."""
+    DEBUG_DIR.mkdir(parents=True, exist_ok=True)
+    snippet_path = DEBUG_DIR / f"{org_key}_listing_snippet.html"
+    with open(snippet_path, "w", encoding="utf-8", errors="replace") as fh:
+        fh.write(html_text[:200_000])
+    log.warning(
+        "[%s] Wrote listing debug snippet to %s (%d bytes)",
+        org_key, snippet_path, min(len(html_text), 200_000),
+    )
+
+# Regex for UNjobs vacancy URLs: /vacancies/ followed by digits
+_VACANCY_URL_RE = re.compile(r"/vacancies/(\d+)")
+
+# Paths to ignore when scanning for vacancy links (navigation, non-job pages)
+_IGNORE_HREF_PARTS = (
+    "/organizations/", "/duty_stations/", "/countries/", "/themes/",
+    "/grades/", "/skills/", "/tags/", "/closing", "/privacy",
+    "/about", "/contact",
+)
+
+
 def scrape_listing_page(soup: BeautifulSoup) -> list[dict]:
     """Extract vacancy stubs from one listing page.
+
+    Primary strategy: find all <a> tags whose href matches /vacancies/DIGITS.
+    This is resilient to HTML structure / class-name changes on UNjobs.
+
+    Fallback: try legacy div.job + a.jtitle selectors.
 
     Returns list of dicts with keys: title, url, closing_date.
     """
     items = []
-    # Extract closing dates from inline JS
+    seen_hrefs: set[str] = set()
+
+    # --- Strategy 1: robust href-based extraction --------------------------
+    for a_tag in soup.find_all("a", href=True):
+        href = a_tag["href"]
+
+        # Must be a vacancy URL
+        if not _VACANCY_URL_RE.search(href):
+            continue
+
+        # Skip navigation / non-job links
+        if any(part in href for part in _IGNORE_HREF_PARTS):
+            continue
+
+        # Normalise to absolute URL
+        if not href.startswith("http"):
+            href = f"https://unjobs.org{href}"
+
+        # Deduplicate within a single page
+        if href in seen_hrefs:
+            continue
+        seen_hrefs.add(href)
+
+        title = a_tag.get_text(strip=True)
+        # Skip anchors with no meaningful text (icons, images, etc.)
+        if not title or len(title) < 3:
+            continue
+
+        items.append({
+            "title": title,
+            "url": href,
+            "closing_date": "",  # will be enriched from detail page
+        })
+
+    if items:
+        log.info("  Listing parser: found %d vacancy links via href matching", len(items))
+        return items
+
+    # --- Strategy 2: legacy div.job + a.jtitle (fallback) ------------------
+    # Extract closing dates from inline JS (old UNjobs feature)
     closing_dates: dict[str, str] = {}
     script_el = soup.find("script", string=re.compile(r"var j\d+i\s*=\s*new Date"))
     if script_el and script_el.string:
@@ -318,11 +384,10 @@ def scrape_listing_page(soup: BeautifulSoup) -> list[dict]:
         if url and not url.startswith("http"):
             url = f"https://unjobs.org{url}"
 
-        # Try to get closing date via span id
         closing_date = ""
         span = job_div.find("span", id=re.compile(r"j\d+"))
         if span:
-            jid = span["id"][1:]  # strip leading 'j'
+            jid = span["id"][1:]
             closing_date = closing_dates.get(jid, "")
 
         items.append({
@@ -330,6 +395,10 @@ def scrape_listing_page(soup: BeautifulSoup) -> list[dict]:
             "url": url,
             "closing_date": closing_date,
         })
+
+    if items:
+        log.info("  Listing parser: found %d stubs via legacy div.job selectors", len(items))
+
     return items
 
 
@@ -350,17 +419,19 @@ def scrape_org_listings(base_url: str, org_key: str) -> list[dict]:
         page_items = scrape_listing_page(soup)
 
         if not page_items:
-            # Diagnostic: log why no jobs were found (helps debug bot blocking)
+            # Diagnostic: log why no jobs were found
             title_el = soup.find("title")
             page_title = title_el.get_text(strip=True) if title_el else "(no title)"
             body_len = len(soup.get_text())
             div_count = len(soup.find_all("div"))
+            a_count = len(soup.find_all("a", href=True))
             log.warning(
                 "[%s] No jobs found on page %d. Page title: '%s', "
-                "body text length: %d, div count: %d – "
-                "this may indicate bot detection or changed HTML structure",
-                org_key, page_num, page_title[:80], body_len, div_count,
+                "body text length: %d, div count: %d, anchor count: %d",
+                org_key, page_num, page_title[:80], body_len, div_count, a_count,
             )
+            # Save HTML snippet for offline debugging
+            _save_listing_debug_snippet(org_key, resp.text)
             break
 
         new_count = 0
