@@ -1,0 +1,163 @@
+# Filter definitions for UNjobs RSS feed scraper
+#
+# Patterns are Python regex strings (case-insensitive matching).
+# "title" patterns match against the job title.
+# "text" patterns match against title + description combined.
+
+# ── Global exclusion (applied to EVERY org before any other filter) ────
+global_exclude:
+  # JPO positions must never appear in any feed
+  jpo_patterns:
+    - '\bJPO\b'
+    - 'Junior Professional Officer'
+    - 'JPO Service Centre'
+    - '\bJPOSC\b'
+    - 'Japanese JPO'
+    - 'Korean JPO'
+    - 'sponsored JPO'
+
+# ── UN standard filter ─────────────────────────────────────────────────
+# Used by: UNDP, UNICEF, UNFPA, UN Women, UNHCR, WFP, RCS, OCHA, IFAD
+un_standard:
+  # Include if title/text matches ANY of these (P/D grades, senior leadership)
+  include_patterns:
+    - '\b[PD]-?[1-6]\b'          # P1-P6, D1-D6, P-1 through P-6, D-1 through D-2
+    - '\bP[1-6]\b'               # P1 through P6 without hyphen
+    - '\bD[1-2]\b'               # D1, D2 without hyphen
+    - '\bASG\b'                  # Assistant Secretary-General
+    - '\bUSG\b'                  # Under-Secretary-General
+    - '\bDSG\b'                  # Deputy Secretary-General
+    - '\bUNV\b'                  # UN Volunteers
+    - 'UN Volunteer'
+    - 'UN Volunteering'
+
+  # Exclude if title/text matches ANY of these (unless the item matched UNV include)
+  exclude_patterns:
+    - '\bIntern\b'
+    - '\bInternship\b'
+    - '\bTraineeship\b'
+    - '\bConsultant\b'
+    - '\bConsultancy\b'
+    - '\bSSA\b'
+    - 'Individual Contractor'
+    - 'National Officer'
+    - '\bNO-?[A-D]\b'            # NOA, NOB, NOC, NOD or NO-A etc.
+    - '\bNational Professional\b'
+
+# ── Bank-specific filter profiles ──────────────────────────────────────
+
+bank_worldbank:
+  # Include GE through GL grades
+  include_patterns:
+    - '\bG[E-L]\b'
+  exclude_patterns:
+    - '\bG[A-D]\b'
+    - '\bIntern\b'
+    - '\bConsultant\b'
+    - '\bConsultancy\b'
+
+bank_ifc:
+  # Same grade structure as World Bank
+  include_patterns:
+    - '\bG[E-L]\b'
+  exclude_patterns:
+    - '\bG[A-D]\b'
+    - '\bIntern\b'
+    - '\bConsultant\b'
+    - '\bConsultancy\b'
+
+bank_adb:
+  # Include TI grades (Technical/International)
+  include_patterns:
+    - 'Position Grade:\s*TI'
+    - '\bTI\d?\b'
+  exclude_patterns:
+    - 'Position Grade:\s*TL'
+    - '\bIntern\b'
+    - '\bConsultant\b'
+    - '\bConsultancy\b'
+
+bank_afdb:
+  # Include PL (Professional) and EL (Executive) grades
+  include_patterns:
+    - '\bPL\b'
+    - '\bPL-?\d\b'
+    - '\bEL\b'
+    - '\bEL-?\d\b'
+  exclude_patterns:
+    - '\bGS\b'
+    - '\bGS-?\d\b'
+    - '\bIntern\b'
+    - '\bConsultant\b'
+    - '\bConsultancy\b'
+
+bank_idb:
+  # Best-effort: include international/professional staff signals
+  include_patterns:
+    - '\bInternational\b'
+    - '\bProfessional\b'
+    - '\bSpecialist\b'
+    - '\bAnalyst\b'
+    - '\bConsultant\b'           # Note: IDB uses "consultant" differently
+    - '\bLead\b'
+    - '\bSenior\b'
+    - '\bChief\b'
+    - '\bDirector\b'
+    - '\bManager\b'
+  exclude_patterns:
+    - '\bIntern\b'
+    - '\bNational Staff\b'
+  # For IDB, we use a permissive approach: include most, exclude interns/national
+  permissive: true
+
+bank_idbinvest:
+  # Same as IDB
+  include_patterns:
+    - '\bInternational\b'
+    - '\bProfessional\b'
+    - '\bSpecialist\b'
+    - '\bAnalyst\b'
+    - '\bLead\b'
+    - '\bSenior\b'
+    - '\bChief\b'
+    - '\bDirector\b'
+    - '\bManager\b'
+    - '\bOfficer\b'
+  exclude_patterns:
+    - '\bIntern\b'
+    - '\bNational Staff\b'
+  permissive: true
+
+bank_ebrd:
+  include_patterns:
+    - '\bAnalyst\b'
+    - '\bAssociate\b'
+    - '\bPrincipal\b'
+    - '\bDirector\b'
+    - '\bManaging Director\b'
+    - '\bBanker\b'
+  exclude_patterns:
+    - '\bIntern\b'
+    - '\bAssistant\b'
+    - '\bTrainee\b'
+
+bank_gcf:
+  # Include Grade C through F
+  include_patterns:
+    - 'Grade\s*[C-F]'
+    - '\bGrade\s*C\b'
+    - '\bGrade\s*D\b'
+    - '\bGrade\s*E\b'
+    - '\bGrade\s*F\b'
+  exclude_patterns:
+    - '\bIntern\b'
+  # Permissive: if no grade info found, include by default
+  permissive: true
+
+bank_aiib:
+  # AIIB may not be reliably available on UNjobs
+  include_patterns: []
+  exclude_patterns:
+    - '\bIntern\b'
+  # Permissive: include all non-intern posts
+  permissive: true
