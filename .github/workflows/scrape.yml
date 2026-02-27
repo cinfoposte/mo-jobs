@@ -1,0 +1,41 @@
+name: Scrape UNjobs and update feeds
+
+on:
+  schedule:
+    # Twice daily – times shown in UTC (Copenhagen = UTC+1 in winter, UTC+2 in summer)
+    - cron: '15 6 * * *'    # 06:15 UTC = 07:15 Copenhagen (CET)
+    - cron: '15 18 * * *'   # 18:15 UTC = 19:15 Copenhagen (CET)
+  workflow_dispatch:         # Allow manual triggers
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scraper
+        run: python scraper.py
+
+      - name: Commit and push if feeds changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add feeds/
+          if git diff --cached --quiet; then
+            echo "No changes to feeds – nothing to commit."
+          else
+            git commit -m "Update feeds"
+            git push
+          fi

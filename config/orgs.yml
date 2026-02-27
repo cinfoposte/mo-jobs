@@ -1,0 +1,122 @@
+# Organisation definitions for UNjobs RSS feed scraper
+# Each entry defines one organisation to scrape and its filter profile.
+#
+# unjobs_url: the UNjobs.org listing page (base URL, without page number)
+# filter_profile: references a profile in filters.yml
+#   un_standard  – P/D grades + UNV, exclude intern/consultant/SSA/national
+#   bank_worldbank, bank_ifc, bank_adb, bank_afdb, bank_idb,
+#   bank_idbinvest, bank_ebrd, bank_gcf, bank_aiib
+
+organisations:
+
+  # ── UN Agencies ──────────────────────────────────────────────────────
+
+  - key: undp
+    display_name: "UNDP – United Nations Development Programme"
+    unjobs_url: "https://unjobs.org/organizations/undp"
+    output_file: "feeds/undp_jobs.xml"
+    filter_profile: un_standard
+
+  - key: unicef
+    display_name: "UNICEF – United Nations Children's Fund"
+    unjobs_url: "https://unjobs.org/organizations/unicef"
+    output_file: "feeds/unicef_jobs.xml"
+    filter_profile: un_standard
+
+  - key: unfpa
+    display_name: "UNFPA – United Nations Population Fund"
+    unjobs_url: "https://unjobs.org/organizations/unfpa"
+    output_file: "feeds/unfpa_jobs.xml"
+    filter_profile: un_standard
+
+  - key: unwomen
+    display_name: "UN Women"
+    unjobs_url: "https://unjobs.org/organizations/un-women"
+    output_file: "feeds/unwomen_jobs.xml"
+    filter_profile: un_standard
+
+  - key: unhcr
+    display_name: "UNHCR – UN Refugee Agency"
+    unjobs_url: "https://unjobs.org/organizations/unhcr"
+    output_file: "feeds/unhcr_jobs.xml"
+    filter_profile: un_standard
+
+  - key: wfp
+    display_name: "WFP – World Food Programme"
+    unjobs_url: "https://unjobs.org/organizations/wfp"
+    output_file: "feeds/wfp_jobs.xml"
+    filter_profile: un_standard
+
+  - key: rcs
+    display_name: "RCS – Resident Coordinator System"
+    unjobs_url: "https://unjobs.org/organizations/rcs"
+    output_file: "feeds/rcs_jobs.xml"
+    filter_profile: un_standard
+
+  - key: ocha
+    display_name: "OCHA – Office for the Coordination of Humanitarian Affairs"
+    unjobs_url: "https://unjobs.org/organizations/ocha"
+    output_file: "feeds/ocha_jobs.xml"
+    filter_profile: un_standard
+
+  - key: ifad
+    display_name: "IFAD – International Fund for Agricultural Development"
+    unjobs_url: "https://unjobs.org/organizations/ifad"
+    output_file: "feeds/ifad_jobs.xml"
+    filter_profile: un_standard
+
+  # ── Development Banks ────────────────────────────────────────────────
+
+  - key: worldbank
+    display_name: "World Bank Group"
+    unjobs_url: "https://unjobs.org/organizations/world-bank"
+    output_file: "feeds/worldbank_jobs.xml"
+    filter_profile: bank_worldbank
+
+  - key: ifc
+    display_name: "IFC – International Finance Corporation"
+    unjobs_url: "https://unjobs.org/organizations/ifc"
+    output_file: "feeds/ifc_jobs.xml"
+    filter_profile: bank_ifc
+
+  - key: afdb
+    display_name: "AfDB – African Development Bank"
+    unjobs_url: "https://unjobs.org/organizations/afdb"
+    output_file: "feeds/afdb_jobs.xml"
+    filter_profile: bank_afdb
+
+  - key: idb
+    display_name: "IDB – Inter-American Development Bank"
+    unjobs_url: "https://unjobs.org/organizations/idb"
+    output_file: "feeds/idb_jobs.xml"
+    filter_profile: bank_idb
+
+  - key: idbinvest
+    display_name: "IDB Invest"
+    unjobs_url: "https://unjobs.org/organizations/idb-invest"
+    output_file: "feeds/idbinvest_jobs.xml"
+    filter_profile: bank_idbinvest
+
+  - key: adb
+    display_name: "ADB – Asian Development Bank"
+    unjobs_url: "https://unjobs.org/organizations/adb"
+    output_file: "feeds/adb_jobs.xml"
+    filter_profile: bank_adb
+
+  - key: ebrd
+    display_name: "EBRD – European Bank for Reconstruction and Development"
+    unjobs_url: "https://unjobs.org/organizations/ebrd"
+    output_file: "feeds/ebrd_jobs.xml"
+    filter_profile: bank_ebrd
+
+  - key: gcf
+    display_name: "GCF – Green Climate Fund"
+    unjobs_url: "https://unjobs.org/non-un-organizations/green-climate-fund"
+    output_file: "feeds/gcf_jobs.xml"
+    filter_profile: bank_gcf
+
+  - key: aiib
+    display_name: "AIIB – Asian Infrastructure Investment Bank"
+    unjobs_url: "https://unjobs.org/organizations/aiib"
+    output_file: "feeds/aiib_jobs.xml"
+    filter_profile: bank_aiib
