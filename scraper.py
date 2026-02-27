@@ -465,8 +465,9 @@ def scrape_org_listings(base_url: str, org_key: str) -> list[dict]:
     all_items: list[dict] = []
     seen_urls: set[str] = set()
 
-    for page_num in range(0, MAX_PAGES_PER_ORG):
-        page_url = base_url if page_num == 0 else f"{base_url}/{page_num}"
+    for page_num in range(1, MAX_PAGES_PER_ORG + 1):
+        # UNjobs uses 1-indexed page numbers: page 1 = base URL, page 2 = /2, etc.
+        page_url = base_url if page_num == 1 else f"{base_url}/{page_num}"
         log.info("[%s] Fetching listing page %d: %s", org_key, page_num, page_url)
         resp = fetch(page_url)
         if resp is None:
