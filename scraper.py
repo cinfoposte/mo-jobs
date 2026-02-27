@@ -46,10 +46,28 @@ ORIGINAL_LINK_TIMEOUT = 15
 RETRY_ATTEMPTS = 3
 SLEEP_BETWEEN_PAGES = 2.0     # seconds between page fetches
 SLEEP_BETWEEN_DETAILS = 1.0   # seconds between detail-page fetches
+
+# Realistic browser headers – UNjobs blocks requests that look automated.
+# Using a standard Chrome User-Agent and common browser headers prevents
+# Cloudflare/bot-detection from serving challenge pages instead of content.
 USER_AGENT = (
-    "Mozilla/5.0 (compatible; mo-jobs-rss-bot/1.0; "
-    "+https://github.com/cinfoposte/mo-jobs)"
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 )
+BROWSER_HEADERS = {
+    "User-Agent": USER_AGENT,
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Upgrade-Insecure-Requests": "1",
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "none",
+    "Sec-Fetch-User": "?1",
+    "Cache-Control": "max-age=0",
+}
+
 FEEDS_BASE_URL = "https://cinfoposte.github.io/mo-jobs"
 ATOM_NS = "http://www.w3.org/2005/Atom"
 
@@ -67,7 +85,23 @@ log = logging.getLogger("scraper")
 # Helpers - HTTP
 # ---------------------------------------------------------------------------
 _session = requests.Session()
-_session.headers.update({"User-Agent": USER_AGENT})
+_session.headers.update(BROWSER_HEADERS)
+
+
+def _is_challenge_page(resp: requests.Response) -> bool:
+    """Detect Cloudflare or bot-challenge pages that return 200 but no real content."""
+    text = resp.text[:2000].lower()
+    markers = [
+        "checking your browser",
+        "cloudflare",
+        "just a moment",
+        "cf-browser-verification",
+        "challenge-platform",
+        "ray id",
+        "_cf_chl",
+        "turnstile",
+    ]
+    return any(m in text for m in markers)
 
 
 def fetch(url: str) -> requests.Response | None:
@@ -76,8 +110,17 @@ def fetch(url: str) -> requests.Response | None:
         try:
             resp = _session.get(url, timeout=REQUEST_TIMEOUT)
             if resp.status_code == 200:
-                return resp
-            log.warning("HTTP %s for %s (attempt %d)", resp.status_code, url, attempt)
+                if _is_challenge_page(resp):
+                    log.warning(
+                        "Bot challenge page detected for %s (attempt %d) – "
+                        "site may be blocking automated requests",
+                        url, attempt,
+                    )
+                    # Fall through to retry with back-off
+                else:
+                    return resp
+            else:
+                log.warning("HTTP %s for %s (attempt %d)", resp.status_code, url, attempt)
         except requests.RequestException as exc:
             log.warning("Request error for %s: %s (attempt %d)", url, exc, attempt)
         if attempt < RETRY_ATTEMPTS:
@@ -307,7 +350,17 @@ def scrape_org_listings(base_url: str, org_key: str) -> list[dict]:
         page_items = scrape_listing_page(soup)
 
         if not page_items:
-            log.info("[%s] No jobs on page %d, ending pagination", org_key, page_num)
+            # Diagnostic: log why no jobs were found (helps debug bot blocking)
+            title_el = soup.find("title")
+            page_title = title_el.get_text(strip=True) if title_el else "(no title)"
+            body_len = len(soup.get_text())
+            div_count = len(soup.find_all("div"))
+            log.warning(
+                "[%s] No jobs found on page %d. Page title: '%s', "
+                "body text length: %d, div count: %d – "
+                "this may indicate bot detection or changed HTML structure",
+                org_key, page_num, page_title[:80], body_len, div_count,
+            )
             break
 
         new_count = 0
