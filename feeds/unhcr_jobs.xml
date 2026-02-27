@@ -5,7 +5,14 @@
     <link>https://unjobs.org/organizations/unhcr</link>
     <description>Latest job vacancies for UNHCR – UN Refugee Agency sourced from UNjobs.org. JPO positions are excluded.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 27 Feb 2026 13:33:23 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Feb 2026 14:00:27 +0000</lastBuildDate>
     <atom:link href="https://cinfoposte.github.io/mo-jobs/feeds/unhcr_jobs.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UNV Community Liaison, Bangui, Central African Republic</title>
+      <link>https://unjobs.org/vacancies/1772028320078</link>
+      <guid isPermaLink="false">fe79f4caaa7174691bb5999ea2017a8a</guid>
+      <pubDate>Fri, 27 Feb 2026 14:00:27 +0000</pubDate>
+      <description />
+    </item>
   </channel>
 </rss>
