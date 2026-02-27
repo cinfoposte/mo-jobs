@@ -55,6 +55,7 @@ ORIGINAL_LINK_TIMEOUT = 15
 RETRY_ATTEMPTS = 3
 SLEEP_BETWEEN_PAGES = 2.0     # seconds between page fetches
 SLEEP_BETWEEN_DETAILS = 1.0   # seconds between detail-page fetches
+SLEEP_BETWEEN_ORGS = 5.0      # seconds between organisations (avoid rate-limiting)
 
 # Realistic browser headers – UNjobs blocks requests that look automated.
 # Using a standard Chrome User-Agent and common browser headers prevents
@@ -103,7 +104,7 @@ else:
     _session.headers.update(BROWSER_HEADERS)
 
 
-def _is_challenge_page(resp: requests.Response) -> bool:
+def _is_challenge_page(resp) -> bool:
     """Detect Cloudflare or bot-challenge pages that return 200 but no real content.
 
     IMPORTANT: Only match on patterns specific to challenge/interstitial pages.
@@ -127,7 +128,7 @@ def _is_challenge_page(resp: requests.Response) -> bool:
     return any(m in text for m in challenge_markers)
 
 
-def fetch(url: str) -> requests.Response | None:
+def fetch(url: str):
     """GET *url* with retries and polite back-off."""
     last_resp = None
     for attempt in range(1, RETRY_ATTEMPTS + 1):
@@ -145,7 +146,7 @@ def fetch(url: str) -> requests.Response | None:
                     return resp
             else:
                 log.warning("HTTP %s for %s (attempt %d)", resp.status_code, url, attempt)
-        except requests.RequestException as exc:
+        except Exception as exc:
             log.warning("Request error for %s: %s (attempt %d)", url, exc, attempt)
         if attempt < RETRY_ATTEMPTS:
             time.sleep(2 ** attempt)
@@ -169,7 +170,7 @@ def fetch(url: str) -> requests.Response | None:
     return None
 
 
-def _save_fetch_debug(url: str, resp: requests.Response) -> None:
+def _save_fetch_debug(url: str, resp) -> None:
     """Save failed response HTML so we can inspect what the site returned."""
     DEBUG_DIR.mkdir(parents=True, exist_ok=True)
     # Use a sanitised filename from the URL
@@ -185,14 +186,14 @@ def _save_fetch_debug(url: str, resp: requests.Response) -> None:
         pass
 
 
-def fetch_best_effort(url: str) -> requests.Response | None:
+def fetch_best_effort(url: str):
     """Single-attempt fetch with shorter timeout (for fallback original links)."""
     try:
         resp = _session.get(url, timeout=ORIGINAL_LINK_TIMEOUT, allow_redirects=True)
         if resp.status_code == 200:
             return resp
         log.debug("Fallback fetch HTTP %s for %s", resp.status_code, url)
-    except requests.RequestException as exc:
+    except Exception as exc:
         log.debug("Fallback fetch error for %s: %s", url, exc)
     return None
 
@@ -464,8 +465,9 @@ def scrape_org_listings(base_url: str, org_key: str) -> list[dict]:
     all_items: list[dict] = []
     seen_urls: set[str] = set()
 
-    for page_num in range(0, MAX_PAGES_PER_ORG):
-        page_url = base_url if page_num == 0 else f"{base_url}/{page_num}"
+    for page_num in range(1, MAX_PAGES_PER_ORG + 1):
+        # UNjobs uses 1-indexed page numbers: page 1 = base URL, page 2 = /2, etc.
+        page_url = base_url if page_num == 1 else f"{base_url}/{page_num}"
         log.info("[%s] Fetching listing page %d: %s", org_key, page_num, page_url)
         resp = fetch(page_url)
         if resp is None:
@@ -483,12 +485,29 @@ def scrape_org_listings(base_url: str, org_key: str) -> list[dict]:
             page_title = title_el.get_text(strip=True) if title_el else "(no title)"
             body_len = len(soup.get_text())
             div_count = len(soup.find_all("div"))
-            a_count = len(soup.find_all("a", href=True))
+            all_anchors = soup.find_all("a", href=True)
+            a_count = len(all_anchors)
+            # Count how many anchors contain /vacancies/ at all
+            vacancy_anchors = [
+                a for a in all_anchors
+                if "/vacancies/" in a.get("href", "")
+            ]
             log.warning(
                 "[%s] No jobs found on page %d. Page title: '%s', "
-                "body text length: %d, div count: %d, anchor count: %d",
-                org_key, page_num, page_title[:80], body_len, div_count, a_count,
+                "body text length: %d, div count: %d, anchor count: %d, "
+                "vacancy anchors: %d",
+                org_key, page_num, page_title[:80], body_len, div_count,
+                a_count, len(vacancy_anchors),
             )
+            # Log sample of vacancy anchors that were skipped for debugging
+            for va in vacancy_anchors[:5]:
+                href = va.get("href", "")
+                text = va.get_text(strip=True)[:60]
+                ignored = any(part in href for part in _IGNORE_HREF_PARTS)
+                log.warning(
+                    "[%s]   vacancy anchor: href=%s text='%s' ignored=%s",
+                    org_key, href[:80], text, ignored,
+                )
             # Save HTML snippet for offline debugging
             _save_listing_debug_snippet(org_key, resp.text)
             break
@@ -765,77 +784,77 @@ def process_org(org: dict, filters_cfg: dict) -> None:
         if len(filtered_items) >= MAX_ITEMS_PER_FEED:
             break
 
-        log.info("[%s] Detail %d/%d: %s", key, i + 1, len(stubs), stub["title"][:60])
-        detail = scrape_detail_page(stub["url"])
+        try:
+            log.info("[%s] Detail %d/%d: %s", key, i + 1, len(stubs), stub["title"][:60])
+            detail = scrape_detail_page(stub["url"])
 
-        detail_ok = bool(detail.get("full_text") or detail.get("description"))
-        if detail_ok:
-            counts["details_fetched_ok"] += 1
-        else:
+            detail_ok = bool(detail.get("full_text") or detail.get("description"))
+            if detail_ok:
+                counts["details_fetched_ok"] += 1
+            else:
+                counts["errors"] += 1
+                log.warning("[%s]   Failed to fetch detail page: %s", key, stub["url"])
+
+            title = stub["title"]
+            full_text = detail.get("full_text", "")
+            original_link = detail.get("original_link", "")
+            text_for_filter = build_text_for_filter(title, full_text)
+
+            # Apply filters on title + full detail text
+            included, reason = apply_filter(text_for_filter, profile_name, filters_cfg)
+
+            # Fallback: for UN standard orgs, if no grade found, try original link
+            if (not included and reason == "no_grade"
+                    and profile_name == "un_standard" and original_link):
+                log.info("[%s]   No grade in UNjobs detail, trying original link: %s",
+                         key, original_link[:80])
+                orig_text = fetch_original_link_text(original_link)
+                if orig_text:
+                    extended_filter_text = build_text_for_filter(
+                        title, full_text + "\n" + orig_text
+                    )
+                    included, reason = apply_filter(
+                        extended_filter_text, profile_name, filters_cfg
+                    )
+                    if included:
+                        log.info("[%s]   Grade found via original link - INCLUDED", key)
+                # If still no grade after fallback, mark as unknown_grade
+                if not included and reason == "no_grade":
+                    reason = "unknown_grade"
+
+            if not included:
+                # Map reason to counter key
+                reason_counter = {
+                    "jpo": "excluded_by_jpo",
+                    "intern_consultant": "excluded_by_intern_consultant",
+                    "no_grade": "excluded_by_grade",
+                    "unknown_grade": "excluded_unknown_grade",
+                    "bank_exclude": "excluded_by_grade",
+                    "bank_no_match": "excluded_by_grade",
+                }
+                counts[reason_counter.get(reason, "excluded_by_grade")] += 1
+
+                excluded_items.append({
+                    "org_key": key,
+                    "title": title,
+                    "unjobs_url": stub["url"],
+                    "original_url": original_link,
+                    "exclusion_reason": reason,
+                })
+                log.info("[%s]   EXCLUDED (%s): %s", key, reason, title[:60])
+            else:
+                counts["included"] += 1
+                filtered_items.append({
+                    "title": title,
+                    "url": stub["url"],
+                    "original_link": original_link,
+                    "pub_date": detail.get("pub_date", ""),
+                    "description": detail.get("description", ""),
+                    "closing_date": stub.get("closing_date", ""),
+                })
+        except Exception:
             counts["errors"] += 1
-            log.warning("[%s]   Failed to fetch detail page: %s", key, stub["url"])
-
-        title = stub["title"]
-        full_text = detail.get("full_text", "")
-        original_link = detail.get("original_link", "")
-        text_for_filter = build_text_for_filter(title, full_text)
-
-        # Apply filters on title + full detail text
-        included, reason = apply_filter(text_for_filter, profile_name, filters_cfg)
-
-        # Fallback: for UN standard orgs, if no grade found, try original link
-        if (not included and reason == "no_grade"
-                and profile_name == "un_standard" and original_link):
-            log.info("[%s]   No grade in UNjobs detail, trying original link: %s",
-                     key, original_link[:80])
-            orig_text = fetch_original_link_text(original_link)
-            if orig_text:
-                extended_filter_text = build_text_for_filter(
-                    title, full_text + "\n" + orig_text
-                )
-                included, reason = apply_filter(
-                    extended_filter_text, profile_name, filters_cfg
-                )
-                if included:
-                    log.info("[%s]   Grade found via original link - INCLUDED", key)
-            # If still no grade after fallback, mark as unknown_grade
-            if not included and reason == "no_grade":
-                reason = "unknown_grade"
-
-        if not included:
-            # Map reason to counter key
-            reason_counter = {
-                "jpo": "excluded_by_jpo",
-                "intern_consultant": "excluded_by_intern_consultant",
-                "no_grade": "excluded_by_grade",
-                "unknown_grade": "excluded_unknown_grade",
-                "bank_exclude": "excluded_by_grade",
-                "bank_no_match": "excluded_by_grade",
-            }
-            counts[reason_counter.get(reason, "excluded_by_grade")] += 1
-
-            excluded_items.append({
-                "org_key": key,
-                "title": title,
-                "unjobs_url": stub["url"],
-                "original_url": original_link,
-                "exclusion_reason": reason,
-            })
-            log.info("[%s]   EXCLUDED (%s): %s", key, reason, title[:60])
-
-            if i < len(stubs) - 1:
-                time.sleep(SLEEP_BETWEEN_DETAILS)
-            continue
-
-        counts["included"] += 1
-        filtered_items.append({
-            "title": title,
-            "url": stub["url"],
-            "original_link": original_link,
-            "pub_date": detail.get("pub_date", ""),
-            "description": detail.get("description", ""),
-            "closing_date": stub.get("closing_date", ""),
-        })
+            log.exception("[%s]   Error processing detail %d: %s", key, i + 1, stub["url"])
 
         if i < len(stubs) - 1:
             time.sleep(SLEEP_BETWEEN_DETAILS)
@@ -865,7 +884,7 @@ def main() -> None:
     success_count = 0
     fail_count = 0
 
-    for org in orgs:
+    for org_idx, org in enumerate(orgs):
         try:
             process_org(org, filters_cfg)
             success_count += 1
@@ -878,10 +897,19 @@ def main() -> None:
                 log.exception("[%s] Could not even write empty feed", org.get("key", "?"))
             fail_count += 1
 
+        # Pause between organisations to avoid rate-limiting
+        if org_idx < len(orgs) - 1:
+            time.sleep(SLEEP_BETWEEN_ORGS)
+
     log.info("=" * 60)
     log.info("Done. Success: %d  Failed: %d  Total: %d", success_count, fail_count, len(orgs))
 
-    if fail_count > 0:
+    # Do NOT sys.exit(1) on partial failure – the GitHub Actions workflow
+    # must still commit and push the feeds that succeeded.  If we exit
+    # non-zero, the subsequent "Commit and push" step is skipped and even
+    # successful feeds are lost.
+    if fail_count == len(orgs):
+        log.error("ALL organisations failed – exiting with error")
         sys.exit(1)
 
 
