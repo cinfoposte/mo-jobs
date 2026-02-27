@@ -6,23 +6,30 @@ Scrapes UNjobs.org organisation pages and generates one RSS 2.0 feed per
 organisation.  Applies global JPO exclusion and org-specific grade/role
 filters defined in config/filters.yml.
 
+Filtering is performed on the FULL TEXT extracted from each UNjobs vacancy
+detail page (not just the title/snippet).  For UN org profiles, if no grade
+is detected in the UNjobs detail, a fallback fetch of the original/source
+link is attempted.
+
 Usage:
     python scraper.py
 """
 
+import csv
 import hashlib
+import io
 import logging
-import os
 import re
 import sys
 import time
 import datetime
 from pathlib import Path
+from xml.etree import ElementTree as ET
 from xml.etree.ElementTree import Element, SubElement, ElementTree, indent
 
 import requests
 import yaml
-from bs4 import BeautifulSoup, NavigableString
+from bs4 import BeautifulSoup
 from dateutil import parser as dateparser
 
 # ---------------------------------------------------------------------------
@@ -31,9 +38,11 @@ from dateutil import parser as dateparser
 BASE_DIR = Path(__file__).resolve().parent
 CONFIG_DIR = BASE_DIR / "config"
 FEEDS_DIR = BASE_DIR / "feeds"
+DEBUG_DIR = BASE_DIR / "debug"
 MAX_ITEMS_PER_FEED = 200
 MAX_PAGES_PER_ORG = 20
 REQUEST_TIMEOUT = 30
+ORIGINAL_LINK_TIMEOUT = 15
 RETRY_ATTEMPTS = 3
 SLEEP_BETWEEN_PAGES = 2.0     # seconds between page fetches
 SLEEP_BETWEEN_DETAILS = 1.0   # seconds between detail-page fetches
@@ -41,6 +50,11 @@ USER_AGENT = (
     "Mozilla/5.0 (compatible; mo-jobs-rss-bot/1.0; "
     "+https://github.com/cinfoposte/mo-jobs)"
 )
+FEEDS_BASE_URL = "https://cinfoposte.github.io/mo-jobs"
+ATOM_NS = "http://www.w3.org/2005/Atom"
+
+# Register atom namespace so ElementTree uses 'atom:' prefix
+ET.register_namespace("atom", ATOM_NS)
 
 logging.basicConfig(
     level=logging.INFO,
@@ -50,7 +64,7 @@ logging.basicConfig(
 log = logging.getLogger("scraper")
 
 # ---------------------------------------------------------------------------
-# Helpers – HTTP
+# Helpers - HTTP
 # ---------------------------------------------------------------------------
 _session = requests.Session()
 _session.headers.update({"User-Agent": USER_AGENT})
@@ -71,8 +85,20 @@ def fetch(url: str) -> requests.Response | None:
     return None
 
 
+def fetch_best_effort(url: str) -> requests.Response | None:
+    """Single-attempt fetch with shorter timeout (for fallback original links)."""
+    try:
+        resp = _session.get(url, timeout=ORIGINAL_LINK_TIMEOUT, allow_redirects=True)
+        if resp.status_code == 200:
+            return resp
+        log.debug("Fallback fetch HTTP %s for %s", resp.status_code, url)
+    except requests.RequestException as exc:
+        log.debug("Fallback fetch error for %s: %s", url, exc)
+    return None
+
+
 # ---------------------------------------------------------------------------
-# Helpers – config loading
+# Helpers - config loading
 # ---------------------------------------------------------------------------
 
 def load_yaml(path: Path) -> dict:
@@ -90,7 +116,36 @@ def load_filters() -> dict:
 
 
 # ---------------------------------------------------------------------------
-# Helpers – filtering
+# Helpers - text extraction
+# ---------------------------------------------------------------------------
+
+def extract_full_text(soup: BeautifulSoup) -> str:
+    """Extract all meaningful plaintext from the page body for filtering.
+
+    Skips script, style, nav, and noscript elements.
+    """
+    texts = []
+    body = soup.find("main") or soup.find("article") or soup.find("body")
+    if body:
+        for element in body.find_all(string=True):
+            if element.parent.name in ("script", "style", "nav", "noscript"):
+                continue
+            text = element.strip()
+            if text:
+                texts.append(text)
+    return " ".join(texts)
+
+
+def build_text_for_filter(title: str, detail_full_text: str) -> str:
+    """Build the canonical text used for all filter matching.
+
+    Returns lowercased combined text of title + detail page plaintext.
+    """
+    return f"{title}\n{detail_full_text}".lower()
+
+
+# ---------------------------------------------------------------------------
+# Helpers - filtering
 # ---------------------------------------------------------------------------
 
 def _matches_any(text: str, patterns: list[str]) -> bool:
@@ -101,101 +156,95 @@ def _matches_any(text: str, patterns: list[str]) -> bool:
     return False
 
 
-def is_jpo(title: str, description: str, jpo_patterns: list[str]) -> bool:
+def is_jpo(text_for_filter: str, jpo_patterns: list[str]) -> bool:
     """Return True if the vacancy is a JPO (must be excluded globally)."""
-    combined = f"{title} {description}"
-    return _matches_any(combined, jpo_patterns)
+    return _matches_any(text_for_filter, jpo_patterns)
 
 
-def passes_un_standard(title: str, description: str, profile: dict) -> bool:
-    """Apply UN standard filter: must match an include pattern.
+def _classify_un_standard(text_for_filter: str, profile: dict) -> tuple[bool, str]:
+    """Apply UN standard filter and return (included, reason).
 
-    The include rule (P/D grades + UNV) is primary.  Exclusions are secondary
-    and must NOT remove posts that matched a P/D grade or UNV pattern.
-    Only items that match *neither* P/D nor UNV are subject to exclusion.
+    Reasons: 'grade_match', 'unv_match', 'intern_consultant', 'no_grade'.
     """
-    combined = f"{title} {description}"
     include_pats = profile.get("include_patterns", [])
     exclude_pats = profile.get("exclude_patterns", [])
 
-    # Classify which kind of include was matched
     matched_pd = False   # P1-P6, D1-D2, ASG/USG/DSG
     matched_unv = False  # UNV / UN Volunteer
 
     _unv_keywords = ("UNV", "UN Volunteer", "UN Volunteering")
 
     for pat in include_pats:
-        if re.search(pat, combined, re.IGNORECASE):
+        if re.search(pat, text_for_filter, re.IGNORECASE):
             if any(kw in pat for kw in _unv_keywords):
                 matched_unv = True
             else:
                 matched_pd = True
 
-    # Must match at least one include pattern
-    if not matched_pd and not matched_unv:
-        return False
+    # P/D grades and UNV are authoritative - include regardless of excludes
+    if matched_pd:
+        return True, "grade_match"
+    if matched_unv:
+        return True, "unv_match"
 
-    # P/D grades and UNV are authoritative — skip exclusion checks
-    if matched_pd or matched_unv:
-        return True
+    # No include match - check excludes for reason classification
+    if _matches_any(text_for_filter, exclude_pats):
+        return False, "intern_consultant"
 
-    # (Unreachable given the logic above, but kept for safety)
-    if _matches_any(combined, exclude_pats):
-        return False
-
-    return True
+    # No include match, no exclude match - unknown grade
+    return False, "no_grade"
 
 
-def passes_bank_filter(title: str, description: str, profile: dict) -> bool:
-    """Apply bank-specific filter."""
-    combined = f"{title} {description}"
+def _classify_bank(text_for_filter: str, profile: dict) -> tuple[bool, str]:
+    """Apply bank-specific filter and return (included, reason)."""
     include_pats = profile.get("include_patterns", [])
     exclude_pats = profile.get("exclude_patterns", [])
     permissive = profile.get("permissive", False)
 
     # Always apply excludes first
-    if _matches_any(combined, exclude_pats):
-        return False
+    if _matches_any(text_for_filter, exclude_pats):
+        return False, "bank_exclude"
 
     # If there are include patterns, check them
     if include_pats:
-        if _matches_any(combined, include_pats):
-            return True
-        # If permissive mode, include even without a grade match
+        if _matches_any(text_for_filter, include_pats):
+            return True, "bank_include"
         if permissive:
-            return True
-        return False
+            return True, "bank_permissive"
+        return False, "bank_no_match"
 
-    # No include patterns and not excluded → include (permissive default)
-    return True
+    # No include patterns and not excluded - include (permissive default)
+    return True, "bank_default"
 
 
-def apply_filter(title: str, description: str, filter_profile_name: str,
-                 filters_cfg: dict) -> bool:
-    """Return True if the vacancy should be INCLUDED in the feed."""
+def apply_filter(text_for_filter: str, filter_profile_name: str,
+                 filters_cfg: dict) -> tuple[bool, str]:
+    """Return (included, reason) for the vacancy.
 
+    *text_for_filter* should be the output of build_text_for_filter().
+    """
     # Global JPO exclusion
     jpo_patterns = filters_cfg.get("global_exclude", {}).get("jpo_patterns", [])
-    if is_jpo(title, description, jpo_patterns):
-        return False
+    if is_jpo(text_for_filter, jpo_patterns):
+        return False, "jpo"
 
     # Org-specific filter
     if filter_profile_name == "un_standard":
         profile = filters_cfg.get("un_standard", {})
-        return passes_un_standard(title, description, profile)
+        return _classify_un_standard(text_for_filter, profile)
 
     # Bank profiles
     profile = filters_cfg.get(filter_profile_name, {})
     if profile:
-        return passes_bank_filter(title, description, profile)
+        return _classify_bank(text_for_filter, profile)
 
-    # Unknown profile → include by default
+    # Unknown profile - include by default
     log.warning("Unknown filter profile '%s', including by default", filter_profile_name)
-    return True
+    return True, "unknown_profile"
 
 
 # ---------------------------------------------------------------------------
-# Scraping – listing pages
+# Scraping - listing pages
 # ---------------------------------------------------------------------------
 
 def scrape_listing_page(soup: BeautifulSoup) -> list[dict]:
@@ -271,7 +320,7 @@ def scrape_org_listings(base_url: str, org_key: str) -> list[dict]:
         log.info("[%s] Page %d: %d jobs (%d new)", org_key, page_num, len(page_items), new_count)
 
         if new_count == 0:
-            break  # all duplicates → we've looped back
+            break  # all duplicates - we've looped back
 
         if len(all_items) >= MAX_ITEMS_PER_FEED:
             all_items = all_items[:MAX_ITEMS_PER_FEED]
@@ -284,25 +333,26 @@ def scrape_org_listings(base_url: str, org_key: str) -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
-# Scraping – detail pages
+# Scraping - detail pages
 # ---------------------------------------------------------------------------
 
 def scrape_detail_page(url: str) -> dict:
     """Fetch a vacancy detail page and extract description + metadata.
 
-    Returns dict with keys: description, pub_date, original_link.
+    Returns dict with keys: description, full_text, pub_date, original_link.
     """
-    result = {"description": "", "pub_date": "", "original_link": ""}
+    result = {"description": "", "full_text": "", "pub_date": "", "original_link": ""}
     resp = fetch(url)
     if resp is None:
         return result
 
     soup = BeautifulSoup(resp.content, "lxml")
 
-    # --- Description ---
-    # Try common containers for the job description
+    # --- Full text for filtering (extract before any DOM modification) ---
+    result["full_text"] = extract_full_text(soup)
+
+    # --- Description (truncated for RSS snippet) ---
     desc_text = ""
-    # Look for the main content area
     for selector in [
         ("div", {"class": "jd"}),
         ("div", {"class": "job-description"}),
@@ -327,7 +377,6 @@ def scrape_detail_page(url: str) -> dict:
     result["description"] = desc_text
 
     # --- Original employer link ---
-    # UNjobs often has a link like "Apply here" or "Original" pointing to the source
     for a in soup.find_all("a", href=True):
         href = a["href"]
         text = a.get_text(strip=True).lower()
@@ -337,7 +386,6 @@ def scrape_detail_page(url: str) -> dict:
                 break
 
     # --- Publication date ---
-    # Try to find a date in the page
     for selector in [
         ("span", {"class": "date"}),
         ("time",),
@@ -356,6 +404,23 @@ def scrape_detail_page(url: str) -> dict:
                     pass
 
     return result
+
+
+def fetch_original_link_text(url: str) -> str:
+    """Best-effort fetch of original job posting for grade detection.
+
+    Uses a shorter timeout and single attempt.  Returns extracted
+    plaintext or empty string on any failure.
+    """
+    resp = fetch_best_effort(url)
+    if resp is None:
+        return ""
+    try:
+        soup = BeautifulSoup(resp.content, "lxml")
+        return extract_full_text(soup)
+    except Exception as exc:
+        log.debug("Error parsing original link %s: %s", url, exc)
+        return ""
 
 
 # ---------------------------------------------------------------------------
@@ -377,11 +442,14 @@ def stable_guid(url: str) -> str:
 
 
 def build_rss(org: dict, items: list[dict]) -> str:
-    """Build an RSS 2.0 XML string from filtered items."""
+    """Build an RSS 2.0 XML string from filtered items.
+
+    Includes <atom:link rel="self"> for feed validator compliance.
+    """
     rss = Element("rss", version="2.0")
     channel = SubElement(rss, "channel")
 
-    SubElement(channel, "title").text = f"{org['display_name']} – Job Vacancies"
+    SubElement(channel, "title").text = f"{org['display_name']} \u2013 Job Vacancies"
     SubElement(channel, "link").text = org["unjobs_url"]
     SubElement(channel, "description").text = (
         f"Latest job vacancies for {org['display_name']} sourced from UNjobs.org. "
@@ -391,6 +459,12 @@ def build_rss(org: dict, items: list[dict]) -> str:
     SubElement(channel, "lastBuildDate").text = datetime.datetime.now(
         tz=datetime.timezone.utc
     ).strftime("%a, %d %b %Y %H:%M:%S +0000")
+
+    # atom:link self (validator recommendation)
+    atom_link = SubElement(channel, f"{{{ATOM_NS}}}link")
+    atom_link.set("href", f"{FEEDS_BASE_URL}/{org['output_file']}")
+    atom_link.set("rel", "self")
+    atom_link.set("type", "application/rss+xml")
 
     for it in items:
         item_el = SubElement(channel, "item")
@@ -416,7 +490,6 @@ def build_rss(org: dict, items: list[dict]) -> str:
     tree = ElementTree(rss)
 
     # Write to string
-    import io
     buf = io.BytesIO()
     tree.write(buf, encoding="utf-8", xml_declaration=True)
     return buf.getvalue().decode("utf-8")
@@ -438,25 +511,73 @@ def write_empty_rss(org: dict) -> None:
 
 
 # ---------------------------------------------------------------------------
+# Debug artifacts
+# ---------------------------------------------------------------------------
+
+def write_debug_csv(org_key: str, excluded_items: list[dict]) -> None:
+    """Write a CSV of excluded items for debugging (up to 50 items)."""
+    DEBUG_DIR.mkdir(parents=True, exist_ok=True)
+    csv_path = DEBUG_DIR / f"{org_key}_excluded_sample.csv"
+    rows = excluded_items[:50]
+    with open(csv_path, "w", newline="", encoding="utf-8") as fh:
+        writer = csv.writer(fh)
+        writer.writerow(["org_key", "title", "unjobs_url", "original_url", "exclusion_reason"])
+        for row in rows:
+            writer.writerow([
+                row.get("org_key", org_key),
+                row.get("title", ""),
+                row.get("unjobs_url", ""),
+                row.get("original_url", ""),
+                row.get("exclusion_reason", ""),
+            ])
+    log.info("[%s] Debug CSV: %s (%d excluded items)", org_key, csv_path, len(rows))
+
+
+# ---------------------------------------------------------------------------
 # Main pipeline
 # ---------------------------------------------------------------------------
 
+def _log_counts(key: str, counts: dict) -> None:
+    """Log filtering summary counts for one org."""
+    log.info("[%s] --- Filter Summary ---", key)
+    for label, value in counts.items():
+        log.info("[%s]   %-30s %d", key, label, value)
+
+
 def process_org(org: dict, filters_cfg: dict) -> None:
-    """Full pipeline for one organisation: scrape → filter → write RSS."""
+    """Full pipeline for one organisation: scrape -> filter -> write RSS."""
     key = org["key"]
-    profile = org.get("filter_profile", "")
+    profile_name = org.get("filter_profile", "")
     log.info("=" * 60)
     log.info("[%s] Starting: %s", key, org["display_name"])
 
+    # Counters for summary
+    counts = {
+        "listings_found": 0,
+        "details_fetched_ok": 0,
+        "included": 0,
+        "excluded_by_jpo": 0,
+        "excluded_by_intern_consultant": 0,
+        "excluded_by_grade": 0,
+        "excluded_unknown_grade": 0,
+        "errors": 0,
+    }
+
     # 1. Scrape listing pages
     stubs = scrape_org_listings(org["unjobs_url"], key)
+    counts["listings_found"] = len(stubs)
+
     if not stubs:
         log.warning("[%s] No listings found; writing empty feed", key)
         write_empty_rss(org)
+        write_debug_csv(key, [])
+        _log_counts(key, counts)
         return
 
     # 2. Fetch detail pages and apply filters
     filtered_items: list[dict] = []
+    excluded_items: list[dict] = []
+
     for i, stub in enumerate(stubs):
         if len(filtered_items) >= MAX_ITEMS_PER_FEED:
             break
@@ -464,29 +585,86 @@ def process_org(org: dict, filters_cfg: dict) -> None:
         log.info("[%s] Detail %d/%d: %s", key, i + 1, len(stubs), stub["title"][:60])
         detail = scrape_detail_page(stub["url"])
 
-        title = stub["title"]
-        description = detail.get("description", "")
+        detail_ok = bool(detail.get("full_text") or detail.get("description"))
+        if detail_ok:
+            counts["details_fetched_ok"] += 1
+        else:
+            counts["errors"] += 1
+            log.warning("[%s]   Failed to fetch detail page: %s", key, stub["url"])
 
-        # Apply filters
-        if not apply_filter(title, description, profile, filters_cfg):
-            log.debug("[%s] EXCLUDED: %s", key, title[:60])
+        title = stub["title"]
+        full_text = detail.get("full_text", "")
+        original_link = detail.get("original_link", "")
+        text_for_filter = build_text_for_filter(title, full_text)
+
+        # Apply filters on title + full detail text
+        included, reason = apply_filter(text_for_filter, profile_name, filters_cfg)
+
+        # Fallback: for UN standard orgs, if no grade found, try original link
+        if (not included and reason == "no_grade"
+                and profile_name == "un_standard" and original_link):
+            log.info("[%s]   No grade in UNjobs detail, trying original link: %s",
+                     key, original_link[:80])
+            orig_text = fetch_original_link_text(original_link)
+            if orig_text:
+                extended_filter_text = build_text_for_filter(
+                    title, full_text + "\n" + orig_text
+                )
+                included, reason = apply_filter(
+                    extended_filter_text, profile_name, filters_cfg
+                )
+                if included:
+                    log.info("[%s]   Grade found via original link - INCLUDED", key)
+            # If still no grade after fallback, mark as unknown_grade
+            if not included and reason == "no_grade":
+                reason = "unknown_grade"
+
+        if not included:
+            # Map reason to counter key
+            reason_counter = {
+                "jpo": "excluded_by_jpo",
+                "intern_consultant": "excluded_by_intern_consultant",
+                "no_grade": "excluded_by_grade",
+                "unknown_grade": "excluded_unknown_grade",
+                "bank_exclude": "excluded_by_grade",
+                "bank_no_match": "excluded_by_grade",
+            }
+            counts[reason_counter.get(reason, "excluded_by_grade")] += 1
+
+            excluded_items.append({
+                "org_key": key,
+                "title": title,
+                "unjobs_url": stub["url"],
+                "original_url": original_link,
+                "exclusion_reason": reason,
+            })
+            log.info("[%s]   EXCLUDED (%s): %s", key, reason, title[:60])
+
+            if i < len(stubs) - 1:
+                time.sleep(SLEEP_BETWEEN_DETAILS)
             continue
 
+        counts["included"] += 1
         filtered_items.append({
             "title": title,
             "url": stub["url"],
-            "original_link": detail.get("original_link", ""),
+            "original_link": original_link,
             "pub_date": detail.get("pub_date", ""),
-            "description": description,
+            "description": detail.get("description", ""),
             "closing_date": stub.get("closing_date", ""),
         })
 
         if i < len(stubs) - 1:
             time.sleep(SLEEP_BETWEEN_DETAILS)
 
-    log.info("[%s] Filtered items: %d / %d listings", key, len(filtered_items), len(stubs))
+    # 3. Log summary
+    _log_counts(key, counts)
 
-    # 3. Write RSS
+    # 4. Write debug CSV
+    write_debug_csv(key, excluded_items)
+
+    # 5. Write RSS
+    log.info("[%s] Filtered items: %d / %d listings", key, len(filtered_items), len(stubs))
     xml_content = build_rss(org, filtered_items)
     write_rss(org, xml_content)
 
@@ -499,6 +677,7 @@ def main() -> None:
     filters_cfg = load_filters()
 
     FEEDS_DIR.mkdir(parents=True, exist_ok=True)
+    DEBUG_DIR.mkdir(parents=True, exist_ok=True)
 
     success_count = 0
     fail_count = 0
@@ -508,7 +687,7 @@ def main() -> None:
             process_org(org, filters_cfg)
             success_count += 1
         except Exception:
-            log.exception("[%s] FAILED – continuing with next org", org.get("key", "?"))
+            log.exception("[%s] FAILED - continuing with next org", org.get("key", "?"))
             # Write empty feed so the file still exists
             try:
                 write_empty_rss(org)
