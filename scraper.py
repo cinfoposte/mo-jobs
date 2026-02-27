@@ -89,31 +89,40 @@ _session.headers.update(BROWSER_HEADERS)
 
 
 def _is_challenge_page(resp: requests.Response) -> bool:
-    """Detect Cloudflare or bot-challenge pages that return 200 but no real content."""
-    text = resp.text[:2000].lower()
-    markers = [
-        "checking your browser",
-        "cloudflare",
-        "just a moment",
+    """Detect Cloudflare or bot-challenge pages that return 200 but no real content.
+
+    IMPORTANT: Only match on patterns specific to challenge/interstitial pages.
+    Do NOT match on generic "cloudflare" — it appears on every page served
+    through Cloudflare CDN (in script URLs, Ray IDs, footers, etc.).
+    """
+    text = resp.text[:5000].lower()
+    # These patterns only appear on actual challenge/block pages, not normal content
+    challenge_markers = [
+        "checking your browser before accessing",
         "cf-browser-verification",
         "challenge-platform",
-        "ray id",
         "_cf_chl",
+        "cf-challenge",
+        "managed challenge",
         "turnstile",
+        # Cloudflare "Just a moment" interstitial (but NOT just "moment" alone)
+        "just a moment</title>",
+        "enable javascript and cookies to continue",
     ]
-    return any(m in text for m in markers)
+    return any(m in text for m in challenge_markers)
 
 
 def fetch(url: str) -> requests.Response | None:
     """GET *url* with retries and polite back-off."""
+    last_resp = None
     for attempt in range(1, RETRY_ATTEMPTS + 1):
         try:
             resp = _session.get(url, timeout=REQUEST_TIMEOUT)
+            last_resp = resp
             if resp.status_code == 200:
                 if _is_challenge_page(resp):
                     log.warning(
-                        "Bot challenge page detected for %s (attempt %d) – "
-                        "site may be blocking automated requests",
+                        "Bot challenge page detected for %s (attempt %d)",
                         url, attempt,
                     )
                     # Fall through to retry with back-off
@@ -125,7 +134,40 @@ def fetch(url: str) -> requests.Response | None:
             log.warning("Request error for %s: %s (attempt %d)", url, exc, attempt)
         if attempt < RETRY_ATTEMPTS:
             time.sleep(2 ** attempt)
+    # Log details about the failure for debugging
+    if last_resp is not None:
+        title = ""
+        try:
+            from bs4 import BeautifulSoup as _BS
+            _s = _BS(last_resp.text[:3000], "lxml")
+            _t = _s.find("title")
+            title = _t.get_text(strip=True) if _t else ""
+        except Exception:
+            pass
+        log.warning(
+            "fetch() failed after %d attempts for %s – "
+            "last status: %d, page title: '%s', body length: %d",
+            RETRY_ATTEMPTS, url, last_resp.status_code, title[:80], len(last_resp.text),
+        )
+        # Save the failed response for offline debugging
+        _save_fetch_debug(url, last_resp)
     return None
+
+
+def _save_fetch_debug(url: str, resp: requests.Response) -> None:
+    """Save failed response HTML so we can inspect what the site returned."""
+    DEBUG_DIR.mkdir(parents=True, exist_ok=True)
+    # Use a sanitised filename from the URL
+    slug = re.sub(r"[^a-z0-9]+", "_", url.lower())[-60:]
+    path = DEBUG_DIR / f"fetch_fail_{slug}.html"
+    try:
+        with open(path, "w", encoding="utf-8", errors="replace") as fh:
+            fh.write(f"<!-- URL: {url} -->\n")
+            fh.write(f"<!-- Status: {resp.status_code} -->\n")
+            fh.write(resp.text[:200_000])
+        log.info("Saved failed fetch response to %s", path)
+    except Exception:
+        pass
 
 
 def fetch_best_effort(url: str) -> requests.Response | None:
@@ -413,6 +455,8 @@ def scrape_org_listings(base_url: str, org_key: str) -> list[dict]:
         resp = fetch(page_url)
         if resp is None:
             log.warning("[%s] Failed to fetch page %d, stopping pagination", org_key, page_num)
+            # Try to save whatever the last HTTP response was for debugging
+            # (fetch() already logged the details)
             break
 
         soup = BeautifulSoup(resp.content, "lxml")
