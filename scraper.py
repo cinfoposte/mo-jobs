@@ -18,6 +18,7 @@ import sys
 import time
 import datetime
 from pathlib import Path
+import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import Element, SubElement, ElementTree, indent
 
 import requests
@@ -376,13 +377,26 @@ def stable_guid(url: str) -> str:
     return hashlib.sha256(url.encode("utf-8")).hexdigest()[:32]
 
 
+GITHUB_PAGES_BASE = "https://cinfoposte.github.io/mo-jobs"
+
+
 def build_rss(org: dict, items: list[dict]) -> str:
     """Build an RSS 2.0 XML string from filtered items."""
+    ATOM_NS = "http://www.w3.org/2005/Atom"
+    ET.register_namespace("atom", ATOM_NS)
     rss = Element("rss", version="2.0")
     channel = SubElement(rss, "channel")
 
     SubElement(channel, "title").text = f"{org['display_name']} – Job Vacancies"
     SubElement(channel, "link").text = org["unjobs_url"]
+
+    # atom:link with rel="self" for feed validator compliance
+    feed_url = f"{GITHUB_PAGES_BASE}/{org['output_file']}"
+    atom_link = SubElement(channel, f"{{{ATOM_NS}}}link")
+    atom_link.set("href", feed_url)
+    atom_link.set("rel", "self")
+    atom_link.set("type", "application/rss+xml")
+
     SubElement(channel, "description").text = (
         f"Latest job vacancies for {org['display_name']} sourced from UNjobs.org. "
         f"JPO positions are excluded."
