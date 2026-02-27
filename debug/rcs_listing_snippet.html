@@ -1,0 +1,521 @@
+
+<!DOCTYPE html>
+
+
+
+<html lang='en'>
+<meta name=viewport content="width=device-width, initial-scale=1">
+<base href="https://unjobs.org/" />
+
+
+ 
+ 
+
+      
+   
+ 
+   
+  
+ 
+ 
+ <title>Vacancies with RCS - Resident Coordinator System | UNjobs</title>
+
+  
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://unjobs.org/js/timeago.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-9196538889333991",
+          enable_page_level_ads: true
+     });
+</script>
+
+<!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+<script type="text/javascript" async=true>
+(function() {
+  var host = window.location.hostname;
+  var element = document.createElement('script');
+  var firstScript = document.getElementsByTagName('script')[0];
+  var url = 'https://cmp.inmobi.com'
+    .concat('/choice/', 'N1sA5xfTskjLj', '/', host, '/choice.js?tag_version=V3');
+  var uspTries = 0;
+  var uspTriesLimit = 3;
+  element.async = true;
+  element.type = 'text/javascript';
+  element.src = url;
+
+  firstScript.parentNode.insertBefore(element, firstScript);
+
+  function makeStub() {
+    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+    var queue = [];
+    var win = window;
+    var cmpFrame;
+
+    function addFrame() {
+      var doc = win.document;
+      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+      if (!otherCMP) {
+        if (doc.body) {
+          var iframe = doc.createElement('iframe');
+
+          iframe.style.cssText = 'display:none';
+          iframe.name = TCF_LOCATOR_NAME;
+          doc.body.appendChild(iframe);
+        } else {
+          setTimeout(addFrame, 5);
+        }
+      }
+      return !otherCMP;
+    }
+
+    function tcfAPIHandler() {
+      var gdprApplies;
+      var args = arguments;
+
+      if (!args.length) {
+        return queue;
+      } else if (args[0] === 'setGdprApplies') {
+        if (
+          args.length > 3 &&
+          args[2] === 2 &&
+          typeof args[3] === 'boolean'
+        ) {
+          gdprApplies = args[3];
+          if (typeof args[2] === 'function') {
+            args[2]('set', true);
+          }
+        }
+      } else if (args[0] === 'ping') {
+        var retr = {
+          gdprApplies: gdprApplies,
+          cmpLoaded: false,
+          cmpStatus: 'stub'
+        };
+
+        if (typeof args[2] === 'function') {
+          args[2](retr);
+        }
+      } else {
+        if(args[0] === 'init' && typeof args[3] === 'object') {
+          args[3] = Object.assign(args[3], { tag_version: 'V3' });
+        }
+        queue.push(args);
+      }
+    }
+
+    function postMessageEventHandler(event) {
+      var msgIsString = typeof event.data === 'string';
+      var json = {};
+
+      try {
+        if (msgIsString) {
+          json = JSON.parse(event.data);
+        } else {
+          json = event.data;
+        }
+      } catch (ignore) {}
+
+      var payload = json.__tcfapiCall;
+
+      if (payload) {
+        window.__tcfapi(
+          payload.command,
+          payload.version,
+          function(retValue, success) {
+            var returnMsg = {
+              __tcfapiReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: payload.callId
+              }
+            };
+            if (msgIsString) {
+              returnMsg = JSON.stringify(returnMsg);
+            }
+            if (event && event.source && event.source.postMessage) {
+              event.source.postMessage(returnMsg, '*');
+            }
+          },
+          payload.parameter
+        );
+      }
+    }
+
+    while (win) {
+      try {
+        if (win.frames[TCF_LOCATOR_NAME]) {
+          cmpFrame = win;
+          break;
+        }
+      } catch (ignore) {}
+
+      if (win === window.top) {
+        break;
+      }
+      win = win.parent;
+    }
+    if (!cmpFrame) {
+      addFrame();
+      win.__tcfapi = tcfAPIHandler;
+      win.addEventListener('message', postMessageEventHandler, false);
+    }
+  };
+
+  makeStub();
+
+  function makeGppStub() {
+    const CMP_ID = 10;
+    const SUPPORTED_APIS = [
+      '2:tcfeuv2',
+      '6:uspv1',
+      '7:usnatv1',
+      '8:usca',
+      '9:usvav1',
+      '10:uscov1',
+      '11:usutv1',
+      '12:usctv1'
+    ];
+
+    window.__gpp_addFrame = function (n) {
+      if (!window.frames[n]) {
+        if (document.body) {
+          var i = document.createElement("iframe");
+          i.style.cssText = "display:none";
+          i.name = n;
+          document.body.appendChild(i);
+        } else {
+          window.setTimeout(window.__gpp_addFrame, 10, n);
+        }
+      }
+    };
+    window.__gpp_stub = function () {
+      var b = arguments;
+      __gpp.queue = __gpp.queue || [];
+      __gpp.events = __gpp.events || [];
+
+      if (!b.length || (b.length == 1 && b[0] == "queue")) {
+        return __gpp.queue;
+      }
+
+      if (b.length == 1 && b[0] == "events") {
+        return __gpp.events;
+      }
+
+      var cmd = b[0];
+      var clb = b.length > 1 ? b[1] : null;
+      var par = b.length > 2 ? b[2] : null;
+      if (cmd === "ping") {
+        clb(
+          {
+            gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
+            cmpStatus: "stub", // possible values: stub, loading, loaded, error
+            cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
+            signalStatus: "not ready", // possible values: not ready, ready
+            supportedAPIs: SUPPORTED_APIS, // list of supported APIs
+            cmpId: CMP_ID, // IAB assigned CMP ID, may be 0 during stub/loading
+            sectionList: [],
+            applicableSections: [-1],
+            gppString: "",
+            parsedSections: {},
+          },
+          true
+        );
+      } else if (cmd === "addEventListener") {
+        if (!("lastId" in __gpp)) {
+          __gpp.lastId = 0;
+        }
+        __gpp.lastId++;
+        var lnr = __gpp.lastId;
+        __gpp.events.push({
+          id: lnr,
+          callback: clb,
+          parameter: par,
+        });
+        clb(
+          {
+            eventName: "listenerRegistered",
+            listenerId: lnr, // Registered ID of the listener
+            data: true, // positive signal
+            pingData: {
+              gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
+              cmpStatus: "stub", // possible values: stub, loading, loaded, error
+              cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
+              signalStatus: "not ready", // possible values: not ready, ready
+              supportedAPIs: SUPPORTED_APIS, // list of supported APIs
+              cmpId: CMP_ID, // list of supported APIs
+              sectionList: [],
+              applicableSections: [-1],
+              gppString: "",
+              parsedSections: {},
+            },
+          },
+          true
+        );
+      } else if (cmd === "removeEventListener") {
+        var success = false;
+        for (var i = 0; i < __gpp.events.length; i++) {
+          if (__gpp.events[i].id == par) {
+            __gpp.events.splice(i, 1);
+            success = true;
+            break;
+          }
+        }
+        clb(
+          {
+            eventName: "listenerRemoved",
+            listenerId: par, // Registered ID of the listener
+            data: success, // status info
+            pingData: {
+              gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
+              cmpStatus: "stub", // possible values: stub, loading, loaded, error
+              cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
+              signalStatus: "not ready", // possible values: not ready, ready
+              supportedAPIs: SUPPORTED_APIS, // list of supported APIs
+              cmpId: CMP_ID, // CMP ID
+              sectionList: [],
+              applicableSections: [-1],
+              gppString: "",
+              parsedSections: {},
+            },
+          },
+          true
+        );
+      } else if (cmd === "hasSection") {
+        clb(false, true);
+      } else if (cmd === "getSection" || cmd === "getField") {
+        clb(null, true);
+      }
+      //queue all other commands
+      else {
+        __gpp.queue.push([].slice.apply(b));
+      }
+    };
+    window.__gpp_msghandler = function (event) {
+      var msgIsString = typeof event.data === "string";
+      try {
+        var json = msgIsString ? JSON.parse(event.data) : event.data;
+      } catch (e) {
+        var json = null;
+      }
+      if (typeof json === "object" && json !== null && "__gppCall" in json) {
+        var i = json.__gppCall;
+        window.__gpp(
+          i.command,
+          function (retValue, success) {
+            var returnMsg = {
+              __gppReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: i.callId,
+              },
+            };
+            event.source.postMessage(msgIsString ? JSON.stringify(returnMsg) : returnMsg, "*");
+          },
+          "parameter" in i ? i.parameter : null,
+          "version" in i ? i.version : "1.1"
+        );
+      }
+    };
+    if (!("__gpp" in window) || typeof window.__gpp !== "function") {
+      window.__gpp = window.__gpp_stub;
+      window.addEventListener("message", window.__gpp_msghandler, false);
+      window.__gpp_addFrame("__gppLocator");
+    }
+  };
+
+  makeGppStub();
+
+  var uspStubFunction = function() {
+    var arg = arguments;
+    if (typeof window.__uspapi !== uspStubFunction) {
+      setTimeout(function() {
+        if (typeof window.__uspapi !== 'undefined') {
+          window.__uspapi.apply(window.__uspapi, arg);
+        }
+      }, 500);
+    }
+  };
+
+  var checkIfUspIsReady = function() {
+    uspTries++;
+    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+      console.warn('USP is not accessible');
+    } else {
+      clearInterval(uspInterval);
+    }
+  };
+
+  if (typeof window.__uspapi === 'undefined') {
+    window.__uspapi = uspStubFunction;
+    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+})();
+</script>
+<!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9NEF8H5W4V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9NEF8H5W4V');
+</script>
+
+<link rel="stylesheet" href="/css/style.css">
+<style>
+.badge {
+	display: inline-block;
+	min-width: 10px;
+	padding: 4px 5px 1px 5px;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	background-color: #777;
+	border-radius: 10px;
+}
+</style>
+</head>
+<body>
+
+<style>
+@media (max-width: 720px)
+{
+  #navbarCollapse
+  {
+    border: 0;
+    max-height: none;
+    position:absolute;margin-right:16px;padding:16px 16px 24px 16px;width:95%
+  }
+}
+</style>
+
+<div class="navy">
+<nav role="navigation" id="unjnav" class="navbar navbar-default navbar-fixed-top" style="background-color: #eee;background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABZklEQVR4nO3bMQ7CMBBEUV8xFR0VHVIaWkTFcROuEC5guVjZnsnmF9MwBeFpIy2GlMdnP2pZ1q36+sju/t6rUVxLtCtOFwMooIACCujFQZd1O0i/DJnQ5/dXjds0DZlQQAG17gAF1LsDtDeoes3IlnKWZTo69bdXPaPeD1BAAQUUUEB9QNVrRrZMPw+NTsxZOkAB9e4ABdS7A7Q3qHrNyJbwhGaftPCEAgqodQcooN4doL1B1WtGtlj9+67Vtc4nR5zpRu9AQAEFFFBAAfUBVa8Z2WL1M7LTtUQ7QAHVowEKqP5aADXpWJs6p7nYX/nhg/CEAgqodQcooN4doL1B1WtGtgw5D539E/PsBxNaX0AABRRQQAEF1AdUvWZkS3hCM5xdjvh8gAIKqC0aoIDqYaaDqteMbCmzzzyzn7ECCqh3Byig3h2gvUHVa0a28Kxn4PO17jJAAQXUFg1QQPUw00HVa0a2/AGTwTetiDfnHAAAAABJRU5ErkJggg==);">
+<div class="container">
+<div class="navbar-header">
+<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle" style="border:0;background:0;position:absolute;top:4px;right:8px;">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar" style="background-color:#fff;"></span>
+<span class="icon-bar" style="background-color:#fff;"></span>
+<span class="icon-bar" style="background-color:#fff;"></span>
+</button>
+<a href="/" class="navbar-brand">
+<img style="height:46px;display: inline-block;margin-left:-4px;margin-top: -12px;" src="https://unjobs.org/images/logo.gif" alt="United Nations Jobs" border="0"/>
+</a>
+<form class="searchbutton navbar-form" method=POST action="/search" style="float:right;height: 40px;margin: 11px 16px 4px 16px;padding:0px 0px 0px 0px;border:0px;">
+<div class="form-group">
+<div class="input-group">
+<input name="q" class="form-control" placeholder="Search jobs for..." type="text">
+<span class="input-group-btn">
+<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+</span></div></div>
+</form>
+
+</div>
+
+<div id="navbarCollapse" class="collapse navbar-collapse">
+<ul class="nav navbar-nav navbar-left" style="">
+<li class="chip"><a href="https://unjobs.org">Latest</a></li>
+<li class="chip"><a href="https://unjobs.org/duty_stations">Duty Stations</a></li>
+<li class="chip"><a href="https://unjobs.org/organizations">Organizations</a></li>
+<li class="chip"><a href="https://unjobs.org/closing">Closing Soon</a></li>
+</ul></div></div>
+</nav>
+</div>
+
+<form class="form-inline mobilesearchbutton" method=POST action="/search" style="height: 40px;margin: 0px 16px 0px 16px;padding:0px 0px 0px 0px;border:0px;">
+  <div class="form-group">
+      <div class="input-group">
+      <input name="q" class="form-control" placeholder="Search jobs for..." type="text">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+      </span>
+    </div>
+  </div>
+</form>
+
+<section class="container">
+
+<h2 style="font-family: 'Roboto Condensed', sans-serif;font-weight: 400;color: #233A69;margin: 4px 0px 4px 0px;">Jobs with RCS - Resident Coordinator System
+
+<!-- 
+&nbsp;&nbsp;
+
+<span style="max-width:150px;margin-top:10px;float:right;display: inline-block;text-align:right;font-size: 14px;"><a style="color: #233A69;" href="https://unjobs.org/orgnews/rcs">
+
+News for RCS</a></span>
+--> 
+
+</h2>
+<div class="row">
+<div>
+<table style="height:100%;margin: 0px;" width=99% cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td style="padding-top:0px;padding-left: 0px;" align="left" valign="top">
+<div style="max-width:1500px;padding:0px;margin-left: 16px;text-align:left;" class="container">
+<div class="row">
+
+<div class="col-sm-12">
+ <div style="margin-top: 4px;margin-bottom: 0px;">
+  <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td class="nv"><a class="ts" href="https://unjobs.org/non-un-organizations/rcs">&laquo;&nbsp;First</a></td><td class="nv"><a class="ts" href="https://unjobs.org/non-un-organizations/rcs/2"><&nbsp;Prev</a></td><td class="nc"><span style="color: #333333; font-size: 13px">51 - 50 of 27</span></td><td class="nv"><span style="font-size: 13px; color:#cccccc">Next&nbsp;></span></td><td class="nv"><a class="ts" href="https://unjobs.org/non-un-organizations/rcs/2">Last&nbsp;&raquo;</a></td></tr></table>
+ </div>
+ <article style="margin: 0px 0px 8px 0px;padding: 8px 0px 8px 0px;">
+     No vacancies to display at this time.
+   </article>
+ <div style="margin-top: 0px;margin-bottom: 8px;">
+  <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td class="nv"><a class="ts" href="https://unjobs.org/non-un-organizations/rcs">&laquo;&nbsp;First</a></td><td class="nv"><a class="ts" href="https://unjobs.org/non-un-organizations/rcs/2"><&nbsp;Prev</a></td><td class="nc"><span style="color: #333333; font-size: 13px">51 - 50 of 27</span></td><td class="nv"><span style="font-size: 13px; color:#cccccc">Next&nbsp;></span></td><td class="nv"><a class="ts" href="https://unjobs.org/non-un-organizations/rcs/2">Last&nbsp;&raquo;</a></td></tr></table>
+ </div>
+</div>
+
+<div style="clear: both;">
+ <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9196538889333991" data-ad-slot="2358682347" data-ad-format="rectangle"></ins>
+ <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+</div>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td style="width: 96%;border-top: 1px solid #ddd;background: #fff; font-size: 12px; padding: 12px; margin: 12px" align="center" valign="bottom">
+UNjobs Association of Geneva<br>
+Not an official document of the United Nations<br>
+<a href="https://www.iubenda.com/privacy-policy/35887823" class="iubenda-nostyle no-brand iubenda-embed " title="Privacy Policy">Privacy Policy</a> 
+<script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script> | 
+<a href="https://www.iubenda.com/privacy-policy/35887823/cookie-policy" class="iubenda-nostyle no-brand iubenda-embed " title="Cookie Policy">Cookie Policy</a>
+<script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+
+</td>
+</tr>
+</table>
+</div>
+</section>
+
+<script type="text/javascript">    
+var monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];var dayNames = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];var text = 'Closing date: ';var vu = 'http://unjobs.org/vacancies/';$( document ).ready(function() {});</script>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script type="text/javascript">
+   jQuery(document).ready(function() {
+     $("time.timeago").timeago();
+   });
+</script>
+
+
+</body>
+</html>
