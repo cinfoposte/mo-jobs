@@ -32,6 +32,15 @@ import yaml
 from bs4 import BeautifulSoup
 from dateutil import parser as dateparser
 
+# curl_cffi impersonates a real Chrome browser at the TLS level.
+# Without it, Cloudflare detects Python's requests library by its
+# TLS fingerprint and returns 403 regardless of HTTP headers.
+try:
+    from curl_cffi import requests as curl_requests
+    _HAVE_CURL_CFFI = True
+except ImportError:
+    _HAVE_CURL_CFFI = False
+
 # ---------------------------------------------------------------------------
 # Constants
 # ---------------------------------------------------------------------------
@@ -84,8 +93,14 @@ log = logging.getLogger("scraper")
 # ---------------------------------------------------------------------------
 # Helpers - HTTP
 # ---------------------------------------------------------------------------
-_session = requests.Session()
-_session.headers.update(BROWSER_HEADERS)
+
+# Prefer curl_cffi: it impersonates Chrome's TLS fingerprint so Cloudflare
+# doesn't block us with 403.  Fall back to plain requests if unavailable.
+if _HAVE_CURL_CFFI:
+    _session = curl_requests.Session(impersonate="chrome")
+else:
+    _session = requests.Session()
+    _session.headers.update(BROWSER_HEADERS)
 
 
 def _is_challenge_page(resp: requests.Response) -> bool:
