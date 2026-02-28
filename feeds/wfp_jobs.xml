@@ -5,7 +5,14 @@
     <link>https://unjobs.org/organizations/wfp</link>
     <description>Latest job vacancies for WFP – World Food Programme sourced from UNjobs.org. JPO positions are excluded.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 27 Feb 2026 19:38:23 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Feb 2026 09:15:06 +0000</lastBuildDate>
     <atom:link href="https://cinfoposte.github.io/mo-jobs/feeds/wfp_jobs.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Internal Auditor P4, Rome, Italy</title>
+      <link>https://unjobs.org/vacancies/1772202217539</link>
+      <guid isPermaLink="false">1668982ab778db7f0e0dc2dc4b7b110f</guid>
+      <pubDate>Sat, 28 Feb 2026 09:15:06 +0000</pubDate>
+      <description />
+    </item>
   </channel>
 </rss>
