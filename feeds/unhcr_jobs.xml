@@ -5,13 +5,20 @@
     <link>https://unjobs.org/organizations/unhcr</link>
     <description>Latest job vacancies for UNHCR – UN Refugee Agency sourced from UNjobs.org. JPO positions are excluded.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Mar 2026 09:16:01 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2026 21:01:59 +0000</lastBuildDate>
     <atom:link href="https://cinfoposte.github.io/mo-jobs/feeds/unhcr_jobs.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UNV Community liaison, Fès, Oujda, Rabat, Casablanca, Morocco</title>
+      <link>https://unjobs.org/vacancies/1772721486399</link>
+      <guid isPermaLink="false">7ff27d2bd2fde5f99dc8313e241f5de1</guid>
+      <pubDate>Fri, 06 Mar 2026 21:01:59 +0000</pubDate>
+      <description />
+    </item>
     <item>
       <title>UNV Community Liaison, Bangui, Central African Republic</title>
       <link>https://unjobs.org/vacancies/1772028320078</link>
       <guid isPermaLink="false">fe79f4caaa7174691bb5999ea2017a8a</guid>
-      <pubDate>Fri, 06 Mar 2026 09:16:01 +0000</pubDate>
+      <pubDate>Fri, 06 Mar 2026 21:01:59 +0000</pubDate>
       <description />
     </item>
   </channel>
