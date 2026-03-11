@@ -1,41 +1,33 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
-unhcr,"Associate Programme Officer, Tahoua, Niger",https://unjobs.org/vacancies/1772831351434,,no_grade
-unhcr,"Information Management Associate, Islamabad, Pakistan",https://unjobs.org/vacancies/1772831407873,,no_grade
-unhcr,"Development Officer, Ouagadougou, Burkina Faso",https://unjobs.org/vacancies/1772831426412,,no_grade
-unhcr,"Health Information System Officer, Geneva, Switzerland",https://unjobs.org/vacancies/1772831454221,,no_grade
-unhcr,"Driver, Benghazi, Libya",https://unjobs.org/vacancies/1772907193708,,no_grade
-unhcr,"Senior PSP Associate (Full Stack Developer), Copenhagen, Denmark",https://unjobs.org/vacancies/1773172048322,,no_grade
-unhcr,"Driver, Tripoli, Libya",https://unjobs.org/vacancies/1773172059603,,no_grade
-unhcr,"Senior Public Health Associate, Tindouf, Algeria",https://unjobs.org/vacancies/1773172071143,,no_grade
-unhcr,"Photographer, Cairo, Egypt",https://unjobs.org/vacancies/1773172083707,,no_grade
-unhcr,"Associate IT Service Delivery Management Officer, Bangui, Central African Republic",https://unjobs.org/vacancies/1773172095163,,no_grade
-unhcr,"Economic Integration Intern, Panama",https://unjobs.org/vacancies/1773172119438,,intern_consultant
-unhcr,"Protection Internship, Warsaw, Poland",https://unjobs.org/vacancies/1773172129943,,intern_consultant
-unhcr,"External Relations Intern, Sofia, Bulgaria",https://unjobs.org/vacancies/1773172140605,,intern_consultant
-unhcr,"Registration Associate, Algiers, Algeria",https://unjobs.org/vacancies/1773172151908,,no_grade
-unhcr,"External Relations Officer, Cairo, Egypt",https://unjobs.org/vacancies/1773172164487,,no_grade
-unhcr,"Boat Driver (Auxiliar Lanchero), Mocoa, Colombia",https://unjobs.org/vacancies/1773172175977,,no_grade
-unhcr,"Head of Field Unit, Birao, Central African Republic",https://unjobs.org/vacancies/1773172185963,,no_grade
-unhcr,"Senior Call Center Assistant, Algiers, Algeria",https://unjobs.org/vacancies/1773172195830,,no_grade
-unhcr,"Driver, Tegucigalpa, Honduras",https://unjobs.org/vacancies/1773191083605,,no_grade
-unhcr,"Protection Associate, Dakar, Senegal",https://unjobs.org/vacancies/1772831445513,,no_grade
-unhcr,"UNOPS Registration Clerk, Lago Agrio, Ecuador",https://unjobs.org/vacancies/1772831378634,,no_grade
-unhcr,"Shelter/WASH Associate, Uvira, Democratic Republic of Congo",https://unjobs.org/vacancies/1772831328160,,no_grade
-unhcr,"Protection Associate, Kaoma, Zambia",https://unjobs.org/vacancies/1772831341918,,no_grade
-unhcr,"Senior Supply Assistant, Quetta, Pakistan",https://unjobs.org/vacancies/1772831361148,,no_grade
-unhcr,"Senior Protection Assistant, Lima, Peru",https://unjobs.org/vacancies/1772831369594,,no_grade
-unhcr,"Senior Communications Assistant, Kyiv, Ukraine",https://unjobs.org/vacancies/1772831388693,,no_grade
-unhcr,"Associate Education Officer, Islamabad, Pakistan",https://unjobs.org/vacancies/1772831398980,,no_grade
-unhcr,"Assistant Community-Based Protection Officer, Faradje, Democratic Republic of Congo",https://unjobs.org/vacancies/1772831416808,,no_grade
-unhcr,"Associate PSP Officer (AI Developer), Copenhagen, Denmark",https://unjobs.org/vacancies/1772831435913,,no_grade
 unhcr,"Senior IT Assistant, Bangui, Central African Republic",https://unjobs.org/vacancies/1772831463505,,no_grade
-unhcr,"Protection Associate, Ankara, Türkiye",https://unjobs.org/vacancies/1772831471719,,no_grade
-unhcr,"Operations Associate (Education), Harare, Zimbabwe",https://unjobs.org/vacancies/1772831480923,,no_grade
+unhcr,"Associate PSP Officer (AI Developer), Copenhagen, Denmark",https://unjobs.org/vacancies/1772831435913,,no_grade
+unhcr,"Assistant Community-Based Protection Officer, Faradje, Democratic Republic of Congo",https://unjobs.org/vacancies/1772831416808,,no_grade
+unhcr,"Associate Education Officer, Islamabad, Pakistan",https://unjobs.org/vacancies/1772831398980,,no_grade
+unhcr,"Senior Communications Assistant, Kyiv, Ukraine",https://unjobs.org/vacancies/1772831388693,,no_grade
+unhcr,"Senior Protection Assistant, Lima, Peru",https://unjobs.org/vacancies/1772831369594,,no_grade
+unhcr,"Senior Supply Assistant, Quetta, Pakistan",https://unjobs.org/vacancies/1772831361148,,no_grade
+unhcr,"Protection Associate, Kaoma, Zambia",https://unjobs.org/vacancies/1772831341918,,no_grade
+unhcr,"Shelter/WASH Associate, Uvira, Democratic Republic of Congo",https://unjobs.org/vacancies/1772831328160,,no_grade
+unhcr,"Protection Associate, Dakar, Senegal",https://unjobs.org/vacancies/1772831445513,,no_grade
+unhcr,"Driver, Tegucigalpa, Honduras",https://unjobs.org/vacancies/1773191083605,,no_grade
+unhcr,"Senior Protection Assistant, Esquipulas, Guatemala",https://unjobs.org/vacancies/1773172107422,,no_grade
+unhcr,"Senior Call Center Assistant, Algiers, Algeria",https://unjobs.org/vacancies/1773172195830,,no_grade
+unhcr,"Head of Field Unit, Birao, Central African Republic",https://unjobs.org/vacancies/1773172185963,,no_grade
+unhcr,"Boat Driver (Auxiliar Lanchero), Mocoa, Colombia",https://unjobs.org/vacancies/1773172175977,,no_grade
+unhcr,"External Relations Officer, Cairo, Egypt",https://unjobs.org/vacancies/1773172164487,,no_grade
+unhcr,"Registration Associate, Algiers, Algeria",https://unjobs.org/vacancies/1773172151908,,no_grade
+unhcr,"External Relations Intern, Sofia, Bulgaria",https://unjobs.org/vacancies/1773172140605,,intern_consultant
+unhcr,"Protection Internship, Warsaw, Poland",https://unjobs.org/vacancies/1773172129943,,intern_consultant
+unhcr,"Associate IT Service Delivery Management Officer, Bangui, Central African Republic",https://unjobs.org/vacancies/1773172095163,,no_grade
+unhcr,"Photographer, Cairo, Egypt",https://unjobs.org/vacancies/1773172083707,,no_grade
+unhcr,"Senior Public Health Associate, Tindouf, Algeria",https://unjobs.org/vacancies/1773172071143,,no_grade
+unhcr,"Driver, Tripoli, Libya",https://unjobs.org/vacancies/1773172059603,,no_grade
+unhcr,"Senior PSP Associate (Full Stack Developer), Copenhagen, Denmark",https://unjobs.org/vacancies/1773172048322,,no_grade
+unhcr,"UNOPS Registration Clerk, Lago Agrio, Ecuador",https://unjobs.org/vacancies/1772831378634,,no_grade
 unhcr,"Assistant(e) Principal (e) au rapatriement, Assistant(e) Principal (e) au rapatriement, Kanga Bandoro, Central African Republic",https://unjobs.org/vacancies/1772721390403,,no_grade
 unhcr,"Associate Registration and Identity Management Officer, Associate Registration and Identity Management Officer, Adjumani/Pakelle, Uganda",https://unjobs.org/vacancies/1772721346029,,no_grade
 unhcr,"Associate Supply Officer, Associate Supply Officer, Sin Paung Wei, Myanmar",https://unjobs.org/vacancies/1772721222174,,no_grade
 unhcr,"Associate Registration and Identity Management Officer, Associate Registration and Identity Management Officer, Yumbe, Uganda",https://unjobs.org/vacancies/1772721087663,,no_grade
-unhcr,"Charge de  MEAL, Bamako, Mali",https://unjobs.org/vacancies/1772547269982,,no_grade
 unhcr,"Electrician, Gambella, Ethiopia",https://unjobs.org/vacancies/1772653724277,,no_grade
 unhcr,"Protection Assistant, Bassikounou, Mauritania",https://unjobs.org/vacancies/1772653683245,,no_grade
 unhcr,"Education Associate, Quetta, Pakistan",https://unjobs.org/vacancies/1772634027220,,no_grade
@@ -49,3 +41,11 @@ unhcr,"Building Services Assistant, Gambella, Ethiopia",https://unjobs.org/vacan
 unhcr,"Senior Protection Associate, Manila, Philippines",https://unjobs.org/vacancies/1772633897963,,no_grade
 unhcr,"Building Services Associate, Addis, Ethiopia",https://unjobs.org/vacancies/1772633889984,,no_grade
 unhcr,"Data Management Associate, Toronto, Canada",https://unjobs.org/vacancies/1772633880711,,no_grade
+unhcr,"Electrician, Asosa, Ethiopia",https://unjobs.org/vacancies/1772633872362,,no_grade
+unhcr,"Senior Protection Associate, Manila, Philippines",https://unjobs.org/vacancies/1772633863583,,no_grade
+unhcr,"Inter-Agency Coordination Associate, Bertoua, Cameroon",https://unjobs.org/vacancies/1772633821571,,no_grade
+unhcr,"Building Services Assistant, Gambella, Ethiopia",https://unjobs.org/vacancies/1772633813514,,no_grade
+unhcr,"Associate Protection Officer, Cairo, Egypt",https://unjobs.org/vacancies/1772633788607,,no_grade
+unhcr,"Field Associate, Dalbandin, Pakistan",https://unjobs.org/vacancies/1772633931657,,no_grade
+unhcr,"Senior Building Services Assistant, Melkadida, Ethiopia",https://unjobs.org/vacancies/1772634000569,,no_grade
+unhcr,"Electrician, Melkadida, Ethiopia",https://unjobs.org/vacancies/1772633838698,,no_grade
