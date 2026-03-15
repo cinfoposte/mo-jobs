@@ -1097,6 +1097,32 @@ Sarajevo</a>
     content: '•\00a0\00a0\00a0';
     color: #000; /* bonus: you can customize the bullet color */
 }
+
+.glossary-item {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 0.5rem;
+  row-gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.glossary-term,
+.glossary-definition {
+  margin: 0;
+}
+
+.glossary-term {
+  font-weight: 700;
+}
+/*
+.glossary-term::after {
+  content: ":";
+}
+*/
+.glossary-definition p {
+	margin: 2px 0 0 0;
+}
+
 </style>
 
 <div class="t1773239074669 fp-snippet">
@@ -1221,7 +1247,7 @@ Sarajevo</a>
  
 
    <p>
-   Any request for clarification must be sent in writing via messaging functionality in the portal. UNDP will respond in writing including an explanation of the query without identifying the source of inquiry. </p> <ul> <li>Offers must be submitted directly in the system following this link: http://supplier.quantum.partneragencies.org using the profile you may have in the portal. If you have never registered before, you can create a profile using the registration link shared via the procurement notice and follow the instructions in the guides available on the UNDP website: https://www.undp.org/procurement/business/resources-for-bidders. </li> <li>Please contact <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="aedccbc9c7dddadcd780cccfeedbc0cade80c1dcc9">[email&#160;protected]</a> if you have previously registered but cannot access the portal. Do not attempt to register again. / Molimo Vas da kontaktirate UNDP BiH Registry putem <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1b697e7c72686f696235797a5b6e757f6b3574697c">[email&#160;protected]</a> ukoliko niste u moguÄ‡nosti da pristupite svom profilu, a prethodno ste se registrovli. Molimo Vas da ne vršite ponovnu registraciju. </li> </ul> 
+   Any request for clarification must be sent in writing via messaging functionality in the portal. UNDP will respond in writing including an explanation of the query without identifying the source of inquiry. </p> <ul> <li>Offers must be submitted directly in the system following this link: http://supplier.quantum.partneragencies.org using the profile you may have in the portal. If you have never registered before, you can create a profile using the registration link shared via the procurement notice and follow the instructions in the guides available on the UNDP website: https://www.undp.org/procurement/business/resources-for-bidders. </li> <li>Please contact <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="88faedefe1fbfcfaf1a6eae9c8fde6ecf8a6e7faef">[email&#160;protected]</a> if you have previously registered but cannot access the portal. Do not attempt to register again. / Molimo Vas da kontaktirate UNDP BiH Registry putem <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8efcebe9e7fdfafcf7a0ecefcefbe0eafea0e1fce9">[email&#160;protected]</a> ukoliko niste u moguÄ‡nosti da pristupite svom profilu, a prethodno ste se registrovli. Molimo Vas da ne vršite ponovnu registraciju. </li> </ul> 
 
    
      
@@ -1234,7 +1260,7 @@ Sarajevo</a>
  
 
    <p>
-   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="156770727c6661676c3b777455607b71653b7a6772">[email&#160;protected]</a> </p> 
+   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8dffe8eae4fef9fff4a3efeccdf8e3e9fda3e2ffea">[email&#160;protected]</a> </p> 
 
    
    
@@ -1252,7 +1278,7 @@ Sarajevo</a>
  
 
    <p>
-   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="324057555b4146404b1c505372475c56421c5d4055">[email&#160;protected]</a> </p> 
+   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3143545658424543481f535071445f55411f5e4356">[email&#160;protected]</a> </p> 
 
    
    
@@ -1279,7 +1305,7 @@ Sarajevo</a>
  
 
    <p>
-   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="394b5c5e504a4d4b40175b58794c575d4917564b5e">[email&#160;protected]</a> </p> 
+   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ddafb8bab4aea9afa4f3bfbc9da8b3b9adf3b2afba">[email&#160;protected]</a> </p> 
 
    
    
@@ -1297,7 +1323,7 @@ Sarajevo</a>
  
 
    <p>
-   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="592b3c3e302a2d2b20773b38192c373d2977362b3e">[email&#160;protected]</a> </p> 
+   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7a081f1d13090e080354181b3a0f141e0a5415081d">[email&#160;protected]</a> </p> 
 
    
    
@@ -1413,9 +1439,9 @@ Sarajevo</a>
 <div style="text-align:center;font-size:11px;max-width: 728px;margin: 8px auto;padding:6px;border: 0px solid #ddddd0;">
 Click the button below to visit the original announcement on the recruiting organization's website.
 </div>
-<input type="hidden" name="item"  value="833426228224355486064186159225326357060957">
-<input type="hidden" name="iitem" value="833522928224355389364089556022026357060957">
-<input type="hidden" name="oitem" value="833426228321055389460789459322026357060957">
+<input type="hidden" name="item"  value="833426324924452089364186159322122960360957">
+<input type="hidden" name="iitem" value="930126324924452186064089555925422960360957">
+<input type="hidden" name="oitem" value="833522928321055389364186255925326260360957">
 
 <button type="submit" id="more-info-button" class="btn btn-raised btn-primary" data-toggle="" data-target="">More Information and Application Details</button>
 </form>
@@ -1635,8 +1661,8 @@ function restorePreview(outer) {
 -->
 <script src="https://www.youtube.com/iframe_api"></script>
 
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dc9d6cb2a80d6b3',t:'MTc3MzU2MDEwMQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-</body>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dcdd9c9d848a7ae',t:'MTc3MzYwMjE2Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
 
 

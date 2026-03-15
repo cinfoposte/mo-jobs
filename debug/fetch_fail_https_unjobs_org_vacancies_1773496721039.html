@@ -236,7 +236,7 @@
       if (cmd === "ping") {
         clb(
           {
-            gppVersion: "1.1", // must be âVersion.Subversionâ, current: â1.1â
+            gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
             cmpStatus: "stub", // possible values: stub, loading, loaded, error
             cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
             signalStatus: "not ready", // possible values: not ready, ready
@@ -266,7 +266,7 @@
             listenerId: lnr, // Registered ID of the listener
             data: true, // positive signal
             pingData: {
-              gppVersion: "1.1", // must be âVersion.Subversionâ, current: â1.1â
+              gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
               cmpStatus: "stub", // possible values: stub, loading, loaded, error
               cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
               signalStatus: "not ready", // possible values: not ready, ready
@@ -295,7 +295,7 @@
             listenerId: par, // Registered ID of the listener
             data: success, // status info
             pingData: {
-              gppVersion: "1.1", // must be âVersion.Subversionâ, current: â1.1â
+              gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
               cmpStatus: "stub", // possible values: stub, loading, loaded, error
               cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
               signalStatus: "not ready", // possible values: not ready, ready
@@ -1089,14 +1089,40 @@ Tashkent</a>
 }
 
 .fp-snippet ul li:before {
-    content: 'â¢\00a0\00a0\00a0';
+    content: '•\00a0\00a0\00a0';
     color: #000; /* bonus: you can customize the bullet color */
 } 
 
 .fp-snippet ol li:before {
-    content: 'â¢\00a0\00a0\00a0';
+    content: '•\00a0\00a0\00a0';
     color: #000; /* bonus: you can customize the bullet color */
 }
+
+.glossary-item {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 0.5rem;
+  row-gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.glossary-term,
+.glossary-definition {
+  margin: 0;
+}
+
+.glossary-term {
+  font-weight: 700;
+}
+/*
+.glossary-term::after {
+  content: ":";
+}
+*/
+.glossary-definition p {
+	margin: 2px 0 0 0;
+}
+
 </style>
 
 <div class="t1773496721039 fp-snippet">
@@ -1243,7 +1269,7 @@ Tashkent</a>
  
 
    <p>
-   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c3b3b6edb6b983b6ada7b3edacb1a4">[email&#160;protected]</a> </p> 
+   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2353560d565963564d47530d4c5144">[email&#160;protected]</a> </p> 
 
    
    
@@ -1261,7 +1287,7 @@ Tashkent</a>
  
 
    <p>
-   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4c3c396239360c3922283c62233e2b">[email&#160;protected]</a> </p> 
+   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="29595c075c53695c474d5907465b4e">[email&#160;protected]</a> </p> 
 
    
    
@@ -1288,7 +1314,7 @@ Tashkent</a>
  
 
    <p>
-   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="92e2e7bce7e8d2e7fcf6e2bcfde0f5">[email&#160;protected]</a> </p> 
+   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b7c7c299c2cdf7c2d9d3c799d8c5d0">[email&#160;protected]</a> </p> 
 
    
    
@@ -1306,7 +1332,7 @@ Tashkent</a>
  
 
    <p>
-   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4a3a3f643f300a3f242e3a6425382d">[email&#160;protected]</a> </p> 
+   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0474712a717e44716a60742a6b7663">[email&#160;protected]</a> </p> 
 
    
    
@@ -1426,9 +1452,9 @@ Tashkent</a>
 <div style="text-align:center;font-size:11px;max-width: 728px;margin: 8px auto;padding:6px;border: 0px solid #ddddd0;">
 Click the button below to visit the original announcement on the recruiting organization's website.
 </div>
-<input type="hidden" name="item"  value="930223025021057427892057923387419552159957">
-<input type="hidden" name="iitem" value="833522928224454031191961223387419455459957">
-<input type="hidden" name="oitem" value="833523025021057331095261320087516155363257">
+<input type="hidden" name="item"  value="930222928321154127795261223484119455459957">
+<input type="hidden" name="iitem" value="930223025021154127891961223484216155363257">
+<input type="hidden" name="oitem" value="930126324924357331095358020184216155363257">
 
 <button type="submit" id="more-info-button" class="btn btn-raised btn-primary" data-toggle="" data-target="">More Information and Application Details</button>
 </form>
@@ -1553,9 +1579,9 @@ function activateYouTubePreview(preview) {
 
   preview.replaceWith(outer);
 
-  // âââââââââââââââââââââââââââââââââââââââââââââ
+  // ─────────────────────────────────────────────
   // Attach YouTube Player API to THIS iframe
-  // âââââââââââââââââââââââââââââââââââââââââââââ
+  // ─────────────────────────────────────────────
   const attachWhenReady = () => {
     if (!window.YT || !YT.Player) return false;
 
@@ -1648,7 +1674,7 @@ function restorePreview(outer) {
 -->
 <script src="https://www.youtube.com/iframe_api"></script>
 
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dc9c0d98adbd6b3',t:'MTc3MzU1OTIwMg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dcdc4a73868a7ae',t:'MTc3MzYwMTMwMQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
 
