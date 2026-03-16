@@ -1097,6 +1097,32 @@ Manama</a>
     content: '•\00a0\00a0\00a0';
     color: #000; /* bonus: you can customize the bullet color */
 }
+
+.glossary-item {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 0.5rem;
+  row-gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.glossary-term,
+.glossary-definition {
+  margin: 0;
+}
+
+.glossary-term {
+  font-weight: 700;
+}
+/*
+.glossary-term::after {
+  content: ":";
+}
+*/
+.glossary-definition p {
+	margin: 2px 0 0 0;
+}
+
 </style>
 
 <div class="t1773411136033 fp-snippet">
@@ -1234,9 +1260,33 @@ Manama</a>
 
    
      
-   <script>console.log(``);</script>
+   <script>console.log(`<aside class="glossary-sidebar">
+  <h3 class="glossary-heading">📚 Key Term</h3>
+  <dl class="glossary-list">
+    <div class="glossary-item">
+      <dt class="glossary-term">Quantum</dt>
+      
+      <dd class="glossary-definition">
+        <p>The Quantum project launched in mid-2020, as a core part of UNDP’s digital transformation agenda to build a strong, cloud-based foundation that is fit for purpose, adds value to UNDP and our partners, and can evolve with changing needs. Quantum will fully replace ATLAS with a future-proofed, digital engagement platform from January 2023.</p>
+        
+      </dd>
+    </div>
+  </dl>
+</aside>`);</script>
    <script>console.log(`undp 1773411136033`);</script>
-
+<aside class="glossary-sidebar">
+  <h3 class="glossary-heading">📚 Key Term</h3>
+  <dl class="glossary-list">
+    <div class="glossary-item">
+      <dt class="glossary-term">Quantum</dt>
+      
+      <dd class="glossary-definition">
+        <p>The Quantum project launched in mid-2020, as a core part of UNDP’s digital transformation agenda to build a strong, cloud-based foundation that is fit for purpose, adds value to UNDP and our partners, and can evolve with changing needs. Quantum will fully replace ATLAS with a future-proofed, digital engagement platform from January 2023.</p>
+        
+      </dd>
+    </div>
+  </dl>
+</aside>
    
  
 
@@ -1252,7 +1302,7 @@ Manama</a>
  
 
    <p>
-   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ee948f869c8fc08f86838b8aae9b808a9ec0819c89">[email&#160;protected]</a> </p> 
+   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="344e555c46551a555c59515074415a50441a5b4653">[email&#160;protected]</a> </p> 
 
    
    
@@ -1270,7 +1320,7 @@ Manama</a>
  
 
    <p>
-   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0a706b62786b246b62676f6e4a7f646e7a2465786d">[email&#160;protected]</a> </p> 
+   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0278636a70632c636a6f676642776c66722c6d7065">[email&#160;protected]</a> </p> 
 
    
    
@@ -1297,7 +1347,7 @@ Manama</a>
  
 
    <p>
-   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="98e2f9f0eaf9b6f9f0f5fdfcd8edf6fce8b6f7eaff">[email&#160;protected]</a> </p> 
+   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="275d464f554609464f4a4243675249435709485540">[email&#160;protected]</a> </p> 
 
    
    
@@ -1315,7 +1365,7 @@ Manama</a>
  
 
    <p>
-   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1c667d746e7d327d747179785c6972786c32736e7b">[email&#160;protected]</a> </p> 
+   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e399828b9182cd828b8e8687a3968d8793cd8c9184">[email&#160;protected]</a> </p> 
 
    
    
@@ -1409,19 +1459,35 @@ Manama</a>
         <a style="text-decoration: none;" href="https://unjobs.org/themes/development-planning">development planning</a>
        </div>
                                <div class="md-chip md-chip-raised md-chip-hover" style="margin-bottom: 10px;">
-        <a style="text-decoration: none;" href="https://unjobs.org/themes/development-policy">development policy</a>
-       </div>
-                               <div class="md-chip md-chip-raised md-chip-hover" style="margin-bottom: 10px;">
         <a style="text-decoration: none;" href="https://unjobs.org/themes/development-research">development research</a>
        </div>
                                <div class="md-chip md-chip-raised md-chip-hover" style="margin-bottom: 10px;">
         <a style="text-decoration: none;" href="https://unjobs.org/themes/human-development">human development</a>
+       </div>
+                               <div class="md-chip md-chip-raised md-chip-hover" style="margin-bottom: 10px;">
+        <a style="text-decoration: none;" href="https://unjobs.org/themes/project-personnel">project personnel</a>
        </div>
                </div>
 
 
 
 
+        <div class="md-chips" style="margin-top:8px;padding-top:16px;border-top: 1px solid #eee;text-align:center;margin-bottom:0px;padding-bottom:0px;">
+
+     
+               <div class="md-chip md-chip-raised md-chip-hover" style="background: #555;font-weight: 400;color: #fff;">Skills</div>
+       
+       <div class="md-chip md-chip-raised md-chip-hover" style="margin-bottom: 10px;">
+        <a style="text-decoration: none;" href="https://unjobs.org/skills/evidence-based-analysis">Evidence-Based Analysis</a>
+       </div>
+
+     
+       
+       <div class="md-chip md-chip-raised md-chip-hover" style="margin-bottom: 10px;">
+        <a style="text-decoration: none;" href="https://unjobs.org/skills/conceptual-framing">Conceptual Framing</a>
+       </div>
+
+         </div>
 
 <div style="clear: both;">
 <ins class="adsbygoogle" style="margin: 16px 0px;display:block" data-full-width-responsive="true" data-ad-client="ca-pub-9196538889333991" data-ad-slot="2358682347" data-ad-format="rectangle"></ins>
@@ -1435,9 +1501,9 @@ Manama</a>
 <div style="text-align:center;font-size:11px;max-width: 728px;margin: 8px auto;padding:6px;border: 0px solid #ddddd0;">
 Click the button below to visit the original announcement on the recruiting organization's website.
 </div>
-<input type="hidden" name="item"  value="833523025021057321517217122455954552055521">
-<input type="hidden" name="iitem" value="833426228224454118120517122456051155452221">
-<input type="hidden" name="oitem" value="930126325021057321420517219059254552152221">
+<input type="hidden" name="item"  value="833522928224357418217217219059351252152221">
+<input type="hidden" name="iitem" value="833522928321154118217217219059254552152221">
+<input type="hidden" name="oitem" value="833426228224454118217217122359351252055521">
 
 <button type="submit" id="more-info-button" class="btn btn-raised btn-primary" data-toggle="" data-target="">More Information and Application Details</button>
 </form>
@@ -1657,8 +1723,8 @@ function restorePreview(outer) {
 -->
 <script src="https://www.youtube.com/iframe_api"></script>
 
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dc9c85cafafd6b3',t:'MTc3MzU1OTUxMA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dd22acd19c42ab8',t:'MTc3MzY0NzQyOA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
 </html>
 
 

@@ -1097,6 +1097,32 @@ Juba</a>
     content: '•\00a0\00a0\00a0';
     color: #000; /* bonus: you can customize the bullet color */
 }
+
+.glossary-item {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 0.5rem;
+  row-gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.glossary-term,
+.glossary-definition {
+  margin: 0;
+}
+
+.glossary-term {
+  font-weight: 700;
+}
+/*
+.glossary-term::after {
+  content: ":";
+}
+*/
+.glossary-definition p {
+	margin: 2px 0 0 0;
+}
+
 </style>
 
 <div class="t1773411076505 fp-snippet">
@@ -1225,16 +1251,40 @@ Juba</a>
 
    
      
-   <script>console.log(``);</script>
+   <script>console.log(`<aside class="glossary-sidebar">
+  <h3 class="glossary-heading">📚 Key Term</h3>
+  <dl class="glossary-list">
+    <div class="glossary-item">
+      <dt class="glossary-term">Quantum</dt>
+      
+      <dd class="glossary-definition">
+        <p>The Quantum project launched in mid-2020, as a core part of UNDP’s digital transformation agenda to build a strong, cloud-based foundation that is fit for purpose, adds value to UNDP and our partners, and can evolve with changing needs. Quantum will fully replace ATLAS with a future-proofed, digital engagement platform from January 2023.</p>
+        
+      </dd>
+    </div>
+  </dl>
+</aside>`);</script>
    <script>console.log(`undp 1773411076505`);</script>
-
+<aside class="glossary-sidebar">
+  <h3 class="glossary-heading">📚 Key Term</h3>
+  <dl class="glossary-list">
+    <div class="glossary-item">
+      <dt class="glossary-term">Quantum</dt>
+      
+      <dd class="glossary-definition">
+        <p>The Quantum project launched in mid-2020, as a core part of UNDP’s digital transformation agenda to build a strong, cloud-based foundation that is fit for purpose, adds value to UNDP and our partners, and can evolve with changing needs. Quantum will fully replace ATLAS with a future-proofed, digital engagement platform from January 2023.</p>
+        
+      </dd>
+    </div>
+  </dl>
+</aside>
    
  
 
  
 
    <p>
-   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e595978a8690978088808b91cb8c8b838acb9696a5908b8195cb8a9782">[email&#160;protected]</a> </p> 
+   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1d6d6f727e686f78707873693374737b72336e6e5d6873796d33726f7a">[email&#160;protected]</a> </p> 
 
    
    
@@ -1252,7 +1302,7 @@ Juba</a>
  
 
    <p>
-   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1a6a6875796f687f777f746e3473747c753469695a6f747e6a3475687d">[email&#160;protected]</a> </p> 
+   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b0c0c2dfd3c5c2d5ddd5dec49ed9ded6df9ec3c3f0c5ded4c09edfc2d7">[email&#160;protected]</a> </p> 
 
    
    
@@ -1279,7 +1329,7 @@ Juba</a>
  
 
    <p>
-   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="92e2e0fdf1e7e0f7fff7fce6bcfbfcf4fdbce1e1d2e7fcf6e2bcfde0f5">[email&#160;protected]</a> </p> 
+   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="57272538342225323a323923793e393138792424172239332779382530">[email&#160;protected]</a> </p> 
 
    
    
@@ -1297,7 +1347,7 @@ Juba</a>
  
 
    <p>
-   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e393918c809691868e868d97cd8a8d858ccd9090a3968d8793cd8c9184">[email&#160;protected]</a> </p> 
+   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="92e2e0fdf1e7e0f7fff7fce6bcfbfcf4fdbce1e1d2e7fcf6e2bcfde0f5">[email&#160;protected]</a> </p> 
 
    
    
@@ -1391,10 +1441,10 @@ Juba</a>
         <a style="text-decoration: none;" href="https://unjobs.org/themes/development-projects">development projects</a>
        </div>
                                <div class="md-chip md-chip-raised md-chip-hover" style="margin-bottom: 10px;">
-        <a style="text-decoration: none;" href="https://unjobs.org/themes/skills-development">skills development</a>
+        <a style="text-decoration: none;" href="https://unjobs.org/themes/employment-services">employment services</a>
        </div>
                                <div class="md-chip md-chip-raised md-chip-hover" style="margin-bottom: 10px;">
-        <a style="text-decoration: none;" href="https://unjobs.org/themes/workforce-development">workforce development</a>
+        <a style="text-decoration: none;" href="https://unjobs.org/themes/skills-development">skills development</a>
        </div>
                                <div class="md-chip md-chip-raised md-chip-hover" style="margin-bottom: 10px;">
         <a style="text-decoration: none;" href="https://unjobs.org/themes/youth-employment">youth employment</a>
@@ -1417,9 +1467,9 @@ Juba</a>
 <div style="text-align:center;font-size:11px;max-width: 728px;margin: 8px auto;padding:6px;border: 0px solid #ddddd0;">
 Click the button below to visit the original announcement on the recruiting organization's website.
 </div>
-<input type="hidden" name="item"  value="930126228224454021420516255927356084156455">
-<input type="hidden" name="iitem" value="930223025021154118217119555927259287553155">
-<input type="hidden" name="oitem" value="930223024924357418120516255927259384253155">
+<input type="hidden" name="item"  value="833426324924357321420419459227259287553155">
+<input type="hidden" name="iitem" value="930223025021154021420516255927259384156455">
+<input type="hidden" name="oitem" value="930126228224454021517119556024056084156455">
 
 <button type="submit" id="more-info-button" class="btn btn-raised btn-primary" data-toggle="" data-target="">More Information and Application Details</button>
 </form>
@@ -1640,7 +1690,7 @@ function restorePreview(outer) {
 <script src="https://www.youtube.com/iframe_api"></script>
 
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dc9bc91ee32d6b3',t:'MTc3MzU1OTAyNw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dd22a9a3be62ab8',t:'MTc3MzY0NzQyMA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
 
 

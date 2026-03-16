@@ -1097,6 +1097,32 @@ Apia</a>
     content: '•\00a0\00a0\00a0';
     color: #000; /* bonus: you can customize the bullet color */
 }
+
+.glossary-item {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 0.5rem;
+  row-gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.glossary-term,
+.glossary-definition {
+  margin: 0;
+}
+
+.glossary-term {
+  font-weight: 700;
+}
+/*
+.glossary-term::after {
+  content: ":";
+}
+*/
+.glossary-definition p {
+	margin: 2px 0 0 0;
+}
+
 </style>
 
 <div class="t1773411202259 fp-snippet">
@@ -1225,16 +1251,40 @@ Apia</a>
 
    
      
-   <script>console.log(``);</script>
+   <script>console.log(`<aside class="glossary-sidebar">
+  <h3 class="glossary-heading">📚 Key Term</h3>
+  <dl class="glossary-list">
+    <div class="glossary-item">
+      <dt class="glossary-term">Quantum</dt>
+      
+      <dd class="glossary-definition">
+        <p>The Quantum project launched in mid-2020, as a core part of UNDP’s digital transformation agenda to build a strong, cloud-based foundation that is fit for purpose, adds value to UNDP and our partners, and can evolve with changing needs. Quantum will fully replace ATLAS with a future-proofed, digital engagement platform from January 2023.</p>
+        
+      </dd>
+    </div>
+  </dl>
+</aside>`);</script>
    <script>console.log(`undp 1773411202259`);</script>
-
+<aside class="glossary-sidebar">
+  <h3 class="glossary-heading">📚 Key Term</h3>
+  <dl class="glossary-list">
+    <div class="glossary-item">
+      <dt class="glossary-term">Quantum</dt>
+      
+      <dd class="glossary-definition">
+        <p>The Quantum project launched in mid-2020, as a core part of UNDP’s digital transformation agenda to build a strong, cloud-based foundation that is fit for purpose, adds value to UNDP and our partners, and can evolve with changing needs. Quantum will fully replace ATLAS with a future-proofed, digital engagement platform from January 2023.</p>
+        
+      </dd>
+    </div>
+  </dl>
+</aside>
    
  
 
  
 
    <p>
-   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="77070518140205121a121903590004370219130759180510">[email&#160;protected]</a> </p> 
+   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="67171508041215020a020913491014271209031749081500">[email&#160;protected]</a> </p> 
 
    
    
@@ -1252,7 +1302,7 @@ Apia</a>
  
 
    <p>
-   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="85f5f7eae6f0f7e0e8e0ebf1abf2f6c5f0ebe1f5abeaf7e2">[email&#160;protected]</a> </p> 
+   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3141435e524443545c545f451f464271445f55411f5e4356">[email&#160;protected]</a> </p> 
 
    
    
@@ -1279,7 +1329,7 @@ Apia</a>
  
 
    <p>
-   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d3a3a1bcb0a6a1b6beb6bda7fda4a093a6bdb7a3fdbca1b4">[email&#160;protected]</a> </p> 
+   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b0c0c2dfd3c5c2d5ddd5dec49ec7c3f0c5ded4c09edfc2d7">[email&#160;protected]</a> </p> 
 
    
    
@@ -1297,7 +1347,7 @@ Apia</a>
  
 
    <p>
-   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a4d4d6cbc7d1d6c1c9c1cad08ad3d7e4d1cac0d48acbd6c3">[email&#160;protected]</a> </p> 
+   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f484869b9781869199919a80da8387b4819a9084da9b8693">[email&#160;protected]</a> </p> 
 
    
    
@@ -1388,7 +1438,7 @@ Apia</a>
         <a style="text-decoration: none;" href="https://unjobs.org/themes/beneficiary-countries">beneficiary countries</a>
        </div>
                                <div class="md-chip md-chip-raised md-chip-hover" style="margin-bottom: 10px;">
-        <a style="text-decoration: none;" href="https://unjobs.org/themes/development-projects">development projects</a>
+        <a style="text-decoration: none;" href="https://unjobs.org/themes/development-assistance">development assistance</a>
        </div>
                                <div class="md-chip md-chip-raised md-chip-hover" style="margin-bottom: 10px;">
         <a style="text-decoration: none;" href="https://unjobs.org/themes/management-services">management services</a>
@@ -1397,7 +1447,7 @@ Apia</a>
         <a style="text-decoration: none;" href="https://unjobs.org/themes/procurement">procurement</a>
        </div>
                                <div class="md-chip md-chip-raised md-chip-hover" style="margin-bottom: 10px;">
-        <a style="text-decoration: none;" href="https://unjobs.org/themes/project-personnel">project personnel</a>
+        <a style="text-decoration: none;" href="https://unjobs.org/themes/quality-assurance">quality assurance</a>
        </div>
                </div>
 
@@ -1417,9 +1467,9 @@ Apia</a>
 <div style="text-align:center;font-size:11px;max-width: 728px;margin: 8px auto;padding:6px;border: 0px solid #ddddd0;">
 Click the button below to visit the original announcement on the recruiting organization's website.
 </div>
-<input type="hidden" name="item"  value="833426228321154021517121386551185091393957">
-<input type="hidden" name="iitem" value="930126228321057321420518086454485091297257">
-<input type="hidden" name="oitem" value="833522928224357321517218086454388391393957">
+<input type="hidden" name="item"  value="833522928224454021517218086454485187997257">
+<input type="hidden" name="iitem" value="833426325021057418120518183251185091297257">
+<input type="hidden" name="oitem" value="930223025021154118120518183251185091393957">
 
 <button type="submit" id="more-info-button" class="btn btn-raised btn-primary" data-toggle="" data-target="">More Information and Application Details</button>
 </form>
@@ -1639,8 +1689,8 @@ function restorePreview(outer) {
 -->
 <script src="https://www.youtube.com/iframe_api"></script>
 
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dc9bcc5db6ed6b3',t:'MTc3MzU1OTAzNQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dd22b029af52ab8',t:'MTc3MzY0NzQzNw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
 </html>
 
 

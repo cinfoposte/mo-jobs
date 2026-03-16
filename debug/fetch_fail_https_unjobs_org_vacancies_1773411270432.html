@@ -1098,6 +1098,32 @@ Bogot&aacute;
     content: '•\00a0\00a0\00a0';
     color: #000; /* bonus: you can customize the bullet color */
 }
+
+.glossary-item {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 0.5rem;
+  row-gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.glossary-term,
+.glossary-definition {
+  margin: 0;
+}
+
+.glossary-term {
+  font-weight: 700;
+}
+/*
+.glossary-term::after {
+  content: ":";
+}
+*/
+.glossary-definition p {
+	margin: 2px 0 0 0;
+}
+
 </style>
 
 <div class="t1773411270432 fp-snippet">
@@ -1294,7 +1320,7 @@ Bogot&aacute;
  
 
    <p>
-   En caso de presentar inconvenientes con la presentación de su propuesta, por favor contactar al correo <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="eb8a9b849284c59b99849d8e8e8f84998e98888487ab9e858f9bc584998c">[email&#160;protected]</a> </p> 
+   En caso de presentar inconvenientes con la presentación de su propuesta, por favor contactar al correo <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bcddccd3c5d392ccced3cad9d9d8d3ced9cfdfd3d0fcc9d2d8cc92d3cedb">[email&#160;protected]</a> </p> 
 
    
    
@@ -1367,7 +1393,7 @@ Bogot&aacute;
  
 
    <p>
-   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6b0a1b041204451b19041d0e0e0f04190e180804072b1e050f1b4504190c">[email&#160;protected]</a> </p> 
+   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="adccddc2d4c283dddfc2dbc8c8c9c2dfc8decec2c1edd8c3c9dd83c2dfca">[email&#160;protected]</a> </p> 
 
    
    
@@ -1385,7 +1411,7 @@ Bogot&aacute;
  
 
    <p>
-   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1f7e6f706670316f6d70697a7a7b706d7a6c7c70735f6a717b6f31706d78">[email&#160;protected]</a> </p> 
+   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="85e4f5eafceaabf5f7eaf3e0e0e1eaf7e0f6e6eae9c5f0ebe1f5abeaf7e2">[email&#160;protected]</a> </p> 
 
    
    
@@ -1412,7 +1438,7 @@ Bogot&aacute;
  
 
    <p>
-   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="660716091f0948161409100303020914031505090a261308021648091401">[email&#160;protected]</a> </p> 
+   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="85e4f5eafceaabf5f7eaf3e0e0e1eaf7e0f6e6eae9c5f0ebe1f5abeaf7e2">[email&#160;protected]</a> </p> 
 
    
    
@@ -1430,7 +1456,7 @@ Bogot&aacute;
  
 
    <p>
-   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a0c1d0cfd9cf8ed0d2cfd6c5c5c4cfd2c5d3c3cfcce0d5cec4d08ecfd2c7">[email&#160;protected]</a> </p> 
+   <b>Email address:</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5a3b2a352335742a28352c3f3f3e35283f293935361a2f343e2a7435283d">[email&#160;protected]</a> </p> 
 
    
    
@@ -1626,6 +1652,9 @@ Bogot&aacute;
     <div class="md-chips" style="text-align:center;margin-bottom:0px;padding-bottom:0px;">
                           <div class="md-chip md-chip-raised md-chip-hover" style="background: #555;font-weight: 400;color: #fff;">Tags</div>
               <div class="md-chip md-chip-raised md-chip-hover" style="margin-bottom: 10px;">
+        <a style="text-decoration: none;" href="https://unjobs.org/themes/development-assistance">development assistance</a>
+       </div>
+                               <div class="md-chip md-chip-raised md-chip-hover" style="margin-bottom: 10px;">
         <a style="text-decoration: none;" href="https://unjobs.org/themes/human-resources">human resources</a>
        </div>
                                <div class="md-chip md-chip-raised md-chip-hover" style="margin-bottom: 10px;">
@@ -1636,9 +1665,6 @@ Bogot&aacute;
        </div>
                                <div class="md-chip md-chip-raised md-chip-hover" style="margin-bottom: 10px;">
         <a style="text-decoration: none;" href="https://unjobs.org/themes/procurement">procurement</a>
-       </div>
-                               <div class="md-chip md-chip-raised md-chip-hover" style="margin-bottom: 10px;">
-        <a style="text-decoration: none;" href="https://unjobs.org/themes/risk-management">risk management</a>
        </div>
                </div>
 
@@ -1651,7 +1677,7 @@ Bogot&aacute;
                <div class="md-chip md-chip-raised md-chip-hover" style="background: #555;font-weight: 400;color: #fff;">Skills</div>
        
        <div class="md-chip md-chip-raised md-chip-hover" style="margin-bottom: 10px;">
-        <a style="text-decoration: none;" href="https://unjobs.org/skills/spanish">Spanish</a>
+        <a style="text-decoration: none;" href="https://unjobs.org/skills/español">Español</a>
        </div>
 
          </div>
@@ -1668,9 +1694,9 @@ Bogot&aacute;
 <div style="text-align:center;font-size:11px;max-width: 728px;margin: 8px auto;padding:6px;border: 0px solid #ddddd0;">
 Click the button below to visit the original announcement on the recruiting organization's website.
 </div>
-<input type="hidden" name="item"  value="930126324924357321517218189921456420054554">
-<input type="hidden" name="iitem" value="833426228224357321517121393318253120054554">
-<input type="hidden" name="oitem" value="833426228321057418217121393221456420151254">
+<input type="hidden" name="item"  value="833523024924454118217121393221456323451254">
+<input type="hidden" name="iitem" value="833426228321154118120518189921553120151254">
+<input type="hidden" name="oitem" value="833426324924357321420421393318253023354554">
 
 <button type="submit" id="more-info-button" class="btn btn-raised btn-primary" data-toggle="" data-target="">More Information and Application Details</button>
 </form>
@@ -1890,8 +1916,8 @@ function restorePreview(outer) {
 -->
 <script src="https://www.youtube.com/iframe_api"></script>
 
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dc9bd95bb8fd6b3',t:'MTc3MzU1OTA2OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-</body>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9dd22bd7ca612ab8',t:'MTc3MzY0NzQ3MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
 
 
