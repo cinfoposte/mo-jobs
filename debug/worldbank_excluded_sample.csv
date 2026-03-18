@@ -1,4 +1,18 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"Associate Senior Service Delivery Officer, Riyadh, Saudi Arabia",https://unjobs.org/vacancies/1773753940917,,bank_no_match
+worldbank,"Product Analyst, Washington, United States",https://unjobs.org/vacancies/1773753859431,,bank_no_match
+worldbank,"Procurement Specialist, Tirana, Albania",https://unjobs.org/vacancies/1773753832764,,bank_no_match
+worldbank,"Financial Officer / Data Science Officer, Washington, United States",https://unjobs.org/vacancies/1773753819229,,bank_no_match
+worldbank,"Associate Senior Enterprise Architect, Washington, United States",https://unjobs.org/vacancies/1773753806018,,bank_no_match
+worldbank,"Infrastructure Engineer, Chennai, India",https://unjobs.org/vacancies/1773753765604,,bank_no_match
+worldbank,"Financial Sector Specialist, Beijing, China",https://unjobs.org/vacancies/1773753752217,,bank_no_match
+worldbank,"Team Assistant, Tashkent, Uzbekistan",https://unjobs.org/vacancies/1773753737413,,bank_no_match
+worldbank,"Infrastructure Engineering Analyst, Chennai, India",https://unjobs.org/vacancies/1773753723778,,bank_no_match
+worldbank,"Extended Term Consultant, Chisinau, Moldova",https://unjobs.org/vacancies/1773753710462,,bank_exclude
+worldbank,"Junior Service Delivery Analyst, Tech Solutions, Dar es Salaam, Tanzania",https://unjobs.org/vacancies/1773753683541,,bank_no_match
+worldbank,"Financial Analyst / Data Science Analyst, Washington, United States",https://unjobs.org/vacancies/1773753670006,,bank_no_match
+worldbank,"Data Scientist, Washington, United States",https://unjobs.org/vacancies/1773753642991,,bank_no_match
+worldbank,"Program Assistant-, Washington, United States",https://unjobs.org/vacancies/1773753873174,,bank_no_match
 worldbank,"Senior IT Program Officer, Washington, United States",https://unjobs.org/vacancies/1773408463722,,bank_no_match
 worldbank,"Senior AI Specialist, Seoul, Republic of Korea",https://unjobs.org/vacancies/1773408450354,,bank_no_match
 worldbank,"Associate Service Management Officer, Washington, United States",https://unjobs.org/vacancies/1773408436682,,bank_no_match
@@ -35,17 +49,3 @@ worldbank,"AI Solutions Analyst, Washington, United States",https://unjobs.org/v
 worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1773235436351,,bank_exclude
 worldbank,"Associate Platform Engineer, Chennai, India",https://unjobs.org/vacancies/1773235409854,,bank_no_match
 worldbank,"Associate Information Management Officer, Sofia, Bulgaria",https://unjobs.org/vacancies/1773235396239,,bank_no_match
-worldbank,"Data Engineer, Chennai, India",https://unjobs.org/vacancies/1773235382668,,bank_no_match
-worldbank,"Financial Management Specialist, Kabul, Afghanistan",https://unjobs.org/vacancies/1773235355323,,bank_no_match
-worldbank,"Procurement Specialist, Pristina, Kosovo",https://unjobs.org/vacancies/1772716987426,,bank_no_match
-worldbank,"Program Manager, Mexico City, Mexico",https://unjobs.org/vacancies/1772803047575,,bank_no_match
-worldbank,"Senior Economist(Health)/Senior Health Specialist, Phnom Penh, Cambodia",https://unjobs.org/vacancies/1772889535595,,bank_no_match
-worldbank,"Senior IT Officer, Business Solutions (Product Manager), Washington, United States",https://unjobs.org/vacancies/1772889522459,,bank_no_match
-worldbank,"Senior Energy Specialist, Washington, United States",https://unjobs.org/vacancies/1772889509303,,bank_no_match
-worldbank,"DevOps Engineer, Sofia, Bulgaria",https://unjobs.org/vacancies/1772889482568,,bank_no_match
-worldbank,"Procurement Specialist, Islamabad, Pakistan",https://unjobs.org/vacancies/1772889468691,,bank_no_match
-worldbank,"Driver, Ankara, Turkey",https://unjobs.org/vacancies/1772889455105,,bank_no_match
-worldbank,"IT Officer, Business Solutions I (Associate Experience Design Officer), Chennai, India",https://unjobs.org/vacancies/1772630416905,,bank_no_match
-worldbank,"Senior IT Officer, Business Solutions I (Associate Senior Solutions Architect), Chennai, India",https://unjobs.org/vacancies/1772630376647,,bank_no_match
-worldbank,"External Affairs Associate, Washington, United States",https://unjobs.org/vacancies/1772630349738,,bank_no_match
-worldbank,"IT Officer, Business Solutions I (OutSystems Technical Lead), Singapore",https://unjobs.org/vacancies/1772284962734,,bank_no_match
