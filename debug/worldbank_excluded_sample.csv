@@ -1,4 +1,12 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"External Affairs Officer, Washington, United States",https://unjobs.org/vacancies/1773753927534,,bank_no_match
+worldbank,"Associate Senior Product Owner, Chennai, India",https://unjobs.org/vacancies/1773839964868,,bank_no_match
+worldbank,"External Affairs Associate, Washington, United States",https://unjobs.org/vacancies/1773839983002,,bank_no_match
+worldbank,"Associate Platform Engineer, Chennai, India",https://unjobs.org/vacancies/1773839996372,,bank_no_match
+worldbank,"Partnership Specialist, Washington, United States",https://unjobs.org/vacancies/1773840057343,,bank_no_match
+worldbank,"Lead Financial Management Specialist, Washington, United States",https://unjobs.org/vacancies/1773840070440,,bank_no_match
+worldbank,"Energy Specialist, Belgrade, Serbia",https://unjobs.org/vacancies/1773840104419,,bank_no_match
+worldbank,"Energy Specialist, Vienna, Austria",https://unjobs.org/vacancies/1773840117916,,bank_no_match
 worldbank,"Associate Senior Service Delivery Officer, Riyadh, Saudi Arabia",https://unjobs.org/vacancies/1773753940917,,bank_no_match
 worldbank,"Product Analyst, Washington, United States",https://unjobs.org/vacancies/1773753859431,,bank_no_match
 worldbank,"Procurement Specialist, Tirana, Albania",https://unjobs.org/vacancies/1773753832764,,bank_no_match
@@ -41,11 +49,3 @@ worldbank,"Software Engineering Analyst, Chennai, India",https://unjobs.org/vaca
 worldbank,"Senior AI Solutions Officer (Knowledge), Singapore",https://unjobs.org/vacancies/1773321622955,,bank_no_match
 worldbank,"Extended Term Consultant, Amman, Jordan",https://unjobs.org/vacancies/1773235572369,,bank_exclude
 worldbank,"Financial Management Specialist, Islamabad, Pakistan",https://unjobs.org/vacancies/1773235558764,,bank_no_match
-worldbank,"Associate Senior Information Management Officer, Washington, United States",https://unjobs.org/vacancies/1773235531665,,bank_no_match
-worldbank,"Senior Digital Tourism Specialist- Applications, Washington, United States",https://unjobs.org/vacancies/1773235518015,,bank_no_match
-worldbank,"Associate Senior Product Owner - Operations Procurement, Sofia, Bulgaria",https://unjobs.org/vacancies/1773235504385,,bank_no_match
-worldbank,"Procurement Specialist, Dar es Salaam, Tanzania",https://unjobs.org/vacancies/1773235490499,,bank_no_match
-worldbank,"AI Solutions Analyst, Washington, United States",https://unjobs.org/vacancies/1773235477067,,bank_no_match
-worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1773235436351,,bank_exclude
-worldbank,"Associate Platform Engineer, Chennai, India",https://unjobs.org/vacancies/1773235409854,,bank_no_match
-worldbank,"Associate Information Management Officer, Sofia, Bulgaria",https://unjobs.org/vacancies/1773235396239,,bank_no_match
