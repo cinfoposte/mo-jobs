@@ -57,340 +57,10 @@
 		
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <!-- <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script> -->
-<!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
-<script type="text/javascript" async=true>
-(function() {
-  var host = window.location.hostname;
-  var element = document.createElement('script');
-  var firstScript = document.getElementsByTagName('script')[0];
-  var url = 'https://cmp.inmobi.com'
-    .concat('/choice/', 'N1sA5xfTskjLj', '/', host, '/choice.js?tag_version=V3');
-  var uspTries = 0;
-  var uspTriesLimit = 3;
-  element.async = true;
-  element.type = 'text/javascript';
-  element.src = url;
-
-  firstScript.parentNode.insertBefore(element, firstScript);
-
-  function makeStub() {
-    var TCF_LOCATOR_NAME = '__tcfapiLocator';
-    var queue = [];
-    var win = window;
-    var cmpFrame;
-
-    function addFrame() {
-      var doc = win.document;
-      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
-
-      if (!otherCMP) {
-        if (doc.body) {
-          var iframe = doc.createElement('iframe');
-
-          iframe.style.cssText = 'display:none';
-          iframe.name = TCF_LOCATOR_NAME;
-          doc.body.appendChild(iframe);
-        } else {
-          setTimeout(addFrame, 5);
-        }
-      }
-      return !otherCMP;
-    }
-
-    function tcfAPIHandler() {
-      var gdprApplies;
-      var args = arguments;
-
-      if (!args.length) {
-        return queue;
-      } else if (args[0] === 'setGdprApplies') {
-        if (
-          args.length > 3 &&
-          args[2] === 2 &&
-          typeof args[3] === 'boolean'
-        ) {
-          gdprApplies = args[3];
-          if (typeof args[2] === 'function') {
-            args[2]('set', true);
-          }
-        }
-      } else if (args[0] === 'ping') {
-        var retr = {
-          gdprApplies: gdprApplies,
-          cmpLoaded: false,
-          cmpStatus: 'stub'
-        };
-
-        if (typeof args[2] === 'function') {
-          args[2](retr);
-        }
-      } else {
-        if(args[0] === 'init' && typeof args[3] === 'object') {
-          args[3] = Object.assign(args[3], { tag_version: 'V3' });
-        }
-        queue.push(args);
-      }
-    }
-
-    function postMessageEventHandler(event) {
-      var msgIsString = typeof event.data === 'string';
-      var json = {};
-
-      try {
-        if (msgIsString) {
-          json = JSON.parse(event.data);
-        } else {
-          json = event.data;
-        }
-      } catch (ignore) {}
-
-      var payload = json.__tcfapiCall;
-
-      if (payload) {
-        window.__tcfapi(
-          payload.command,
-          payload.version,
-          function(retValue, success) {
-            var returnMsg = {
-              __tcfapiReturn: {
-                returnValue: retValue,
-                success: success,
-                callId: payload.callId
-              }
-            };
-            if (msgIsString) {
-              returnMsg = JSON.stringify(returnMsg);
-            }
-            if (event && event.source && event.source.postMessage) {
-              event.source.postMessage(returnMsg, '*');
-            }
-          },
-          payload.parameter
-        );
-      }
-    }
-
-    while (win) {
-      try {
-        if (win.frames[TCF_LOCATOR_NAME]) {
-          cmpFrame = win;
-          break;
-        }
-      } catch (ignore) {}
-
-      if (win === window.top) {
-        break;
-      }
-      win = win.parent;
-    }
-    if (!cmpFrame) {
-      addFrame();
-      win.__tcfapi = tcfAPIHandler;
-      win.addEventListener('message', postMessageEventHandler, false);
-    }
-  };
-
-  makeStub();
-
-  function makeGppStub() {
-    const CMP_ID = 10;
-    const SUPPORTED_APIS = [
-      '2:tcfeuv2',
-      '6:uspv1',
-      '7:usnatv1',
-      '8:usca',
-      '9:usvav1',
-      '10:uscov1',
-      '11:usutv1',
-      '12:usctv1'
-    ];
-
-    window.__gpp_addFrame = function (n) {
-      if (!window.frames[n]) {
-        if (document.body) {
-          var i = document.createElement("iframe");
-          i.style.cssText = "display:none";
-          i.name = n;
-          document.body.appendChild(i);
-        } else {
-          window.setTimeout(window.__gpp_addFrame, 10, n);
-        }
-      }
-    };
-    window.__gpp_stub = function () {
-      var b = arguments;
-      __gpp.queue = __gpp.queue || [];
-      __gpp.events = __gpp.events || [];
-
-      if (!b.length || (b.length == 1 && b[0] == "queue")) {
-        return __gpp.queue;
-      }
-
-      if (b.length == 1 && b[0] == "events") {
-        return __gpp.events;
-      }
-
-      var cmd = b[0];
-      var clb = b.length > 1 ? b[1] : null;
-      var par = b.length > 2 ? b[2] : null;
-      if (cmd === "ping") {
-        clb(
-          {
-            gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
-            cmpStatus: "stub", // possible values: stub, loading, loaded, error
-            cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
-            signalStatus: "not ready", // possible values: not ready, ready
-            supportedAPIs: SUPPORTED_APIS, // list of supported APIs
-            cmpId: CMP_ID, // IAB assigned CMP ID, may be 0 during stub/loading
-            sectionList: [],
-            applicableSections: [-1],
-            gppString: "",
-            parsedSections: {},
-          },
-          true
-        );
-      } else if (cmd === "addEventListener") {
-        if (!("lastId" in __gpp)) {
-          __gpp.lastId = 0;
-        }
-        __gpp.lastId++;
-        var lnr = __gpp.lastId;
-        __gpp.events.push({
-          id: lnr,
-          callback: clb,
-          parameter: par,
-        });
-        clb(
-          {
-            eventName: "listenerRegistered",
-            listenerId: lnr, // Registered ID of the listener
-            data: true, // positive signal
-            pingData: {
-              gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
-              cmpStatus: "stub", // possible values: stub, loading, loaded, error
-              cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
-              signalStatus: "not ready", // possible values: not ready, ready
-              supportedAPIs: SUPPORTED_APIS, // list of supported APIs
-              cmpId: CMP_ID, // list of supported APIs
-              sectionList: [],
-              applicableSections: [-1],
-              gppString: "",
-              parsedSections: {},
-            },
-          },
-          true
-        );
-      } else if (cmd === "removeEventListener") {
-        var success = false;
-        for (var i = 0; i < __gpp.events.length; i++) {
-          if (__gpp.events[i].id == par) {
-            __gpp.events.splice(i, 1);
-            success = true;
-            break;
-          }
-        }
-        clb(
-          {
-            eventName: "listenerRemoved",
-            listenerId: par, // Registered ID of the listener
-            data: success, // status info
-            pingData: {
-              gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
-              cmpStatus: "stub", // possible values: stub, loading, loaded, error
-              cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
-              signalStatus: "not ready", // possible values: not ready, ready
-              supportedAPIs: SUPPORTED_APIS, // list of supported APIs
-              cmpId: CMP_ID, // CMP ID
-              sectionList: [],
-              applicableSections: [-1],
-              gppString: "",
-              parsedSections: {},
-            },
-          },
-          true
-        );
-      } else if (cmd === "hasSection") {
-        clb(false, true);
-      } else if (cmd === "getSection" || cmd === "getField") {
-        clb(null, true);
-      }
-      //queue all other commands
-      else {
-        __gpp.queue.push([].slice.apply(b));
-      }
-    };
-    window.__gpp_msghandler = function (event) {
-      var msgIsString = typeof event.data === "string";
-      try {
-        var json = msgIsString ? JSON.parse(event.data) : event.data;
-      } catch (e) {
-        var json = null;
-      }
-      if (typeof json === "object" && json !== null && "__gppCall" in json) {
-        var i = json.__gppCall;
-        window.__gpp(
-          i.command,
-          function (retValue, success) {
-            var returnMsg = {
-              __gppReturn: {
-                returnValue: retValue,
-                success: success,
-                callId: i.callId,
-              },
-            };
-            event.source.postMessage(msgIsString ? JSON.stringify(returnMsg) : returnMsg, "*");
-          },
-          "parameter" in i ? i.parameter : null,
-          "version" in i ? i.version : "1.1"
-        );
-      }
-    };
-    if (!("__gpp" in window) || typeof window.__gpp !== "function") {
-      window.__gpp = window.__gpp_stub;
-      window.addEventListener("message", window.__gpp_msghandler, false);
-      window.__gpp_addFrame("__gppLocator");
-    }
-  };
-
-  makeGppStub();
-
-  var uspStubFunction = function() {
-    var arg = arguments;
-    if (typeof window.__uspapi !== uspStubFunction) {
-      setTimeout(function() {
-        if (typeof window.__uspapi !== 'undefined') {
-          window.__uspapi.apply(window.__uspapi, arg);
-        }
-      }, 500);
-    }
-  };
-
-  var checkIfUspIsReady = function() {
-    uspTries++;
-    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
-      console.warn('USP is not accessible');
-    } else {
-      clearInterval(uspInterval);
-    }
-  };
-
-  if (typeof window.__uspapi === 'undefined') {
-    window.__uspapi = uspStubFunction;
-    var uspInterval = setInterval(checkIfUspIsReady, 6000);
-  }
-})();
-</script>
-<!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9NEF8H5W4V"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9NEF8H5W4V');
+  (adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;
 </script>
+
 
 <link rel="stylesheet" href="/css/style.css">
 <style>@import url(https://fonts.googleapis.com/css?family=Roboto);.md-chip{display:inline-block;background:#e0e0e0;padding:0 12px;border-radius:32px;font-size:13px}.md-chip.md-chip-hover:hover{background:#ccc}.md-chip-clickable{cursor:pointer}.md-chip,.md-chip-icon{height:32px;line-height:32px}.md-chip-icon{display:block;float:left;background:#009587;width:32px;border-radius:50%;text-align:center;color:#fff;margin:0 8px 0 -12px}.md-chip-remove{display:inline-block;background:#aaa;border:0;height:20px;width:20px;border-radius:50%;padding:0;margin:0 -4px 0 4px;cursor:pointer;font:inherit;line-height:20px}.md-chip-remove:after{color:#e0e0e0;content:'x'}.md-chip-remove:hover{background:#999}.md-chip-remove:active{background:#777}.md-chips{padding:12px 0}.md-chips .md-chip{margin:0 5px 3px 0}.md-chip-raised{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2)}*,:after,:before{box-sizing:border-box}</style>
@@ -1262,7 +932,7 @@ Rome</a>
  
 
    <p>
-   <b>Terms of Reference</b> </p> <ul> <li>Provide edited videos to be used for media placement and/or UNHCR website and social media on human interest/news stories for both local and global use as per UNHCR guidelines. </li> <li>Material must be delivered in three versions:o the final version including subtitles and anagraphic layout for the Italian channels,o the final version without subtitles or text,o the final version without subtitles, text or music duly edited and captioned images as set in the UNHCR photo guidelines. </li> <li>Provide Metadata for the footage as per the UNHCR guidelines.Minimum qualifications requiredEssential requirements: </li> <li>The prospective consultants will demonstrate their strong technical skills, as well as their artistic and ethical approach to within their profession, by presenting a comprehensive portfolio of previous work. </li> <li>The consultants will provide evidence of prior experience in the field of refugees/migration, whether through personal projects or commissioned assignments, highlighting their familiarity with sensitive contexts and storytelling in humanitarian settings.Desirable and preferential: </li> <li>The consultants should have more than 4 years of progressively responsible technical experience, demonstrating recognized expertise in their field. A proven track record of excellence is essential, ideally supported by awards, nominations, or other forms of professional recognition. </li> <li>The consultants should provide evidence of prior experience working with the United Nations, International NGOs, government entities, or large companies, showcasing their ability to deliver high-quality results in complex and high-profile environments.ObligationsThe consultants undertake to provide, at their own expense, all personnel, equipment, supplies, materials, tools and other facilities required for the performance and completion of services.The consultants shall ensure that they shall perform the services with the necessary care and diligence, and in accordance with the highest professional standards.The consultants will demonstrate commitment to the UNHCR Code of Conduct, its core values and guiding principles.The consultants will undertake not to disclose or discuss any information about asylum seekers, refugees, internally displaced persons, returnees, stateless persons, (all these categories are hereinafter referred to as persons of concern to UNHCR), UNHCR personnel or other work-related matters that come to their knowledge as a result of their assignment as consultants with UNHCR. The consultants will understand and accept that their obligation to maintain the confidentiality of information they will have received in UNHCR continues beyond the termination of their assignment with UNHCR.CopyrightsUNHCR will retain full copyright ownership for all materials produced under this consultancy. The consultant must obtain prior written authorization from UNHCR before publishing any content or sharing it with third parties, including their own agency or media outlets. All products must always be credited as: © UNHCR / [Consultant's Name] regardless of where or how they are used. If permission is granted for the consultant or their agency to use the material, distribution may only occur after an agreed-upon embargo period. Under no circumstances may the consultant or their agency sell or license the content to UNHCR's competitors, including other UN agencies or non-governmental organizations.Interested consultants are encouraged to review the UNHCR Media Centre at https://www.unhcr.org/media-centre.html for further guidance on UNHCR media standards.Duration of the roster3 years from 01/01/2026 to 31/12/2028.FeeDaily fee is 300 Euro (+ travel costs when missions are required). For further information please contact <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c2abb6a3b0adaab082b7acaaa1b0ecadb0a5ec8baca1aeb7b1abadac">[email&#160;protected]</a> in the roster does not entail any obligation for the UNHCR to sign a contract. UNHCR retains full discretion to decide on concluding (individual) contracts with specific external consultants included in the roster, depending on its operational needs and priorities.UNHCR does not charge a fee at any stage of its recruitment process (application, interview, meeting, travelling, processing, or training).We welcome applications from candidates with a refugee or stateless background.The UNHCR workforce consists of many diverse nationalities, cultures, languages, and opinions. UNHCR seeks to sustain and strengthen this diversity to ensure equal opportunities as well as an inclusive working environment. Applications are encouraged from all qualified candidates without distinction on grounds of race, color, sex, national origin, age, religion, disability, sexual orientation, and gender identity.PLEASE NOTE:Interested candidates shall apply through the system and send by e-mail to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8be2ffeaf9e4e3f9cbfee5e3e8f9a5e4f9ec">[email&#160;protected]</a> the following documents:− CV/Portfolio of relevant works− Copy of ID card/ Passport− Copy of VAT numberApplications will be assessed through a desk review based on the documents submitted upon email application.Due to the high volume of applications, only suitable candidates will be contacted. </li> </ul> 
+   <b>Terms of Reference</b> </p> <ul> <li>Provide edited videos to be used for media placement and/or UNHCR website and social media on human interest/news stories for both local and global use as per UNHCR guidelines. </li> <li>Material must be delivered in three versions:o the final version including subtitles and anagraphic layout for the Italian channels,o the final version without subtitles or text,o the final version without subtitles, text or music duly edited and captioned images as set in the UNHCR photo guidelines. </li> <li>Provide Metadata for the footage as per the UNHCR guidelines.Minimum qualifications requiredEssential requirements: </li> <li>The prospective consultants will demonstrate their strong technical skills, as well as their artistic and ethical approach to within their profession, by presenting a comprehensive portfolio of previous work. </li> <li>The consultants will provide evidence of prior experience in the field of refugees/migration, whether through personal projects or commissioned assignments, highlighting their familiarity with sensitive contexts and storytelling in humanitarian settings.Desirable and preferential: </li> <li>The consultants should have more than 4 years of progressively responsible technical experience, demonstrating recognized expertise in their field. A proven track record of excellence is essential, ideally supported by awards, nominations, or other forms of professional recognition. </li> <li>The consultants should provide evidence of prior experience working with the United Nations, International NGOs, government entities, or large companies, showcasing their ability to deliver high-quality results in complex and high-profile environments.ObligationsThe consultants undertake to provide, at their own expense, all personnel, equipment, supplies, materials, tools and other facilities required for the performance and completion of services.The consultants shall ensure that they shall perform the services with the necessary care and diligence, and in accordance with the highest professional standards.The consultants will demonstrate commitment to the UNHCR Code of Conduct, its core values and guiding principles.The consultants will undertake not to disclose or discuss any information about asylum seekers, refugees, internally displaced persons, returnees, stateless persons, (all these categories are hereinafter referred to as persons of concern to UNHCR), UNHCR personnel or other work-related matters that come to their knowledge as a result of their assignment as consultants with UNHCR. The consultants will understand and accept that their obligation to maintain the confidentiality of information they will have received in UNHCR continues beyond the termination of their assignment with UNHCR.CopyrightsUNHCR will retain full copyright ownership for all materials produced under this consultancy. The consultant must obtain prior written authorization from UNHCR before publishing any content or sharing it with third parties, including their own agency or media outlets. All products must always be credited as: © UNHCR / [Consultant's Name] regardless of where or how they are used. If permission is granted for the consultant or their agency to use the material, distribution may only occur after an agreed-upon embargo period. Under no circumstances may the consultant or their agency sell or license the content to UNHCR's competitors, including other UN agencies or non-governmental organizations.Interested consultants are encouraged to review the UNHCR Media Centre at https://www.unhcr.org/media-centre.html for further guidance on UNHCR media standards.Duration of the roster3 years from 01/01/2026 to 31/12/2028.FeeDaily fee is 300 Euro (+ travel costs when missions are required). For further information please contact <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3c55485d4e53544e7c4952545f4e12534e5b1275525f50494f555352">[email&#160;protected]</a> in the roster does not entail any obligation for the UNHCR to sign a contract. UNHCR retains full discretion to decide on concluding (individual) contracts with specific external consultants included in the roster, depending on its operational needs and priorities.UNHCR does not charge a fee at any stage of its recruitment process (application, interview, meeting, travelling, processing, or training).We welcome applications from candidates with a refugee or stateless background.The UNHCR workforce consists of many diverse nationalities, cultures, languages, and opinions. UNHCR seeks to sustain and strengthen this diversity to ensure equal opportunities as well as an inclusive working environment. Applications are encouraged from all qualified candidates without distinction on grounds of race, color, sex, national origin, age, religion, disability, sexual orientation, and gender identity.PLEASE NOTE:Interested candidates shall apply through the system and send by e-mail to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e38a9782918c8b91a3968d8b8091cd8c9184">[email&#160;protected]</a> the following documents:− CV/Portfolio of relevant works− Copy of ID card/ Passport− Copy of VAT numberApplications will be assessed through a desk review based on the documents submitted upon email application.Due to the high volume of applications, only suitable candidates will be contacted. </li> </ul> 
 
    
    
@@ -1473,9 +1143,9 @@ Rome</a>
 <div style="text-align:center;font-size:11px;max-width: 728px;margin: 8px auto;padding:6px;border: 0px solid #ddddd0;">
 Click the button below to visit the original announcement on the recruiting organization's website.
 </div>
-<input type="hidden" name="item"  value="930126324924363225054159827294318252158990">
-<input type="hidden" name="iitem" value="833523025021159828257363224090921552062290">
-<input type="hidden" name="oitem" value="930126325021063128257459923994318252062290">
+<input type="hidden" name="item"  value="930222928224363224957459827391018252062290">
+<input type="hidden" name="iitem" value="833523024924363224957363223994221455458990">
+<input type="hidden" name="oitem" value="833426228224459828354063223994221455458990">
 
 <button type="submit" id="more-info-button" class="btn btn-raised btn-primary" data-toggle="" data-target="">More Information and Application Details</button>
 </form>
@@ -1497,6 +1167,7 @@ Click the button below to visit the original announcement on the recruiting orga
 <div style="text-align:center;clear:both;border-top: 1px solid #ddd;background: #fff; font-size: 12px; padding: 12px; margin: 12px">
 UNjobs Association of Geneva<br>
 Not an official document of the United Nations<br>
+We use cookies for basic functionality and non-personalized ads.<br>
 <a href="https://www.iubenda.com/privacy-policy/35887823" class="iubenda-nostyle no-brand iubenda-embed " title="Privacy Policy">Privacy Policy</a> 
 <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script> | 
 <a href="https://www.iubenda.com/privacy-policy/35887823/cookie-policy" class="iubenda-nostyle no-brand iubenda-embed " title="Cookie Policy">Cookie Policy</a>
@@ -1695,8 +1366,8 @@ function restorePreview(outer) {
 -->
 <script src="https://www.youtube.com/iframe_api"></script>
 
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e0c38702a85bc84',t:'MTc3NDI1NjE2MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-</body>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e102ad68afacc16',t:'MTc3NDI5NzU0Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
 
 

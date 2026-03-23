@@ -57,340 +57,10 @@
 		
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <!-- <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script> -->
-<!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
-<script type="text/javascript" async=true>
-(function() {
-  var host = window.location.hostname;
-  var element = document.createElement('script');
-  var firstScript = document.getElementsByTagName('script')[0];
-  var url = 'https://cmp.inmobi.com'
-    .concat('/choice/', 'N1sA5xfTskjLj', '/', host, '/choice.js?tag_version=V3');
-  var uspTries = 0;
-  var uspTriesLimit = 3;
-  element.async = true;
-  element.type = 'text/javascript';
-  element.src = url;
-
-  firstScript.parentNode.insertBefore(element, firstScript);
-
-  function makeStub() {
-    var TCF_LOCATOR_NAME = '__tcfapiLocator';
-    var queue = [];
-    var win = window;
-    var cmpFrame;
-
-    function addFrame() {
-      var doc = win.document;
-      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
-
-      if (!otherCMP) {
-        if (doc.body) {
-          var iframe = doc.createElement('iframe');
-
-          iframe.style.cssText = 'display:none';
-          iframe.name = TCF_LOCATOR_NAME;
-          doc.body.appendChild(iframe);
-        } else {
-          setTimeout(addFrame, 5);
-        }
-      }
-      return !otherCMP;
-    }
-
-    function tcfAPIHandler() {
-      var gdprApplies;
-      var args = arguments;
-
-      if (!args.length) {
-        return queue;
-      } else if (args[0] === 'setGdprApplies') {
-        if (
-          args.length > 3 &&
-          args[2] === 2 &&
-          typeof args[3] === 'boolean'
-        ) {
-          gdprApplies = args[3];
-          if (typeof args[2] === 'function') {
-            args[2]('set', true);
-          }
-        }
-      } else if (args[0] === 'ping') {
-        var retr = {
-          gdprApplies: gdprApplies,
-          cmpLoaded: false,
-          cmpStatus: 'stub'
-        };
-
-        if (typeof args[2] === 'function') {
-          args[2](retr);
-        }
-      } else {
-        if(args[0] === 'init' && typeof args[3] === 'object') {
-          args[3] = Object.assign(args[3], { tag_version: 'V3' });
-        }
-        queue.push(args);
-      }
-    }
-
-    function postMessageEventHandler(event) {
-      var msgIsString = typeof event.data === 'string';
-      var json = {};
-
-      try {
-        if (msgIsString) {
-          json = JSON.parse(event.data);
-        } else {
-          json = event.data;
-        }
-      } catch (ignore) {}
-
-      var payload = json.__tcfapiCall;
-
-      if (payload) {
-        window.__tcfapi(
-          payload.command,
-          payload.version,
-          function(retValue, success) {
-            var returnMsg = {
-              __tcfapiReturn: {
-                returnValue: retValue,
-                success: success,
-                callId: payload.callId
-              }
-            };
-            if (msgIsString) {
-              returnMsg = JSON.stringify(returnMsg);
-            }
-            if (event && event.source && event.source.postMessage) {
-              event.source.postMessage(returnMsg, '*');
-            }
-          },
-          payload.parameter
-        );
-      }
-    }
-
-    while (win) {
-      try {
-        if (win.frames[TCF_LOCATOR_NAME]) {
-          cmpFrame = win;
-          break;
-        }
-      } catch (ignore) {}
-
-      if (win === window.top) {
-        break;
-      }
-      win = win.parent;
-    }
-    if (!cmpFrame) {
-      addFrame();
-      win.__tcfapi = tcfAPIHandler;
-      win.addEventListener('message', postMessageEventHandler, false);
-    }
-  };
-
-  makeStub();
-
-  function makeGppStub() {
-    const CMP_ID = 10;
-    const SUPPORTED_APIS = [
-      '2:tcfeuv2',
-      '6:uspv1',
-      '7:usnatv1',
-      '8:usca',
-      '9:usvav1',
-      '10:uscov1',
-      '11:usutv1',
-      '12:usctv1'
-    ];
-
-    window.__gpp_addFrame = function (n) {
-      if (!window.frames[n]) {
-        if (document.body) {
-          var i = document.createElement("iframe");
-          i.style.cssText = "display:none";
-          i.name = n;
-          document.body.appendChild(i);
-        } else {
-          window.setTimeout(window.__gpp_addFrame, 10, n);
-        }
-      }
-    };
-    window.__gpp_stub = function () {
-      var b = arguments;
-      __gpp.queue = __gpp.queue || [];
-      __gpp.events = __gpp.events || [];
-
-      if (!b.length || (b.length == 1 && b[0] == "queue")) {
-        return __gpp.queue;
-      }
-
-      if (b.length == 1 && b[0] == "events") {
-        return __gpp.events;
-      }
-
-      var cmd = b[0];
-      var clb = b.length > 1 ? b[1] : null;
-      var par = b.length > 2 ? b[2] : null;
-      if (cmd === "ping") {
-        clb(
-          {
-            gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
-            cmpStatus: "stub", // possible values: stub, loading, loaded, error
-            cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
-            signalStatus: "not ready", // possible values: not ready, ready
-            supportedAPIs: SUPPORTED_APIS, // list of supported APIs
-            cmpId: CMP_ID, // IAB assigned CMP ID, may be 0 during stub/loading
-            sectionList: [],
-            applicableSections: [-1],
-            gppString: "",
-            parsedSections: {},
-          },
-          true
-        );
-      } else if (cmd === "addEventListener") {
-        if (!("lastId" in __gpp)) {
-          __gpp.lastId = 0;
-        }
-        __gpp.lastId++;
-        var lnr = __gpp.lastId;
-        __gpp.events.push({
-          id: lnr,
-          callback: clb,
-          parameter: par,
-        });
-        clb(
-          {
-            eventName: "listenerRegistered",
-            listenerId: lnr, // Registered ID of the listener
-            data: true, // positive signal
-            pingData: {
-              gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
-              cmpStatus: "stub", // possible values: stub, loading, loaded, error
-              cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
-              signalStatus: "not ready", // possible values: not ready, ready
-              supportedAPIs: SUPPORTED_APIS, // list of supported APIs
-              cmpId: CMP_ID, // list of supported APIs
-              sectionList: [],
-              applicableSections: [-1],
-              gppString: "",
-              parsedSections: {},
-            },
-          },
-          true
-        );
-      } else if (cmd === "removeEventListener") {
-        var success = false;
-        for (var i = 0; i < __gpp.events.length; i++) {
-          if (__gpp.events[i].id == par) {
-            __gpp.events.splice(i, 1);
-            success = true;
-            break;
-          }
-        }
-        clb(
-          {
-            eventName: "listenerRemoved",
-            listenerId: par, // Registered ID of the listener
-            data: success, // status info
-            pingData: {
-              gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
-              cmpStatus: "stub", // possible values: stub, loading, loaded, error
-              cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
-              signalStatus: "not ready", // possible values: not ready, ready
-              supportedAPIs: SUPPORTED_APIS, // list of supported APIs
-              cmpId: CMP_ID, // CMP ID
-              sectionList: [],
-              applicableSections: [-1],
-              gppString: "",
-              parsedSections: {},
-            },
-          },
-          true
-        );
-      } else if (cmd === "hasSection") {
-        clb(false, true);
-      } else if (cmd === "getSection" || cmd === "getField") {
-        clb(null, true);
-      }
-      //queue all other commands
-      else {
-        __gpp.queue.push([].slice.apply(b));
-      }
-    };
-    window.__gpp_msghandler = function (event) {
-      var msgIsString = typeof event.data === "string";
-      try {
-        var json = msgIsString ? JSON.parse(event.data) : event.data;
-      } catch (e) {
-        var json = null;
-      }
-      if (typeof json === "object" && json !== null && "__gppCall" in json) {
-        var i = json.__gppCall;
-        window.__gpp(
-          i.command,
-          function (retValue, success) {
-            var returnMsg = {
-              __gppReturn: {
-                returnValue: retValue,
-                success: success,
-                callId: i.callId,
-              },
-            };
-            event.source.postMessage(msgIsString ? JSON.stringify(returnMsg) : returnMsg, "*");
-          },
-          "parameter" in i ? i.parameter : null,
-          "version" in i ? i.version : "1.1"
-        );
-      }
-    };
-    if (!("__gpp" in window) || typeof window.__gpp !== "function") {
-      window.__gpp = window.__gpp_stub;
-      window.addEventListener("message", window.__gpp_msghandler, false);
-      window.__gpp_addFrame("__gppLocator");
-    }
-  };
-
-  makeGppStub();
-
-  var uspStubFunction = function() {
-    var arg = arguments;
-    if (typeof window.__uspapi !== uspStubFunction) {
-      setTimeout(function() {
-        if (typeof window.__uspapi !== 'undefined') {
-          window.__uspapi.apply(window.__uspapi, arg);
-        }
-      }, 500);
-    }
-  };
-
-  var checkIfUspIsReady = function() {
-    uspTries++;
-    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
-      console.warn('USP is not accessible');
-    } else {
-      clearInterval(uspInterval);
-    }
-  };
-
-  if (typeof window.__uspapi === 'undefined') {
-    window.__uspapi = uspStubFunction;
-    var uspInterval = setInterval(checkIfUspIsReady, 6000);
-  }
-})();
-</script>
-<!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9NEF8H5W4V"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9NEF8H5W4V');
+  (adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;
 </script>
+
 
 <link rel="stylesheet" href="/css/style.css">
 <style>@import url(https://fonts.googleapis.com/css?family=Roboto);.md-chip{display:inline-block;background:#e0e0e0;padding:0 12px;border-radius:32px;font-size:13px}.md-chip.md-chip-hover:hover{background:#ccc}.md-chip-clickable{cursor:pointer}.md-chip,.md-chip-icon{height:32px;line-height:32px}.md-chip-icon{display:block;float:left;background:#009587;width:32px;border-radius:50%;text-align:center;color:#fff;margin:0 8px 0 -12px}.md-chip-remove{display:inline-block;background:#aaa;border:0;height:20px;width:20px;border-radius:50%;padding:0;margin:0 -4px 0 4px;cursor:pointer;font:inherit;line-height:20px}.md-chip-remove:after{color:#e0e0e0;content:'x'}.md-chip-remove:hover{background:#999}.md-chip-remove:active{background:#777}.md-chips{padding:12px 0}.md-chips .md-chip{margin:0 5px 3px 0}.md-chip-raised{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2)}*,:after,:before{box-sizing:border-box}</style>
@@ -1451,7 +1121,7 @@ Buenos Aires</a>
  
 
    <p>
-   <strong>Aclaraciones Importantes:</strong> </p> <ul> <li>La propuesta económica debe ser en pesos argentinos (ARS). Por default el formulario de aplicación incluye un pedido de fee diario y total en USD en el que deberán indicar "1" y no tendrá validez en la evaluación. El valor que se tendrá en cuenta es el que presente como adjunto en su propuesta económica. </li> <li>El sistema no permite adjuntar archivos excel (.xlsx) con lo cual la propuesta económica debe estar en archivo word o PDF. </li> <li>Todas las consultas referidas al proceso deberán ser enviadas a <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f0939f9e848291849193999f9e9583918297959e84999e91b0859e99939596de9f8297">[email&#160;protected]</a> con copia a <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="91d7d7d0c3d8d0c2d1e4fff8f2f4f7bffee3f6">[email&#160;protected]</a> con el asunto<strong>: Consultor/a Individual - Responsable de datos y gestión del conocimiento.</strong> No se recibirán propuestas a través de mail y serán automáticamente eliminadas. La postulación es exclusivamente por la plataforma. </li> <li>El pago de los honorarios profesionales se basará en la presentación de los entregables acordados. UNICEF se reserva el derecho de retener el pago en caso de que los entregables presentados no cumplan con el estándar requerido o en caso de retrasos en la entrega de los entregables por parte del consultor/a. </li> <li>Las condiciones de servicio se regirán por su contrato y las Condiciones Generales de Contratación de Servicios de Consultores. Los consultores son responsables de determinar sus obligaciones tributarias y del pago de cualquier impuesto y/o derecho, de conformidad con las leyes locales u otras leyes aplicables. </li> <li>El/los candidatos seleccionados son los únicos responsables de garantizar el seguro de salud necesarios para desempeñar las funciones del contrato sean válidos durante todo el período del Acuerdo a Largo Plazo y contratos. </li> <li>Los candidatos seleccionados están sujetos a la confirmación del estado de vacunación completa contra el SARS-CoV-2 (Covid-19) con una vacuna respaldada por la Organización Mundial de la Salud (OMS), que debe cumplirse antes de asumir la asignación. </li> <li>Cualquier intento de influir indebidamente en el proceso de selección de UNICEF conllevará la descalificación automática del solicitante. </li> <li>No se aceptan solicitudes conjuntas de dos o más personas. </li> <li>Tenga en cuenta que UNICEF no cobra honorarios en ninguna fase del proceso. </li> <li>Se anima encarecidamente a las candidatas que cumplan los requisitos a que presenten su solicitud. </li> <li>UNICEF está comprometido con la diversidad y la inclusión y anima a los candidatos cualificados de todos los orígenes, incluidas las personas con discapacidad, a que presenten su candidatura. </li> <li>UNICEF no garantiza que se vaya a adquirir ninguna cantidad de servicios durante la vigencia del LTA, ya que ello dependerá de las necesidades futuras. </li> <li>CONTRATOS CREADOS VINCULADOS AL LTA: Siempre que se requieran los servicios, se presentarán al o los consultores del/los LTA los detalles de los requisitos/entregables, incluidas las cantidades y los plazos. Una vez recibida la confirmación de disponibilidad e interés en el encargo, se emitirá un contrato o solicitud con los precios/tarifas acordadas en la LTA. El consultor deberá firmar/ confirmar notificación antes de comenzar el trabajo. </li> <li>Acompañar cotización con fotocopia de registro de ARCA (monotributo). </li> <li>En caso de existir una subcontratación para la prestación efectiva y eficiente del servicio, una vez suscripto el contrato deberá someter a aprobación del Supervisor del contrato el currículo de los candidatos propuestos, proporcionado además sus datos personales (Nombre, Apellido y Documento) a fin de tomar las medidas de seguridad para el ingreso de estos a las oficinas o viajes. </li> <li>Cursos mandatorios: Sólo en caso de quedar seleccionados para este proyecto, el individuo deberá completar en forma obligatoria los siguientes cursos en línea, cuyos certificados de finalización deben compartirse con el Supervisor del contrato. </li> </ul> 
+   <strong>Aclaraciones Importantes:</strong> </p> <ul> <li>La propuesta económica debe ser en pesos argentinos (ARS). Por default el formulario de aplicación incluye un pedido de fee diario y total en USD en el que deberán indicar "1" y no tendrá validez en la evaluación. El valor que se tendrá en cuenta es el que presente como adjunto en su propuesta económica. </li> <li>El sistema no permite adjuntar archivos excel (.xlsx) con lo cual la propuesta económica debe estar en archivo word o PDF. </li> <li>Todas las consultas referidas al proceso deberán ser enviadas a <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b1d2dedfc5c3d0c5d0d2d8dedfd4c2d0c3d6d4dfc5d8dfd0f1c4dfd8d2d4d79fdec3d6">[email&#160;protected]</a> con copia a <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="80c6c6c1d2c9c1d3c0f5eee9e3e5e6aeeff2e7">[email&#160;protected]</a> con el asunto<strong>: Consultor/a Individual - Responsable de datos y gestión del conocimiento.</strong> No se recibirán propuestas a través de mail y serán automáticamente eliminadas. La postulación es exclusivamente por la plataforma. </li> <li>El pago de los honorarios profesionales se basará en la presentación de los entregables acordados. UNICEF se reserva el derecho de retener el pago en caso de que los entregables presentados no cumplan con el estándar requerido o en caso de retrasos en la entrega de los entregables por parte del consultor/a. </li> <li>Las condiciones de servicio se regirán por su contrato y las Condiciones Generales de Contratación de Servicios de Consultores. Los consultores son responsables de determinar sus obligaciones tributarias y del pago de cualquier impuesto y/o derecho, de conformidad con las leyes locales u otras leyes aplicables. </li> <li>El/los candidatos seleccionados son los únicos responsables de garantizar el seguro de salud necesarios para desempeñar las funciones del contrato sean válidos durante todo el período del Acuerdo a Largo Plazo y contratos. </li> <li>Los candidatos seleccionados están sujetos a la confirmación del estado de vacunación completa contra el SARS-CoV-2 (Covid-19) con una vacuna respaldada por la Organización Mundial de la Salud (OMS), que debe cumplirse antes de asumir la asignación. </li> <li>Cualquier intento de influir indebidamente en el proceso de selección de UNICEF conllevará la descalificación automática del solicitante. </li> <li>No se aceptan solicitudes conjuntas de dos o más personas. </li> <li>Tenga en cuenta que UNICEF no cobra honorarios en ninguna fase del proceso. </li> <li>Se anima encarecidamente a las candidatas que cumplan los requisitos a que presenten su solicitud. </li> <li>UNICEF está comprometido con la diversidad y la inclusión y anima a los candidatos cualificados de todos los orígenes, incluidas las personas con discapacidad, a que presenten su candidatura. </li> <li>UNICEF no garantiza que se vaya a adquirir ninguna cantidad de servicios durante la vigencia del LTA, ya que ello dependerá de las necesidades futuras. </li> <li>CONTRATOS CREADOS VINCULADOS AL LTA: Siempre que se requieran los servicios, se presentarán al o los consultores del/los LTA los detalles de los requisitos/entregables, incluidas las cantidades y los plazos. Una vez recibida la confirmación de disponibilidad e interés en el encargo, se emitirá un contrato o solicitud con los precios/tarifas acordadas en la LTA. El consultor deberá firmar/ confirmar notificación antes de comenzar el trabajo. </li> <li>Acompañar cotización con fotocopia de registro de ARCA (monotributo). </li> <li>En caso de existir una subcontratación para la prestación efectiva y eficiente del servicio, una vez suscripto el contrato deberá someter a aprobación del Supervisor del contrato el currículo de los candidatos propuestos, proporcionado además sus datos personales (Nombre, Apellido y Documento) a fin de tomar las medidas de seguridad para el ingreso de estos a las oficinas o viajes. </li> <li>Cursos mandatorios: Sólo en caso de quedar seleccionados para este proyecto, el individuo deberá completar en forma obligatoria los siguientes cursos en línea, cuyos certificados de finalización deben compartirse con el Supervisor del contrato. </li> </ul> 
 
    
    
@@ -1704,9 +1374,9 @@ Buenos Aires</a>
 <div style="text-align:center;font-size:11px;max-width: 728px;margin: 8px auto;padding:6px;border: 0px solid #ddddd0;">
 Click the button below to visit the original announcement on the recruiting organization's website.
 </div>
-<input type="hidden" name="item"  value="833426324924460891090055118129221090416320">
-<input type="hidden" name="iitem" value="833426228321064094389958418129221090319620">
-<input type="hidden" name="oitem" value="833522928224364094390055021525921090319620">
+<input type="hidden" name="item"  value="930222928224364094390055118129221090319620">
+<input type="hidden" name="iitem" value="833426228224364190993355118225921090416320">
+<input type="hidden" name="oitem" value="833523024924460794293258321525824390319620">
 
 <button type="submit" id="more-info-button" class="btn btn-raised btn-primary" data-toggle="" data-target="">More Information and Application Details</button>
 </form>
@@ -1728,6 +1398,7 @@ Click the button below to visit the original announcement on the recruiting orga
 <div style="text-align:center;clear:both;border-top: 1px solid #ddd;background: #fff; font-size: 12px; padding: 12px; margin: 12px">
 UNjobs Association of Geneva<br>
 Not an official document of the United Nations<br>
+We use cookies for basic functionality and non-personalized ads.<br>
 <a href="https://www.iubenda.com/privacy-policy/35887823" class="iubenda-nostyle no-brand iubenda-embed " title="Privacy Policy">Privacy Policy</a> 
 <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script> | 
 <a href="https://www.iubenda.com/privacy-policy/35887823/cookie-policy" class="iubenda-nostyle no-brand iubenda-embed " title="Cookie Policy">Cookie Policy</a>
@@ -1926,7 +1597,7 @@ function restorePreview(outer) {
 -->
 <script src="https://www.youtube.com/iframe_api"></script>
 
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e0bf79c5adcbc84',t:'MTc3NDI1MzUwNQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9e0ff158d8cacc16',t:'MTc3NDI5NTE5Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
 
