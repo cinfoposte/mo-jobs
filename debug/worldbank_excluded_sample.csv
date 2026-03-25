@@ -1,24 +1,9 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
-worldbank,"Platform Engineer, Washington, United States",https://unjobs.org/vacancies/1774358302040,,bank_no_match
-worldbank,"Associate Service Management Officer, Washington, United States",https://unjobs.org/vacancies/1774358330025,,bank_no_match
-worldbank,"Resource Mobilization Specialist, Washington, United States",https://unjobs.org/vacancies/1774358343427,,bank_no_match
-worldbank,"Senior Data Architect (Associate Senior Data Architect), Chennai, India",https://unjobs.org/vacancies/1774358356744,,bank_no_match
-worldbank,"Infrastructure Engineer, Washington, United States",https://unjobs.org/vacancies/1774358370008,,bank_no_match
-worldbank,"Agriculture Economist, Antananarivo, Madagascar",https://unjobs.org/vacancies/1774358383369,,bank_no_match
-worldbank,"Associate Senior Enterprise Architect, Washington, United States",https://unjobs.org/vacancies/1774358396650,,bank_no_match
-worldbank,"Associate Senior Cloud & Agentic Architect, Washington, United States",https://unjobs.org/vacancies/1774358410044,,bank_no_match
-worldbank,"Senior External Affairs Officer, Maputo, Mozambique",https://unjobs.org/vacancies/1774358424102,,bank_no_match
-worldbank,"Infrastructure Engineering Analyst, Washington, United States",https://unjobs.org/vacancies/1774358437350,,bank_no_match
-worldbank,"Associate Senior Enterprise Architect, Washington, United States",https://unjobs.org/vacancies/1774358450690,,bank_no_match
-worldbank,"Associate Platform Engineer, Chennai, India",https://unjobs.org/vacancies/1774358464095,,bank_no_match
 worldbank,"Energy Specialist, Tashkent, Uzbekistan",https://unjobs.org/vacancies/1774358477436,,bank_no_match
-worldbank,"Associate Senior Service Management Officer, Washington, United States",https://unjobs.org/vacancies/1774358491155,,bank_no_match
-worldbank,"Associate Senior Enterprise Architect, Washington, United States",https://unjobs.org/vacancies/1774358504482,,bank_no_match
-worldbank,"Infrastructure Engineering Analyst, Washington, United States",https://unjobs.org/vacancies/1774358517785,,bank_no_match
-worldbank,"Platform Engineer, Sofia, Bulgaria",https://unjobs.org/vacancies/1774358531069,,bank_no_match
-worldbank,"Software Engineering Analyst, Chennai, India",https://unjobs.org/vacancies/1774358558188,,bank_no_match
-worldbank,"Associate Software Engineer, Chennai, India",https://unjobs.org/vacancies/1774358571685,,bank_no_match
-worldbank,"Senior IT Program Officer, Washington, United States",https://unjobs.org/vacancies/1774358585372,,bank_no_match
+worldbank,"Senior External Affairs Officer, Maputo, Mozambique",https://unjobs.org/vacancies/1774358424102,,bank_no_match
+worldbank,"Agriculture Economist, Antananarivo, Madagascar",https://unjobs.org/vacancies/1774358383369,,bank_no_match
+worldbank,"Senior Data Architect (Associate Senior Data Architect), Chennai, India",https://unjobs.org/vacancies/1774358356744,,bank_no_match
+worldbank,"Resource Mobilization Specialist, Washington, United States",https://unjobs.org/vacancies/1774358343427,,bank_no_match
 worldbank,"Extended Term Consultant (Disaster Risk Management), Washington, United States",https://unjobs.org/vacancies/1774271865150,,bank_exclude
 worldbank,"Associate Infrastructure Engineer, Washington, United States",https://unjobs.org/vacancies/1774013303120,,bank_no_match
 worldbank,"Economist, Washington, United States",https://unjobs.org/vacancies/1774013249492,,bank_no_match
@@ -49,3 +34,17 @@ worldbank,"Financial Officer / Data Science Officer, Washington, United States",
 worldbank,"Infrastructure Engineer, Chennai, India",https://unjobs.org/vacancies/1773753765604,,bank_no_match
 worldbank,"Financial Sector Specialist, Beijing, China",https://unjobs.org/vacancies/1773753752217,,bank_no_match
 worldbank,"Team Assistant, Tashkent, Uzbekistan",https://unjobs.org/vacancies/1773753737413,,bank_no_match
+worldbank,"Infrastructure Engineering Analyst, Chennai, India",https://unjobs.org/vacancies/1773753723778,,bank_no_match
+worldbank,"Junior Service Delivery Analyst, Tech Solutions, Dar es Salaam, Tanzania",https://unjobs.org/vacancies/1773753683541,,bank_no_match
+worldbank,"Financial Analyst / Data Science Analyst, Washington, United States",https://unjobs.org/vacancies/1773753670006,,bank_no_match
+worldbank,"Data Scientist, Washington, United States",https://unjobs.org/vacancies/1773753642991,,bank_no_match
+worldbank,"Program Assistant-, Washington, United States",https://unjobs.org/vacancies/1773753873174,,bank_no_match
+worldbank,"Senior AI Specialist, Seoul, Republic of Korea",https://unjobs.org/vacancies/1773408450354,,bank_no_match
+worldbank,"Extended Term Consultant - Carbon Credit Mobilization, Washington, United States",https://unjobs.org/vacancies/1773494501721,,bank_exclude
+worldbank,"Lead Transport Specialist, Washington, United States",https://unjobs.org/vacancies/1773494488254,,bank_no_match
+worldbank,"Extended Term Consultant - Natural Resources Management Specialist, Dhaka, Bangladesh",https://unjobs.org/vacancies/1773494420621,,bank_exclude
+worldbank,"Extended Term Consultant - Nature-Based Tourism Specialist, Colombo, Sri Lanka",https://unjobs.org/vacancies/1773494352607,,bank_exclude
+worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1773494447314,,bank_exclude
+worldbank,"Associate Senior Product Owner - Operations Procurement, Sofia, Bulgaria",https://unjobs.org/vacancies/1773235504385,,bank_no_match
+worldbank,"DevOps Engineer, Sofia, Bulgaria",https://unjobs.org/vacancies/1772889482568,,bank_no_match
+worldbank,"Senior IT Officer, Business Solutions I (Associate Senior Solutions Architect), Chennai, India",https://unjobs.org/vacancies/1772630376647,,bank_no_match

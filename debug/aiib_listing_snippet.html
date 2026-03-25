@@ -37,6 +37,18 @@
 
 <script>
   (adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds = 1;
+
+(function() {
+  var tcfCookies = ['euconsent-v2', 'eupubconsent-v2', 'addtl_consent', 'FCCDCF'];
+  var expired = 'expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+  tcfCookies.forEach(function(name) {
+    // Try both with and without leading dot for domain
+    document.cookie = name + '=; ' + expired;
+    document.cookie = name + '=; ' + expired + '; domain=' + location.hostname;
+    document.cookie = name + '=; ' + expired + '; domain=.' + location.hostname;
+  });
+})();
+
 </script>
 
 
