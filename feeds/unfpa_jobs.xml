@@ -5,13 +5,20 @@
     <link>https://unjobs.org/organizations/unfpa</link>
     <description>Latest job vacancies for UNFPA – United Nations Population Fund sourced from UNjobs.org. JPO positions are excluded.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 03 Apr 2026 08:38:28 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Apr 2026 20:09:49 +0000</lastBuildDate>
     <atom:link href="https://cinfoposte.github.io/mo-jobs/feeds/unfpa_jobs.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UNFPA Representative, Malawi, P-5, Lilongwe, Malawi</title>
+      <link>https://unjobs.org/vacancies/1775162418873</link>
+      <guid isPermaLink="false">9642c8c5706b7b0162cba0149dd3d20e</guid>
+      <pubDate>Fri, 03 Apr 2026 20:09:49 +0000</pubDate>
+      <description />
+    </item>
     <item>
       <title>International UNV Communications Expert, Port Moresby, Papua New Guinea</title>
       <link>https://unjobs.org/vacancies/1774533991117</link>
       <guid isPermaLink="false">379717b81d6ad40068fdc18477b8528d</guid>
-      <pubDate>Fri, 03 Apr 2026 08:38:28 +0000</pubDate>
+      <pubDate>Fri, 03 Apr 2026 20:09:49 +0000</pubDate>
       <description />
     </item>
   </channel>
