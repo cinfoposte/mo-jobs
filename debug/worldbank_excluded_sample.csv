@@ -1,9 +1,4 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
-worldbank,"Financial Officer / Data Science Officer, Washington, United States",https://unjobs.org/vacancies/1775481562204,,bank_no_match
-worldbank,"IT Workforce Development and Engagement Analyst, Washington, United States",https://unjobs.org/vacancies/1775481575570,,bank_no_match
-worldbank,"Energy Specialist, Tashkent, Uzbekistan",https://unjobs.org/vacancies/1775481602630,,bank_no_match
-worldbank,"Resource Mobilization Specialist, Washington, United States",https://unjobs.org/vacancies/1775481616289,,bank_no_match
-worldbank,"Senior Data Architect (Associate Senior Data Architect), Chennai, India",https://unjobs.org/vacancies/1775481629591,,bank_no_match
 worldbank,"Extended Term Consultant, Kyiv, Ukraine",https://unjobs.org/vacancies/1775567830145,,bank_exclude
 worldbank,"Project Manager - HQ Real Estate Projects, Washington, United States",https://unjobs.org/vacancies/1775567857561,,bank_no_match
 worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1775567871289,,bank_exclude
@@ -17,7 +12,6 @@ worldbank,"Extended Term Consultant - Industry Specialist (Cloud), Washington, U
 worldbank,"Senior Administrative Assistant, Paris, France",https://unjobs.org/vacancies/1775136374590,,bank_no_match
 worldbank,"Senior Technology Learning Officer (Associate Senior Technology Learning Officer), Sofia, Bulgaria",https://unjobs.org/vacancies/1775136388106,,bank_no_match
 worldbank,"Product Analyst, Sofia, Bulgaria",https://unjobs.org/vacancies/1775136401658,,bank_no_match
-worldbank,"Senior External Affairs Officer, Washington, United States",https://unjobs.org/vacancies/1774704571244,,bank_no_match
 worldbank,"Economist, Vienna, Austria",https://unjobs.org/vacancies/1774704543367,,bank_no_match
 worldbank,"Health Specialist, Nouakchott, Mauritania",https://unjobs.org/vacancies/1774876859365,,bank_no_match
 worldbank,"Senior Executive Assistant, Washington, United States",https://unjobs.org/vacancies/1774963686817,,bank_no_match
@@ -29,10 +23,8 @@ worldbank,"Service Delivery Officer (Associate Senior Service Delivery Officer),
 worldbank,"Service Delivery Officer (Associate Senior Service Delivery Officer), Panama City, Panama",https://unjobs.org/vacancies/1775049845503,,bank_no_match
 worldbank,"Health Economist/Health Specialist, Honiara, Solomon Islands",https://unjobs.org/vacancies/1774704584893,,bank_no_match
 worldbank,"Team Assistant, Maputo, Mozambique",https://unjobs.org/vacancies/1774617608454,,bank_no_match
-worldbank,"Cloud Network Analyst (Infrastructure Engineering Analyst), Sofia, Bulgaria",https://unjobs.org/vacancies/1774617649104,,bank_no_match
 worldbank,"Gender & Social Inclusion Consultant, Washington, United States",https://unjobs.org/vacancies/1774617703792,,bank_exclude
 worldbank,"IT Workforce Development & Engagement (Associate IT Workforce Development and Engagement Officer), Sofia, Bulgaria",https://unjobs.org/vacancies/1774531134215,,bank_no_match
-worldbank,"Extended Term Consultant (Transformation Management Officer), Washington, United States",https://unjobs.org/vacancies/1774531147593,,bank_exclude
 worldbank,"Senior Health Specialist/Medical Products and Commodities Procurement, Washington, United States",https://unjobs.org/vacancies/1774531174205,,bank_no_match
 worldbank,"Senior Health Specialist/Lead for SCAP program, Washington, United States",https://unjobs.org/vacancies/1774531201112,,bank_no_match
 worldbank,"Senior Health Specialist/Reproductive Health Commodities, Washington, United States",https://unjobs.org/vacancies/1774531215867,,bank_no_match
