@@ -1,8 +1,5 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
-worldbank,"Economist, Vienna, Austria",https://unjobs.org/vacancies/1775827009719,,bank_no_match
-worldbank,"Head, Washington, United States",https://unjobs.org/vacancies/1775827023088,,bank_no_match
 worldbank,"Controllers Loan Client Service Finance Officer, Chennai, India",https://unjobs.org/vacancies/1775827036441,,bank_no_match
-worldbank,"Senior External Affairs Officer, Maputo, Mozambique",https://unjobs.org/vacancies/1775827063591,,bank_no_match
 worldbank,"Extended Term Consultant, Yaounde, Cameroon",https://unjobs.org/vacancies/1775827090422,,bank_exclude
 worldbank,"Mining Specialist, Washington, United States",https://unjobs.org/vacancies/1775740664048,,bank_no_match
 worldbank,"Financial Management Specialist, Freetown, Sierra Leone",https://unjobs.org/vacancies/1775740677724,,bank_no_match
@@ -40,8 +37,6 @@ worldbank,"Senior HR Specialist - Employee Listening & Engagement, Washington, U
 worldbank,"Service Delivery Officer (Associate Senior Service Delivery Officer), Riyadh, Saudi Arabia",https://unjobs.org/vacancies/1775049858092,,bank_no_match
 worldbank,"Service Delivery Officer (Associate Senior Service Delivery Officer), Panama City, Panama",https://unjobs.org/vacancies/1775049845503,,bank_no_match
 worldbank,"Health Economist/Health Specialist, Honiara, Solomon Islands",https://unjobs.org/vacancies/1774704584893,,bank_no_match
-worldbank,"Team Assistant, Maputo, Mozambique",https://unjobs.org/vacancies/1774617608454,,bank_no_match
-worldbank,"Gender & Social Inclusion Consultant, Washington, United States",https://unjobs.org/vacancies/1774617703792,,bank_exclude
 worldbank,"IT Workforce Development & Engagement (Associate IT Workforce Development and Engagement Officer), Sofia, Bulgaria",https://unjobs.org/vacancies/1774531134215,,bank_no_match
 worldbank,"Senior Health Specialist/Lead for SCAP program, Washington, United States",https://unjobs.org/vacancies/1774531201112,,bank_no_match
 worldbank,"Agriculture Economist, Antananarivo, Madagascar",https://unjobs.org/vacancies/1774358383369,,bank_no_match
