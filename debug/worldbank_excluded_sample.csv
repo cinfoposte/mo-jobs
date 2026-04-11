@@ -1,4 +1,9 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"Economist, Vienna, Austria",https://unjobs.org/vacancies/1775827009719,,bank_no_match
+worldbank,"Head, Washington, United States",https://unjobs.org/vacancies/1775827023088,,bank_no_match
+worldbank,"Controllers Loan Client Service Finance Officer, Chennai, India",https://unjobs.org/vacancies/1775827036441,,bank_no_match
+worldbank,"Senior External Affairs Officer, Maputo, Mozambique",https://unjobs.org/vacancies/1775827063591,,bank_no_match
+worldbank,"Extended Term Consultant, Yaounde, Cameroon",https://unjobs.org/vacancies/1775827090422,,bank_exclude
 worldbank,"Mining Specialist, Washington, United States",https://unjobs.org/vacancies/1775740664048,,bank_no_match
 worldbank,"Financial Management Specialist, Freetown, Sierra Leone",https://unjobs.org/vacancies/1775740677724,,bank_no_match
 worldbank,"Adaptation & Resilience Consultant, Washington, United States",https://unjobs.org/vacancies/1775740691396,,bank_exclude
