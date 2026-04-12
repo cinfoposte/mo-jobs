@@ -1,7 +1,4 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
-worldbank,"Economist, Vienna, Austria",https://unjobs.org/vacancies/1775827009719,,bank_no_match
-worldbank,"Head, Washington, United States",https://unjobs.org/vacancies/1775827023088,,bank_no_match
-worldbank,"Senior External Affairs Officer, Maputo, Mozambique",https://unjobs.org/vacancies/1775827063591,,bank_no_match
 worldbank,"Senior Programming Specialist, Washington, United States",https://unjobs.org/vacancies/1775913430605,,bank_no_match
 worldbank,"Controllers Loan Client Service Finance Officer, Chennai, India",https://unjobs.org/vacancies/1775827036441,,bank_no_match
 worldbank,"Extended Term Consultant, Yaounde, Cameroon",https://unjobs.org/vacancies/1775827090422,,bank_exclude
@@ -34,7 +31,6 @@ worldbank,"Senior Technology Learning Officer (Associate Senior Technology Learn
 worldbank,"Product Analyst, Sofia, Bulgaria",https://unjobs.org/vacancies/1775136401658,,bank_no_match
 worldbank,"Health Specialist, Nouakchott, Mauritania",https://unjobs.org/vacancies/1774876859365,,bank_no_match
 worldbank,"Senior Executive Assistant, Washington, United States",https://unjobs.org/vacancies/1774963686817,,bank_no_match
-worldbank,"Operations Officer, Lome, Togo",https://unjobs.org/vacancies/1774963537288,,bank_no_match
 worldbank,"AI Enablement Lead (Associate Senior IT Transformation Management Officer), Washington, United States",https://unjobs.org/vacancies/1774963523334,,bank_no_match
 worldbank,"Service Delivery Officer (Associate Senior Service Delivery Officer), New Delhi, India",https://unjobs.org/vacancies/1775049913151,,bank_no_match
 worldbank,"Senior HR Specialist - Employee Listening & Engagement, Washington, United States",https://unjobs.org/vacancies/1775049899388,,bank_no_match
