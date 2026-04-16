@@ -1,9 +1,15 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
-ifc,"(Senior)Investment Officer- Manufacturing, Chemicals and Fertilizers, Cairo, Egypt",https://unjobs.org/vacancies/1776259400308,,bank_no_match
-ifc,"Environment and Social Specialist, Istanbul, Türkiye",https://unjobs.org/vacancies/1776259441891,,bank_no_match
-ifc,"Operations Officer - Country Office Brazzaville, Brazzaville, Congo",https://unjobs.org/vacancies/1776259455236,,bank_no_match
-ifc,"Program Assistant - Protocol, Lagos, Nigeria",https://unjobs.org/vacancies/1776259522639,,bank_no_match
-ifc,"(Associate) Investment Officer, Public Private Partnership, Brazil, Sao Paulo, Brazil",https://unjobs.org/vacancies/1776259536115,,bank_no_match
+ifc,"Regional Industry Director, FIG, LAC & Europe, Vienna, Austria",https://unjobs.org/vacancies/1776347339403,,bank_no_match
+ifc,"Budget Manager, Asia, Hong Kong, China",https://unjobs.org/vacancies/1776347366245,,bank_no_match
+ifc,"Associate IT Officer, Data and Information Management (Associate Data Engineer), Washington, United States",https://unjobs.org/vacancies/1776347379627,,bank_no_match
+ifc,"Extended Term Consultant, Public Private Partnership, Colombia, Bogota, Colombia",https://unjobs.org/vacancies/1776347406321,,bank_exclude
+ifc,"(Associate) Investment Officer, Johannesburg, South Africa",https://unjobs.org/vacancies/1776347432959,,bank_no_match
+ifc,"Investment Analyst, Tokyo, Japan",https://unjobs.org/vacancies/1776347460406,,bank_no_match
+ifc,"Extended Term Consultant, Public Private Partnership, Colombia, Bogota, Colombia",https://unjobs.org/vacancies/1776347500748,,bank_exclude
+ifc,"(Associate) Investment Officer, Public Private Partnership, Brazil, Sao Paulo, Brazil",https://unjobs.org/vacancies/1776347527520,,bank_no_match
+ifc,"Associate Investment, Officer, N'Djamena, Chad",https://unjobs.org/vacancies/1774617744367,,bank_no_match
+ifc,"Environment and Social Specialist, Istanbul",https://unjobs.org/vacancies/1776259441891,,bank_no_match
+ifc,"(Senior) Investment Officer- Manufacturing, Chemicals and Fertilizers, Cairo, Egypt",https://unjobs.org/vacancies/1776259400308,,bank_no_match
 ifc,"Upstream and Investment Manager, Bangkok, Thailand",https://unjobs.org/vacancies/1775999738550,,bank_no_match
 ifc,"Investment Analyst - Public Private Partnership Transaction Advisory, Johannesburg, South Africa",https://unjobs.org/vacancies/1775999752445,,bank_no_match
 ifc,"Associate Investment Office, PPP Transaction Advisory, Tashkent, Uzbekistan",https://unjobs.org/vacancies/1775827050328,,bank_no_match
@@ -13,7 +19,4 @@ ifc,"Extended Term Consultant - Nature Finance Specialist, Washington, United St
 ifc,"Program Manager, Jamaica, Kingston, Jamaica",https://unjobs.org/vacancies/1775654300600,,bank_no_match
 ifc,"Regional Industry Manager, INR, LAC, Lima, Peru",https://unjobs.org/vacancies/1775654313955,,bank_no_match
 ifc,"Investment Analyst - Private Equity Funds (PE) - Asia, Singapore",https://unjobs.org/vacancies/1775567843832,,bank_no_match
-ifc,"Investment Officer-Financial Institutions Group, Nairobi, Kenya",https://unjobs.org/vacancies/1775136428618,,bank_no_match
 ifc,"Senior Investment Officer - Digital, Washington, United States",https://unjobs.org/vacancies/1774617676223,,bank_no_match
-ifc,"Associate investment, Officer, N'Djamena, Chad",https://unjobs.org/vacancies/1774617744367,,bank_no_match
-ifc,"Senior Investment Officer, Corporate Finance Services (CFS) - Asia, Singapore",https://unjobs.org/vacancies/1774444893969,,bank_no_match
