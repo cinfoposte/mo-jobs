@@ -1,4 +1,5 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+wfp,"Programme Assistant (Emergency Preparedness and Response), Tripoli, Libya",https://unjobs.org/vacancies/1776352969187,,no_grade
 wfp,"JPO Vulnerability Assessment and Mapping (VAM) Officer, N'Djamena",https://unjobs.org/vacancies/1776265362800,,jpo
 wfp,"Roster Monitor/a, Colombia",https://unjobs.org/vacancies/1776353002456,,no_grade
 wfp,"Driver, Cox's Bazaar, Bangladesh",https://unjobs.org/vacancies/1776352887821,,no_grade
@@ -7,7 +8,6 @@ wfp,"Programme Policy Officer (Adaptive social protection, evidence generation a
 wfp,"Assistant/e au Programme, Assistant/e au Programme, Uvira, Democratic Republic of Congo",https://unjobs.org/vacancies/1776352585508,,no_grade
 wfp,"Consultor para Planes de Negocio, Ayacucho, Peru",https://unjobs.org/vacancies/1776352936090,,no_grade
 wfp,"Asistente de Monitoreo & Evaluación, La Paz, Bolivia",https://unjobs.org/vacancies/1776352961164,,no_grade
-wfp,"Programme Assistant (Emergency Preparedness and Response) SSA5, Tripoli, Libya",https://unjobs.org/vacancies/1776352969187,,no_grade
 wfp,"Auxiliar de Programas IDM, Bogota, Colombia",https://unjobs.org/vacancies/1776353050019,,no_grade
 wfp,"Asistente de Monitoreo Evaluación Sc, Quito, Ecuador",https://unjobs.org/vacancies/1776177337214,,no_grade
 wfp,"Human Resources Officer, Bujumbura, Burundi",https://unjobs.org/vacancies/1776265355277,,no_grade
@@ -25,19 +25,6 @@ wfp,"Coordinador/a objetivo estratégico 2 - Resiliencia, La Paz, Bolivia",https
 wfp,"Programme Associate (KIM & Data Analysis), Dhaka, Bangladesh",https://unjobs.org/vacancies/1776090929783,,no_grade
 wfp,"Asistente de Programas - Coordinador/a Emergencias (SO1), La Paz, Bolivia",https://unjobs.org/vacancies/1776001740886,,no_grade
 wfp,"Assessment Officer, Rome, Italy",https://unjobs.org/vacancies/1775744018663,,no_grade
-wfp,"Auxiliar Gestion de Datos, Riohacha, Colombia",https://unjobs.org/vacancies/1775830655629,,no_grade
-wfp,"Programme Policy Officer (Disaster Risk Financing Strategy and Insurance), Kigali, Rwanda",https://unjobs.org/vacancies/1775830625962,,no_grade
-wfp,"Roster Asociada/o Senior de Programas CBT, Bogota, Colombia",https://unjobs.org/vacancies/1775830617694,,no_grade
-wfp,"Senior Programme Associate, Bridgetown, Barbados",https://unjobs.org/vacancies/1775915796939,,no_grade
-wfp,"Asistente de Programas, Quibdo, Colombia",https://unjobs.org/vacancies/1775830601903,,no_grade
-wfp,"Nutritionist, Kinshasa, Democratic Republic of Congo",https://unjobs.org/vacancies/1775830594566,,no_grade
-wfp,"Family Liaison Officer, Kinshasa, Democratic Republic of Congo",https://unjobs.org/vacancies/1775830586969,,no_grade
-wfp,"Assistant Logistique (Gestion des Stocks des CP & Support SCOPE In Kind), Brazzaville, Congo",https://unjobs.org/vacancies/1775830579522,,no_grade
-wfp,"Programme Policy Officer, Bridgetown, Barbados",https://unjobs.org/vacancies/1775915789375,,no_grade
-wfp,"Senior Budget & Programming Associate, Bridgetown, Barbados",https://unjobs.org/vacancies/1775915781766,,no_grade
-wfp,"Senior Logistics Associate (Hub Manager), Bridgetown, Barbados",https://unjobs.org/vacancies/1775915774302,,no_grade
-wfp,"Senior Programme Associate, Port of Spain, Trinidad and Tobago",https://unjobs.org/vacancies/1775915766534,,no_grade
-wfp,"Programme Associate, Roseau, Dominica",https://unjobs.org/vacancies/1775915750435,,no_grade
 wfp,"Global Chief, Individual Giving, London, United Kingdom",https://unjobs.org/vacancies/1775830648184,,no_grade
 wfp,"Regional Medical Officer, Panama City, Panama",https://unjobs.org/vacancies/1775657478847,,no_grade
 wfp,"Programme Policy Officer (CBT), Port Sudan, Sudan",https://unjobs.org/vacancies/1775657448709,,no_grade
@@ -49,3 +36,16 @@ wfp,"Insurance Officer (Underwriting), Rome, Italy",https://unjobs.org/vacancies
 wfp,"HR Assistance, Managua, Nicaragua",https://unjobs.org/vacancies/1775743989328,,no_grade
 wfp,"Human Resources Associate, Djibouti",https://unjobs.org/vacancies/1775743935362,,no_grade
 wfp,"Data Analyst, Kinshasa, Democratic Republic of Congo",https://unjobs.org/vacancies/1775744032942,,no_grade
+wfp,"CRM Marketing Manager, Berlin, Germany",https://unjobs.org/vacancies/1775744047954,,no_grade
+wfp,"Communications Associate (Social Media Lead), Cairo, Egypt",https://unjobs.org/vacancies/1775657427360,,no_grade
+wfp,"Programme Policy Officer - Resilience, Kinshasa, Democratic Republic of Congo",https://unjobs.org/vacancies/1775657434511,,no_grade
+wfp,"Finance Associate, New Delhi, India",https://unjobs.org/vacancies/1775657441706,,no_grade
+wfp,"Budget and Programming Associate, Dakar, Senegal",https://unjobs.org/vacancies/1775657464416,,no_grade
+wfp,"Fleet/fuel Monitoring and Reporting Associate, Port-au-Prince, Haiti",https://unjobs.org/vacancies/1775657471657,,no_grade
+wfp,"Management Services Assistant (Fleet), Islamabad, Pakistan",https://unjobs.org/vacancies/1775484077850,,no_grade
+wfp,"Programme Policy Officer  -  Climate Resilience, Nutrition and School Feeding, Maputo, Mozambique",https://unjobs.org/vacancies/1775571064250,,no_grade
+wfp,"Logistic Officer, Fort-Dauphin, Madagascar",https://unjobs.org/vacancies/1775571049023,,no_grade
+wfp,"IT Solutions Assistant, Nairobi, Kenya",https://unjobs.org/vacancies/1775571041571,,no_grade
+wfp,"Asociado/a de Adquisiciones y Logistica SC, Quito, Ecuador",https://unjobs.org/vacancies/1775571087019,,no_grade
+wfp,"Business Support Assistant (Partnership Assistant), Dili, Timor-Leste",https://unjobs.org/vacancies/1775140500204,,no_grade
+wfp,"Business Support Assistant/Finances, Conakry, Guinea",https://unjobs.org/vacancies/1775225196499,,no_grade
