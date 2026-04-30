@@ -1,4 +1,8 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"E T Temporary, Singapore",https://unjobs.org/vacancies/1777495365653,,bank_no_match
+worldbank,"E T consultant - Programming Analyst, Washington, United States",https://unjobs.org/vacancies/1777495379074,,bank_exclude
+worldbank,"Digital Specialist, Seoul, Republic of Korea",https://unjobs.org/vacancies/1777495392724,,bank_no_match
+worldbank,"E T Temporary, Montevideo, Uruguay",https://unjobs.org/vacancies/1777495406351,,bank_no_match
 worldbank,"Associate Product Owner, Washington, United States",https://unjobs.org/vacancies/1777382639228,,bank_no_match
 worldbank,"Product Analyst, Washington, United States",https://unjobs.org/vacancies/1777382666360,,bank_no_match
 worldbank,"Senior Economist, Washington, United States",https://unjobs.org/vacancies/1777382679819,,bank_no_match
