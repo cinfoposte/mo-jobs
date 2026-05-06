@@ -1,7 +1,9 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+ebrd,"Intern, AI engineer, Sofia, Bulgaria",https://unjobs.org/vacancies/1778099850355,,bank_exclude
+ebrd,"Intern, London, United Kingdom",https://unjobs.org/vacancies/1778099883675,,bank_exclude
+ebrd,"Receptionist, Cairo, Egypt",https://unjobs.org/vacancies/1778099889439,,bank_no_match
 ebrd,"Assistant Analyst, AP DF, Ops Finance, London, United Kingdom",https://unjobs.org/vacancies/1777583139272,,bank_exclude
 ebrd,"Lead Full Stack Engineer, Sofia, Bulgaria",https://unjobs.org/vacancies/1777583144610,,bank_no_match
-ebrd,"Driver, Pristina, Kosovo",https://unjobs.org/vacancies/1777497268315,,bank_no_match
 ebrd,"Mid-Level, DevOps Engineer- Azure, Sofia, Bulgaria",https://unjobs.org/vacancies/1777497278940,,bank_no_match
 ebrd,"Intern, Bucharest, Romania",https://unjobs.org/vacancies/1777299357274,,bank_exclude
 ebrd,"Lead Data Quality Engineer (Azure Fabric), Sofia, Bulgaria",https://unjobs.org/vacancies/1777024664865,,bank_no_match
