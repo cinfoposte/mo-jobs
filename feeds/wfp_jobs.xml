@@ -5,28 +5,7 @@
     <link>https://unjobs.org/organizations/wfp</link>
     <description>Latest job vacancies for WFP – World Food Programme sourced from UNjobs.org. JPO positions are excluded.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 18 May 2026 21:42:53 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2026 12:49:28 +0000</lastBuildDate>
     <atom:link href="https://cinfoposte.github.io/mo-jobs/feeds/wfp_jobs.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Chief Food Safety &amp; Quality (P5), Rome, Italy</title>
-      <link>https://unjobs.org/vacancies/1779105236683</link>
-      <guid isPermaLink="false">45603a7b1bdee66f0b7f19c362b36dad</guid>
-      <pubDate>Mon, 18 May 2026 21:42:53 +0000</pubDate>
-      <description />
-    </item>
-    <item>
-      <title>Data Privacy Specialist P3, Rome, Italy</title>
-      <link>https://unjobs.org/vacancies/1779105668790</link>
-      <guid isPermaLink="false">393e16f076bb3a821d455e7c774ed143</guid>
-      <pubDate>Mon, 18 May 2026 21:42:53 +0000</pubDate>
-      <description />
-    </item>
-    <item>
-      <title>Data Programme Specialist P4, Rome, Italy</title>
-      <link>https://unjobs.org/vacancies/1779105754060</link>
-      <guid isPermaLink="false">b67a720cc6d30aa2baf008563615d631</guid>
-      <pubDate>Mon, 18 May 2026 21:42:53 +0000</pubDate>
-      <description />
-    </item>
   </channel>
 </rss>
