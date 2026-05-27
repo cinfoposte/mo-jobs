@@ -1,4 +1,12 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"E T Temporary, Nouakchott, Mauritania",https://unjobs.org/vacancies/1779893190153,,bank_no_match
+worldbank,"Extended Term Consultant (Database Administrator), Chennai, India",https://unjobs.org/vacancies/1779893217681,,bank_exclude
+worldbank,"Financial Management Specialist, Abuja, Nigeria",https://unjobs.org/vacancies/1779893245391,,bank_no_match
+worldbank,"Senior Mining Specialist, Riyadh, Saudi Arabia",https://unjobs.org/vacancies/1779893259147,,bank_no_match
+worldbank,"Extended Term Consultant, Chennai, India",https://unjobs.org/vacancies/1779893272779,,bank_exclude
+worldbank,"Extended Term Consultant (Senior GenAI Engineering Practitioner - SDLC & Agentic AI), Chennai, India",https://unjobs.org/vacancies/1779893286301,,bank_exclude
+worldbank,"Operations Officer, Praia, Cape Verde",https://unjobs.org/vacancies/1779893341691,,bank_no_match
+worldbank,"Driver, N'Djamena, Chad",https://unjobs.org/vacancies/1779893355611,,bank_no_match
 worldbank,"AI Service Management Transformation Lead (Associate Senior Service Management Officer), Washington, United States",https://unjobs.org/vacancies/1779546331811,,bank_no_match
 worldbank,"AI Solutions Analyst, Washington, United States",https://unjobs.org/vacancies/1779546346754,,bank_no_match
 worldbank,"E T Temporary, Port Moresby, Papua New Guinea",https://unjobs.org/vacancies/1779546360488,,bank_no_match
@@ -19,14 +27,11 @@ worldbank,"Extended Term Consultant (Windows Server Administrator), Chennai, Ind
 worldbank,"Extended Term Consultant (Logistics and Asset Management Analyst), Washington, United States",https://unjobs.org/vacancies/1779481871108,,bank_exclude
 worldbank,"Extended Term Consultant (Infrastructure Engineering Analyst - (Technician), Chennai, India",https://unjobs.org/vacancies/1779481884892,,bank_exclude
 worldbank,"Extended Term Consultant, Chennai, India",https://unjobs.org/vacancies/1779481912525,,bank_exclude
-worldbank,"WBG Country Manager, Spain, Europe",https://unjobs.org/vacancies/1779204805283,,bank_no_match
 worldbank,"Product Owner, Washington, United States",https://unjobs.org/vacancies/1779296061957,,bank_no_match
 worldbank,"Programming specialist, Washington, United States",https://unjobs.org/vacancies/1779296103543,,bank_no_match
 worldbank,"Extended Term Consultant (Transformation Management Officer), Washington, United States",https://unjobs.org/vacancies/1779296172902,,bank_exclude
 worldbank,"Team Assistant, Riyadh, Saudi Arabia",https://unjobs.org/vacancies/1779296186972,,bank_no_match
 worldbank,"WBG Special Representative, Washington, United States",https://unjobs.org/vacancies/1779204734539,,bank_no_match
-worldbank,"E T Temporary, Ankara, Turkey",https://unjobs.org/vacancies/1779204763870,,bank_no_match
-worldbank,"Financial Analyst, Paris, France",https://unjobs.org/vacancies/1779204791474,,bank_no_match
 worldbank,"Associate Product Owner, Chennai, India",https://unjobs.org/vacancies/1779204855860,,bank_no_match
 worldbank,"Extended Term Consultant (Wide Area Network Engineer), Washington, United States",https://unjobs.org/vacancies/1779204882899,,bank_exclude
 worldbank,"Infrastructure Engineer, Manila, Philippines",https://unjobs.org/vacancies/1779204896864,,bank_no_match
@@ -34,5 +39,4 @@ worldbank,"Lead Disaster Risk Management Specialist, Washington, United States",
 worldbank,"E T Temporary, Cap Haitien, Haiti",https://unjobs.org/vacancies/1779205069198,,bank_no_match
 worldbank,"Program Assistant, Riyadh, Saudi Arabia",https://unjobs.org/vacancies/1779205083062,,bank_no_match
 worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1779205138238,,bank_exclude
-worldbank,"Team Assistant, Kabul, Afghanistan",https://unjobs.org/vacancies/1779205155320,,bank_no_match
 worldbank,"Urban Specialist, Libreville, Gabon",https://unjobs.org/vacancies/1778098620081,,bank_no_match
