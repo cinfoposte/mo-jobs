@@ -1,6 +1,6 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"Financial Management Specialist, Ecuador",https://unjobs.org/vacancies/1780153255743,,bank_no_match
 worldbank,"Senior Accounting Assistant, Manila, Philippines",https://unjobs.org/vacancies/1780153212867,,bank_no_match
-worldbank,"Senior Procurement Specialist, Juba, South Sudan",https://unjobs.org/vacancies/1780153241765,,bank_no_match
 worldbank,"E T Temporary (Junior Service Delivery Analyst), Yaounde, Cameroon",https://unjobs.org/vacancies/1780153269931,,bank_no_match
 worldbank,"Extended Term Consultant, Chennai, India",https://unjobs.org/vacancies/1780153283746,,bank_exclude
 worldbank,"Extended Term Consultant-Water, Tunis, Tunisia",https://unjobs.org/vacancies/1780153297571,,bank_exclude
@@ -16,25 +16,12 @@ worldbank,"AI Service Management Transformation Lead (Associate Senior Service M
 worldbank,"AI Solutions Analyst, Washington, United States",https://unjobs.org/vacancies/1779546346754,,bank_no_match
 worldbank,"AI Incident and Problem Management Lead (Associate Service Management Officer), Washington, United States",https://unjobs.org/vacancies/1779546388211,,bank_no_match
 worldbank,"E T Temporary, Port Moresby, Papua New Guinea",https://unjobs.org/vacancies/1779546401724,,bank_no_match
-worldbank,"ET Temporary, Malabo, Equatorial Guinea",https://unjobs.org/vacancies/1779546428806,,bank_no_match
-worldbank,"Extended Term Consultant (Windows Server Administrator), Chennai, India",https://unjobs.org/vacancies/1779481648651,,bank_exclude
 worldbank,"Software Engineer, Sofia, Bulgaria",https://unjobs.org/vacancies/1779481663368,,bank_no_match
 worldbank,"Agriculture Specialist, Bamako, Mali",https://unjobs.org/vacancies/1779481705213,,bank_no_match
 worldbank,"Extended Term Consultant - Analyst, New Delhi, India",https://unjobs.org/vacancies/1779481732948,,bank_exclude
-worldbank,"Extended Term Consultant (Backup Administrator), Chennai, India",https://unjobs.org/vacancies/1779481746941,,bank_exclude
 worldbank,"Operations Analyst, Amman, Jordan",https://unjobs.org/vacancies/1779481760792,,bank_no_match
-worldbank,"Extended Term Consultant (Linux Administrator), Chennai, India",https://unjobs.org/vacancies/1779481774741,,bank_exclude
 worldbank,"Extended Term Consultant (Infrastructure Engineering Analyst - (Technician), Washington, United States",https://unjobs.org/vacancies/1779481788781,,bank_exclude
-worldbank,"Extended Term Consultant (Site Reliability Engineer - Platform & Cloud Operations), Chennai, India",https://unjobs.org/vacancies/1779481802583,,bank_exclude
-worldbank,"Data Engineer, Washington, United States",https://unjobs.org/vacancies/1779481816354,,bank_no_match
 worldbank,"Extended Term Consultant (Windows Server Administrator), Chennai, India",https://unjobs.org/vacancies/1779481857480,,bank_exclude
-worldbank,"Extended Term Consultant (Logistics and Asset Management Analyst), Washington, United States",https://unjobs.org/vacancies/1779481871108,,bank_exclude
 worldbank,"Extended Term Consultant (Infrastructure Engineering Analyst - (Technician), Chennai, India",https://unjobs.org/vacancies/1779481884892,,bank_exclude
 worldbank,"Programming specialist, Washington, United States",https://unjobs.org/vacancies/1779296103543,,bank_no_match
-worldbank,"Team Assistant, Riyadh, Saudi Arabia",https://unjobs.org/vacancies/1779296186972,,bank_no_match
-worldbank,"WBG Special Representative, Washington, United States",https://unjobs.org/vacancies/1779204734539,,bank_no_match
-worldbank,"Associate Product Owner, Chennai, India",https://unjobs.org/vacancies/1779204855860,,bank_no_match
-worldbank,"Extended Term Consultant (Wide Area Network Engineer), Washington, United States",https://unjobs.org/vacancies/1779204882899,,bank_exclude
-worldbank,"Infrastructure Engineer, Manila, Philippines",https://unjobs.org/vacancies/1779204896864,,bank_no_match
-worldbank,"Program Assistant, Riyadh, Saudi Arabia",https://unjobs.org/vacancies/1779205083062,,bank_no_match
 worldbank,"Urban Specialist, Libreville, Gabon",https://unjobs.org/vacancies/1778098620081,,bank_no_match
