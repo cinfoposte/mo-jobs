@@ -1,4 +1,8 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1781272124749,,bank_exclude
+worldbank,"Extended Term Consultant - Multi-Stakeholder Partnership Coordinator, Bangkok, Thailand",https://unjobs.org/vacancies/1781272138185,,bank_exclude
+worldbank,"Research and Reference Librarian (Information Solutions Analyst), Washington, United States",https://unjobs.org/vacancies/1781272165767,,bank_no_match
+worldbank,"Manager SME and Enterprise Development, Policy & Regulations, Washington, United States",https://unjobs.org/vacancies/1781272193944,,bank_no_match
 worldbank,"Platform Engineering Analyst, Chennai, India",https://unjobs.org/vacancies/1781185215426,,bank_no_match
 worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1781185229259,,bank_exclude
 worldbank,"Senior Agriculture Specialist, Maputo, Mozambique",https://unjobs.org/vacancies/1781185243162,,bank_no_match
@@ -45,7 +49,3 @@ worldbank,"Strategy Officer (Partnerships Officer), Brussels, Belgium",https://u
 worldbank,"Extended Term Temporary, Chennai, India",https://unjobs.org/vacancies/1780584669397,,bank_no_match
 worldbank,"Associate Infrastructure Engineer, Washington, United States",https://unjobs.org/vacancies/1780584696339,,bank_no_match
 worldbank,"Senior Environmental Specialist, Addis Ababa, Ethiopia",https://unjobs.org/vacancies/1780584724290,,bank_no_match
-worldbank,"Senior AI Specialist, Seoul, Republic of Korea",https://unjobs.org/vacancies/1780584737855,,bank_no_match
-worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1780584792538,,bank_exclude
-worldbank,"Financial Management Specialist, Ecuador",https://unjobs.org/vacancies/1780153255743,,bank_no_match
-worldbank,"Senior Accounting Assistant, Manila, Philippines",https://unjobs.org/vacancies/1780153212867,,bank_no_match
