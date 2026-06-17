@@ -1,4 +1,7 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1781635736173,,bank_exclude
+worldbank,"Extended Term Consultant (Associate Platform Engineer, Informatica), Washington, United States",https://unjobs.org/vacancies/1781635791722,,bank_exclude
+worldbank,"Platform Engineering Analyst, Chennai, India",https://unjobs.org/vacancies/1781635832783,,bank_no_match
 worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1781272124749,,bank_exclude
 worldbank,"Extended Term Consultant - Multi-Stakeholder Partnership Coordinator, Bangkok, Thailand",https://unjobs.org/vacancies/1781272138185,,bank_exclude
 worldbank,"Research and Reference Librarian (Information Solutions Analyst), Washington, United States",https://unjobs.org/vacancies/1781272165767,,bank_no_match
@@ -46,6 +49,3 @@ worldbank,"Infrastructure Engineering Analyst, Washington, United States",https:
 worldbank,"Manager, Climate Strategy, Learn. & Ops, Solutions & Impact, Washington, United States",https://unjobs.org/vacancies/1780584614749,,bank_no_match
 worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1780584628329,,bank_exclude
 worldbank,"Strategy Officer (Partnerships Officer), Brussels, Belgium",https://unjobs.org/vacancies/1780584642036,,bank_no_match
-worldbank,"Extended Term Temporary, Chennai, India",https://unjobs.org/vacancies/1780584669397,,bank_no_match
-worldbank,"Associate Infrastructure Engineer, Washington, United States",https://unjobs.org/vacancies/1780584696339,,bank_no_match
-worldbank,"Senior Environmental Specialist, Addis Ababa, Ethiopia",https://unjobs.org/vacancies/1780584724290,,bank_no_match
