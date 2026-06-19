@@ -1,4 +1,11 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"DevOps Engineer (IT Officer, Engineering I), Sofia, Bulgaria",https://unjobs.org/vacancies/1781807506060,,bank_no_match
+worldbank,"Driver, Bissau, Guinea Bissau",https://unjobs.org/vacancies/1781807520003,,bank_no_match
+worldbank,"Extended Term Consultant - Product Owner, Washington, United States",https://unjobs.org/vacancies/1781807533890,,bank_exclude
+worldbank,"Health Specialist, Colombo, Sri Lanka",https://unjobs.org/vacancies/1781807547797,,bank_no_match
+worldbank,"Extended Term Consultant (IT Workforce Engagement & Development), Washington, United States",https://unjobs.org/vacancies/1781807561660,,bank_exclude
+worldbank,"Procurement Specialist, Kyiv, Ukraine",https://unjobs.org/vacancies/1781807575307,,bank_no_match
+worldbank,"E T Temporary, Manila, Philippines",https://unjobs.org/vacancies/1781807589441,,bank_no_match
 worldbank,"Extended Term Consultant (SAP Solution Manager Administrator), Washington, United States",https://unjobs.org/vacancies/1781704638419,,bank_exclude
 worldbank,"Senior Water Specialist, N'Djamena, Chad",https://unjobs.org/vacancies/1781704679293,,bank_no_match
 worldbank,"Practice Manager, Washington, United States",https://unjobs.org/vacancies/1781704707092,,bank_no_match
@@ -42,10 +49,3 @@ worldbank,"Financial Analyst, Paris, France",https://unjobs.org/vacancies/178101
 worldbank,"Associate Platform Engineer, Washington, United States",https://unjobs.org/vacancies/1781016296691,,bank_no_match
 worldbank,"Extended Term Consultant (Information Solutions Analyst), Washington, United States",https://unjobs.org/vacancies/1781016310428,,bank_exclude
 worldbank,"Extended Term Consultant, Chennai, India",https://unjobs.org/vacancies/1781016324339,,bank_exclude
-worldbank,"Extended Term Consultant, Chennai, India",https://unjobs.org/vacancies/1781016338123,,bank_exclude
-worldbank,"Extended Term Consultant (Associate Product Owner), Washington, United States",https://unjobs.org/vacancies/1781016351727,,bank_exclude
-worldbank,"Manager-AI, Analytics, and Digital, Washington, United States",https://unjobs.org/vacancies/1781016365494,,bank_no_match
-worldbank,"Senior Digital Government Interoperability and Data Exchange Specialist, Washington, United States",https://unjobs.org/vacancies/1780947200829,,bank_no_match
-worldbank,"Senior Portfolio Manager, Hedge Funds, Washington, United States",https://unjobs.org/vacancies/1780947214481,,bank_no_match
-worldbank,"Senior Risk Specialist, Washington, United States",https://unjobs.org/vacancies/1780674036631,,bank_no_match
-worldbank,"IT Officer, Business Solutions I, Chennai, India",https://unjobs.org/vacancies/1780674050354,,bank_no_match
