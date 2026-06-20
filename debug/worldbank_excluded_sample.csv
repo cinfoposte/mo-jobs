@@ -1,4 +1,8 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"Associate Senior Product Owner - Platform Engineering, Washington, United States",https://unjobs.org/vacancies/1781907436292,,bank_no_match
+worldbank,"Senior Technology Learning Officer (Associate Senior Technology Learning Officer), Sofia, Bulgaria",https://unjobs.org/vacancies/1781907464349,,bank_no_match
+worldbank,"Data Engineer, Chennai, India",https://unjobs.org/vacancies/1781907478063,,bank_no_match
+worldbank,"AI Governance Analyst (IT Program Analyst), Washington, United States",https://unjobs.org/vacancies/1781907492167,,bank_no_match
 worldbank,"DevOps Engineer (IT Officer, Engineering I), Sofia, Bulgaria",https://unjobs.org/vacancies/1781807506060,,bank_no_match
 worldbank,"Driver, Bissau, Guinea Bissau",https://unjobs.org/vacancies/1781807520003,,bank_no_match
 worldbank,"Extended Term Consultant - Product Owner, Washington, United States",https://unjobs.org/vacancies/1781807533890,,bank_exclude
@@ -45,7 +49,3 @@ worldbank,"Extended Term Consultant, Chennai, India",https://unjobs.org/vacancie
 worldbank,"Extended Term Consultant, Chennai, India",https://unjobs.org/vacancies/1781108807004,,bank_exclude
 worldbank,"Security Engineering Analyst, Chennai, India",https://unjobs.org/vacancies/1781108820384,,bank_no_match
 worldbank,"Extended Term Consultant, Chennai, India",https://unjobs.org/vacancies/1781108834282,,bank_exclude
-worldbank,"Financial Analyst, Paris, France",https://unjobs.org/vacancies/1781016269156,,bank_no_match
-worldbank,"Associate Platform Engineer, Washington, United States",https://unjobs.org/vacancies/1781016296691,,bank_no_match
-worldbank,"Extended Term Consultant (Information Solutions Analyst), Washington, United States",https://unjobs.org/vacancies/1781016310428,,bank_exclude
-worldbank,"Extended Term Consultant, Chennai, India",https://unjobs.org/vacancies/1781016324339,,bank_exclude
