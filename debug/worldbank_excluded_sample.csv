@@ -1,4 +1,8 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"GIA IT Audit Analyst, Washington, United States",https://unjobs.org/vacancies/1782153746531,,bank_no_match
+worldbank,"GIA IT Audit Specialist, Washington, United States",https://unjobs.org/vacancies/1782153760223,,bank_no_match
+worldbank,"Senior AV/VC Solutions Designer ( Associate Senior Infrastructure Engineer), Washington, United States",https://unjobs.org/vacancies/1782153787592,,bank_no_match
+worldbank,"Senior Environmental Specialist/Safeguards, Abidjan, Cote d'Ivoire",https://unjobs.org/vacancies/1782153801408,,bank_no_match
 worldbank,"Associate Senior Product Owner - Platform Engineering, Washington, United States",https://unjobs.org/vacancies/1781907436292,,bank_no_match
 worldbank,"Senior Technology Learning Officer (Associate Senior Technology Learning Officer), Sofia, Bulgaria",https://unjobs.org/vacancies/1781907464349,,bank_no_match
 worldbank,"Data Engineer, Chennai, India",https://unjobs.org/vacancies/1781907478063,,bank_no_match
@@ -45,7 +49,3 @@ worldbank,"Transport Specialist- Modelling, Washington, United States",https://u
 worldbank,"Infrastructure Engineering Analyst, Washington, United States",https://unjobs.org/vacancies/1781108764920,,bank_no_match
 worldbank,"Extended Term Consultant (Product Owner - Lending Solutions), Washington, United States",https://unjobs.org/vacancies/1781108779182,,bank_exclude
 worldbank,"Extended Term Consultant, Chennai, India",https://unjobs.org/vacancies/1781108793106,,bank_exclude
-worldbank,"Extended Term Consultant, Chennai, India",https://unjobs.org/vacancies/1781108807004,,bank_exclude
-worldbank,"Security Engineering Analyst, Chennai, India",https://unjobs.org/vacancies/1781108820384,,bank_no_match
-worldbank,"Extended Term Consultant, Chennai, India",https://unjobs.org/vacancies/1781108834282,,bank_exclude
-worldbank,"Financial Analyst, Paris, France",https://unjobs.org/vacancies/1781016269156,,bank_no_match
