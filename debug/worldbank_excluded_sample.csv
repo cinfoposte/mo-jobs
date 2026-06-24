@@ -1,4 +1,6 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"Counsel, Washington, United States",https://unjobs.org/vacancies/1782238990272,,bank_no_match
+worldbank,"Natural Resources Management Specialist, Kathmandu, Nepal",https://unjobs.org/vacancies/1782239018109,,bank_no_match
 worldbank,"GIA IT Audit Analyst, Washington, United States",https://unjobs.org/vacancies/1782153746531,,bank_no_match
 worldbank,"GIA IT Audit Specialist, Washington, United States",https://unjobs.org/vacancies/1782153760223,,bank_no_match
 worldbank,"Senior AV/VC Solutions Designer ( Associate Senior Infrastructure Engineer), Washington, United States",https://unjobs.org/vacancies/1782153787592,,bank_no_match
@@ -47,5 +49,3 @@ worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.o
 worldbank,"Transport Specialist- Modelling, Washington, United States",https://unjobs.org/vacancies/1781108750994,,bank_no_match
 worldbank,"Infrastructure Engineering Analyst, Washington, United States",https://unjobs.org/vacancies/1781108764920,,bank_no_match
 worldbank,"Extended Term Consultant (Product Owner - Lending Solutions), Washington, United States",https://unjobs.org/vacancies/1781108779182,,bank_exclude
-worldbank,"Extended Term Consultant, Chennai, India",https://unjobs.org/vacancies/1781108807004,,bank_exclude
-worldbank,"Security Engineering Analyst, Chennai, India",https://unjobs.org/vacancies/1781108820384,,bank_no_match
