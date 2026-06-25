@@ -1,4 +1,8 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"ET Consultant  -  Operations Analyst, Digital Applications, Washington, United States",https://unjobs.org/vacancies/1782327712054,,bank_exclude
+worldbank,"Operations  Officer, Washington, United States",https://unjobs.org/vacancies/1782327725819,,bank_no_match
+worldbank,"Product Analyst, Washington, United States",https://unjobs.org/vacancies/1782327739712,,bank_no_match
+worldbank,"Knowledge Management & Learning Officer, Washington, United States",https://unjobs.org/vacancies/1782327767130,,bank_no_match
 worldbank,"Counsel, Washington, United States",https://unjobs.org/vacancies/1782238990272,,bank_no_match
 worldbank,"Natural Resources Management Specialist, Kathmandu, Nepal",https://unjobs.org/vacancies/1782239018109,,bank_no_match
 worldbank,"GIA IT Audit Analyst, Washington, United States",https://unjobs.org/vacancies/1782153746531,,bank_no_match
@@ -45,4 +49,3 @@ worldbank,"Engineering Supervisor, Washington, United States",https://unjobs.org
 worldbank,"Program Assistant, Singapore, Singapore",https://unjobs.org/vacancies/1781108694510,,bank_no_match
 worldbank,"Financial Analyst, Paris, France",https://unjobs.org/vacancies/1781016269156,,bank_no_match
 worldbank,"Senior Digital Government Interoperability and Data Exchange Specialist, Washington, United States",https://unjobs.org/vacancies/1780947200829,,bank_no_match
-worldbank,"Senior Portfolio Manager, Hedge Funds, Washington, United States",https://unjobs.org/vacancies/1780947214481,,bank_no_match
