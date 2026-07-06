@@ -1,44 +1,374 @@
-
 <!DOCTYPE html>
+<html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vacancies with rcs/2 | UNjobs</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap" rel="stylesheet">
+  <script src="https://unjobs.org/js/timeago.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&lang=en">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="icon" href="https://images.unjobs.org/org/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/local.css">
+  <link rel="stylesheet" href="/css/bundle2.css">
+  <link rel="stylesheet" href="/css/ais.css">
+
+  
 
 
+<style>
+/* ── Logo positioning ── */
+@media screen and (min-width: 900px) {
+  #logoimg { z-index:9999; display:inline; position:fixed; left:calc(50% - 96px); top:4px; height:46px; }
+}
+@media screen and (max-width: 900px) {
+  #logoimg { z-index:9999; display:inline; position:fixed; left:calc(50% - 70px); top:4px; height:46px; }
+}
 
-<html lang='en'>
-<meta name=viewport content="width=device-width, initial-scale=1">
-<base href="https://unjobs.org/" />
+/* ── Navigation ── */
+.navitem .mdl-button        { visibility: hidden; }
+.navitem:hover .mdl-button  { visibility: visible; }
+.mdl-navigation__link:hover { background-color: #f0f0f0; color: #37474F; }
+.fp-usernameLink:hover      { background-color: #f0f0f0; color: #37474F; }
+*:focus { outline: none; }
+* { scroll-margin-top: 100px; }
+
+/* ── Pagination bar ── */
+#ppp { margin:12px 8px 4px 8px; padding:16px 0 8px 0; display:flex; max-height:16px; }
+
+/* ── Job list ── */
+.fp-facetname.mdl-button {
+  width:fit-content; display:flex; height:36px; margin-left:-3px; padding:0;
+  border-radius:9999px; text-transform:none; white-space:nowrap;
+}
+.fp-facet {
+  float:left; display:inline-block; width:32%; min-width:0; display:flex;
+  position:relative; padding:3px; margin:0; height:36px;
+}
+.jtitle {
+  margin:4px 16px 0 0; padding:0 8px 3px 0;
+}
+.jobsnippet   { width:95%; }
+.expdt:empty  { display:none; }
+.jobupdated   { margin:0; }
+.likes        { display:none; }
+.icon-place   { left:1px; }
+
+.condensed {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+/* ── List group ── */
+.list-group { border-radius:4px; box-shadow:0 1px 2px rgba(0,0,0,.075); break-inside: avoid !important; }
+.list-group-item {
+  position:relative; display:block; padding:10px 15px; margin-bottom:-1px;
+  background-color:#fff; border:1px solid #ddd;
+}
+.list-group-item:first-child { border-top-left-radius:4px; border-top-right-radius:4px; }
+.list-group-item:last-child  { border-bottom-left-radius:4px; border-bottom-right-radius:4px; }
+
+/* ── MD chips (tags, skills) ── */
+.md-chips { padding:0; margin:0; }
+.md-chip {
+  display:inline-block; background:#e0e0e0; padding:0 12px; border-radius:32px;
+  height:32px; line-height:32px; margin:4px; font-size:13px; cursor:default;
+  white-space:nowrap; vertical-align:middle;
+}
+.md-chip a { color:inherit; text-decoration:none; }
+.md-chip-raised {
+  box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+.md-chip-hover:hover { background:#ccc; cursor:pointer; }
+
+/* ── Job cards ── */
+.job-card {
+  background:#fff; border:1px solid #c4c8d8; box-shadow:0 2px 5px 0 #e3e5ec;
+  border-radius:4px; padding:10px 12px; margin:0 0 8px 0;
+  font-size:13px; font-family:sans-serif; line-height:1.4em;
+  overflow-wrap:break-word; break-inside:avoid; width:100%; box-sizing:border-box;
+}
+.job {
+  line-height:1.4em; font-size:13px; padding:6px 0;
+  border-bottom:1px dotted #555; font-family:sans-serif;
+  overflow-wrap:break-word; break-inside:avoid;
+}
+.fp-username.fp-orgname.mdl-color-text--black { max-width:296px; }
+
+/* ── Ad slots ── */
+.ad-slot-inline {
+  border-bottom: 0 !important;
+  background: transparent;
+}
+
+/* ── Mobile viewport constraints ── */
+.mdc-drawer-app-content, .main-content {
+  overflow-x: hidden;
+}
+table.pag {
+  table-layout: fixed;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ── Auto Ads containment ── */
+.mdc-top-app-bar,
+.mdc-top-app-bar--scrolled-under,
+.mdc-top-app-bar--short,
+.mdc-top-app-bar--short-collapsed,
+.mdc-top-app-bar--fixed,
+.mdc-top-app-bar--prominent {
+  z-index: 2147483647 !important;
+  background-color: #eee !important;
+  background-image: url(https://images.unjobs.org/org/topbar-bg.png) !important;
+}
+ins.adsbygoogle[data-ad-status] {
+  position: relative !important;
+  z-index: auto !important;
+}
+body > ins.adsbygoogle:first-child {
+  display: none !important;
+}
+</style>
+</head>
+<body class="mdc-typography" style="background-color:#fff !important;">
+
+  <!-- Independent fixed background — MDC JS cannot touch this -->
+  <div style="position:fixed;top:0;left:0;width:100%;height:55px;
+              background-color:#eee;
+              background-image:url(https://images.unjobs.org/org/topbar-bg.png);
+              z-index:2147483646;"></div>
+
+  <style>
+  nav i.material-icons0 { display: none; }
+  @media (max-width: 720px) { .mdc-drawer { display: none; } }
+</style>
+
+<aside class="mdc-drawer" style="">
+  <div class="mdc-drawer__content" style="background-color:#fff;width:256px;position:fixed;height:100%;overflow:hidden;">
+    <nav class="mdc-list" style="padding-top:0;width:100%;height:100%;overflow:hidden;position:relative;">
+
+      <div style="z-index:9999;position:fixed;height:55px;min-height:0px;width:100%;background-color:#eee;background-image:url(https://images.unjobs.org/org/topbar-bg.png);"></div>
+
+      <div class="innav" style="position:absolute;top:30px;bottom:90px;left:-4px;right:0px;overflow-y:scroll">
+
+        <a id="hlh" rel="nofollow"
+          style="visibility:hidden;width:-moz-fit-content;width:fit-content;position:relative;border-radius:9999px;display:table;margin:0 0 0 12px;padding:16px 16px 16px 12px"
+          class="mdl-navigation__link">
+          <i class="mdl-color-text--blue-grey-900 material-icons hl" role="presentation" style="margin-right:8px;"></i>
+          <div class="hltitle" style="float:right;"></div>
+        </a>
+
+        <div id="navitem1" class="navitem">
+          <a style="width:-moz-fit-content;width:fit-content;position:relative;border-radius:9999px;display:table;margin:0 0 0 12px;padding:16px 16px 16px 12px"
+            class="mdl-navigation__link" href="/">
+            <i class="mdl-color-text--blue-grey-900 material-icons" role="presentation" style="margin-right:8px;">inbox</i>
+            <div style="float:right;">Latest</div>
+          </a>
+        </div>
+
+        <a style="width:-moz-fit-content;width:fit-content;position:relative;border-radius:9999px;display:table;margin:0 0 0 12px;padding:16px 16px 16px 12px"
+          class="mdl-navigation__link" href="/closing">
+          <i class="mdl-color-text--blue-grey-900 material-icons" role="presentation" style="margin-right:8px;">alarm</i>
+          <div style="float:right;font-kerning:normal;">Closing soon</div>
+        </a>
+
+        <a id="srchlink"
+          style="width:-moz-fit-content;width:fit-content;position:relative;border-radius:9999px;display:table;margin:0 0 0 12px;padding:16px 16px 16px 12px"
+          class="mdl-navigation__link" href="/search">
+          <i class="mdl-color-text--blue-grey-900 material-icons" role="presentation" style="margin-right:8px;">search</i>
+          <div style="float:right;">Search</div>
+        </a>
+
+        <div class="navitem">
+          <a style="width:-moz-fit-content;width:fit-content;position:relative;border-radius:9999px;display:table;margin:0 0 0 12px;padding:16px 16px 16px 12px"
+            class="mdl-navigation__link" href="/duty_stations">
+            <i class="mdl-color-text--blue-grey-900 material-icons" role="presentation" style="margin-right:8px;">place</i>
+            <div style="float:right;">Duty&nbsp;stations</div>
+          </a>
+        </div>
+
+        <div class="navitem">
+          <a style="width:-moz-fit-content;width:fit-content;position:relative;border-radius:9999px;display:table;margin:0 0 0 12px;padding:16px 16px 16px 12px"
+            class="mdl-navigation__link" href="/organizations">
+            <i class="mdl-color-text--blue-grey-900 material-icons" role="presentation" style="margin-right:8px;">account_balance</i>
+            <div style="float:right;">Organizations</div>
+          </a>
+        </div>
+
+        <a style="width:-moz-fit-content;width:fit-content;position:relative;border-radius:9999px;display:table;margin:0 0 0 12px;padding:16px 16px 16px 12px"
+          class="mdl-navigation__link" href="/themes">
+          <i class="mdl-color-text--blue-grey-900 material-icons" role="presentation" style="margin-right:8px;">local_offer</i>
+          <div style="float:right;">Themes</div>
+        </a>
+
+        <a style="width:-moz-fit-content;width:fit-content;position:relative;border-radius:9999px;display:table;margin:0 0 0 12px;padding:16px 16px 16px 12px"
+          class="mdl-navigation__link" href="/countries">
+          <i class="mdl-color-text--blue-grey-900 material-icons" role="presentation" style="margin-right:8px;">flag</i>
+          <div style="float:right;">Countries</div>
+        </a>
+
+      </div>
+
+      <div class="condensed" style="position:absolute;bottom:20px;left:4px;right:0;padding:10px 12px;font-size:13px;background: rgb(224, 230, 254); color: rgb(87, 115, 236);">
+        A service of Infomation Sàrl, Genève<br>
+        <span style="font-size:12px;">Not an official document of the United Nations</span>
+        <br>
+        <a href="https://www.iubenda.com/privacy-policy/35887823"
+           class="iubenda-nostyle no-brand iubenda-embed" title="Privacy Policy"
+           style="color:rgb(87, 115, 236);font-size:12px;">Privacy Policy</a>
+        |
+        <a href="https://www.iubenda.com/privacy-policy/35887823/cookie-policy"
+           class="iubenda-nostyle no-brand iubenda-embed" title="Cookie Policy"
+           style="color:rgb(87, 115, 236);font-size:12px;">Cookie Policy</a>
+        <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+<!--         |
+        <a href="#" id="manage-cookies-link" style="color:#fff;font-size:11px;">Manage Cookies</a>
+        -->
+      </div>
+
+    </nav>
+  </div>
+</aside>
+  <header class="mdc-top-app-bar" data-google-auto-excluded style="z-index:11000;position:fixed;height:55px;min-height:0px;width:100%;background-color:#eee !important;background-image:url(https://images.unjobs.org/org/topbar-bg.png) !important;">
+  <div class="mdc-top-app-bar__row">
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+      <a href="#" style="color:white" class="demo-menu material-icons mdc-top-app-bar__navigation-icon">menu</a>
+      <div style="width:141px;height:46px;" id="logoimglink">
+        <a href="/"><img id="logoimg" class="logoiimage" src="https://images.unjobs.org/org/logo.gif" style=""></a>
+      </div>
+    </section>
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar" style="z-index:2147483647;position:relative;">
+      <a href="/search" style="color:white;" class="srchlink material-icons mdc-top-app-bar__action-item" aria-label="Search" alt="Search">search</a>
+    </section>
+  </div>
+</header>
+
+  <div class="mdc-drawer-scrim"></div>
+  <div class="mdc-drawer-app-content" style="width:100%;">
+
+    <main id="main-content" class="main-content" style="margin:0;">
+      <div class="mdc-top-app-bar--fixed-adjust">
 
 
- 
- 
+<section id="page-org-info" class="mdl-grid fp-content"
+  style="width:100%;max-width:100%;padding:6px 0;margin:0 8px;">
+
+  <div style="width:99%">
+    <div class="fp-user-container mdl-shadow--1dp mdl-cell mdl-cell--12-col"
+         style="margin:0;position:relative;width:fit-content;margin-right:8px;background:#fff;">
+      <div class="fp-name-follow-container" style="width:100%;margin:0 4px;">
+        <div style="display:flex;width:fit-content;">
+          <h1 class="fp-user-username" style="">Vacancies with rcs/2</h1>
+        </div>
+      </div>
+    </div>
+
+    
+    <div style="display:flex;align-items:center;gap:8px;margin:6px 0 4px 4px;">
+      <a href="/organizations/rcs/2"  style="display:inline-block;padding:4px 14px;border-radius:9999px;font-size:13px;font-weight:500;background:#37474F;color:#fff;text-decoration:none;">Jobs</a>
+      <a href="/organizations/rcs/2/videos" style="display:inline-block;padding:4px 14px;border-radius:9999px;font-size:13px;font-weight:500;background:#eee;color:#37474F;text-decoration:none;">Media</a>
+    </div>
+
+    
+  </div>
+
+  <div id="offices-wrap"
+  style="position:relative;display:none;width:100%;max-width:1200px;">
+
+  <button id="offices-close"
+    class="fp-close-following mdl-button mdl-js-button mdl-button--raised mdl-button--fab"
+    style="position:absolute;top:-28px;left:50%;transform:translateX(-50%);z-index:20;background-color:#eee;">
+    <i class="material-icons">expand_less</i>
+  </button>
+
+  <div id="offices"
+    style="position:relative;max-height:67vh;overflow-y:auto;overflow-x:hidden;width:100%;max-width:1200px;background:#fff;padding:24px 8px 0 8px;margin:12px 0 8px 0;display:flex;flex-flow:row wrap;"
+    class="fp-user-following mdl-shadow--2dp mdl-cell mdl-cell--12-col">
+    <div style="padding:16px;color:#999;">No active office locations</div>
+    <div id="offices-ad-target"
+         style="width:100%;max-width:100%;box-sizing:border-box;flex-basis:100%;margin-top:16px;padding:0 8px;"></div>
+  </div>
+</div>
+
+  <div style="min-height:150px;position:relative;width:100%;max-width:1200px;margin-right:8px;background:0;margin:0;">
+
+    <div id="ppp" class="pagination" style="position:relative;margin:0px 8px 4px 8px;padding:8px 0 8px 0;display:flex;max-height:16px;">
+    
+  </div>
+
+    <div class="fp-image-container fp-org-image-container article"
+         style="width:100%;max-width:1200px;margin-right:8px;margin:0;padding-top:0;column-gap:32px;column-rule:0 dotted rgb(85,85,85);min-height:150px;">
 
       
-   
- 
-   
-  
- 
- 
- <title>Vacancies with RCS - Resident Coordinator System | UNjobs</title>
 
-  
+      <div>No jobs to display at this time.</div>
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://unjobs.org/js/timeago.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </div>
+
+    <div id="pp3" class="pagination" style="margin-bottom:50px;">
+      
+    </div>
+
+  </div>
+</section>
+
 <script>
-     (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-9196538889333991",
-          enable_page_level_ads: true
-     });
+var topic       = "rcs/2";
+var pageIsUN    = "";
+var pageOrgID   = "rcs/2";
+var pageType    = "org";
+var isCgiarAll  = false;
+var cgiarTags      = [];
+var pageTotalHits  = 0;
+
+$(document).ready(function () {
+  var officeAdPushed = false;
+
+  $('#org-user-detail').on('click', function () {
+    $('#offices-wrap').show();
+    if (!officeAdPushed) {
+      officeAdPushed = true;
+      $('#offices-ad-target').html(
+        '<ins class="adsbygoogle" style="display:block;"' +
+        ' data-ad-client="ca-pub-9196538889333991"' +
+        ' data-ad-slot="4504822997"' +
+        ' data-ad-format="auto"' +
+        ' data-full-width-responsive="true"></ins>'
+      );
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    }
+  });
+
+  $('#offices-close').on('click', function () {
+    $('#offices-wrap').hide();
+  });
+});
 </script>
+
+        <!-- Toast -->
+        <div aria-live="assertive" aria-atomic="true" aria-relevant="text" class="mdl-snackbar mdl-js-snackbar">
+          <div class="mdl-snackbar__text"></div>
+          <button type="button" class="mdl-snackbar__action"></button>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
 
 <!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
 <script type="text/javascript" async=true>
 (function() {
-  var host = window.location.hostname;
+  //var host = window.location.hostname;
+  var host = 'unjobs.org';
   var element = document.createElement('script');
   var firstScript = document.getElementsByTagName('script')[0];
   var url = 'https://cmp.inmobi.com'
@@ -48,7 +378,6 @@
   element.async = true;
   element.type = 'text/javascript';
   element.src = url;
-
   firstScript.parentNode.insertBefore(element, firstScript);
 
   function makeStub() {
@@ -60,11 +389,9 @@
     function addFrame() {
       var doc = win.document;
       var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
-
       if (!otherCMP) {
         if (doc.body) {
           var iframe = doc.createElement('iframe');
-
           iframe.style.cssText = 'display:none';
           iframe.name = TCF_LOCATOR_NAME;
           doc.body.appendChild(iframe);
@@ -78,32 +405,18 @@
     function tcfAPIHandler() {
       var gdprApplies;
       var args = arguments;
-
       if (!args.length) {
         return queue;
       } else if (args[0] === 'setGdprApplies') {
-        if (
-          args.length > 3 &&
-          args[2] === 2 &&
-          typeof args[3] === 'boolean'
-        ) {
+        if (args.length > 3 && args[2] === 2 && typeof args[3] === 'boolean') {
           gdprApplies = args[3];
-          if (typeof args[2] === 'function') {
-            args[2]('set', true);
-          }
+          if (typeof args[2] === 'function') { args[2]('set', true); }
         }
       } else if (args[0] === 'ping') {
-        var retr = {
-          gdprApplies: gdprApplies,
-          cmpLoaded: false,
-          cmpStatus: 'stub'
-        };
-
-        if (typeof args[2] === 'function') {
-          args[2](retr);
-        }
+        var retr = { gdprApplies: gdprApplies, cmpLoaded: false, cmpStatus: 'stub' };
+        if (typeof args[2] === 'function') { args[2](retr); }
       } else {
-        if(args[0] === 'init' && typeof args[3] === 'object') {
+        if (args[0] === 'init' && typeof args[3] === 'object') {
           args[3] = Object.assign(args[3], { tag_version: 'V3' });
         }
         queue.push(args);
@@ -113,52 +426,26 @@
     function postMessageEventHandler(event) {
       var msgIsString = typeof event.data === 'string';
       var json = {};
-
       try {
-        if (msgIsString) {
-          json = JSON.parse(event.data);
-        } else {
-          json = event.data;
-        }
+        if (msgIsString) { json = JSON.parse(event.data); } else { json = event.data; }
       } catch (ignore) {}
-
       var payload = json.__tcfapiCall;
-
       if (payload) {
-        window.__tcfapi(
-          payload.command,
-          payload.version,
-          function(retValue, success) {
-            var returnMsg = {
-              __tcfapiReturn: {
-                returnValue: retValue,
-                success: success,
-                callId: payload.callId
-              }
-            };
-            if (msgIsString) {
-              returnMsg = JSON.stringify(returnMsg);
-            }
-            if (event && event.source && event.source.postMessage) {
-              event.source.postMessage(returnMsg, '*');
-            }
-          },
-          payload.parameter
-        );
+        window.__tcfapi(payload.command, payload.version, function(retValue, success) {
+          var returnMsg = { __tcfapiReturn: { returnValue: retValue, success: success, callId: payload.callId } };
+          if (msgIsString) { returnMsg = JSON.stringify(returnMsg); }
+          if (event && event.source && event.source.postMessage) {
+            event.source.postMessage(returnMsg, '*');
+          }
+        }, payload.parameter);
       }
     }
 
     while (win) {
       try {
-        if (win.frames[TCF_LOCATOR_NAME]) {
-          cmpFrame = win;
-          break;
-        }
+        if (win.frames[TCF_LOCATOR_NAME]) { cmpFrame = win; break; }
       } catch (ignore) {}
-
-      if (win === window.top) {
-        break;
-      }
+      if (win === window.top) { break; }
       win = win.parent;
     }
     if (!cmpFrame) {
@@ -166,171 +453,8 @@
       win.__tcfapi = tcfAPIHandler;
       win.addEventListener('message', postMessageEventHandler, false);
     }
-  };
-
+  }
   makeStub();
-
-  function makeGppStub() {
-    const CMP_ID = 10;
-    const SUPPORTED_APIS = [
-      '2:tcfeuv2',
-      '6:uspv1',
-      '7:usnatv1',
-      '8:usca',
-      '9:usvav1',
-      '10:uscov1',
-      '11:usutv1',
-      '12:usctv1'
-    ];
-
-    window.__gpp_addFrame = function (n) {
-      if (!window.frames[n]) {
-        if (document.body) {
-          var i = document.createElement("iframe");
-          i.style.cssText = "display:none";
-          i.name = n;
-          document.body.appendChild(i);
-        } else {
-          window.setTimeout(window.__gpp_addFrame, 10, n);
-        }
-      }
-    };
-    window.__gpp_stub = function () {
-      var b = arguments;
-      __gpp.queue = __gpp.queue || [];
-      __gpp.events = __gpp.events || [];
-
-      if (!b.length || (b.length == 1 && b[0] == "queue")) {
-        return __gpp.queue;
-      }
-
-      if (b.length == 1 && b[0] == "events") {
-        return __gpp.events;
-      }
-
-      var cmd = b[0];
-      var clb = b.length > 1 ? b[1] : null;
-      var par = b.length > 2 ? b[2] : null;
-      if (cmd === "ping") {
-        clb(
-          {
-            gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
-            cmpStatus: "stub", // possible values: stub, loading, loaded, error
-            cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
-            signalStatus: "not ready", // possible values: not ready, ready
-            supportedAPIs: SUPPORTED_APIS, // list of supported APIs
-            cmpId: CMP_ID, // IAB assigned CMP ID, may be 0 during stub/loading
-            sectionList: [],
-            applicableSections: [-1],
-            gppString: "",
-            parsedSections: {},
-          },
-          true
-        );
-      } else if (cmd === "addEventListener") {
-        if (!("lastId" in __gpp)) {
-          __gpp.lastId = 0;
-        }
-        __gpp.lastId++;
-        var lnr = __gpp.lastId;
-        __gpp.events.push({
-          id: lnr,
-          callback: clb,
-          parameter: par,
-        });
-        clb(
-          {
-            eventName: "listenerRegistered",
-            listenerId: lnr, // Registered ID of the listener
-            data: true, // positive signal
-            pingData: {
-              gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
-              cmpStatus: "stub", // possible values: stub, loading, loaded, error
-              cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
-              signalStatus: "not ready", // possible values: not ready, ready
-              supportedAPIs: SUPPORTED_APIS, // list of supported APIs
-              cmpId: CMP_ID, // list of supported APIs
-              sectionList: [],
-              applicableSections: [-1],
-              gppString: "",
-              parsedSections: {},
-            },
-          },
-          true
-        );
-      } else if (cmd === "removeEventListener") {
-        var success = false;
-        for (var i = 0; i < __gpp.events.length; i++) {
-          if (__gpp.events[i].id == par) {
-            __gpp.events.splice(i, 1);
-            success = true;
-            break;
-          }
-        }
-        clb(
-          {
-            eventName: "listenerRemoved",
-            listenerId: par, // Registered ID of the listener
-            data: success, // status info
-            pingData: {
-              gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
-              cmpStatus: "stub", // possible values: stub, loading, loaded, error
-              cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
-              signalStatus: "not ready", // possible values: not ready, ready
-              supportedAPIs: SUPPORTED_APIS, // list of supported APIs
-              cmpId: CMP_ID, // CMP ID
-              sectionList: [],
-              applicableSections: [-1],
-              gppString: "",
-              parsedSections: {},
-            },
-          },
-          true
-        );
-      } else if (cmd === "hasSection") {
-        clb(false, true);
-      } else if (cmd === "getSection" || cmd === "getField") {
-        clb(null, true);
-      }
-      //queue all other commands
-      else {
-        __gpp.queue.push([].slice.apply(b));
-      }
-    };
-    window.__gpp_msghandler = function (event) {
-      var msgIsString = typeof event.data === "string";
-      try {
-        var json = msgIsString ? JSON.parse(event.data) : event.data;
-      } catch (e) {
-        var json = null;
-      }
-      if (typeof json === "object" && json !== null && "__gppCall" in json) {
-        var i = json.__gppCall;
-        window.__gpp(
-          i.command,
-          function (retValue, success) {
-            var returnMsg = {
-              __gppReturn: {
-                returnValue: retValue,
-                success: success,
-                callId: i.callId,
-              },
-            };
-            event.source.postMessage(msgIsString ? JSON.stringify(returnMsg) : returnMsg, "*");
-          },
-          "parameter" in i ? i.parameter : null,
-          "version" in i ? i.version : "1.1"
-        );
-      }
-    };
-    if (!("__gpp" in window) || typeof window.__gpp !== "function") {
-      window.__gpp = window.__gpp_stub;
-      window.addEventListener("message", window.__gpp_msghandler, false);
-      window.__gpp_addFrame("__gppLocator");
-    }
-  };
-
-  makeGppStub();
 
   var uspStubFunction = function() {
     var arg = arguments;
@@ -342,7 +466,6 @@
       }, 500);
     }
   };
-
   var checkIfUspIsReady = function() {
     uspTries++;
     if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
@@ -351,172 +474,55 @@
       clearInterval(uspInterval);
     }
   };
-
   if (typeof window.__uspapi === 'undefined') {
     window.__uspapi = uspStubFunction;
     var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+
+  // GPP (IAB Global Privacy Platform) stub — same rationale as the __uspapi
+  // stub above. Without this, any script (e.g. InMobi cmp2.js) that calls
+  // window.__gpp(...) before a real CMP has defined it throws a TypeError
+  // and aborts its own execution at that point.
+  if (typeof window.__gpp !== 'function') {
+    window.__gppQueue = window.__gppQueue || [];
+    window.__gpp = function() {
+      window.__gppQueue.push(arguments);
+    };
   }
 })();
 </script>
 <!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9NEF8H5W4V"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
+<script>window.__algoliaV4 = algoliasearch;</script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.8.3/dist/instantsearch.production.min.js" integrity="sha256-LAGhRRdtVoD6RLo2qDQsU2mp+XVSciKRC8XPOBWmofM=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3/dist/algoliasearchLite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch-helper@2.24.0/dist/algoliasearch.helper.min.js"></script>
+<script src="/js/feed.js"></script>
+
+<script src="/js/bundle2.js" async></script>
+
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9NEF8H5W4V');
-  gtag('config', 'G-7EQN1KX5DL');
-
-</script>
-<link rel="stylesheet" href="/css/style.css">
-<style>
-.badge {
-	display: inline-block;
-	min-width: 10px;
-	padding: 4px 5px 1px 5px;
-	font-size: 12px;
-	font-weight: 700;
-	line-height: 1;
-	color: #fff;
-	text-align: center;
-	white-space: nowrap;
-	vertical-align: middle;
-	background-color: #777;
-	border-radius: 10px;
-}
-</style>
-</head>
-<body>
-
-<style>
-@media (max-width: 720px)
-{
-  #navbarCollapse
-  {
-    border: 0;
-    max-height: none;
-    position:absolute;margin-right:16px;padding:16px 16px 24px 16px;width:95%
-  }
-}
-</style>
-
-<div class="navy">
-<nav role="navigation" id="unjnav" class="navbar navbar-default navbar-fixed-top" style="background-color: #eee;background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABZklEQVR4nO3bMQ7CMBBEUV8xFR0VHVIaWkTFcROuEC5guVjZnsnmF9MwBeFpIy2GlMdnP2pZ1q36+sju/t6rUVxLtCtOFwMooIACCujFQZd1O0i/DJnQ5/dXjds0DZlQQAG17gAF1LsDtDeoes3IlnKWZTo69bdXPaPeD1BAAQUUUEB9QNVrRrZMPw+NTsxZOkAB9e4ABdS7A7Q3qHrNyJbwhGaftPCEAgqodQcooN4doL1B1WtGtlj9+67Vtc4nR5zpRu9AQAEFFFBAAfUBVa8Z2WL1M7LTtUQ7QAHVowEKqP5aADXpWJs6p7nYX/nhg/CEAgqodQcooN4doL1B1WtGtgw5D539E/PsBxNaX0AABRRQQAEF1AdUvWZkS3hCM5xdjvh8gAIKqC0aoIDqYaaDqteMbCmzzzyzn7ECCqh3Byig3h2gvUHVa0a28Kxn4PO17jJAAQXUFg1QQPUw00HVa0a2/AGTwTetiDfnHAAAAABJRU5ErkJggg==);">
-<div class="container">
-<div class="navbar-header">
-<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle" style="border:0;background:0;position:absolute;top:4px;right:8px;">
-<span class="sr-only">Toggle navigation</span>
-<span class="icon-bar" style="background-color:#fff;"></span>
-<span class="icon-bar" style="background-color:#fff;"></span>
-<span class="icon-bar" style="background-color:#fff;"></span>
-</button>
-<a href="/" class="navbar-brand">
-<img style="height:46px;display: inline-block;margin-left:-4px;margin-top: -12px;" src="https://unjobs.org/images/logo.gif" alt="United Nations Jobs" border="0"/>
-</a>
-<form class="searchbutton navbar-form" method=POST action="/search" style="float:right;height: 40px;margin: 11px 16px 4px 16px;padding:0px 0px 0px 0px;border:0px;">
-<div class="form-group">
-<div class="input-group">
-<input name="q" class="form-control" placeholder="Search jobs for..." type="text">
-<span class="input-group-btn">
-<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-</span></div></div>
-</form>
-
-</div>
-
-<div id="navbarCollapse" class="collapse navbar-collapse">
-<ul class="nav navbar-nav navbar-left" style="">
-<li class="chip"><a href="https://unjobs.org">Latest</a></li>
-<li class="chip"><a href="https://unjobs.org/duty_stations">Duty Stations</a></li>
-<li class="chip"><a href="https://unjobs.org/organizations">Organizations</a></li>
-<li class="chip"><a href="https://unjobs.org/closing">Closing Soon</a></li>
-</ul></div></div>
-</nav>
-</div>
-
-<form class="form-inline mobilesearchbutton" method=POST action="/search" style="height: 40px;margin: 0px 16px 0px 16px;padding:0px 0px 0px 0px;border:0px;">
-  <div class="form-group">
-      <div class="input-group">
-      <input name="q" class="form-control" placeholder="Search jobs for..." type="text">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-      </span>
-    </div>
-  </div>
-</form>
-
-<section class="container">
-
-<h2 style="font-family: 'Roboto Condensed', sans-serif;font-weight: 400;color: #233A69;margin: 4px 0px 4px 0px;">Jobs with RCS - Resident Coordinator System
-
-<!-- 
-&nbsp;&nbsp;
-
-<span style="max-width:150px;margin-top:10px;float:right;display: inline-block;text-align:right;font-size: 14px;"><a style="color: #233A69;" href="https://unjobs.org/orgnews/rcs">
-
-News for RCS</a></span>
---> 
-
-</h2>
-<div class="row">
-<div>
-<table style="height:100%;margin: 0px;" width=99% cellspacing="0" cellpadding="0" border="0">
-<tr>
-<td style="padding-top:0px;padding-left: 0px;" align="left" valign="top">
-<div style="max-width:1500px;padding:0px;margin-left: 16px;text-align:left;" class="container">
-<div class="row">
-
-<div class="col-sm-12">
- <div style="margin-top: 4px;margin-bottom: 0px;">
-  <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td class="nv"><a class="ts" href="https://unjobs.org/non-un-organizations/rcs">&laquo;&nbsp;First</a></td><td class="nv"><a class="ts" href="https://unjobs.org/non-un-organizations/rcs/2"><&nbsp;Prev</a></td><td class="nc"><span style="color: #333333; font-size: 13px">51 - 50 of 36</span></td><td class="nv"><span style="font-size: 13px; color:#cccccc">Next&nbsp;></span></td><td class="nv"><a class="ts" href="https://unjobs.org/non-un-organizations/rcs/2">Last&nbsp;&raquo;</a></td></tr></table>
- </div>
- <article style="margin: 0px 0px 8px 0px;padding: 8px 0px 8px 0px;">
-     No vacancies to display at this time.
-   </article>
- <div style="margin-top: 0px;margin-bottom: 8px;">
-  <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td class="nv"><a class="ts" href="https://unjobs.org/non-un-organizations/rcs">&laquo;&nbsp;First</a></td><td class="nv"><a class="ts" href="https://unjobs.org/non-un-organizations/rcs/2"><&nbsp;Prev</a></td><td class="nc"><span style="color: #333333; font-size: 13px">51 - 50 of 36</span></td><td class="nv"><span style="font-size: 13px; color:#cccccc">Next&nbsp;></span></td><td class="nv"><a class="ts" href="https://unjobs.org/non-un-organizations/rcs/2">Last&nbsp;&raquo;</a></td></tr></table>
- </div>
-</div>
-
-<div style="clear: both;">
- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9196538889333991" data-ad-slot="2358682347" data-ad-format="rectangle"></ins>
- <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-
-</div>
-</div>
-</div>
-</td>
-</tr>
-<tr>
-<td style="width: 96%;border-top: 1px solid #ddd;background: #fff; font-size: 12px; padding: 12px; margin: 12px" align="center" valign="bottom">
-UNjobs Association of Geneva<br>
-Not an official document of the United Nations<br>
-<a href="https://www.iubenda.com/privacy-policy/35887823" class="iubenda-nostyle no-brand iubenda-embed " title="Privacy Policy">Privacy Policy</a> 
-<script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script> | 
-<a href="https://www.iubenda.com/privacy-policy/35887823/cookie-policy" class="iubenda-nostyle no-brand iubenda-embed " title="Cookie Policy">Cookie Policy</a>
-<script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
-
-</td>
-</tr>
-</table>
-</div>
-</section>
-
-<script type="text/javascript">    
-var monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];var dayNames = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];var text = 'Closing date: ';var vu = 'http://unjobs.org/vacancies/';$( document ).ready(function() {});</script>
-
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-<script type="text/javascript">
-   jQuery(document).ready(function() {
-     $("time.timeago").timeago();
-   });
+window.addEventListener('load', function() {
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      mutation.addedNodes.forEach(function(node) {
+        if (node.nodeType !== 1) return;
+        if (node.id === 'iubenda-pp-overlay') {
+          node.style.setProperty('top', '55px', 'important');
+          node.style.setProperty('z-index', '2147483644', 'important');
+        }
+        if (node.id === 'iubenda-pp') {
+          node.style.setProperty('top', '75px', 'important');
+          node.style.setProperty('z-index', '2147483645', 'important');
+        }
+      });
+    });
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+});
 </script>
 
-
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a16e2df9e84581c4',t:'MTc4MzMzNjQwMA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
