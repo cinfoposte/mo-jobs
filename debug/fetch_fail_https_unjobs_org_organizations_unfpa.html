@@ -15,7 +15,17 @@
   <script src="https://unjobs.org/js/timeago.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&lang=en">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="icon" href="https://images.unjobs.org/org/favicon.ico">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9NEF8H5W4V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9NEF8H5W4V');
+    gtag('config', 'G-7EQN1KX5DL');
+  </script>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/local.css">
   <link rel="stylesheet" href="/css/bundle2.css">
@@ -50,7 +60,7 @@
   border-radius:9999px; text-transform:none; white-space:nowrap;
 }
 .fp-facet {
-  float:left; display:inline-block; width:32%; min-width:336px; display:flex;
+  float:left; display:inline-block; width:32%; min-width:0; display:flex;
   position:relative; padding:3px; margin:0; height:36px;
 }
 .jtitle {
@@ -62,8 +72,12 @@
 .likes        { display:none; }
 .icon-place   { left:1px; }
 
+.condensed {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
 /* ── List group ── */
-.list-group { border-radius:4px; box-shadow:0 1px 2px rgba(0,0,0,.075); }
+.list-group { border-radius:4px; box-shadow:0 1px 2px rgba(0,0,0,.075); break-inside: avoid !important; }
 .list-group-item {
   position:relative; display:block; padding:10px 15px; margin-bottom:-1px;
   background-color:#fff; border:1px solid #ddd;
@@ -103,9 +117,45 @@
   border-bottom: 0 !important;
   background: transparent;
 }
+
+/* ── Mobile viewport constraints ── */
+.mdc-drawer-app-content, .main-content {
+  overflow-x: hidden;
+}
+table.pag {
+  table-layout: fixed;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ── Auto Ads containment ── */
+.mdc-top-app-bar,
+.mdc-top-app-bar--scrolled-under,
+.mdc-top-app-bar--short,
+.mdc-top-app-bar--short-collapsed,
+.mdc-top-app-bar--fixed,
+.mdc-top-app-bar--prominent {
+  z-index: 2147483647 !important;
+  background-color: #eee !important;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABZklEQVR4nO3bMQ7CMBBEUV8xFR0VHVIaWkTFcROuEC5guVjZnsnmF9MwBeFpIy2GlMdnP2pZ1q36+sju/t6rUVxLtCtOFwMooIACCujFQZd1O0i/DJnQ5/dXjds0DZlQQAG17gAF1LsDtDeoes3IlnKWZTo69bdXPaPeD1BAAQUUUEB9QNVrRrZMPw+NTsxZOkAB9e4ABdS7A7Q3qHrNyJbwhGaftPCEAgqodQcooN4doL1B1WtGtlj9+67Vtc4nR5zpRu9AQAEFFFBAAfUBVa8Z2WL1M7LTtUQ7QAHVowEKqP5aADXpWJs6p7nYX/nhg/CEAgqodQcooN4doL1B1WtGtgw5D539E/PsBxNaX0AABRRQQAEF1AdUvWZkS3hCM5xdjvh8gAIKqC0aoIDqYaaDqteMbCmzzzyzn7ECCqh3Byig3h2gvUHVa0a28Kxn4PO17jJAAQXUFg1QQPUw00HVa0a2/AGTwTetiDfnHAAAAABJRU5ErkJggg==) !important;
+}
+ins.adsbygoogle[data-ad-status] {
+  position: relative !important;
+  z-index: auto !important;
+}
+body > ins.adsbygoogle:first-child {
+  display: none !important;
+}
 </style>
-<script data-cfasync="false" nonce="c80bf6dd-e95b-483f-b8c8-703a16f1e136">try{(function(w,d){!function(mw,mx,my,mz){if(mw.zaraz)console.error("zaraz is loaded twice");else{mw[my]=mw[my]||{};mw[my].executed=[];mw.zaraz={deferred:[],listeners:[]};mw.zaraz._v="5887";mw.zaraz._n="c80bf6dd-e95b-483f-b8c8-703a16f1e136";mw.zaraz.q=[];mw.zaraz._f=function(mA){return async function(){var mB=Array.prototype.slice.call(arguments);mw.zaraz.q.push({m:mA,a:mB})}};for(const mC of["track","set","debug"])mw.zaraz[mC]=mw.zaraz._f(mC);mw.zaraz.init=()=>{var mD=mx.getElementsByTagName(mz)[0],mE=mx.createElement(mz),mF=mx.getElementsByTagName("title")[0];mF&&(mw[my].t=mx.getElementsByTagName("title")[0].text);mw[my].x=Math.random();mw[my].w=mw.screen.width;mw[my].h=mw.screen.height;mw[my].j=mw.innerHeight;mw[my].e=mw.innerWidth;mw[my].l=mw.location.href;mw[my].r=mx.referrer;mw[my].k=mw.screen.colorDepth;mw[my].n=mx.characterSet;mw[my].o=(new Date).getTimezoneOffset();if(mw.dataLayer)for(const mG of Object.entries(Object.entries(dataLayer).reduce((mH,mI)=>({...mH[1],...mI[1]}),{})))zaraz.set(mG[0],mG[1],{scope:"page"});mw[my].q=[];for(;mw.zaraz.q.length;){const mJ=mw.zaraz.q.shift();mw[my].q.push(mJ)}mE.defer=!0;for(const mK of[localStorage,sessionStorage])Object.keys(mK||{}).filter(mM=>mM.startsWith("_zaraz_")).forEach(mL=>{try{mw[my]["z_"+mL.slice(7)]=JSON.parse(mK.getItem(mL))}catch{mw[my]["z_"+mL.slice(7)]=mK.getItem(mL)}});mE.referrerPolicy="origin";mE.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(mw[my])));mD.parentNode.insertBefore(mE,mD)};["complete","interactive"].includes(mx.readyState)?zaraz.init():mw.addEventListener("DOMContentLoaded",zaraz.init)}}(w,d,"zarazData","script");window.zaraz._p=async nn=>new Promise(no=>{if(nn){nn.e&&nn.e.forEach(np=>{try{const nq=d.querySelector("script[nonce]"),nr=nq?.nonce||nq?.getAttribute("nonce"),ns=d.createElement("script");nr&&(ns.nonce=nr);ns.innerHTML=np;ns.onload=()=>{d.head.removeChild(ns)};d.head.appendChild(ns)}catch(nt){console.error(`Error executing script: ${np}\n`,nt)}});Promise.allSettled((nn.f||[]).map(nu=>fetch(nu[0],nu[1])))}no()});zaraz._p({"e":["(function(w,d){})(window,document)"]});})(window,document)}catch(e){throw fetch("/cdn-cgi/zaraz/t"),e;};</script></head>
+</head>
 <body class="mdc-typography" style="background-color:#fff !important;">
+
+  <!-- Independent fixed background — MDC JS cannot touch this -->
+  <div style="position:fixed;top:0;left:0;width:100%;height:55px;
+              background-color:#eee;
+              background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABZklEQVR4nO3bMQ7CMBBEUV8xFR0VHVIaWkTFcROuEC5guVjZnsnmF9MwBeFpIy2GlMdnP2pZ1q36+sju/t6rUVxLtCtOFwMooIACCujFQZd1O0i/DJnQ5/dXjds0DZlQQAG17gAF1LsDtDeoes3IlnKWZTo69bdXPaPeD1BAAQUUUEB9QNVrRrZMPw+NTsxZOkAB9e4ABdS7A7Q3qHrNyJbwhGaftPCEAgqodQcooN4doL1B1WtGtlj9+67Vtc4nR5zpRu9AQAEFFFBAAfUBVa8Z2WL1M7LTtUQ7QAHVowEKqP5aADXpWJs6p7nYX/nhg/CEAgqodQcooN4doL1B1WtGtgw5D539E/PsBxNaX0AABRRQQAEF1AdUvWZkS3hCM5xdjvh8gAIKqC0aoIDqYaaDqteMbCmzzzyzn7ECCqh3Byig3h2gvUHVa0a28Kxn4PO17jJAAQXUFg1QQPUw00HVa0a2/AGTwTetiDfnHAAAAABJRU5ErkJggg==);
+              z-index:2147483646;"></div>
 
   <style>
   nav i.material-icons0 { display: none; }
@@ -118,7 +168,7 @@
 
       <div style="z-index:9999;position:fixed;height:55px;min-height:0px;width:100%;background-color:#eee;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABZklEQVR4nO3bMQ7CMBBEUV8xFR0VHVIaWkTFcROuEC5guVjZnsnmF9MwBeFpIy2GlMdnP2pZ1q36+sju/t6rUVxLtCtOFwMooIACCujFQZd1O0i/DJnQ5/dXjds0DZlQQAG17gAF1LsDtDeoes3IlnKWZTo69bdXPaPeD1BAAQUUUEB9QNVrRrZMPw+NTsxZOkAB9e4ABdS7A7Q3qHrNyJbwhGaftPCEAgqodQcooN4doL1B1WtGtlj9+67Vtc4nR5zpRu9AQAEFFFBAAfUBVa8Z2WL1M7LTtUQ7QAHVowEKqP5aADXpWJs6p7nYX/nhg/CEAgqodQcooN4doL1B1WtGtgw5D539E/PsBxNaX0AABRRQQAEF1AdUvWZkS3hCM5xdjvh8gAIKqC0aoIDqYaaDqteMbCmzzzyzn7ECCqh3Byig3h2gvUHVa0a28Kxn4PO17jJAAQXUFg1QQPUw00HVa0a2/AGTwTetiDfnHAAAAABJRU5ErkJggg==);"></div>
 
-      <div class="innav" style="position:absolute;top:30px;bottom:0;left:-4px;right:0px;overflow-y:scroll">
+      <div class="innav" style="position:absolute;top:30px;bottom:90px;left:-4px;right:0px;overflow-y:scroll">
 
         <a id="hlh" rel="nofollow"
           style="visibility:hidden;width:-moz-fit-content;width:fit-content;position:relative;border-radius:9999px;display:table;margin:0 0 0 12px;padding:16px 16px 16px 12px"
@@ -177,14 +227,28 @@
         </a>
 
       </div>
+
+      <div class="condensed" style="text-align:center;position:absolute;bottom:20px;left:4px;right:0;padding:10px 12px;font-size:14px;background: rgb(224, 230, 254); color: rgb(87, 115, 236);">
+        UNjobs, Infomation Sàrl, Genève<br>
+        <span style="font-style: Roboto;font-size:12px;">Not an official document of the United Nations</span>
+        <br>
+        <a href="https://www.iubenda.com/privacy-policy/35887823"
+           class="iubenda-nostyle no-brand iubenda-embed" title="Privacy Policy"
+           style="color:rgb(87, 115, 236);font-size:13px;">Privacy Policy</a>
+        |
+        <a href="https://www.iubenda.com/privacy-policy/35887823/cookie-policy"
+           class="iubenda-nostyle no-brand iubenda-embed" title="Cookie Policy"
+           style="color:rgb(87, 115, 236);font-size:13px;">Cookie Policy</a>
+        <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+<!--         |
+        <a href="#" id="manage-cookies-link" style="color:#fff;font-size:11px;">Manage Cookies</a>
+        -->
+      </div>
+
     </nav>
   </div>
 </aside>
-
-  <div class="mdc-drawer-scrim"></div>
-  <div class="mdc-drawer-app-content" style="width:100%;">
-
-    <header class="mdc-top-app-bar" style="z-index:11000;position:fixed;height:55px;min-height:0px;width:100%;background-color:#eee;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABZklEQVR4nO3bMQ7CMBBEUV8xFR0VHVIaWkTFcROuEC5guVjZnsnmF9MwBeFpIy2GlMdnP2pZ1q36+sju/t6rUVxLtCtOFwMooIACCujFQZd1O0i/DJnQ5/dXjds0DZlQQAG17gAF1LsDtDeoes3IlnKWZTo69bdXPaPeD1BAAQUUUEB9QNVrRrZMPw+NTsxZOkAB9e4ABdS7A7Q3qHrNyJbwhGaftPCEAgqodQcooN4doL1B1WtGtlj9+67Vtc4nR5zpRu9AQAEFFFBAAfUBVa8Z2WL1M7LTtUQ7QAHVowEKqP5aADXpWJs6p7nYX/nhg/CEAgqodQcooN4doL1B1WtGtgw5D539E/PsBxNaX0AABRRQQAEF1AdUvWZkS3hCM5xdjvh8gAIKqC0aoIDqYaaDqteMbCmzzzyzn7ECCqh3Byig3h2gvUHVa0a28Kxn4PO17jJAAQXUFg1QQPUw00HVa0a2/AGTwTetiDfnHAAAAABJRU5ErkJggg==);">
+  <header class="mdc-top-app-bar" data-google-auto-excluded style="z-index:11000;position:fixed;height:55px;min-height:0px;width:100%;background-color:#eee !important;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABZklEQVR4nO3bMQ7CMBBEUV8xFR0VHVIaWkTFcROuEC5guVjZnsnmF9MwBeFpIy2GlMdnP2pZ1q36+sju/t6rUVxLtCtOFwMooIACCujFQZd1O0i/DJnQ5/dXjds0DZlQQAG17gAF1LsDtDeoes3IlnKWZTo69bdXPaPeD1BAAQUUUEB9QNVrRrZMPw+NTsxZOkAB9e4ABdS7A7Q3qHrNyJbwhGaftPCEAgqodQcooN4doL1B1WtGtlj9+67Vtc4nR5zpRu9AQAEFFFBAAfUBVa8Z2WL1M7LTtUQ7QAHVowEKqP5aADXpWJs6p7nYX/nhg/CEAgqodQcooN4doL1B1WtGtgw5D539E/PsBxNaX0AABRRQQAEF1AdUvWZkS3hCM5xdjvh8gAIKqC0aoIDqYaaDqteMbCmzzzyzn7ECCqh3Byig3h2gvUHVa0a28Kxn4PO17jJAAQXUFg1QQPUw00HVa0a2/AGTwTetiDfnHAAAAABJRU5ErkJggg==) !important;">
   <div class="mdc-top-app-bar__row">
     <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
       <a href="#" style="color:white" class="demo-menu material-icons mdc-top-app-bar__navigation-icon">menu</a>
@@ -192,11 +256,14 @@
         <a href="/"><img id="logoimg" class="logoiimage" src="https://images.unjobs.org/org/logo.gif" style=""></a>
       </div>
     </section>
-    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-      <a href="#" style="color:white;" class="srchlink material-icons mdc-top-app-bar__action-item" aria-label="Search" alt="Search">search</a>
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar" style="z-index:2147483647;position:relative;">
+      <a href="/search" style="color:white;" class="srchlink material-icons mdc-top-app-bar__action-item" aria-label="Search" alt="Search">search</a>
     </section>
   </div>
 </header>
+
+  <div class="mdc-drawer-scrim"></div>
+  <div class="mdc-drawer-app-content" style="width:100%;">
 
     <main id="main-content" class="main-content" style="margin:0;">
       <div class="mdc-top-app-bar--fixed-adjust">
@@ -226,7 +293,7 @@
       <div style="margin-top:6px;margin-right:16px;height:40px;width:130px;text-align:center;margin-left:0;display:flex;"
            class="fp-user-detail-container">
         <div style="padding:0 8px 4px 8px;margin:0;" class="fp-user-nbfollowing-container fp-user-nbfollowing">
-          <div>33</div>
+          <div>31</div>
           <div style="font-weight:normal;">locations</div>
         </div>
       </div>
@@ -247,18 +314,6 @@
     class="fp-user-following mdl-shadow--2dp mdl-cell mdl-cell--12-col">
     
 <div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
-  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_cai"
-     style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
-    <div class="fp-avatar"
-         style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
-    </div>
-    <div class="fp-username fp-orgname mdl-color-text--black"
-         style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
-      Cairo (4)
-    </div>
-  </a>
-</div>
-<div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
   <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_nbo"
      style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
     <div class="fp-avatar"
@@ -267,18 +322,6 @@
     <div class="fp-username fp-orgname mdl-color-text--black"
          style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
       Nairobi (4)
-    </div>
-  </a>
-</div>
-<div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
-  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_nyc"
-     style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
-    <div class="fp-avatar"
-         style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
-    </div>
-    <div class="fp-username fp-orgname mdl-color-text--black"
-         style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
-      New York (4)
     </div>
   </a>
 </div>
@@ -295,6 +338,30 @@
   </a>
 </div>
 <div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
+  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_cai"
+     style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
+    <div class="fp-avatar"
+         style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
+    </div>
+    <div class="fp-username fp-orgname mdl-color-text--black"
+         style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
+      Cairo (3)
+    </div>
+  </a>
+</div>
+<div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
+  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_nyc"
+     style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
+    <div class="fp-avatar"
+         style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
+    </div>
+    <div class="fp-username fp-orgname mdl-color-text--black"
+         style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
+      New York (3)
+    </div>
+  </a>
+</div>
+<div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
   <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_bkk"
      style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
     <div class="fp-avatar"
@@ -302,7 +369,7 @@
     </div>
     <div class="fp-username fp-orgname mdl-color-text--black"
          style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
-      Bangkok (3)
+      Bangkok (2)
     </div>
   </a>
 </div>
@@ -314,7 +381,19 @@
     </div>
     <div class="fp-username fp-orgname mdl-color-text--black"
          style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
-      Dakar (3)
+      Dakar (2)
+    </div>
+  </a>
+</div>
+<div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
+  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_dil"
+     style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
+    <div class="fp-avatar"
+         style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
+    </div>
+    <div class="fp-username fp-orgname mdl-color-text--black"
+         style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
+      Dili (2)
     </div>
   </a>
 </div>
@@ -326,31 +405,7 @@
     </div>
     <div class="fp-username fp-orgname mdl-color-text--black"
          style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
-      Home-based (3)
-    </div>
-  </a>
-</div>
-<div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
-  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_cky"
-     style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
-    <div class="fp-avatar"
-         style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
-    </div>
-    <div class="fp-username fp-orgname mdl-color-text--black"
-         style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
-      Conakry (2)
-    </div>
-  </a>
-</div>
-<div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
-  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_coo"
-     style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
-    <div class="fp-avatar"
-         style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
-    </div>
-    <div class="fp-username fp-orgname mdl-color-text--black"
-         style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
-      Cotonou (2)
+      Home-based (2)
     </div>
   </a>
 </div>
@@ -367,14 +422,14 @@
   </a>
 </div>
 <div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
-  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_jnb"
+  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_kbl"
      style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
     <div class="fp-avatar"
          style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
     </div>
     <div class="fp-username fp-orgname mdl-color-text--black"
          style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
-      Johannesburg (2)
+      Kabul (2)
     </div>
   </a>
 </div>
@@ -415,14 +470,26 @@
   </a>
 </div>
 <div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
-  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_22001086389"
+  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_bsb"
      style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
     <div class="fp-avatar"
          style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
     </div>
     <div class="fp-username fp-orgname mdl-color-text--black"
          style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
-      Bhubaneshwar (1)
+      Brasília (1)
+    </div>
+  </a>
+</div>
+<div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
+  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_cky"
+     style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
+    <div class="fp-avatar"
+         style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
+    </div>
+    <div class="fp-username fp-orgname mdl-color-text--black"
+         style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
+      Conakry (1)
     </div>
   </a>
 </div>
@@ -439,18 +506,6 @@
   </a>
 </div>
 <div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
-  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_dar"
-     style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
-    <div class="fp-avatar"
-         style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
-    </div>
-    <div class="fp-username fp-orgname mdl-color-text--black"
-         style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
-      Dar es Salaam (1)
-    </div>
-  </a>
-</div>
-<div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
   <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_dac"
      style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
     <div class="fp-avatar"
@@ -463,6 +518,30 @@
   </a>
 </div>
 <div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
+  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_83109153752629248"
+     style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
+    <div class="fp-avatar"
+         style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
+    </div>
+    <div class="fp-username fp-orgname mdl-color-text--black"
+         style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
+      Ethiopia (1)
+    </div>
+  </a>
+</div>
+<div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
+  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_hre"
+     style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
+    <div class="fp-avatar"
+         style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
+    </div>
+    <div class="fp-username fp-orgname mdl-color-text--black"
+         style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
+      Harare (1)
+    </div>
+  </a>
+</div>
+<div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
   <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_hir"
      style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
     <div class="fp-avatar"
@@ -471,6 +550,18 @@
     <div class="fp-username fp-orgname mdl-color-text--black"
          style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
       Honiara (1)
+    </div>
+  </a>
+</div>
+<div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
+  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_jnb"
+     style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
+    <div class="fp-avatar"
+         style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
+    </div>
+    <div class="fp-username fp-orgname mdl-color-text--black"
+         style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
+      Johannesburg (1)
     </div>
   </a>
 </div>
@@ -499,18 +590,6 @@
   </a>
 </div>
 <div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
-  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_krt"
-     style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
-    <div class="fp-avatar"
-         style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
-    </div>
-    <div class="fp-username fp-orgname mdl-color-text--black"
-         style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
-      Khartoum (1)
-    </div>
-  </a>
-</div>
-<div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
   <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_iev"
      style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
     <div class="fp-avatar"
@@ -519,6 +598,18 @@
     <div class="fp-username fp-orgname mdl-color-text--black"
          style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
       Kyiv (1)
+    </div>
+  </a>
+</div>
+<div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
+  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_lun"
+     style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
+    <div class="fp-avatar"
+         style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
+    </div>
+    <div class="fp-username fp-orgname mdl-color-text--black"
+         style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
+      Lusaka (1)
     </div>
   </a>
 </div>
@@ -583,54 +674,6 @@
   </a>
 </div>
 <div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
-  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_pom"
-     style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
-    <div class="fp-avatar"
-         style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
-    </div>
-    <div class="fp-username fp-orgname mdl-color-text--black"
-         style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
-      Port Moresby (1)
-    </div>
-  </a>
-</div>
-<div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
-  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_uio"
-     style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
-    <div class="fp-avatar"
-         style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
-    </div>
-    <div class="fp-username fp-orgname mdl-color-text--black"
-         style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
-      Quito (1)
-    </div>
-  </a>
-</div>
-<div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
-  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_rba"
-     style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
-    <div class="fp-avatar"
-         style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
-    </div>
-    <div class="fp-username fp-orgname mdl-color-text--black"
-         style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
-      Rabat (1)
-    </div>
-  </a>
-</div>
-<div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
-  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_sdq"
-     style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
-    <div class="fp-avatar"
-         style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
-    </div>
-    <div class="fp-username fp-orgname mdl-color-text--black"
-         style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
-      Santo Domingo (1)
-    </div>
-  </a>
-</div>
-<div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
   <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/unfpa_suv"
      style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
     <div class="fp-avatar"
@@ -650,14 +693,14 @@
   <div style="min-height:150px;position:relative;width:100%;max-width:1200px;margin-right:8px;background:0;margin:0;">
 
     <div id="ppp" class="pagination" style="position:relative;margin:0px 8px 4px 8px;padding:8px 0 8px 0;display:flex;max-height:16px;">
-    <table class="pag" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+    <table class="pag" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="table-layout:fixed;max-width:100%;box-sizing:border-box;">
   <tbody>
     <tr>
       <td class="nv fp-first-page-button" style="width:15%;color:#999;">«&nbsp;First</td>
       <td class="nv fp-prev-page-button"  style="width:15%;color:#999;">&lt;&nbsp;Prev</td>
       <td class="nc">
         <span style="color:#333;font-size:13px;">
-          1&nbsp;–&nbsp;20 of 61
+          1&nbsp;–&nbsp;20 of 54
         </span>
       </td>
       <td class="nv fp-next-page-button"  style="width:15%;cursor:pointer;">Next&nbsp;&gt;</td>
@@ -672,9 +715,9 @@
 
       
 
-      <div id="j1782847524605" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+      <div id="j1783250775040" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -687,7 +730,336 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782847524605">Communications and External Relations Associate, Kyiv, Ukraine</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783250775040">National Consultant: Senior Demographer Consultants, Kabul Afghanistan/Remote</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">National Consultant: Senior Demographer Consultants, Kabul Afghanistan/Remote Kabul, Afghanistan and 1 more Job Info Job Identification 35205 Posting Date 07/05/2026, 04:13 AM Apply Before 07/13&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">14h</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div id="j1783250786618" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        UNFPA
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783250786618">National Consultant: Demographer Consultants, Kabul Afghanistan/Remote</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">National Consultant: Demographer Consultants, Kabul Afghanistan/Remote Kabul, Afghanistan and 1 more Job Info Job Identification 35206 Posting Date 07/05/2026, 04:06 AM Apply Before 07/13/2026&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">14h</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div class="job ad-slot-inline" style="margin:12px 0;padding:0;border-bottom:0;width:100%;break-inside:auto;">
+  <ins class="adsbygoogle"
+       style="display:block;min-height:100px;"
+       data-ad-client="ca-pub-9196538889333991"
+       data-ad-slot="4504822997"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div id="j1783207703985" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        UNFPA
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783207703985">National Consultant - Strengthen National Capacity in Forecast Accuracy and Distribution Costing for Reproductive Health Commodities, Lusaka, Zambia</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">National Consultant - Strengthen National Capacity in Forecast Accuracy and Distribution Costing for Reproductive Health Commodities Lusaka, Zambia Job Info Job Identification 35278 Posting Date 07/03/2026, 10:38 AM&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">1d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div id="j1783003871389" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        UNFPA
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783003871389">National Consultant: Develop Public Financial Management (PFM) mechanisms for the operationalization of the National Framework for Reducing Maternal and Child Mortality (KIA Framework/Kerangka Kerja Kesehatan Ibu Anak) 2026-2030, Jakarta Pusat</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">National Consultant: Develop Public Financial Management (PFM) mechanisms for the operationalization of the National Framework for Reducing Maternal and Child Mortality (KIA Framework/Kerangka Kerja Kesehatan Ibu Anak) 2026-2030&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">3d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div id="j1783003825763" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        UNFPA
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783003825763">Assistant Representative, Brasilia, Brasil</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">Assistant Representative, Brasilia, Brasil, NOC, FTA Brasilia, Brazil Job Info Job Identification 35200 Posting Date 07/02/2026, 01:21 PM Apply Before 07/19/2026, 12:21 PM Job&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">3d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div id="j1783003837837" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        UNFPA
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783003837837">Programme Analyst, SRHR, Dili</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">NATIONAL POST: Programme Analyst, SRHR, NOB, Dili, Timor-Leste Dili, Timor-Leste Job Info Job Identification 34876 Posting Date 07/01/2026, 07:25 PM Apply Before 07/16/2026&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">3d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div id="j1783003848719" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        UNFPA
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783003848719">Programme Specialist, Quality Assurance, Nairobi</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">Programme Specialist, Quality Assurance, P3, Nairobi, Quality Programming Branch, Programme Division Nairobi, Kenya Job Info Job Identification 35258 Posting Date 07/02/2026, 08:33 AM Apply Before 07/18&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">3d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div id="j1783003859728" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        UNFPA
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783003859728">Finance Associate, Dili</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">NATIONAL POST: Finance Associate, G-7, Dili, Timor-Leste Dili, Timor-Leste Job Info Job Identification 35254 Posting Date 07/02/2026, 04:37 AM Apply Before 07/16/2026&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">3d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div id="j1783003883087" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        UNFPA
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783003883087">National Consultant: Sexual and Reproductive Health Rights (SRHR) Program Officer, Addis Ababa</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">National Consultant: Sexual and Reproductive Health Rights (SRHR) Program Officer, Addis Ababa, Ethiopia Ethiopia Job Info Job Identification 35236 Posting Date 07/01/2026, 08:47 AM Apply Before 07&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">3d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div id="j1783028571610" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        UNFPA
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783028571610">Gender-Based Violence (GBV) Programme Officer, Harare</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">General Description of assignment title: Gender-Based Violence (GBV) Programme Officer Assignment country: Zimbabwe Duty stations: Harare Work location: On UN premises Expected start date: 08/01/2026 Duration: 12&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">3d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div id="j1782847524605" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        UNFPA
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782847524605">Communications and External Relations Associate, Kyiv, Ukraine</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Communications and External Relations Associate Kyiv, Ukraine Job Info Job Identification 35213 Posting Date 06/30/2026, 12:49 PM Apply Before 07/14/2026, 09:59 PM Job Schedule&hellip;</span>
@@ -695,7 +1067,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">15h</span> ago
+      Updated <span class="fp-time">5d</span> ago
     </div>
   </div>
 
@@ -706,7 +1078,7 @@
 </div>
 <div id="j1782766693025" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -719,7 +1091,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782766693025">Special Assistant to Deputy Executive Director (Programme), Office of the Executive Director, New York</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782766693025">Special Assistant to Deputy Executive Director (Programme), Office of the Executive Director, New York</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Special Assistant to Deputy Executive Director (Programme), Office of the Executive Director, New York, FTA, P-4 New York, United States Job Info Job Identification 35199 Posting Date 06/29&hellip;</span>
@@ -727,7 +1099,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">1d</span> ago
+      Updated <span class="fp-time">6d</span> ago
     </div>
   </div>
 
@@ -747,7 +1119,7 @@
 </div>
 <div id="j1782766704613" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -760,7 +1132,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782766704613">Programme Specialist, Spotlight Initiative Africa Regional Programme (SIARP) 2.0, Addis Ababa</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782766704613">Programme Specialist, Spotlight Initiative Africa Regional Programme (SIARP) 2.0, Addis Ababa</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Programme Specialist, Spotlight Initiative Africa Regional Programme (SIARP) 2.0, Addis Ababa, Ethiopia, P-3 Addis Ababa, Ethiopia Job Info Job Identification 35062 Posting Date 06/29/2026, 12:33&hellip;</span>
@@ -768,7 +1140,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">1d</span> ago
+      Updated <span class="fp-time">6d</span> ago
     </div>
   </div>
 
@@ -779,7 +1151,7 @@
 </div>
 <div id="j1782766716610" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -792,7 +1164,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782766716610">HR Adviser, Talent Acquisition, Client Services and Outreach Branch, Division for Human Resources, New York</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782766716610">HR Adviser, Talent Acquisition, Client Services and Outreach Branch, Division for Human Resources, New York</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">RE-ADVERTISEMENT: HR Adviser, Talent Acquisition, Client Services and Outreach Branch, Division for Human Resources, New York, P-5 New York, United States Job Info Job Identification 35193 Posting Date&hellip;</span>
@@ -800,7 +1172,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">1d</span> ago
+      Updated <span class="fp-time">6d</span> ago
     </div>
   </div>
 
@@ -811,7 +1183,7 @@
 </div>
 <div id="j1782766727659" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -824,7 +1196,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782766727659">Senior HR Business Partner, Client Services and Outreach Branch, Division for Human Resources, Dakar</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782766727659">Senior HR Business Partner, Client Services and Outreach Branch, Division for Human Resources, Dakar</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">RE-ADVERTISEMENT: Senior HR Business Partner, Client Services and Outreach Branch, Division for Human Resources, Dakar, Senegal, P-5 (1 Post + ROSTER) Dakar, Senegal Job Info Job Identification 35194 Posting&hellip;</span>
@@ -832,7 +1204,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">1d</span> ago
+      Updated <span class="fp-time">6d</span> ago
     </div>
   </div>
 
@@ -841,9 +1213,18 @@
   </div>
 
 </div>
+<div class="job ad-slot-inline" style="margin:12px 0;padding:0;border-bottom:0;width:100%;break-inside:auto;">
+  <ins class="adsbygoogle"
+       style="display:block;min-height:100px;"
+       data-ad-client="ca-pub-9196538889333991"
+       data-ad-slot="4504822997"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 <div id="j1782760015873" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -856,7 +1237,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782760015873">Monitoring and Reporting Specialist, Bangkok, Thailand</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782760015873">Monitoring and Reporting Specialist, Bangkok, Thailand</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">General Description of assignment title: Monitoring and Reporting Specialist Assignment country: Thailand Duty stations: Bangkok Work location: On UN premises Expected start date: 08/15/2026 Duration: 12 months(with&hellip;</span>
@@ -864,7 +1245,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">2d</span> ago
+      Updated <span class="fp-time">6d</span> ago
     </div>
   </div>
 
@@ -875,7 +1256,7 @@
 </div>
 <div id="j1782676264646" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -888,7 +1269,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782676264646">Assistant(e) Logistique, N&#39;Djamena, Chad</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782676264646">Assistant(e) Logistique, N&#39;Djamena, Chad</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">General Description of assignment title: Assistant(e) Logistique Assignment country: Chad Duty stations: Ndjamena Work location: On UN premises Expected start date: 07/15/2026 Duration: 6 months(with possibility&hellip;</span>
@@ -896,7 +1277,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">2d</span> ago
+      Updated <span class="fp-time">7d</span> ago
     </div>
   </div>
 
@@ -907,7 +1288,7 @@
 </div>
 <div id="j1782684523930" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -920,7 +1301,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782684523930">Communication Intern, Bangkok, Thailand</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782684523930">Communication Intern, Bangkok, Thailand</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Communication Intern Bangkok, Thailand Job Info Job Identification 35168 Posting Date 06/28/2026, 07:36 AM Apply Before 07/11/2026, 04:59 PM Job Schedule Full time Locations&hellip;</span>
@@ -928,39 +1309,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">2d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div id="j1782522342432" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        UNFPA
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782522342432">Individual Consultant Reproductive Maternal Newborn Child and Adolescent Health (RMNCAH) Consultant, Nairobi, Kenya</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Individual Consultant Reproductive Maternal Newborn Child and Adolescent Health (RMNCAH) Consultant Nairobi, Kenya Job Info Job Identification 35164 Posting Date 06/26/2026, 12:42 PM Apply Before 06/30&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">4d</span> ago
+      Updated <span class="fp-time">7d</span> ago
     </div>
   </div>
 
@@ -971,7 +1320,7 @@
 </div>
 <div id="j1782459150983" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -984,7 +1333,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782459150983">International consultant on adoption of breast cancer treatment clinical protocols and development of compliance monitoring indicators, Ashkhabad, Turkmenistan</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782459150983">International consultant on adoption of breast cancer treatment clinical protocols and development of compliance monitoring indicators, Ashkhabad, Turkmenistan</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">International consultant on adoption of breast cancer treatment clinical protocols and development of compliance monitoring indicators Ashkhabad, Turkmenistan Job Info Job Identification 35165 Posting Date 06/26/2026, 07:20&hellip;</span>
@@ -992,7 +1341,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">5d</span> ago
+      Updated <span class="fp-time">10d</span> ago
     </div>
   </div>
 
@@ -1003,7 +1352,7 @@
 </div>
 <div id="j1782459163609" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -1016,7 +1365,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782459163609">National consultant on on legislative alignment of the  Guidance on provision of services to the victims of sexual violence (SV) in health care settings, Ashkhabad, Turkmenistan</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782459163609">National consultant on on legislative alignment of the  Guidance on provision of services to the victims of sexual violence (SV) in health care settings, Ashkhabad, Turkmenistan</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">National consultant on on legislative alignment of the Guidance on provision of services to the victims of sexual violence (SV) in health care settings Ashkhabad, Turkmenistan Job Info Job Identification&hellip;</span>
@@ -1024,307 +1373,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">5d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div id="j1782417663564" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        UNFPA
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782417663564">Individual Consultant: Baseline Assessment and Stock Take GBV Case Management, Phnom-Penh, Cambodia</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Individual Consultant: Baseline Assessment and “Stock Take” GBV Case Management Phnom-Penh, Cambodia Job Info Job Identification 35129 Posting Date 06/25/2026, 03:36 AM Apply Before 07/01&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">5d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div class="job ad-slot-inline" style="margin:12px 0;padding:0;border-bottom:0;width:100%;break-inside:auto;">
-  <ins class="adsbygoogle"
-       style="display:block;min-height:100px;"
-       data-ad-client="ca-pub-9196538889333991"
-       data-ad-slot="4504822997"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-<div id="j1782417676918" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        UNFPA
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782417676918">National consultant on conducting analysis of existing materials on health and gender and revision of the teachers manual, Ashkhabad, Turkmenistan</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">National consultant on conducting analysis of existing materials on health and gender and revision of the teachers manual Ashkhabad, Turkmenistan Job Info Job Identification 35136 Posting Date 06/25/2026&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">5d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div id="1782420306907" class="job ais-Hits-item" style="width:100%;margin-left:0 !important;margin-bottom:8px;overflow:hidden;padding:0;">
-  <div style="padding:6px 12px 0 12px;">
-    <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:-4px -4px 4px 0;height:34px;">
-      <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
-         style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-        <div class="fp-avatar"
-             style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
-        </div>
-        <div class="fp-username fp-orgname mdl-color-text--black"
-             style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-          UNFPA
-        </div>
-      </a>
-    </div>
-    <a class="jtitle" style="display:block;padding:4px 0 6px 0;" href="/vacancies/1782334228636">Innovative Financing and Resource Mobilization Specialist, FGM Joint Programme, Division for External Relations, Nairobi</a>
-  </div>
-  <a href="/vacancies/1782334228636"><img style="width:100%;display:block;margin:0;" src="https://media-cdn.unjobs.org/job-cards/1782334228636"></a>
-  <div style="padding:6px 12px 8px 12px;">
-    <div class="jobsnippet" style="margin:4px 0;">
-      <span class="fp-snippet" style="line-height:0.9em;font-size:0.8em">Innovative Financing and Resource Mobilization Specialist, FGM Joint Programme, Division for External Relations, Nairobi, P-4 (232349) Nairobi, Kenya Job Info Job Identification 35130 Posting Date 06/24/2026, 07</span>
-    </div>
-    UNFPA - United Nations Population Fund
-    <br>Updated: <time class="upd timeago" datetime="2026-06-25T20:45:06.907Z">5d</time>
-    <br><span class="expdt">Closing date: ongoing</span>
-  </div>
-</div>
-<div id="j1782331867191" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        UNFPA
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782331867191">Programme Officer- Gender Based Violence, Dhaka, Bangladesh</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">General Description of assignment title: Programme Officer- Gender Based Violence Assignment country: Bangladesh Duty stations: Dhaka Work location: On UN premises Expected start date: 08/01/2026 Duration: 6 months&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">6d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div class="job ad-slot-inline" style="margin:12px 0;padding:0;border-bottom:0;width:100%;break-inside:auto;">
-  <ins class="adsbygoogle"
-       style="display:block;min-height:100px;"
-       data-ad-client="ca-pub-9196538889333991"
-       data-ad-slot="4504822997"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-<div id="j1782334170747" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        UNFPA
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782334170747">Programme Analyst, Quality Assurance, Quality Programming Branch, Programme Division (PD), Nairobi</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Programme Analyst, Quality Assurance, Quality Programming Branch, Programme Division (PD), Nairobi, Kenya, P-2 Nairobi, Kenya Job Info Job Identification 35119 Posting Date 06/24/2026, 12:16 PM Apply&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">6d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div id="j1782334182881" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        UNFPA
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782334182881">Programme Associate, Humanitarian, Dakar</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Programme Associate, Humanitarian, Dakar, Senegal, WCARO, G6 Dakar, Senegal Job Info Job Identification 35124 Posting Date 06/24/2026, 01:45 PM Apply Before 07/16/2026, 03:00 AM&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">6d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div id="j1782334194128" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        UNFPA
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782334194128">National Consultant - Quantification Capacity Assessment (QCA), Manila, Philippines</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">National Consultant - Quantification Capacity Assessment (QCA) Manila, Philippines Job Info Job Identification 35110 Posting Date 06/24/2026, 11:25 AM Apply Before 07/01/2026, 11:25 AM Job&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">6d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div id="j1782334205815" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        UNFPA
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782334205815">Consultant for National Climate Vulnerability Mapping of Health Service Delivery Systems, Home based, Remote</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Consultant for National Climate Vulnerability Mapping of Health Service Delivery Systems Home Based Job Info Job Identification 35111 Posting Date 06/24/2026, 08:31 AM Apply Before 07/08&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">6d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div id="j1782334217094" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/unfpa"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/unfpa.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        UNFPA
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782334217094">Consultant for National Climate Impact Analysis on Reproductive Health, Home based, Remote</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Consultant for National Climate Impact Analysis on Reproductive Health Home Based Job Info Job Identification 35114 Posting Date 06/24/2026, 08:35 AM Apply Before 07/08/2026, 08&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">6d</span> ago
+      Updated <span class="fp-time">10d</span> ago
     </div>
   </div>
 
@@ -1337,14 +1386,14 @@
     </div>
 
     <div id="pp3" class="pagination" style="margin-bottom:50px;">
-      <table class="pag" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+      <table class="pag" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="table-layout:fixed;max-width:100%;box-sizing:border-box;">
   <tbody>
     <tr>
       <td class="nv fp-first-page-button" style="width:15%;color:#999;">«&nbsp;First</td>
       <td class="nv fp-prev-page-button"  style="width:15%;color:#999;">&lt;&nbsp;Prev</td>
       <td class="nc">
         <span style="color:#333;font-size:13px;">
-          1&nbsp;–&nbsp;20 of 61
+          1&nbsp;–&nbsp;20 of 54
         </span>
       </td>
       <td class="nv fp-next-page-button"  style="width:15%;cursor:pointer;">Next&nbsp;&gt;</td>
@@ -1364,7 +1413,7 @@ var pageOrgID   = "unfpa";
 var pageType    = "org";
 var isCgiarAll  = false;
 var cgiarTags      = [];
-var pageTotalHits  = 61;
+var pageTotalHits  = 54;
 
 $(document).ready(function () {
   var officeAdPushed = false;
@@ -1398,8 +1447,139 @@ $(document).ready(function () {
 
       </div>
     </main>
+
   </div>
 
+<!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+<script type="text/javascript" async=true>
+(function() {
+  //var host = window.location.hostname;
+  var host = 'unjobs.org';
+  var element = document.createElement('script');
+  var firstScript = document.getElementsByTagName('script')[0];
+  var url = 'https://cmp.inmobi.com'
+    .concat('/choice/', 'N1sA5xfTskjLj', '/', host, '/choice.js?tag_version=V3');
+  var uspTries = 0;
+  var uspTriesLimit = 3;
+  element.async = true;
+  element.type = 'text/javascript';
+  element.src = url;
+  firstScript.parentNode.insertBefore(element, firstScript);
+
+  function makeStub() {
+    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+    var queue = [];
+    var win = window;
+    var cmpFrame;
+
+    function addFrame() {
+      var doc = win.document;
+      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+      if (!otherCMP) {
+        if (doc.body) {
+          var iframe = doc.createElement('iframe');
+          iframe.style.cssText = 'display:none';
+          iframe.name = TCF_LOCATOR_NAME;
+          doc.body.appendChild(iframe);
+        } else {
+          setTimeout(addFrame, 5);
+        }
+      }
+      return !otherCMP;
+    }
+
+    function tcfAPIHandler() {
+      var gdprApplies;
+      var args = arguments;
+      if (!args.length) {
+        return queue;
+      } else if (args[0] === 'setGdprApplies') {
+        if (args.length > 3 && args[2] === 2 && typeof args[3] === 'boolean') {
+          gdprApplies = args[3];
+          if (typeof args[2] === 'function') { args[2]('set', true); }
+        }
+      } else if (args[0] === 'ping') {
+        var retr = { gdprApplies: gdprApplies, cmpLoaded: false, cmpStatus: 'stub' };
+        if (typeof args[2] === 'function') { args[2](retr); }
+      } else {
+        if (args[0] === 'init' && typeof args[3] === 'object') {
+          args[3] = Object.assign(args[3], { tag_version: 'V3' });
+        }
+        queue.push(args);
+      }
+    }
+
+    function postMessageEventHandler(event) {
+      var msgIsString = typeof event.data === 'string';
+      var json = {};
+      try {
+        if (msgIsString) { json = JSON.parse(event.data); } else { json = event.data; }
+      } catch (ignore) {}
+      var payload = json.__tcfapiCall;
+      if (payload) {
+        window.__tcfapi(payload.command, payload.version, function(retValue, success) {
+          var returnMsg = { __tcfapiReturn: { returnValue: retValue, success: success, callId: payload.callId } };
+          if (msgIsString) { returnMsg = JSON.stringify(returnMsg); }
+          if (event && event.source && event.source.postMessage) {
+            event.source.postMessage(returnMsg, '*');
+          }
+        }, payload.parameter);
+      }
+    }
+
+    while (win) {
+      try {
+        if (win.frames[TCF_LOCATOR_NAME]) { cmpFrame = win; break; }
+      } catch (ignore) {}
+      if (win === window.top) { break; }
+      win = win.parent;
+    }
+    if (!cmpFrame) {
+      addFrame();
+      win.__tcfapi = tcfAPIHandler;
+      win.addEventListener('message', postMessageEventHandler, false);
+    }
+  }
+  makeStub();
+
+  var uspStubFunction = function() {
+    var arg = arguments;
+    if (typeof window.__uspapi !== uspStubFunction) {
+      setTimeout(function() {
+        if (typeof window.__uspapi !== 'undefined') {
+          window.__uspapi.apply(window.__uspapi, arg);
+        }
+      }, 500);
+    }
+  };
+  var checkIfUspIsReady = function() {
+    uspTries++;
+    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+      console.warn('USP is not accessible');
+    } else {
+      clearInterval(uspInterval);
+    }
+  };
+  if (typeof window.__uspapi === 'undefined') {
+    window.__uspapi = uspStubFunction;
+    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+  
+  // GPP (IAB Global Privacy Platform) stub — same rationale as the __uspapi
+  // stub above. Without this, any script (e.g. InMobi cmp2.js) that calls
+  // window.__gpp(...) before a real CMP has defined it throws a TypeError
+  // and aborts its own execution at that point.
+  if (typeof window.__gpp !== 'function') {
+    window.__gppQueue = window.__gppQueue || [];
+    window.__gpp = function() {
+      window.__gppQueue.push(arguments);
+    };
+  }  
+  
+})();
+</script>
+<!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9196538889333991" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
 <script>window.__algoliaV4 = algoliasearch;</script>
 <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.8.3/dist/instantsearch.production.min.js" integrity="sha256-LAGhRRdtVoD6RLo2qDQsU2mp+XVSciKRC8XPOBWmofM=" crossorigin="anonymous"></script>
@@ -1412,24 +1592,43 @@ $(document).ready(function () {
        data-callback="onTurnstileSuccess"
        data-error-callback="onTurnstileError"
        data-expired-callback="onTurnstileExpired"
-       data-size="flexible">
+       data-size="flexible"
+       data-appearance="interaction-only">
     </div>
     <script>
     var turnstilePassed = false;
     var TURNSTILE_TTL_HOURS = 24;
 
-    function setVerifiedCookie(hours) {
-      var expires = new Date(Date.now() + hours * 60 * 60 * 1000).toUTCString();
-      document.cookie = 'cf_verified=1; expires=' + expires + '; path=/; SameSite=Lax; Secure';
+    function isVerifiedStillValid() {
+      var expiry = parseInt(localStorage.getItem('cf_verified_until') || '0', 10);
+      return Date.now() < expiry;
+    }
+
+    function setVerifiedTTL(hours) {
+      var expiry = Date.now() + hours * 60 * 60 * 1000;
+      localStorage.setItem('cf_verified_until', expiry);
     }
 
     function onTurnstileSuccess(token) {
-      setVerifiedCookie(TURNSTILE_TTL_HOURS);
-      turnstilePassed = true;
+      fetch('/api/turnstile-verify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ token: token }),
+      })
+      .then(function(res) {
+        if (res.ok) {
+          setVerifiedTTL(TURNSTILE_TTL_HOURS);
+          turnstilePassed = true;
+        } else {
+          console.warn('Turnstile server verification failed');
+        }
+      })
+      .catch(function(err) {
+        console.warn('Turnstile verify error:', err);
+      });
     }
 
     function onTurnstileError() {
-      // Challenge failed — feed.js will silently suppress Algolia pagination.
       console.warn('Turnstile error — Algolia pagination suppressed.');
     }
 
@@ -1439,11 +1638,36 @@ $(document).ready(function () {
     }
 
     window.onload = function() {
-      turnstile.execute();
+      if (isVerifiedStillValid()) {
+        turnstilePassed = true;
+      } else {
+        turnstile.execute();
+      }
     };
     </script>
 <script src="/js/bundle2.js" async></script>
 
+<script>
+window.addEventListener('load', function() {
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      mutation.addedNodes.forEach(function(node) {
+        if (node.nodeType !== 1) return;
+        if (node.id === 'iubenda-pp-overlay') {
+          node.style.setProperty('top', '55px', 'important');
+          node.style.setProperty('z-index', '2147483644', 'important');
+        }
+        if (node.id === 'iubenda-pp') {
+          node.style.setProperty('top', '55px', 'important');
+          node.style.setProperty('z-index', '2147483645', 'important');
+        }
+      });
+    });
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+});
+</script>
+
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a14816671e883287',t:'MTc4MjkzNjk3Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a17147e40ff2eb03',t:'MTc4MzM2ODkxOQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

@@ -15,7 +15,17 @@
   <script src="https://unjobs.org/js/timeago.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&lang=en">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="icon" href="https://images.unjobs.org/org/favicon.ico">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9NEF8H5W4V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9NEF8H5W4V');
+    gtag('config', 'G-7EQN1KX5DL');
+  </script>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/local.css">
   <link rel="stylesheet" href="/css/bundle2.css">
@@ -50,7 +60,7 @@
   border-radius:9999px; text-transform:none; white-space:nowrap;
 }
 .fp-facet {
-  float:left; display:inline-block; width:32%; min-width:336px; display:flex;
+  float:left; display:inline-block; width:32%; min-width:0; display:flex;
   position:relative; padding:3px; margin:0; height:36px;
 }
 .jtitle {
@@ -62,8 +72,12 @@
 .likes        { display:none; }
 .icon-place   { left:1px; }
 
+.condensed {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
 /* ── List group ── */
-.list-group { border-radius:4px; box-shadow:0 1px 2px rgba(0,0,0,.075); }
+.list-group { border-radius:4px; box-shadow:0 1px 2px rgba(0,0,0,.075); break-inside: avoid !important; }
 .list-group-item {
   position:relative; display:block; padding:10px 15px; margin-bottom:-1px;
   background-color:#fff; border:1px solid #ddd;
@@ -103,9 +117,45 @@
   border-bottom: 0 !important;
   background: transparent;
 }
+
+/* ── Mobile viewport constraints ── */
+.mdc-drawer-app-content, .main-content {
+  overflow-x: hidden;
+}
+table.pag {
+  table-layout: fixed;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ── Auto Ads containment ── */
+.mdc-top-app-bar,
+.mdc-top-app-bar--scrolled-under,
+.mdc-top-app-bar--short,
+.mdc-top-app-bar--short-collapsed,
+.mdc-top-app-bar--fixed,
+.mdc-top-app-bar--prominent {
+  z-index: 2147483647 !important;
+  background-color: #eee !important;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABZklEQVR4nO3bMQ7CMBBEUV8xFR0VHVIaWkTFcROuEC5guVjZnsnmF9MwBeFpIy2GlMdnP2pZ1q36+sju/t6rUVxLtCtOFwMooIACCujFQZd1O0i/DJnQ5/dXjds0DZlQQAG17gAF1LsDtDeoes3IlnKWZTo69bdXPaPeD1BAAQUUUEB9QNVrRrZMPw+NTsxZOkAB9e4ABdS7A7Q3qHrNyJbwhGaftPCEAgqodQcooN4doL1B1WtGtlj9+67Vtc4nR5zpRu9AQAEFFFBAAfUBVa8Z2WL1M7LTtUQ7QAHVowEKqP5aADXpWJs6p7nYX/nhg/CEAgqodQcooN4doL1B1WtGtgw5D539E/PsBxNaX0AABRRQQAEF1AdUvWZkS3hCM5xdjvh8gAIKqC0aoIDqYaaDqteMbCmzzzyzn7ECCqh3Byig3h2gvUHVa0a28Kxn4PO17jJAAQXUFg1QQPUw00HVa0a2/AGTwTetiDfnHAAAAABJRU5ErkJggg==) !important;
+}
+ins.adsbygoogle[data-ad-status] {
+  position: relative !important;
+  z-index: auto !important;
+}
+body > ins.adsbygoogle:first-child {
+  display: none !important;
+}
 </style>
-<script data-cfasync="false" nonce="25760007-73c5-49bb-ba11-a95ceaea193e">try{(function(w,d){!function(mw,mx,my,mz){if(mw.zaraz)console.error("zaraz is loaded twice");else{mw[my]=mw[my]||{};mw[my].executed=[];mw.zaraz={deferred:[],listeners:[]};mw.zaraz._v="5887";mw.zaraz._n="25760007-73c5-49bb-ba11-a95ceaea193e";mw.zaraz.q=[];mw.zaraz._f=function(mA){return async function(){var mB=Array.prototype.slice.call(arguments);mw.zaraz.q.push({m:mA,a:mB})}};for(const mC of["track","set","debug"])mw.zaraz[mC]=mw.zaraz._f(mC);mw.zaraz.init=()=>{var mD=mx.getElementsByTagName(mz)[0],mE=mx.createElement(mz),mF=mx.getElementsByTagName("title")[0];mF&&(mw[my].t=mx.getElementsByTagName("title")[0].text);mw[my].x=Math.random();mw[my].w=mw.screen.width;mw[my].h=mw.screen.height;mw[my].j=mw.innerHeight;mw[my].e=mw.innerWidth;mw[my].l=mw.location.href;mw[my].r=mx.referrer;mw[my].k=mw.screen.colorDepth;mw[my].n=mx.characterSet;mw[my].o=(new Date).getTimezoneOffset();if(mw.dataLayer)for(const mG of Object.entries(Object.entries(dataLayer).reduce((mH,mI)=>({...mH[1],...mI[1]}),{})))zaraz.set(mG[0],mG[1],{scope:"page"});mw[my].q=[];for(;mw.zaraz.q.length;){const mJ=mw.zaraz.q.shift();mw[my].q.push(mJ)}mE.defer=!0;for(const mK of[localStorage,sessionStorage])Object.keys(mK||{}).filter(mM=>mM.startsWith("_zaraz_")).forEach(mL=>{try{mw[my]["z_"+mL.slice(7)]=JSON.parse(mK.getItem(mL))}catch{mw[my]["z_"+mL.slice(7)]=mK.getItem(mL)}});mE.referrerPolicy="origin";mE.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(mw[my])));mD.parentNode.insertBefore(mE,mD)};["complete","interactive"].includes(mx.readyState)?zaraz.init():mw.addEventListener("DOMContentLoaded",zaraz.init)}}(w,d,"zarazData","script");window.zaraz._p=async nn=>new Promise(no=>{if(nn){nn.e&&nn.e.forEach(np=>{try{const nq=d.querySelector("script[nonce]"),nr=nq?.nonce||nq?.getAttribute("nonce"),ns=d.createElement("script");nr&&(ns.nonce=nr);ns.innerHTML=np;ns.onload=()=>{d.head.removeChild(ns)};d.head.appendChild(ns)}catch(nt){console.error(`Error executing script: ${np}\n`,nt)}});Promise.allSettled((nn.f||[]).map(nu=>fetch(nu[0],nu[1])))}no()});zaraz._p({"e":["(function(w,d){})(window,document)"]});})(window,document)}catch(e){throw fetch("/cdn-cgi/zaraz/t"),e;};</script></head>
+</head>
 <body class="mdc-typography" style="background-color:#fff !important;">
+
+  <!-- Independent fixed background — MDC JS cannot touch this -->
+  <div style="position:fixed;top:0;left:0;width:100%;height:55px;
+              background-color:#eee;
+              background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABZklEQVR4nO3bMQ7CMBBEUV8xFR0VHVIaWkTFcROuEC5guVjZnsnmF9MwBeFpIy2GlMdnP2pZ1q36+sju/t6rUVxLtCtOFwMooIACCujFQZd1O0i/DJnQ5/dXjds0DZlQQAG17gAF1LsDtDeoes3IlnKWZTo69bdXPaPeD1BAAQUUUEB9QNVrRrZMPw+NTsxZOkAB9e4ABdS7A7Q3qHrNyJbwhGaftPCEAgqodQcooN4doL1B1WtGtlj9+67Vtc4nR5zpRu9AQAEFFFBAAfUBVa8Z2WL1M7LTtUQ7QAHVowEKqP5aADXpWJs6p7nYX/nhg/CEAgqodQcooN4doL1B1WtGtgw5D539E/PsBxNaX0AABRRQQAEF1AdUvWZkS3hCM5xdjvh8gAIKqC0aoIDqYaaDqteMbCmzzzyzn7ECCqh3Byig3h2gvUHVa0a28Kxn4PO17jJAAQXUFg1QQPUw00HVa0a2/AGTwTetiDfnHAAAAABJRU5ErkJggg==);
+              z-index:2147483646;"></div>
 
   <style>
   nav i.material-icons0 { display: none; }
@@ -118,7 +168,7 @@
 
       <div style="z-index:9999;position:fixed;height:55px;min-height:0px;width:100%;background-color:#eee;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABZklEQVR4nO3bMQ7CMBBEUV8xFR0VHVIaWkTFcROuEC5guVjZnsnmF9MwBeFpIy2GlMdnP2pZ1q36+sju/t6rUVxLtCtOFwMooIACCujFQZd1O0i/DJnQ5/dXjds0DZlQQAG17gAF1LsDtDeoes3IlnKWZTo69bdXPaPeD1BAAQUUUEB9QNVrRrZMPw+NTsxZOkAB9e4ABdS7A7Q3qHrNyJbwhGaftPCEAgqodQcooN4doL1B1WtGtlj9+67Vtc4nR5zpRu9AQAEFFFBAAfUBVa8Z2WL1M7LTtUQ7QAHVowEKqP5aADXpWJs6p7nYX/nhg/CEAgqodQcooN4doL1B1WtGtgw5D539E/PsBxNaX0AABRRQQAEF1AdUvWZkS3hCM5xdjvh8gAIKqC0aoIDqYaaDqteMbCmzzzyzn7ECCqh3Byig3h2gvUHVa0a28Kxn4PO17jJAAQXUFg1QQPUw00HVa0a2/AGTwTetiDfnHAAAAABJRU5ErkJggg==);"></div>
 
-      <div class="innav" style="position:absolute;top:30px;bottom:0;left:-4px;right:0px;overflow-y:scroll">
+      <div class="innav" style="position:absolute;top:30px;bottom:90px;left:-4px;right:0px;overflow-y:scroll">
 
         <a id="hlh" rel="nofollow"
           style="visibility:hidden;width:-moz-fit-content;width:fit-content;position:relative;border-radius:9999px;display:table;margin:0 0 0 12px;padding:16px 16px 16px 12px"
@@ -177,14 +227,28 @@
         </a>
 
       </div>
+
+      <div class="condensed" style="text-align:center;position:absolute;bottom:20px;left:4px;right:0;padding:10px 12px;font-size:14px;background: rgb(224, 230, 254); color: rgb(87, 115, 236);">
+        UNjobs, Infomation Sàrl, Genève<br>
+        <span style="font-style: Roboto;font-size:12px;">Not an official document of the United Nations</span>
+        <br>
+        <a href="https://www.iubenda.com/privacy-policy/35887823"
+           class="iubenda-nostyle no-brand iubenda-embed" title="Privacy Policy"
+           style="color:rgb(87, 115, 236);font-size:13px;">Privacy Policy</a>
+        |
+        <a href="https://www.iubenda.com/privacy-policy/35887823/cookie-policy"
+           class="iubenda-nostyle no-brand iubenda-embed" title="Cookie Policy"
+           style="color:rgb(87, 115, 236);font-size:13px;">Cookie Policy</a>
+        <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+<!--         |
+        <a href="#" id="manage-cookies-link" style="color:#fff;font-size:11px;">Manage Cookies</a>
+        -->
+      </div>
+
     </nav>
   </div>
 </aside>
-
-  <div class="mdc-drawer-scrim"></div>
-  <div class="mdc-drawer-app-content" style="width:100%;">
-
-    <header class="mdc-top-app-bar" style="z-index:11000;position:fixed;height:55px;min-height:0px;width:100%;background-color:#eee;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABZklEQVR4nO3bMQ7CMBBEUV8xFR0VHVIaWkTFcROuEC5guVjZnsnmF9MwBeFpIy2GlMdnP2pZ1q36+sju/t6rUVxLtCtOFwMooIACCujFQZd1O0i/DJnQ5/dXjds0DZlQQAG17gAF1LsDtDeoes3IlnKWZTo69bdXPaPeD1BAAQUUUEB9QNVrRrZMPw+NTsxZOkAB9e4ABdS7A7Q3qHrNyJbwhGaftPCEAgqodQcooN4doL1B1WtGtlj9+67Vtc4nR5zpRu9AQAEFFFBAAfUBVa8Z2WL1M7LTtUQ7QAHVowEKqP5aADXpWJs6p7nYX/nhg/CEAgqodQcooN4doL1B1WtGtgw5D539E/PsBxNaX0AABRRQQAEF1AdUvWZkS3hCM5xdjvh8gAIKqC0aoIDqYaaDqteMbCmzzzyzn7ECCqh3Byig3h2gvUHVa0a28Kxn4PO17jJAAQXUFg1QQPUw00HVa0a2/AGTwTetiDfnHAAAAABJRU5ErkJggg==);">
+  <header class="mdc-top-app-bar" data-google-auto-excluded style="z-index:11000;position:fixed;height:55px;min-height:0px;width:100%;background-color:#eee !important;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABZklEQVR4nO3bMQ7CMBBEUV8xFR0VHVIaWkTFcROuEC5guVjZnsnmF9MwBeFpIy2GlMdnP2pZ1q36+sju/t6rUVxLtCtOFwMooIACCujFQZd1O0i/DJnQ5/dXjds0DZlQQAG17gAF1LsDtDeoes3IlnKWZTo69bdXPaPeD1BAAQUUUEB9QNVrRrZMPw+NTsxZOkAB9e4ABdS7A7Q3qHrNyJbwhGaftPCEAgqodQcooN4doL1B1WtGtlj9+67Vtc4nR5zpRu9AQAEFFFBAAfUBVa8Z2WL1M7LTtUQ7QAHVowEKqP5aADXpWJs6p7nYX/nhg/CEAgqodQcooN4doL1B1WtGtgw5D539E/PsBxNaX0AABRRQQAEF1AdUvWZkS3hCM5xdjvh8gAIKqC0aoIDqYaaDqteMbCmzzzyzn7ECCqh3Byig3h2gvUHVa0a28Kxn4PO17jJAAQXUFg1QQPUw00HVa0a2/AGTwTetiDfnHAAAAABJRU5ErkJggg==) !important;">
   <div class="mdc-top-app-bar__row">
     <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
       <a href="#" style="color:white" class="demo-menu material-icons mdc-top-app-bar__navigation-icon">menu</a>
@@ -192,11 +256,14 @@
         <a href="/"><img id="logoimg" class="logoiimage" src="https://images.unjobs.org/org/logo.gif" style=""></a>
       </div>
     </section>
-    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-      <a href="#" style="color:white;" class="srchlink material-icons mdc-top-app-bar__action-item" aria-label="Search" alt="Search">search</a>
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar" style="z-index:2147483647;position:relative;">
+      <a href="/search" style="color:white;" class="srchlink material-icons mdc-top-app-bar__action-item" aria-label="Search" alt="Search">search</a>
     </section>
   </div>
 </header>
+
+  <div class="mdc-drawer-scrim"></div>
+  <div class="mdc-drawer-app-content" style="width:100%;">
 
     <main id="main-content" class="main-content" style="margin:0;">
       <div class="mdc-top-app-bar--fixed-adjust">
@@ -226,7 +293,7 @@
       <div style="margin-top:6px;margin-right:16px;height:40px;width:130px;text-align:center;margin-left:0;display:flex;"
            class="fp-user-detail-container">
         <div style="padding:0 8px 4px 8px;margin:0;" class="fp-user-nbfollowing-container fp-user-nbfollowing">
-          <div>13</div>
+          <div>10</div>
           <div style="font-weight:normal;">locations</div>
         </div>
       </div>
@@ -254,7 +321,7 @@
     </div>
     <div class="fp-username fp-orgname mdl-color-text--black"
          style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
-      Washington (34)
+      Washington (25)
     </div>
   </a>
 </div>
@@ -266,7 +333,7 @@
     </div>
     <div class="fp-username fp-orgname mdl-color-text--black"
          style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
-      Sofia (3)
+      Sofia (2)
     </div>
   </a>
 </div>
@@ -283,26 +350,14 @@
   </a>
 </div>
 <div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
-  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/world-bank_bxo"
+  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/world-bank_bjs"
      style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
     <div class="fp-avatar"
          style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/world-bank.jpg&quot;);">
     </div>
     <div class="fp-username fp-orgname mdl-color-text--black"
          style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
-      Bissau (1)
-    </div>
-  </a>
-</div>
-<div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
-  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/world-bank_maa"
-     style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
-    <div class="fp-avatar"
-         style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/world-bank.jpg&quot;);">
-    </div>
-    <div class="fp-username fp-orgname mdl-color-text--black"
-         style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
-      Chennai (1)
+      Beijing (1)
     </div>
   </a>
 </div>
@@ -339,30 +394,6 @@
     <div class="fp-username fp-orgname mdl-color-text--black"
          style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
       Kathmandu (1)
-    </div>
-  </a>
-</div>
-<div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
-  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/world-bank_iev"
-     style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
-    <div class="fp-avatar"
-         style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/world-bank.jpg&quot;);">
-    </div>
-    <div class="fp-username fp-orgname mdl-color-text--black"
-         style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
-      Kyiv (1)
-    </div>
-  </a>
-</div>
-<div class="fp-header fp-facet" style="display:flex;position:relative;padding:4px 0;margin:4px;height:34px;">
-  <a class="fp-usernameLink mdl-button mdl-js-button" href="/offices/world-bank_mnl"
-     style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:0;border-radius:9999px;text-transform:none;white-space:nowrap;border:1px solid #eee;">
-    <div class="fp-avatar"
-         style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/world-bank.jpg&quot;);">
-    </div>
-    <div class="fp-username fp-orgname mdl-color-text--black"
-         style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
-      Manila (1)
     </div>
   </a>
 </div>
@@ -410,14 +441,14 @@
   <div style="min-height:150px;position:relative;width:100%;max-width:1200px;margin-right:8px;background:0;margin:0;">
 
     <div id="ppp" class="pagination" style="position:relative;margin:0px 8px 4px 8px;padding:8px 0 8px 0;display:flex;max-height:16px;">
-    <table class="pag" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+    <table class="pag" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="table-layout:fixed;max-width:100%;box-sizing:border-box;">
   <tbody>
     <tr>
       <td class="nv fp-first-page-button" style="width:15%;color:#999;">«&nbsp;First</td>
       <td class="nv fp-prev-page-button"  style="width:15%;color:#999;">&lt;&nbsp;Prev</td>
       <td class="nc">
         <span style="color:#333;font-size:13px;">
-          1&nbsp;–&nbsp;20 of 48
+          1&nbsp;–&nbsp;20 of 35
         </span>
       </td>
       <td class="nv fp-next-page-button"  style="width:15%;cursor:pointer;">Next&nbsp;&gt;</td>
@@ -432,9 +463,9 @@
 
       
 
-      <div id="j1782832692084" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+      <div id="j1783024555285" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/world-bank"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -447,7 +478,80 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782832692084">Extended Term Consultant - Data Scientist, Washington, United States</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783024555285">ET Consultant, Beijing, China</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">ET Consultant Job #: req37380 Organization: World Bank Sector: Environment Grade: EC3 Term Duration: 1 year 0 months Recruitment Type: Local Recruitment Location: Beijing,China Required Language(s): English Preferred Language&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">3d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div id="j1783024569724" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/world-bank"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/world-bank.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        World Bank Group
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783024569724">Financial Officer, Washington, United States</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">Financial Officer Job #: req37396 Organization: World Bank Sector: Treasury Grade: GF Term Duration: 3 years 0 months Recruitment Type: International Recruitment Location: Washington, DC,United States Required Language(s): English&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">3d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div class="job ad-slot-inline" style="margin:12px 0;padding:0;border-bottom:0;width:100%;break-inside:auto;">
+  <ins class="adsbygoogle"
+       style="display:block;min-height:100px;"
+       data-ad-client="ca-pub-9196538889333991"
+       data-ad-slot="4504822997"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div id="j1782832692084" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/world-bank"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/world-bank.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        World Bank Group
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782832692084">Extended Term Consultant - Data Scientist, Washington, United States</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">E T Consultant - Data Scientist Job #: req37368 Organization: World Bank Sector: Research & Quantitative Analysis Grade: EC2 Term Duration: 1 year Recruitment Type: Local Recruitment Location: Washington, DC,United States Required&hellip;</span>
@@ -455,7 +559,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">14h</span> ago
+      Updated <span class="fp-time">5d</span> ago
     </div>
   </div>
 
@@ -466,7 +570,7 @@
 </div>
 <div id="j1782832733442" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/world-bank"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -479,7 +583,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782832733442">Program Officer (Ethics &amp; Compliance Learning Experience Specialist), Washington, United States</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782832733442">Program Officer (Ethics &amp; Compliance Learning Experience Specialist), Washington, United States</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Program Officer (Ethics & Compliance Learning Experience Specialist) Job #: req37378 Organization: World Bank Sector: Ethics & Internal Justice Systems Grade: GF Term Duration: 4 years 0 months Recruitment Type: International Recruitment Location&hellip;</span>
@@ -487,7 +591,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">14h</span> ago
+      Updated <span class="fp-time">5d</span> ago
     </div>
   </div>
 
@@ -496,18 +600,9 @@
   </div>
 
 </div>
-<div class="job ad-slot-inline" style="margin:12px 0;padding:0;border-bottom:0;width:100%;break-inside:auto;">
-  <ins class="adsbygoogle"
-       style="display:block;min-height:100px;"
-       data-ad-client="ca-pub-9196538889333991"
-       data-ad-slot="4504822997"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
 <div id="j1782832760764" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/world-bank"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -520,7 +615,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782832760764">Extended Term Consultant - Talent Analytics and Insights, Washington, United States</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782832760764">Extended Term Consultant - Talent Analytics and Insights, Washington, United States</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">E T Consultant - Talent Analytics and Insights Job #: req37367 Organization: World Bank Sector: Human Resources Grade: EC1 Term Duration: 1 year 0 months Recruitment Type: Local Recruitment Location: Washington, DC&hellip;</span>
@@ -528,7 +623,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">14h</span> ago
+      Updated <span class="fp-time">5d</span> ago
     </div>
   </div>
 
@@ -539,7 +634,7 @@
 </div>
 <div id="j1782832774420" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/world-bank"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -552,7 +647,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782832774420">Extended Term Consultant, Washington, United States</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782832774420">Extended Term Consultant, Washington, United States</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Extended Term Consultant Job #: req37383 Organization: World Bank Sector: Climate Change Grade: EC1 Term Duration: 1 year 0 months Recruitment Type: Local Recruitment Location: Washington, DC,United States Required Language&hellip;</span>
@@ -560,7 +655,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">14h</span> ago
+      Updated <span class="fp-time">5d</span> ago
     </div>
   </div>
 
@@ -571,7 +666,7 @@
 </div>
 <div id="j1782757702957" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/world-bank"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -584,7 +679,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782757702957">Program Analyst, Washington, United States</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782757702957">Program Analyst, Washington, United States</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Program Analyst (Ethics & Compliance Learning Experience Associate) Job #: req37376 Organization: World Bank Sector: Ethics & Internal Justice Systems Grade: GE Term Duration: 4 years 0 months Recruitment Type: Local Recruitment Location&hellip;</span>
@@ -592,39 +687,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">1d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div id="j1782672860706" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/world-bank"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/world-bank.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        World Bank Group
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782672860706">Infrastructure Engineer, Washington, United States</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Infrastructure Engineer Job #: req37115 Organization: World Bank Sector: Information Technology Grade: GF Term Duration: 3 years 0 months Recruitment Type: Local Recruitment Location: Washington, DC,United States Required Language(s&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">2d</span> ago
+      Updated <span class="fp-time">6d</span> ago
     </div>
   </div>
 
@@ -635,7 +698,7 @@
 </div>
 <div id="j1782672874108" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/world-bank"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -648,7 +711,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782672874108">Extended Term Consultant - Research Analyst, Washington, United States</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782672874108">Extended Term Consultant - Research Analyst, Washington, United States</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">E T Consultant - Research Analyst Job #: req37351 Organization: World Bank Group Sector: Research & Quantitative Analysis Grade: EC1 Term Duration: 1 year 0 months Recruitment Type: Local Recruitment Location: Washington, DC&hellip;</span>
@@ -656,7 +719,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">2d</span> ago
+      Updated <span class="fp-time">7d</span> ago
     </div>
   </div>
 
@@ -667,7 +730,7 @@
 </div>
 <div id="j1782672887546" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/world-bank"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -680,7 +743,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782672887546">Audio Visual Systems Engineer (Infrastructure Engineering Analyst), Washington, United States</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782672887546">Audio Visual Systems Engineer (Infrastructure Engineering Analyst), Washington, United States</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Audio Visual Systems Engineer (Infrastructure Engineering Analyst) Job #: req37347 Organization: World Bank Sector: Information Technology Grade: GE Term Duration: 3 years 0 months Recruitment Type: Local Recruitment Location: Washington, DC&hellip;</span>
@@ -688,7 +751,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">2d</span> ago
+      Updated <span class="fp-time">7d</span> ago
     </div>
   </div>
 
@@ -699,7 +762,7 @@
 </div>
 <div id="j1782496018454" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/world-bank"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -712,7 +775,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782496018454">IT Officer, Business Solutions I (Agentic AI Developer), Sofia, Bulgaria</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782496018454">IT Officer, Business Solutions I (Agentic AI Developer), Sofia, Bulgaria</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">IT Officer, Business Solutions I (Agentic AI Developer) Job #: req37317 Organization: World Bank Sector: Information & Communication Technology Grade: GF Term Duration: 2 years 0 months Recruitment Type: Local Recruitment Location&hellip;</span>
@@ -720,7 +783,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">4d</span> ago
+      Updated <span class="fp-time">9d</span> ago
     </div>
   </div>
 
@@ -731,7 +794,7 @@
 </div>
 <div id="j1782496032391" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/world-bank"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -744,7 +807,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782496032391">Extended Term Consultant, Nairobi, Kenya</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782496032391">Extended Term Consultant, Nairobi, Kenya</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">E T Consultant Job #: req37320 Organization: World Bank Sector: Economics Grade: EC1 Term Duration: 1 year 0 months Recruitment Type: Local Recruitment Location: Nairobi,Kenya Required Language(s): English Preferred&hellip;</span>
@@ -752,7 +815,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">4d</span> ago
+      Updated <span class="fp-time">9d</span> ago
     </div>
   </div>
 
@@ -763,7 +826,7 @@
 </div>
 <div id="j1782496046146" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/world-bank"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -776,7 +839,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782496046146">Financial Management Specialist, Freetown, Sierra Leone</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782496046146">Financial Management Specialist, Freetown, Sierra Leone</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Financial Management Specialist Job #: req37287 Organization: World Bank Group Sector: Financial Management Grade: GF Term Duration: 2 years 0 months Recruitment Type: Local Recruitment Location: Freetown,Sierra Leone Required Language&hellip;</span>
@@ -784,39 +847,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">4d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div id="j1782496060064" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/world-bank"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/world-bank.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        World Bank Group
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782496060064">Extended Term Consultant Global Research Economist, Washington, United States</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">E T Consultant Global Research Economist Job #: req37321 Organization: World Bank Sector: Research & Quantitative Analysis Grade: EC2 Term Duration: 1 year 0 months Recruitment Type: Local Recruitment Location: Washington, DC&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">4d</span> ago
+      Updated <span class="fp-time">9d</span> ago
     </div>
   </div>
 
@@ -834,9 +865,9 @@
        data-full-width-responsive="true"></ins>
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-<div id="j1782496073782" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+<div id="j1782496060064" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/world-bank"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -849,7 +880,39 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782496073782">Extended Term Consultant Research Economist, Washington, United States</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782496060064">Extended Term Consultant Global Research Economist, Washington, United States</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">E T Consultant Global Research Economist Job #: req37321 Organization: World Bank Sector: Research & Quantitative Analysis Grade: EC2 Term Duration: 1 year 0 months Recruitment Type: Local Recruitment Location: Washington, DC&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">9d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div id="j1782496073782" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/world-bank"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/world-bank.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        World Bank Group
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782496073782">Extended Term Consultant Research Economist, Washington, United States</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">E T Consultant Research Economist Ukraine Job #: req37328 Organization: World Bank Sector: Research & Quantitative Analysis Grade: EC2 Term Duration: 1 year 0 months Recruitment Type: Local Recruitment Location: Washington, DC&hellip;</span>
@@ -857,7 +920,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">4d</span> ago
+      Updated <span class="fp-time">9d</span> ago
     </div>
   </div>
 
@@ -868,7 +931,7 @@
 </div>
 <div id="j1782496087300" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/world-bank"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -881,7 +944,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782496087300">Extended Term Consultant Research Economist, Washington, United States</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782496087300">Extended Term Consultant Research Economist, Washington, United States</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">E T Consultant Research Economist India Job #: req37322 Organization: World Bank Sector: Research & Quantitative Analysis Grade: EC2 Term Duration: 1 year 0 months Recruitment Type: Local Recruitment Location: Washington, DC&hellip;</span>
@@ -889,39 +952,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">4d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div id="j1782496114278" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/world-bank"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/world-bank.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        World Bank Group
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782496114278">Associate Economist, Washington, United States</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Associate Economist Job #: req37348 Organization: World Bank Group Sector: Economics Grade: GF Term Duration: 4 years 0 months Recruitment Type: International Recruitment Location: Washington, DC,United States Required Language(s&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">4d</span> ago
+      Updated <span class="fp-time">9d</span> ago
     </div>
   </div>
 
@@ -939,9 +970,9 @@
        data-full-width-responsive="true"></ins>
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-<div id="j1782496127687" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+<div id="j1782496114278" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/world-bank"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -954,7 +985,39 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782496127687">E T Temporary Senior Program Administrator, Washington, United States</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782496114278">Associate Economist, Washington, United States</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">Associate Economist Job #: req37348 Organization: World Bank Group Sector: Economics Grade: GF Term Duration: 4 years 0 months Recruitment Type: International Recruitment Location: Washington, DC,United States Required Language(s&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">9d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div id="j1782496127687" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/world-bank"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/world-bank.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        World Bank Group
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782496127687">E T Temporary Senior Program Administrator, Washington, United States</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">E T Temporary Senior Program Administrator Job #: req37329 Organization: World Bank Sector: Administration/Office Support Grade: ET4 Term Duration: 1 year 0 months Recruitment Type: Local Recruitment Location: Washington, DC&hellip;</span>
@@ -962,7 +1025,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">4d</span> ago
+      Updated <span class="fp-time">9d</span> ago
     </div>
   </div>
 
@@ -973,7 +1036,7 @@
 </div>
 <div id="j1782413196026" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/world-bank"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -986,7 +1049,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782413196026">Paralegal, Washington, United States</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782413196026">Paralegal, Washington, United States</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Paralegal Job #: req37278 Organization: ICSID Sector: Legal Grade: GD Term Duration: 3 years 0 months Recruitment Type: Local Recruitment Location: Washington, DC,United States Required Language(s): English, French, Spanish&hellip;</span>
@@ -994,7 +1057,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">5d</span> ago
+      Updated <span class="fp-time">10d</span> ago
     </div>
   </div>
 
@@ -1005,7 +1068,7 @@
 </div>
 <div id="j1782413209850" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/world-bank"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -1018,7 +1081,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782413209850">Senior HR Specialist - Workforce Planning &amp; Organization Design, Washington, United States</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782413209850">Senior HR Specialist - Workforce Planning &amp; Organization Design, Washington, United States</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Senior HR Specialist - Workforce Planning & Organization Design Job #: req37314 Organization: World Bank Sector: Human Resources Grade: GG Term Duration: 4 years 0 months Recruitment Type: International Recruitment Location: Washington, DC&hellip;</span>
@@ -1026,7 +1089,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">5d</span> ago
+      Updated <span class="fp-time">10d</span> ago
     </div>
   </div>
 
@@ -1037,7 +1100,7 @@
 </div>
 <div id="j1782413223435" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/world-bank"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -1050,7 +1113,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782413223435">HR Specialist - Workforce Planning and Skills, Washington, United States</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782413223435">HR Specialist - Workforce Planning and Skills, Washington, United States</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">HR Specialist - Workforce Planning and Skills Job #: req37313 Organization: World Bank Sector: Human Resources Grade: GF Term Duration: 4 years 0 months Recruitment Type: International Recruitment Location: Washington, DC,United&hellip;</span>
@@ -1058,39 +1121,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">5d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div id="j1782413250819" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/world-bank"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/world-bank.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        World Bank Group
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782413250819">Senior Office Administrator, Muscat, Oman</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Senior Office Administrator Job #: req37316 Organization: World Bank Sector: Administration/Office Support Grade: GD Term Duration: 2 years 0 months Recruitment Type: Local Recruitment Location: Muscat,Oman Required Language(s&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">5d</span> ago
+      Updated <span class="fp-time">10d</span> ago
     </div>
   </div>
 
@@ -1103,14 +1134,14 @@
     </div>
 
     <div id="pp3" class="pagination" style="margin-bottom:50px;">
-      <table class="pag" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+      <table class="pag" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="table-layout:fixed;max-width:100%;box-sizing:border-box;">
   <tbody>
     <tr>
       <td class="nv fp-first-page-button" style="width:15%;color:#999;">«&nbsp;First</td>
       <td class="nv fp-prev-page-button"  style="width:15%;color:#999;">&lt;&nbsp;Prev</td>
       <td class="nc">
         <span style="color:#333;font-size:13px;">
-          1&nbsp;–&nbsp;20 of 48
+          1&nbsp;–&nbsp;20 of 35
         </span>
       </td>
       <td class="nv fp-next-page-button"  style="width:15%;cursor:pointer;">Next&nbsp;&gt;</td>
@@ -1130,7 +1161,7 @@ var pageOrgID   = "world-bank";
 var pageType    = "org";
 var isCgiarAll  = false;
 var cgiarTags      = [];
-var pageTotalHits  = 48;
+var pageTotalHits  = 35;
 
 $(document).ready(function () {
   var officeAdPushed = false;
@@ -1164,8 +1195,139 @@ $(document).ready(function () {
 
       </div>
     </main>
+
   </div>
 
+<!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+<script type="text/javascript" async=true>
+(function() {
+  //var host = window.location.hostname;
+  var host = 'unjobs.org';
+  var element = document.createElement('script');
+  var firstScript = document.getElementsByTagName('script')[0];
+  var url = 'https://cmp.inmobi.com'
+    .concat('/choice/', 'N1sA5xfTskjLj', '/', host, '/choice.js?tag_version=V3');
+  var uspTries = 0;
+  var uspTriesLimit = 3;
+  element.async = true;
+  element.type = 'text/javascript';
+  element.src = url;
+  firstScript.parentNode.insertBefore(element, firstScript);
+
+  function makeStub() {
+    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+    var queue = [];
+    var win = window;
+    var cmpFrame;
+
+    function addFrame() {
+      var doc = win.document;
+      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+      if (!otherCMP) {
+        if (doc.body) {
+          var iframe = doc.createElement('iframe');
+          iframe.style.cssText = 'display:none';
+          iframe.name = TCF_LOCATOR_NAME;
+          doc.body.appendChild(iframe);
+        } else {
+          setTimeout(addFrame, 5);
+        }
+      }
+      return !otherCMP;
+    }
+
+    function tcfAPIHandler() {
+      var gdprApplies;
+      var args = arguments;
+      if (!args.length) {
+        return queue;
+      } else if (args[0] === 'setGdprApplies') {
+        if (args.length > 3 && args[2] === 2 && typeof args[3] === 'boolean') {
+          gdprApplies = args[3];
+          if (typeof args[2] === 'function') { args[2]('set', true); }
+        }
+      } else if (args[0] === 'ping') {
+        var retr = { gdprApplies: gdprApplies, cmpLoaded: false, cmpStatus: 'stub' };
+        if (typeof args[2] === 'function') { args[2](retr); }
+      } else {
+        if (args[0] === 'init' && typeof args[3] === 'object') {
+          args[3] = Object.assign(args[3], { tag_version: 'V3' });
+        }
+        queue.push(args);
+      }
+    }
+
+    function postMessageEventHandler(event) {
+      var msgIsString = typeof event.data === 'string';
+      var json = {};
+      try {
+        if (msgIsString) { json = JSON.parse(event.data); } else { json = event.data; }
+      } catch (ignore) {}
+      var payload = json.__tcfapiCall;
+      if (payload) {
+        window.__tcfapi(payload.command, payload.version, function(retValue, success) {
+          var returnMsg = { __tcfapiReturn: { returnValue: retValue, success: success, callId: payload.callId } };
+          if (msgIsString) { returnMsg = JSON.stringify(returnMsg); }
+          if (event && event.source && event.source.postMessage) {
+            event.source.postMessage(returnMsg, '*');
+          }
+        }, payload.parameter);
+      }
+    }
+
+    while (win) {
+      try {
+        if (win.frames[TCF_LOCATOR_NAME]) { cmpFrame = win; break; }
+      } catch (ignore) {}
+      if (win === window.top) { break; }
+      win = win.parent;
+    }
+    if (!cmpFrame) {
+      addFrame();
+      win.__tcfapi = tcfAPIHandler;
+      win.addEventListener('message', postMessageEventHandler, false);
+    }
+  }
+  makeStub();
+
+  var uspStubFunction = function() {
+    var arg = arguments;
+    if (typeof window.__uspapi !== uspStubFunction) {
+      setTimeout(function() {
+        if (typeof window.__uspapi !== 'undefined') {
+          window.__uspapi.apply(window.__uspapi, arg);
+        }
+      }, 500);
+    }
+  };
+  var checkIfUspIsReady = function() {
+    uspTries++;
+    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+      console.warn('USP is not accessible');
+    } else {
+      clearInterval(uspInterval);
+    }
+  };
+  if (typeof window.__uspapi === 'undefined') {
+    window.__uspapi = uspStubFunction;
+    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+  
+  // GPP (IAB Global Privacy Platform) stub — same rationale as the __uspapi
+  // stub above. Without this, any script (e.g. InMobi cmp2.js) that calls
+  // window.__gpp(...) before a real CMP has defined it throws a TypeError
+  // and aborts its own execution at that point.
+  if (typeof window.__gpp !== 'function') {
+    window.__gppQueue = window.__gppQueue || [];
+    window.__gpp = function() {
+      window.__gppQueue.push(arguments);
+    };
+  }  
+  
+})();
+</script>
+<!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9196538889333991" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
 <script>window.__algoliaV4 = algoliasearch;</script>
 <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.8.3/dist/instantsearch.production.min.js" integrity="sha256-LAGhRRdtVoD6RLo2qDQsU2mp+XVSciKRC8XPOBWmofM=" crossorigin="anonymous"></script>
@@ -1178,24 +1340,43 @@ $(document).ready(function () {
        data-callback="onTurnstileSuccess"
        data-error-callback="onTurnstileError"
        data-expired-callback="onTurnstileExpired"
-       data-size="flexible">
+       data-size="flexible"
+       data-appearance="interaction-only">
     </div>
     <script>
     var turnstilePassed = false;
     var TURNSTILE_TTL_HOURS = 24;
 
-    function setVerifiedCookie(hours) {
-      var expires = new Date(Date.now() + hours * 60 * 60 * 1000).toUTCString();
-      document.cookie = 'cf_verified=1; expires=' + expires + '; path=/; SameSite=Lax; Secure';
+    function isVerifiedStillValid() {
+      var expiry = parseInt(localStorage.getItem('cf_verified_until') || '0', 10);
+      return Date.now() < expiry;
+    }
+
+    function setVerifiedTTL(hours) {
+      var expiry = Date.now() + hours * 60 * 60 * 1000;
+      localStorage.setItem('cf_verified_until', expiry);
     }
 
     function onTurnstileSuccess(token) {
-      setVerifiedCookie(TURNSTILE_TTL_HOURS);
-      turnstilePassed = true;
+      fetch('/api/turnstile-verify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ token: token }),
+      })
+      .then(function(res) {
+        if (res.ok) {
+          setVerifiedTTL(TURNSTILE_TTL_HOURS);
+          turnstilePassed = true;
+        } else {
+          console.warn('Turnstile server verification failed');
+        }
+      })
+      .catch(function(err) {
+        console.warn('Turnstile verify error:', err);
+      });
     }
 
     function onTurnstileError() {
-      // Challenge failed — feed.js will silently suppress Algolia pagination.
       console.warn('Turnstile error — Algolia pagination suppressed.');
     }
 
@@ -1205,11 +1386,36 @@ $(document).ready(function () {
     }
 
     window.onload = function() {
-      turnstile.execute();
+      if (isVerifiedStillValid()) {
+        turnstilePassed = true;
+      } else {
+        turnstile.execute();
+      }
     };
     </script>
 <script src="/js/bundle2.js" async></script>
 
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a14818622f513287',t:'MTc4MjkzNzA1Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script>
+window.addEventListener('load', function() {
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      mutation.addedNodes.forEach(function(node) {
+        if (node.nodeType !== 1) return;
+        if (node.id === 'iubenda-pp-overlay') {
+          node.style.setProperty('top', '55px', 'important');
+          node.style.setProperty('z-index', '2147483644', 'important');
+        }
+        if (node.id === 'iubenda-pp') {
+          node.style.setProperty('top', '55px', 'important');
+          node.style.setProperty('z-index', '2147483645', 'important');
+        }
+      });
+    });
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+});
+</script>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a17149e1ef66eb03',t:'MTc4MzM2OTAwMQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>

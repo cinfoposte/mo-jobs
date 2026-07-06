@@ -15,7 +15,17 @@
   <script src="https://unjobs.org/js/timeago.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&lang=en">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="icon" href="https://images.unjobs.org/org/favicon.ico">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9NEF8H5W4V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9NEF8H5W4V');
+    gtag('config', 'G-7EQN1KX5DL');
+  </script>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/local.css">
   <link rel="stylesheet" href="/css/bundle2.css">
@@ -50,7 +60,7 @@
   border-radius:9999px; text-transform:none; white-space:nowrap;
 }
 .fp-facet {
-  float:left; display:inline-block; width:32%; min-width:336px; display:flex;
+  float:left; display:inline-block; width:32%; min-width:0; display:flex;
   position:relative; padding:3px; margin:0; height:36px;
 }
 .jtitle {
@@ -62,8 +72,12 @@
 .likes        { display:none; }
 .icon-place   { left:1px; }
 
+.condensed {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
 /* ── List group ── */
-.list-group { border-radius:4px; box-shadow:0 1px 2px rgba(0,0,0,.075); }
+.list-group { border-radius:4px; box-shadow:0 1px 2px rgba(0,0,0,.075); break-inside: avoid !important; }
 .list-group-item {
   position:relative; display:block; padding:10px 15px; margin-bottom:-1px;
   background-color:#fff; border:1px solid #ddd;
@@ -103,9 +117,45 @@
   border-bottom: 0 !important;
   background: transparent;
 }
+
+/* ── Mobile viewport constraints ── */
+.mdc-drawer-app-content, .main-content {
+  overflow-x: hidden;
+}
+table.pag {
+  table-layout: fixed;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ── Auto Ads containment ── */
+.mdc-top-app-bar,
+.mdc-top-app-bar--scrolled-under,
+.mdc-top-app-bar--short,
+.mdc-top-app-bar--short-collapsed,
+.mdc-top-app-bar--fixed,
+.mdc-top-app-bar--prominent {
+  z-index: 2147483647 !important;
+  background-color: #eee !important;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABZklEQVR4nO3bMQ7CMBBEUV8xFR0VHVIaWkTFcROuEC5guVjZnsnmF9MwBeFpIy2GlMdnP2pZ1q36+sju/t6rUVxLtCtOFwMooIACCujFQZd1O0i/DJnQ5/dXjds0DZlQQAG17gAF1LsDtDeoes3IlnKWZTo69bdXPaPeD1BAAQUUUEB9QNVrRrZMPw+NTsxZOkAB9e4ABdS7A7Q3qHrNyJbwhGaftPCEAgqodQcooN4doL1B1WtGtlj9+67Vtc4nR5zpRu9AQAEFFFBAAfUBVa8Z2WL1M7LTtUQ7QAHVowEKqP5aADXpWJs6p7nYX/nhg/CEAgqodQcooN4doL1B1WtGtgw5D539E/PsBxNaX0AABRRQQAEF1AdUvWZkS3hCM5xdjvh8gAIKqC0aoIDqYaaDqteMbCmzzzyzn7ECCqh3Byig3h2gvUHVa0a28Kxn4PO17jJAAQXUFg1QQPUw00HVa0a2/AGTwTetiDfnHAAAAABJRU5ErkJggg==) !important;
+}
+ins.adsbygoogle[data-ad-status] {
+  position: relative !important;
+  z-index: auto !important;
+}
+body > ins.adsbygoogle:first-child {
+  display: none !important;
+}
 </style>
-<script data-cfasync="false" nonce="d4383d9a-94a3-4794-9044-09b6a49a8bb8">try{(function(w,d){!function(mw,mx,my,mz){if(mw.zaraz)console.error("zaraz is loaded twice");else{mw[my]=mw[my]||{};mw[my].executed=[];mw.zaraz={deferred:[],listeners:[]};mw.zaraz._v="5887";mw.zaraz._n="d4383d9a-94a3-4794-9044-09b6a49a8bb8";mw.zaraz.q=[];mw.zaraz._f=function(mA){return async function(){var mB=Array.prototype.slice.call(arguments);mw.zaraz.q.push({m:mA,a:mB})}};for(const mC of["track","set","debug"])mw.zaraz[mC]=mw.zaraz._f(mC);mw.zaraz.init=()=>{var mD=mx.getElementsByTagName(mz)[0],mE=mx.createElement(mz),mF=mx.getElementsByTagName("title")[0];mF&&(mw[my].t=mx.getElementsByTagName("title")[0].text);mw[my].x=Math.random();mw[my].w=mw.screen.width;mw[my].h=mw.screen.height;mw[my].j=mw.innerHeight;mw[my].e=mw.innerWidth;mw[my].l=mw.location.href;mw[my].r=mx.referrer;mw[my].k=mw.screen.colorDepth;mw[my].n=mx.characterSet;mw[my].o=(new Date).getTimezoneOffset();if(mw.dataLayer)for(const mG of Object.entries(Object.entries(dataLayer).reduce((mH,mI)=>({...mH[1],...mI[1]}),{})))zaraz.set(mG[0],mG[1],{scope:"page"});mw[my].q=[];for(;mw.zaraz.q.length;){const mJ=mw.zaraz.q.shift();mw[my].q.push(mJ)}mE.defer=!0;for(const mK of[localStorage,sessionStorage])Object.keys(mK||{}).filter(mM=>mM.startsWith("_zaraz_")).forEach(mL=>{try{mw[my]["z_"+mL.slice(7)]=JSON.parse(mK.getItem(mL))}catch{mw[my]["z_"+mL.slice(7)]=mK.getItem(mL)}});mE.referrerPolicy="origin";mE.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(mw[my])));mD.parentNode.insertBefore(mE,mD)};["complete","interactive"].includes(mx.readyState)?zaraz.init():mw.addEventListener("DOMContentLoaded",zaraz.init)}}(w,d,"zarazData","script");window.zaraz._p=async nn=>new Promise(no=>{if(nn){nn.e&&nn.e.forEach(np=>{try{const nq=d.querySelector("script[nonce]"),nr=nq?.nonce||nq?.getAttribute("nonce"),ns=d.createElement("script");nr&&(ns.nonce=nr);ns.innerHTML=np;ns.onload=()=>{d.head.removeChild(ns)};d.head.appendChild(ns)}catch(nt){console.error(`Error executing script: ${np}\n`,nt)}});Promise.allSettled((nn.f||[]).map(nu=>fetch(nu[0],nu[1])))}no()});zaraz._p({"e":["(function(w,d){})(window,document)"]});})(window,document)}catch(e){throw fetch("/cdn-cgi/zaraz/t"),e;};</script></head>
+</head>
 <body class="mdc-typography" style="background-color:#fff !important;">
+
+  <!-- Independent fixed background — MDC JS cannot touch this -->
+  <div style="position:fixed;top:0;left:0;width:100%;height:55px;
+              background-color:#eee;
+              background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABZklEQVR4nO3bMQ7CMBBEUV8xFR0VHVIaWkTFcROuEC5guVjZnsnmF9MwBeFpIy2GlMdnP2pZ1q36+sju/t6rUVxLtCtOFwMooIACCujFQZd1O0i/DJnQ5/dXjds0DZlQQAG17gAF1LsDtDeoes3IlnKWZTo69bdXPaPeD1BAAQUUUEB9QNVrRrZMPw+NTsxZOkAB9e4ABdS7A7Q3qHrNyJbwhGaftPCEAgqodQcooN4doL1B1WtGtlj9+67Vtc4nR5zpRu9AQAEFFFBAAfUBVa8Z2WL1M7LTtUQ7QAHVowEKqP5aADXpWJs6p7nYX/nhg/CEAgqodQcooN4doL1B1WtGtgw5D539E/PsBxNaX0AABRRQQAEF1AdUvWZkS3hCM5xdjvh8gAIKqC0aoIDqYaaDqteMbCmzzzyzn7ECCqh3Byig3h2gvUHVa0a28Kxn4PO17jJAAQXUFg1QQPUw00HVa0a2/AGTwTetiDfnHAAAAABJRU5ErkJggg==);
+              z-index:2147483646;"></div>
 
   <style>
   nav i.material-icons0 { display: none; }
@@ -118,7 +168,7 @@
 
       <div style="z-index:9999;position:fixed;height:55px;min-height:0px;width:100%;background-color:#eee;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABZklEQVR4nO3bMQ7CMBBEUV8xFR0VHVIaWkTFcROuEC5guVjZnsnmF9MwBeFpIy2GlMdnP2pZ1q36+sju/t6rUVxLtCtOFwMooIACCujFQZd1O0i/DJnQ5/dXjds0DZlQQAG17gAF1LsDtDeoes3IlnKWZTo69bdXPaPeD1BAAQUUUEB9QNVrRrZMPw+NTsxZOkAB9e4ABdS7A7Q3qHrNyJbwhGaftPCEAgqodQcooN4doL1B1WtGtlj9+67Vtc4nR5zpRu9AQAEFFFBAAfUBVa8Z2WL1M7LTtUQ7QAHVowEKqP5aADXpWJs6p7nYX/nhg/CEAgqodQcooN4doL1B1WtGtgw5D539E/PsBxNaX0AABRRQQAEF1AdUvWZkS3hCM5xdjvh8gAIKqC0aoIDqYaaDqteMbCmzzzyzn7ECCqh3Byig3h2gvUHVa0a28Kxn4PO17jJAAQXUFg1QQPUw00HVa0a2/AGTwTetiDfnHAAAAABJRU5ErkJggg==);"></div>
 
-      <div class="innav" style="position:absolute;top:30px;bottom:0;left:-4px;right:0px;overflow-y:scroll">
+      <div class="innav" style="position:absolute;top:30px;bottom:90px;left:-4px;right:0px;overflow-y:scroll">
 
         <a id="hlh" rel="nofollow"
           style="visibility:hidden;width:-moz-fit-content;width:fit-content;position:relative;border-radius:9999px;display:table;margin:0 0 0 12px;padding:16px 16px 16px 12px"
@@ -177,14 +227,28 @@
         </a>
 
       </div>
+
+      <div class="condensed" style="text-align:center;position:absolute;bottom:20px;left:4px;right:0;padding:10px 12px;font-size:14px;background: rgb(224, 230, 254); color: rgb(87, 115, 236);">
+        UNjobs, Infomation Sàrl, Genève<br>
+        <span style="font-style: Roboto;font-size:12px;">Not an official document of the United Nations</span>
+        <br>
+        <a href="https://www.iubenda.com/privacy-policy/35887823"
+           class="iubenda-nostyle no-brand iubenda-embed" title="Privacy Policy"
+           style="color:rgb(87, 115, 236);font-size:13px;">Privacy Policy</a>
+        |
+        <a href="https://www.iubenda.com/privacy-policy/35887823/cookie-policy"
+           class="iubenda-nostyle no-brand iubenda-embed" title="Cookie Policy"
+           style="color:rgb(87, 115, 236);font-size:13px;">Cookie Policy</a>
+        <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+<!--         |
+        <a href="#" id="manage-cookies-link" style="color:#fff;font-size:11px;">Manage Cookies</a>
+        -->
+      </div>
+
     </nav>
   </div>
 </aside>
-
-  <div class="mdc-drawer-scrim"></div>
-  <div class="mdc-drawer-app-content" style="width:100%;">
-
-    <header class="mdc-top-app-bar" style="z-index:11000;position:fixed;height:55px;min-height:0px;width:100%;background-color:#eee;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABZklEQVR4nO3bMQ7CMBBEUV8xFR0VHVIaWkTFcROuEC5guVjZnsnmF9MwBeFpIy2GlMdnP2pZ1q36+sju/t6rUVxLtCtOFwMooIACCujFQZd1O0i/DJnQ5/dXjds0DZlQQAG17gAF1LsDtDeoes3IlnKWZTo69bdXPaPeD1BAAQUUUEB9QNVrRrZMPw+NTsxZOkAB9e4ABdS7A7Q3qHrNyJbwhGaftPCEAgqodQcooN4doL1B1WtGtlj9+67Vtc4nR5zpRu9AQAEFFFBAAfUBVa8Z2WL1M7LTtUQ7QAHVowEKqP5aADXpWJs6p7nYX/nhg/CEAgqodQcooN4doL1B1WtGtgw5D539E/PsBxNaX0AABRRQQAEF1AdUvWZkS3hCM5xdjvh8gAIKqC0aoIDqYaaDqteMbCmzzzyzn7ECCqh3Byig3h2gvUHVa0a28Kxn4PO17jJAAQXUFg1QQPUw00HVa0a2/AGTwTetiDfnHAAAAABJRU5ErkJggg==);">
+  <header class="mdc-top-app-bar" data-google-auto-excluded style="z-index:11000;position:fixed;height:55px;min-height:0px;width:100%;background-color:#eee !important;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABZklEQVR4nO3bMQ7CMBBEUV8xFR0VHVIaWkTFcROuEC5guVjZnsnmF9MwBeFpIy2GlMdnP2pZ1q36+sju/t6rUVxLtCtOFwMooIACCujFQZd1O0i/DJnQ5/dXjds0DZlQQAG17gAF1LsDtDeoes3IlnKWZTo69bdXPaPeD1BAAQUUUEB9QNVrRrZMPw+NTsxZOkAB9e4ABdS7A7Q3qHrNyJbwhGaftPCEAgqodQcooN4doL1B1WtGtlj9+67Vtc4nR5zpRu9AQAEFFFBAAfUBVa8Z2WL1M7LTtUQ7QAHVowEKqP5aADXpWJs6p7nYX/nhg/CEAgqodQcooN4doL1B1WtGtgw5D539E/PsBxNaX0AABRRQQAEF1AdUvWZkS3hCM5xdjvh8gAIKqC0aoIDqYaaDqteMbCmzzzyzn7ECCqh3Byig3h2gvUHVa0a28Kxn4PO17jJAAQXUFg1QQPUw00HVa0a2/AGTwTetiDfnHAAAAABJRU5ErkJggg==) !important;">
   <div class="mdc-top-app-bar__row">
     <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
       <a href="#" style="color:white" class="demo-menu material-icons mdc-top-app-bar__navigation-icon">menu</a>
@@ -192,11 +256,14 @@
         <a href="/"><img id="logoimg" class="logoiimage" src="https://images.unjobs.org/org/logo.gif" style=""></a>
       </div>
     </section>
-    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-      <a href="#" style="color:white;" class="srchlink material-icons mdc-top-app-bar__action-item" aria-label="Search" alt="Search">search</a>
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar" style="z-index:2147483647;position:relative;">
+      <a href="/search" style="color:white;" class="srchlink material-icons mdc-top-app-bar__action-item" aria-label="Search" alt="Search">search</a>
     </section>
   </div>
 </header>
+
+  <div class="mdc-drawer-scrim"></div>
+  <div class="mdc-drawer-app-content" style="width:100%;">
 
     <main id="main-content" class="main-content" style="margin:0;">
       <div class="mdc-top-app-bar--fixed-adjust">
@@ -254,7 +321,7 @@
     </div>
     <div class="fp-username fp-orgname mdl-color-text--black"
          style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-3px;display:block;">
-      Manila (18)
+      Manila (16)
     </div>
   </a>
 </div>
@@ -290,14 +357,14 @@
   <div style="min-height:150px;position:relative;width:100%;max-width:1200px;margin-right:8px;background:0;margin:0;">
 
     <div id="ppp" class="pagination" style="position:relative;margin:0px 8px 4px 8px;padding:8px 0 8px 0;display:flex;max-height:16px;">
-    <table class="pag" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+    <table class="pag" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="table-layout:fixed;max-width:100%;box-sizing:border-box;">
   <tbody>
     <tr>
       <td class="nv fp-first-page-button" style="width:15%;color:#999;">«&nbsp;First</td>
       <td class="nv fp-prev-page-button"  style="width:15%;color:#999;">&lt;&nbsp;Prev</td>
       <td class="nc">
         <span style="color:#333;font-size:13px;">
-          1&nbsp;–&nbsp;20 of 26
+          1&nbsp;–&nbsp;20 of 22
         </span>
       </td>
       <td class="nv fp-next-page-button"  style="width:15%;cursor:pointer;">Next&nbsp;&gt;</td>
@@ -312,9 +379,9 @@
 
       
 
-      <div id="j1782855518295" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+      <div id="j1783287128560" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -327,7 +394,272 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782855518295">Procurement Officer, New Delhi, India</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783287128560">Associate Financing Partnerships Officer, Manila, Philippines</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">Reference Number : 260633 Position Grade : TL4 Department : Climate Change and Sustainable Development Department Division : Partner Funds Division Location : Asian Development Bank Headquarters Date Posted : Friday, June 19, 2026 Closing Date&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">15h</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: 2026 07 10
+  </div>
+
+</div>
+<div id="j1783287134760" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/adb.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        ADB
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783287134760">Markets Development Advisory Specialist, Manila, Philippines</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">Reference Number : 260623 Position Grade : TI1 Department : Office of Markets Development and Public-Private Partnership Division : Advisory Division 1 Location : Asian Development Bank Headquarters Date Posted : Friday, June 19, 2026&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">15h</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: 2026 07 24
+  </div>
+
+</div>
+<div class="job ad-slot-inline" style="margin:12px 0;padding:0;border-bottom:0;width:100%;break-inside:auto;">
+  <ins class="adsbygoogle"
+       style="display:block;min-height:100px;"
+       data-ad-client="ca-pub-9196538889333991"
+       data-ad-slot="4504822997"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div id="j1783287137123" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/adb.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        ADB
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783287137123">Principal Operations Specialist, Manila, Philippines</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">Reference Number : 260581 Position Grade : TI3 Department : Pacific Department Division : Operations Coordination Unit, PARD Location : Asian Development Bank Headquarters Date Posted : Thursday, June 11, 2026 Closing Date : Friday, July 17&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">15h</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: 2026 07 17
+  </div>
+
+</div>
+<div id="j1783287139210" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/adb.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        ADB
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783287139210">Senior Financing Partnerships Assistant, Manila, Philippines</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">Reference Number : 260682 Position Grade : TL2 Department : Climate Change and Sustainable Development Department Division : Partner Funds Division Location : Asian Development Bank Headquarters Date Posted : Friday, July 3, 2026 Closing Date&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">15h</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: 2026 07 17
+  </div>
+
+</div>
+<div id="j1783012781682" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/adb.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        ADB
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783012781682">Associate Retirement Benefits Officer, Manila, Philippines</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">Reference Number : 260718 Position Grade : TL4 Department : Budget, People, and Management Systems Department Division : Retirement Benefits and Investment Unit Location : Asian Development Bank Headquarters Date Posted : Wednesday, July 1, 2026&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">3d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: 2026 07 22
+  </div>
+
+</div>
+<div id="j1783012788203" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/adb.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        ADB
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783012788203">CounselSenior Counsel (Sovereign Operations), Manila, Philippines</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">Reference Number : 260658 Position Grade : TI 1/2 Department : Office of the General Counsel Division : Office of the General Counsel Location : Asian Development Bank Headquarters Date Posted : Thursday, July 2&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">3d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: 2026 07 16
+  </div>
+
+</div>
+<div id="j1783012790340" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/adb.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        ADB
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783012790340">Operations Specialist, Manila, Philippines</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">Reference Number : 260491 Position Grade : TI1 Department : Central and West Asia Department Division : Office of the Director General, CWRD Location : Asian Development Bank Headquarters Date Posted : Thursday, July 2, 2026&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">3d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: 2026 07 16
+  </div>
+
+</div>
+<div id="j1783012792430" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/adb.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        ADB
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783012792430">Associate Operations Officer, Manila, Philippines</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">Reference Number : 260683 Position Grade : TL4 Department : Climate Change and Sustainable Development Department Division : Regional Cooperation and Integration and Trade Division Location : Asian Development Bank Headquarters Date Posted : Thursday, July&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">3d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: 2026 07 16
+  </div>
+
+</div>
+<div id="j1782855518295" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/adb.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        ADB
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782855518295">Procurement Officer, New Delhi, India</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Reference Number : 260684 Position Grade : TL5 Department : Procurement, Portfolio and Financial Management Department Division : Procurement Division Location : India Resident Mission Date Posted : Tuesday, June 30, 2026 Closing Date : Tuesday, July&hellip;</span>
@@ -335,7 +667,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">16h</span> ago
+      Updated <span class="fp-time">5d</span> ago
     </div>
   </div>
 
@@ -346,7 +678,7 @@
 </div>
 <div id="j1782855525677" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -359,7 +691,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782855525677">Principal Sustainable Solutions Specialist, Manila, Philippines</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782855525677">Principal Sustainable Solutions Specialist, Manila, Philippines</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Reference Number : 260676 Position Grade : TI3 Department : Climate Change and Sustainable Development Department Division : Climate Change and Sustainable Development Department Location : Asian Development Bank Headquarters Date Posted : Tuesday, June 30&hellip;</span>
@@ -367,7 +699,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">16h</span> ago
+      Updated <span class="fp-time">5d</span> ago
     </div>
   </div>
 
@@ -376,18 +708,9 @@
   </div>
 
 </div>
-<div class="job ad-slot-inline" style="margin:12px 0;padding:0;border-bottom:0;width:100%;break-inside:auto;">
-  <ins class="adsbygoogle"
-       style="display:block;min-height:100px;"
-       data-ad-client="ca-pub-9196538889333991"
-       data-ad-slot="4504822997"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
 <div id="j1782774831863" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -400,7 +723,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782774831863">Legal Operations Administrator, Manila, Philippines</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782774831863">Legal Operations Administrator, Manila, Philippines</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Reference Number : 260689 Position Grade : TL3 Department : Office of the General Counsel Division : Office of the General Counsel Location : Asian Development Bank Headquarters Date Posted : Monday, June 29, 2026 Closing&hellip;</span>
@@ -408,7 +731,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">1d</span> ago
+      Updated <span class="fp-time">6d</span> ago
     </div>
   </div>
 
@@ -419,7 +742,7 @@
 </div>
 <div id="j1782513895159" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -432,7 +755,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782513895159">Editor, Manila, Philippines</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782513895159">Editor, Manila, Philippines</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Reference Number : 260620 Position Grade : TI1 Department : Office of the Secretary Division : Information Access Unit Location : Asian Development Bank Headquarters Date Posted : Friday, June 26, 2026 Closing Date : Friday, July&hellip;</span>
@@ -440,7 +763,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">4d</span> ago
+      Updated <span class="fp-time">9d</span> ago
     </div>
   </div>
 
@@ -449,9 +772,18 @@
   </div>
 
 </div>
+<div class="job ad-slot-inline" style="margin:12px 0;padding:0;border-bottom:0;width:100%;break-inside:auto;">
+  <ins class="adsbygoogle"
+       style="display:block;min-height:100px;"
+       data-ad-client="ca-pub-9196538889333991"
+       data-ad-slot="4504822997"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 <div id="j1782513902468" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -464,7 +796,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782513902468">Project Officer (Agriculture and Natural Resources), Yerevan, Armenia</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782513902468">Project Officer (Agriculture and Natural Resources), Yerevan, Armenia</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Reference Number : 260332 Position Grade : TL5 Department : Sectors Department 2 Division : Agriculture, Food, Nature, and Rural Development Sector Office Location : Armenia Resident Mission Date Posted : Friday, June 26, 2026 Closing&hellip;</span>
@@ -472,7 +804,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">4d</span> ago
+      Updated <span class="fp-time">9d</span> ago
     </div>
   </div>
 
@@ -483,7 +815,7 @@
 </div>
 <div id="j1782513905199" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -496,7 +828,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782513905199">Director, Special Initiatives and Funds, Manila, Philippines</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782513905199">Director, Special Initiatives and Funds, Manila, Philippines</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Reference Number : 260560 Position Grade : M1 Department : Office of Markets Development and Public-Private Partnership Division : Special Initiatives and Funds Location : Asian Development Bank Headquarters Date Posted : Friday, June 26&hellip;</span>
@@ -504,7 +836,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">4d</span> ago
+      Updated <span class="fp-time">9d</span> ago
     </div>
   </div>
 
@@ -515,7 +847,7 @@
 </div>
 <div id="j1782513910140" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -528,7 +860,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782513910140">Individual Career Guidance - Recruitment Outreach Mission in Tokyo, Japan, Manila, Philippines</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782513910140">Individual Career Guidance - Recruitment Outreach Mission in Tokyo, Japan, Manila, Philippines</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Reference Number : 260701 Position Grade : TI 1/2 Department : Budget, People, and Management Systems Department Division : Office of the Director General, BPMSD Location : Asian Development Bank Headquarters Date Posted : Friday&hellip;</span>
@@ -536,7 +868,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">4d</span> ago
+      Updated <span class="fp-time">9d</span> ago
     </div>
   </div>
 
@@ -545,9 +877,18 @@
   </div>
 
 </div>
+<div class="job ad-slot-inline" style="margin:12px 0;padding:0;border-bottom:0;width:100%;break-inside:auto;">
+  <ins class="adsbygoogle"
+       style="display:block;min-height:100px;"
+       data-ad-client="ca-pub-9196538889333991"
+       data-ad-slot="4504822997"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 <div id="j1782426564265" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -560,7 +901,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782426564265">Senior Operations Assistant, Bhutan Resident Mission</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782426564265">Senior Operations Assistant, Bhutan Resident Mission</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Reference Number : 260645 Position Grade : TL2 Department : South Asia Department Division : Bhutan Resident Mission Location : Bhutan Resident Mission Date Posted : Thursday, June 25, 2026 Closing Date : Thursday, July 9, 2026&hellip;</span>
@@ -568,7 +909,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">5d</span> ago
+      Updated <span class="fp-time">10d</span> ago
     </div>
   </div>
 
@@ -579,7 +920,7 @@
 </div>
 <div id="j1782426551327" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -592,7 +933,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782426551327">Senior Financial Management Specialist, Bangladesh Resident Mission</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782426551327">Senior Financial Management Specialist, Bangladesh Resident Mission</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Reference Number : 260575 Position Grade : TI2 Department : Procurement, Portfolio and Financial Management Department Division : Financial Management Division Location : Bangladesh Resident Mission Date Posted : Thursday, June 25, 2026 Closing Date : Thursday&hellip;</span>
@@ -600,7 +941,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">5d</span> ago
+      Updated <span class="fp-time">10d</span> ago
     </div>
   </div>
 
@@ -611,7 +952,7 @@
 </div>
 <div id="j1782343601720" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -624,7 +965,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782343601720">Senior Operations Assistant, Pakistan Resident Mission</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782343601720">Senior Operations Assistant, Pakistan Resident Mission</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Reference Number : 260671 Position Grade : TL2 Department : Central and West Asia Department Division : Pakistan Resident Mission Location : Pakistan Resident Mission Date Posted : Wednesday, June 24, 2026 Closing Date : Wednesday, July&hellip;</span>
@@ -632,7 +973,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">6d</span> ago
+      Updated <span class="fp-time">11d</span> ago
     </div>
   </div>
 
@@ -643,7 +984,7 @@
 </div>
 <div id="j1782257190075" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -656,7 +997,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782257190075">Principal Operations Coordination Specialist, New Delhi, India</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782257190075">Principal Operations Coordination Specialist, New Delhi, India</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Reference Number : 260648 Position Grade : TI3 Department : South Asia Department Division : India Resident Mission Location : India Resident Mission Date Posted : Tuesday, June 23, 2026 Closing Date : Wednesday, July 8, 2026&hellip;</span>
@@ -664,7 +1005,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">7d</span> ago
+      Updated <span class="fp-time">12d</span> ago
     </div>
   </div>
 
@@ -675,7 +1016,7 @@
 </div>
 <div id="j1782257192536" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -688,7 +1029,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782257192536">Associate Operations Officer, Manila, Philippines</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782257192536">Associate Operations Officer, Manila, Philippines</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Reference Number : 260646 Position Grade : TL4 Department : Climate Change and Sustainable Development Department Division : Fragility and Engagement Division Location : Asian Development Bank Headquarters Date Posted : Tuesday, June 23, 2026 Closing&hellip;</span>
@@ -696,7 +1037,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">7d</span> ago
+      Updated <span class="fp-time">12d</span> ago
     </div>
   </div>
 
@@ -705,292 +1046,18 @@
   </div>
 
 </div>
-<div class="job ad-slot-inline" style="margin:12px 0;padding:0;border-bottom:0;width:100%;break-inside:auto;">
-  <ins class="adsbygoogle"
-       style="display:block;min-height:100px;"
-       data-ad-client="ca-pub-9196538889333991"
-       data-ad-slot="4504822997"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-<div id="j1782169819804" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/adb.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        ADB
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782169819804">Senior Project Officer (Financial Sector), Pakistan Resident Mission</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Reference Number : 260672 Position Grade : TL6 Department : Sectors Department 3 Division : Finance Sector Office Location : Pakistan Resident Mission Date Posted : Monday, June 22, 2026 Closing Date : Monday, July 6, 2026&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">8d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: 2026 07 06
-  </div>
-
-</div>
-<div id="j1782169817118" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/adb.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        ADB
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782169817118">Senior Financial Management Specialist, Mongolia Resident Mission</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Reference Number : 260518 Position Grade : TI2 Department : Procurement, Portfolio and Financial Management Department Division : Financial Management Division Location : Mongolia Resident Mission Date Posted : Monday, June 8, 2026 Closing Date : Monday&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">8d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: 2026 07 06
-  </div>
-
-</div>
-<div id="j1782169822352" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/adb.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        ADB
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782169822352">Senior Investment Specialist, Manila, Philippines</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Reference Number : 260549 Position Grade : TI2 Department : Private Sector Operations Department Division : Private Sector Investment Funds and Special Initiatives Division Location : Asian Development Bank Headquarters Date Posted : Monday, June 22&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">8d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: 2026 07 06
-  </div>
-
-</div>
-<div class="job ad-slot-inline" style="margin:12px 0;padding:0;border-bottom:0;width:100%;break-inside:auto;">
-  <ins class="adsbygoogle"
-       style="display:block;min-height:100px;"
-       data-ad-client="ca-pub-9196538889333991"
-       data-ad-slot="4504822997"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-<div id="j1782169829783" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/adb.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        ADB
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782169829783">Associate Communications Officer, Manila, Philippines</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Reference Number : 260664 Position Grade : TL4 Department : Department of Communications and Knowledge Management Division : Planning Division Location : Asian Development Bank Headquarters Date Posted : Monday, June 22, 2026 Closing Date : Monday&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">8d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: 2026 07 06
-  </div>
-
-</div>
-<div id="j1782169831965" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/adb.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        ADB
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782169831965">Transport Specialist, Manila, Philippines</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Reference Number : 260621 Position Grade : TI1 Department : Sectors Department 1 Division : Transport Sector Office Location : Asian Development Bank Headquarters Date Posted : Monday, June 22, 2026 Closing Date : Monday, July 6&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">8d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: 2026 07 06
-  </div>
-
-</div>
-<div id="j1782050745899" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/adb.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        ADB
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782050745899">Economics Analyst, Manila, Philippines</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Reference Number : 260636 Position Grade : TL3 Department : Economic Research and Development Impact Department Division : Macroeconomics Research Division Location : Asian Development Bank Headquarters Date Posted : Friday, June 19, 2026 Closing Date&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">9d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: 2026 07 03
-  </div>
-
-</div>
-<div id="j1782050747942" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/adb.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        ADB
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782050747942">Markets Development Advisory Specialist, Manila, Philippines</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Reference Number : 260623 Position Grade : TI1 Department : Office of Markets Development and Public-Private Partnership Division : Advisory Division 1 Location : Asian Development Bank Headquarters Date Posted : Friday, June 19, 2026&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">9d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: 2026 07 03
-  </div>
-
-</div>
-<div id="j1782050750066" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/adb"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/adb.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        ADB
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782050750066">Associate Financing Partnerships Officer, Manila, Philippines</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Reference Number : 260633 Position Grade : TL4 Department : Climate Change and Sustainable Development Department Division : Partner Funds Division Location : Asian Development Bank Headquarters Date Posted : Friday, June 19, 2026 Closing Date&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">9d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: 2026 07 03
-  </div>
-
-</div>
 
     </div>
 
     <div id="pp3" class="pagination" style="margin-bottom:50px;">
-      <table class="pag" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+      <table class="pag" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="table-layout:fixed;max-width:100%;box-sizing:border-box;">
   <tbody>
     <tr>
       <td class="nv fp-first-page-button" style="width:15%;color:#999;">«&nbsp;First</td>
       <td class="nv fp-prev-page-button"  style="width:15%;color:#999;">&lt;&nbsp;Prev</td>
       <td class="nc">
         <span style="color:#333;font-size:13px;">
-          1&nbsp;–&nbsp;20 of 26
+          1&nbsp;–&nbsp;20 of 22
         </span>
       </td>
       <td class="nv fp-next-page-button"  style="width:15%;cursor:pointer;">Next&nbsp;&gt;</td>
@@ -1010,7 +1077,7 @@ var pageOrgID   = "adb";
 var pageType    = "org";
 var isCgiarAll  = false;
 var cgiarTags      = [];
-var pageTotalHits  = 26;
+var pageTotalHits  = 22;
 
 $(document).ready(function () {
   var officeAdPushed = false;
@@ -1044,8 +1111,139 @@ $(document).ready(function () {
 
       </div>
     </main>
+
   </div>
 
+<!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+<script type="text/javascript" async=true>
+(function() {
+  //var host = window.location.hostname;
+  var host = 'unjobs.org';
+  var element = document.createElement('script');
+  var firstScript = document.getElementsByTagName('script')[0];
+  var url = 'https://cmp.inmobi.com'
+    .concat('/choice/', 'N1sA5xfTskjLj', '/', host, '/choice.js?tag_version=V3');
+  var uspTries = 0;
+  var uspTriesLimit = 3;
+  element.async = true;
+  element.type = 'text/javascript';
+  element.src = url;
+  firstScript.parentNode.insertBefore(element, firstScript);
+
+  function makeStub() {
+    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+    var queue = [];
+    var win = window;
+    var cmpFrame;
+
+    function addFrame() {
+      var doc = win.document;
+      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+      if (!otherCMP) {
+        if (doc.body) {
+          var iframe = doc.createElement('iframe');
+          iframe.style.cssText = 'display:none';
+          iframe.name = TCF_LOCATOR_NAME;
+          doc.body.appendChild(iframe);
+        } else {
+          setTimeout(addFrame, 5);
+        }
+      }
+      return !otherCMP;
+    }
+
+    function tcfAPIHandler() {
+      var gdprApplies;
+      var args = arguments;
+      if (!args.length) {
+        return queue;
+      } else if (args[0] === 'setGdprApplies') {
+        if (args.length > 3 && args[2] === 2 && typeof args[3] === 'boolean') {
+          gdprApplies = args[3];
+          if (typeof args[2] === 'function') { args[2]('set', true); }
+        }
+      } else if (args[0] === 'ping') {
+        var retr = { gdprApplies: gdprApplies, cmpLoaded: false, cmpStatus: 'stub' };
+        if (typeof args[2] === 'function') { args[2](retr); }
+      } else {
+        if (args[0] === 'init' && typeof args[3] === 'object') {
+          args[3] = Object.assign(args[3], { tag_version: 'V3' });
+        }
+        queue.push(args);
+      }
+    }
+
+    function postMessageEventHandler(event) {
+      var msgIsString = typeof event.data === 'string';
+      var json = {};
+      try {
+        if (msgIsString) { json = JSON.parse(event.data); } else { json = event.data; }
+      } catch (ignore) {}
+      var payload = json.__tcfapiCall;
+      if (payload) {
+        window.__tcfapi(payload.command, payload.version, function(retValue, success) {
+          var returnMsg = { __tcfapiReturn: { returnValue: retValue, success: success, callId: payload.callId } };
+          if (msgIsString) { returnMsg = JSON.stringify(returnMsg); }
+          if (event && event.source && event.source.postMessage) {
+            event.source.postMessage(returnMsg, '*');
+          }
+        }, payload.parameter);
+      }
+    }
+
+    while (win) {
+      try {
+        if (win.frames[TCF_LOCATOR_NAME]) { cmpFrame = win; break; }
+      } catch (ignore) {}
+      if (win === window.top) { break; }
+      win = win.parent;
+    }
+    if (!cmpFrame) {
+      addFrame();
+      win.__tcfapi = tcfAPIHandler;
+      win.addEventListener('message', postMessageEventHandler, false);
+    }
+  }
+  makeStub();
+
+  var uspStubFunction = function() {
+    var arg = arguments;
+    if (typeof window.__uspapi !== uspStubFunction) {
+      setTimeout(function() {
+        if (typeof window.__uspapi !== 'undefined') {
+          window.__uspapi.apply(window.__uspapi, arg);
+        }
+      }, 500);
+    }
+  };
+  var checkIfUspIsReady = function() {
+    uspTries++;
+    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+      console.warn('USP is not accessible');
+    } else {
+      clearInterval(uspInterval);
+    }
+  };
+  if (typeof window.__uspapi === 'undefined') {
+    window.__uspapi = uspStubFunction;
+    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+  
+  // GPP (IAB Global Privacy Platform) stub — same rationale as the __uspapi
+  // stub above. Without this, any script (e.g. InMobi cmp2.js) that calls
+  // window.__gpp(...) before a real CMP has defined it throws a TypeError
+  // and aborts its own execution at that point.
+  if (typeof window.__gpp !== 'function') {
+    window.__gppQueue = window.__gppQueue || [];
+    window.__gpp = function() {
+      window.__gppQueue.push(arguments);
+    };
+  }  
+  
+})();
+</script>
+<!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9196538889333991" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
 <script>window.__algoliaV4 = algoliasearch;</script>
 <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.8.3/dist/instantsearch.production.min.js" integrity="sha256-LAGhRRdtVoD6RLo2qDQsU2mp+XVSciKRC8XPOBWmofM=" crossorigin="anonymous"></script>
@@ -1058,24 +1256,43 @@ $(document).ready(function () {
        data-callback="onTurnstileSuccess"
        data-error-callback="onTurnstileError"
        data-expired-callback="onTurnstileExpired"
-       data-size="flexible">
+       data-size="flexible"
+       data-appearance="interaction-only">
     </div>
     <script>
     var turnstilePassed = false;
     var TURNSTILE_TTL_HOURS = 24;
 
-    function setVerifiedCookie(hours) {
-      var expires = new Date(Date.now() + hours * 60 * 60 * 1000).toUTCString();
-      document.cookie = 'cf_verified=1; expires=' + expires + '; path=/; SameSite=Lax; Secure';
+    function isVerifiedStillValid() {
+      var expiry = parseInt(localStorage.getItem('cf_verified_until') || '0', 10);
+      return Date.now() < expiry;
+    }
+
+    function setVerifiedTTL(hours) {
+      var expiry = Date.now() + hours * 60 * 60 * 1000;
+      localStorage.setItem('cf_verified_until', expiry);
     }
 
     function onTurnstileSuccess(token) {
-      setVerifiedCookie(TURNSTILE_TTL_HOURS);
-      turnstilePassed = true;
+      fetch('/api/turnstile-verify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ token: token }),
+      })
+      .then(function(res) {
+        if (res.ok) {
+          setVerifiedTTL(TURNSTILE_TTL_HOURS);
+          turnstilePassed = true;
+        } else {
+          console.warn('Turnstile server verification failed');
+        }
+      })
+      .catch(function(err) {
+        console.warn('Turnstile verify error:', err);
+      });
     }
 
     function onTurnstileError() {
-      // Challenge failed — feed.js will silently suppress Algolia pagination.
       console.warn('Turnstile error — Algolia pagination suppressed.');
     }
 
@@ -1085,11 +1302,36 @@ $(document).ready(function () {
     }
 
     window.onload = function() {
-      turnstile.execute();
+      if (isVerifiedStillValid()) {
+        turnstilePassed = true;
+      } else {
+        turnstile.execute();
+      }
     };
     </script>
 <script src="/js/bundle2.js" async></script>
 
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a14819cb6ad13287',t:'MTc4MjkzNzExNQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-</body>
+<script>
+window.addEventListener('load', function() {
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      mutation.addedNodes.forEach(function(node) {
+        if (node.nodeType !== 1) return;
+        if (node.id === 'iubenda-pp-overlay') {
+          node.style.setProperty('top', '55px', 'important');
+          node.style.setProperty('z-index', '2147483644', 'important');
+        }
+        if (node.id === 'iubenda-pp') {
+          node.style.setProperty('top', '55px', 'important');
+          node.style.setProperty('z-index', '2147483645', 'important');
+        }
+      });
+    });
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+});
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1714b4c4f8ceb03',t:'MTc4MzM2OTA1OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>

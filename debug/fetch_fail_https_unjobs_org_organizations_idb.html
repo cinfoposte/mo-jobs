@@ -15,7 +15,17 @@
   <script src="https://unjobs.org/js/timeago.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&lang=en">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="icon" href="https://images.unjobs.org/org/favicon.ico">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9NEF8H5W4V"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9NEF8H5W4V');
+    gtag('config', 'G-7EQN1KX5DL');
+  </script>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/local.css">
   <link rel="stylesheet" href="/css/bundle2.css">
@@ -50,7 +60,7 @@
   border-radius:9999px; text-transform:none; white-space:nowrap;
 }
 .fp-facet {
-  float:left; display:inline-block; width:32%; min-width:336px; display:flex;
+  float:left; display:inline-block; width:32%; min-width:0; display:flex;
   position:relative; padding:3px; margin:0; height:36px;
 }
 .jtitle {
@@ -62,8 +72,12 @@
 .likes        { display:none; }
 .icon-place   { left:1px; }
 
+.condensed {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
 /* ── List group ── */
-.list-group { border-radius:4px; box-shadow:0 1px 2px rgba(0,0,0,.075); }
+.list-group { border-radius:4px; box-shadow:0 1px 2px rgba(0,0,0,.075); break-inside: avoid !important; }
 .list-group-item {
   position:relative; display:block; padding:10px 15px; margin-bottom:-1px;
   background-color:#fff; border:1px solid #ddd;
@@ -103,9 +117,45 @@
   border-bottom: 0 !important;
   background: transparent;
 }
+
+/* ── Mobile viewport constraints ── */
+.mdc-drawer-app-content, .main-content {
+  overflow-x: hidden;
+}
+table.pag {
+  table-layout: fixed;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ── Auto Ads containment ── */
+.mdc-top-app-bar,
+.mdc-top-app-bar--scrolled-under,
+.mdc-top-app-bar--short,
+.mdc-top-app-bar--short-collapsed,
+.mdc-top-app-bar--fixed,
+.mdc-top-app-bar--prominent {
+  z-index: 2147483647 !important;
+  background-color: #eee !important;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABZklEQVR4nO3bMQ7CMBBEUV8xFR0VHVIaWkTFcROuEC5guVjZnsnmF9MwBeFpIy2GlMdnP2pZ1q36+sju/t6rUVxLtCtOFwMooIACCujFQZd1O0i/DJnQ5/dXjds0DZlQQAG17gAF1LsDtDeoes3IlnKWZTo69bdXPaPeD1BAAQUUUEB9QNVrRrZMPw+NTsxZOkAB9e4ABdS7A7Q3qHrNyJbwhGaftPCEAgqodQcooN4doL1B1WtGtlj9+67Vtc4nR5zpRu9AQAEFFFBAAfUBVa8Z2WL1M7LTtUQ7QAHVowEKqP5aADXpWJs6p7nYX/nhg/CEAgqodQcooN4doL1B1WtGtgw5D539E/PsBxNaX0AABRRQQAEF1AdUvWZkS3hCM5xdjvh8gAIKqC0aoIDqYaaDqteMbCmzzzyzn7ECCqh3Byig3h2gvUHVa0a28Kxn4PO17jJAAQXUFg1QQPUw00HVa0a2/AGTwTetiDfnHAAAAABJRU5ErkJggg==) !important;
+}
+ins.adsbygoogle[data-ad-status] {
+  position: relative !important;
+  z-index: auto !important;
+}
+body > ins.adsbygoogle:first-child {
+  display: none !important;
+}
 </style>
-<script data-cfasync="false" nonce="7ffe9b7c-dea0-4ebe-8077-37404371b22b">try{(function(w,d){!function(mw,mx,my,mz){if(mw.zaraz)console.error("zaraz is loaded twice");else{mw[my]=mw[my]||{};mw[my].executed=[];mw.zaraz={deferred:[],listeners:[]};mw.zaraz._v="5887";mw.zaraz._n="7ffe9b7c-dea0-4ebe-8077-37404371b22b";mw.zaraz.q=[];mw.zaraz._f=function(mA){return async function(){var mB=Array.prototype.slice.call(arguments);mw.zaraz.q.push({m:mA,a:mB})}};for(const mC of["track","set","debug"])mw.zaraz[mC]=mw.zaraz._f(mC);mw.zaraz.init=()=>{var mD=mx.getElementsByTagName(mz)[0],mE=mx.createElement(mz),mF=mx.getElementsByTagName("title")[0];mF&&(mw[my].t=mx.getElementsByTagName("title")[0].text);mw[my].x=Math.random();mw[my].w=mw.screen.width;mw[my].h=mw.screen.height;mw[my].j=mw.innerHeight;mw[my].e=mw.innerWidth;mw[my].l=mw.location.href;mw[my].r=mx.referrer;mw[my].k=mw.screen.colorDepth;mw[my].n=mx.characterSet;mw[my].o=(new Date).getTimezoneOffset();if(mw.dataLayer)for(const mG of Object.entries(Object.entries(dataLayer).reduce((mH,mI)=>({...mH[1],...mI[1]}),{})))zaraz.set(mG[0],mG[1],{scope:"page"});mw[my].q=[];for(;mw.zaraz.q.length;){const mJ=mw.zaraz.q.shift();mw[my].q.push(mJ)}mE.defer=!0;for(const mK of[localStorage,sessionStorage])Object.keys(mK||{}).filter(mM=>mM.startsWith("_zaraz_")).forEach(mL=>{try{mw[my]["z_"+mL.slice(7)]=JSON.parse(mK.getItem(mL))}catch{mw[my]["z_"+mL.slice(7)]=mK.getItem(mL)}});mE.referrerPolicy="origin";mE.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(mw[my])));mD.parentNode.insertBefore(mE,mD)};["complete","interactive"].includes(mx.readyState)?zaraz.init():mw.addEventListener("DOMContentLoaded",zaraz.init)}}(w,d,"zarazData","script");window.zaraz._p=async nn=>new Promise(no=>{if(nn){nn.e&&nn.e.forEach(np=>{try{const nq=d.querySelector("script[nonce]"),nr=nq?.nonce||nq?.getAttribute("nonce"),ns=d.createElement("script");nr&&(ns.nonce=nr);ns.innerHTML=np;ns.onload=()=>{d.head.removeChild(ns)};d.head.appendChild(ns)}catch(nt){console.error(`Error executing script: ${np}\n`,nt)}});Promise.allSettled((nn.f||[]).map(nu=>fetch(nu[0],nu[1])))}no()});zaraz._p({"e":["(function(w,d){})(window,document)"]});})(window,document)}catch(e){throw fetch("/cdn-cgi/zaraz/t"),e;};</script></head>
+</head>
 <body class="mdc-typography" style="background-color:#fff !important;">
+
+  <!-- Independent fixed background — MDC JS cannot touch this -->
+  <div style="position:fixed;top:0;left:0;width:100%;height:55px;
+              background-color:#eee;
+              background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABZklEQVR4nO3bMQ7CMBBEUV8xFR0VHVIaWkTFcROuEC5guVjZnsnmF9MwBeFpIy2GlMdnP2pZ1q36+sju/t6rUVxLtCtOFwMooIACCujFQZd1O0i/DJnQ5/dXjds0DZlQQAG17gAF1LsDtDeoes3IlnKWZTo69bdXPaPeD1BAAQUUUEB9QNVrRrZMPw+NTsxZOkAB9e4ABdS7A7Q3qHrNyJbwhGaftPCEAgqodQcooN4doL1B1WtGtlj9+67Vtc4nR5zpRu9AQAEFFFBAAfUBVa8Z2WL1M7LTtUQ7QAHVowEKqP5aADXpWJs6p7nYX/nhg/CEAgqodQcooN4doL1B1WtGtgw5D539E/PsBxNaX0AABRRQQAEF1AdUvWZkS3hCM5xdjvh8gAIKqC0aoIDqYaaDqteMbCmzzzyzn7ECCqh3Byig3h2gvUHVa0a28Kxn4PO17jJAAQXUFg1QQPUw00HVa0a2/AGTwTetiDfnHAAAAABJRU5ErkJggg==);
+              z-index:2147483646;"></div>
 
   <style>
   nav i.material-icons0 { display: none; }
@@ -118,7 +168,7 @@
 
       <div style="z-index:9999;position:fixed;height:55px;min-height:0px;width:100%;background-color:#eee;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABZklEQVR4nO3bMQ7CMBBEUV8xFR0VHVIaWkTFcROuEC5guVjZnsnmF9MwBeFpIy2GlMdnP2pZ1q36+sju/t6rUVxLtCtOFwMooIACCujFQZd1O0i/DJnQ5/dXjds0DZlQQAG17gAF1LsDtDeoes3IlnKWZTo69bdXPaPeD1BAAQUUUEB9QNVrRrZMPw+NTsxZOkAB9e4ABdS7A7Q3qHrNyJbwhGaftPCEAgqodQcooN4doL1B1WtGtlj9+67Vtc4nR5zpRu9AQAEFFFBAAfUBVa8Z2WL1M7LTtUQ7QAHVowEKqP5aADXpWJs6p7nYX/nhg/CEAgqodQcooN4doL1B1WtGtgw5D539E/PsBxNaX0AABRRQQAEF1AdUvWZkS3hCM5xdjvh8gAIKqC0aoIDqYaaDqteMbCmzzzyzn7ECCqh3Byig3h2gvUHVa0a28Kxn4PO17jJAAQXUFg1QQPUw00HVa0a2/AGTwTetiDfnHAAAAABJRU5ErkJggg==);"></div>
 
-      <div class="innav" style="position:absolute;top:30px;bottom:0;left:-4px;right:0px;overflow-y:scroll">
+      <div class="innav" style="position:absolute;top:30px;bottom:90px;left:-4px;right:0px;overflow-y:scroll">
 
         <a id="hlh" rel="nofollow"
           style="visibility:hidden;width:-moz-fit-content;width:fit-content;position:relative;border-radius:9999px;display:table;margin:0 0 0 12px;padding:16px 16px 16px 12px"
@@ -177,14 +227,28 @@
         </a>
 
       </div>
+
+      <div class="condensed" style="text-align:center;position:absolute;bottom:20px;left:4px;right:0;padding:10px 12px;font-size:14px;background: rgb(224, 230, 254); color: rgb(87, 115, 236);">
+        UNjobs, Infomation Sàrl, Genève<br>
+        <span style="font-style: Roboto;font-size:12px;">Not an official document of the United Nations</span>
+        <br>
+        <a href="https://www.iubenda.com/privacy-policy/35887823"
+           class="iubenda-nostyle no-brand iubenda-embed" title="Privacy Policy"
+           style="color:rgb(87, 115, 236);font-size:13px;">Privacy Policy</a>
+        |
+        <a href="https://www.iubenda.com/privacy-policy/35887823/cookie-policy"
+           class="iubenda-nostyle no-brand iubenda-embed" title="Cookie Policy"
+           style="color:rgb(87, 115, 236);font-size:13px;">Cookie Policy</a>
+        <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+<!--         |
+        <a href="#" id="manage-cookies-link" style="color:#fff;font-size:11px;">Manage Cookies</a>
+        -->
+      </div>
+
     </nav>
   </div>
 </aside>
-
-  <div class="mdc-drawer-scrim"></div>
-  <div class="mdc-drawer-app-content" style="width:100%;">
-
-    <header class="mdc-top-app-bar" style="z-index:11000;position:fixed;height:55px;min-height:0px;width:100%;background-color:#eee;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABZklEQVR4nO3bMQ7CMBBEUV8xFR0VHVIaWkTFcROuEC5guVjZnsnmF9MwBeFpIy2GlMdnP2pZ1q36+sju/t6rUVxLtCtOFwMooIACCujFQZd1O0i/DJnQ5/dXjds0DZlQQAG17gAF1LsDtDeoes3IlnKWZTo69bdXPaPeD1BAAQUUUEB9QNVrRrZMPw+NTsxZOkAB9e4ABdS7A7Q3qHrNyJbwhGaftPCEAgqodQcooN4doL1B1WtGtlj9+67Vtc4nR5zpRu9AQAEFFFBAAfUBVa8Z2WL1M7LTtUQ7QAHVowEKqP5aADXpWJs6p7nYX/nhg/CEAgqodQcooN4doL1B1WtGtgw5D539E/PsBxNaX0AABRRQQAEF1AdUvWZkS3hCM5xdjvh8gAIKqC0aoIDqYaaDqteMbCmzzzyzn7ECCqh3Byig3h2gvUHVa0a28Kxn4PO17jJAAQXUFg1QQPUw00HVa0a2/AGTwTetiDfnHAAAAABJRU5ErkJggg==);">
+  <header class="mdc-top-app-bar" data-google-auto-excluded style="z-index:11000;position:fixed;height:55px;min-height:0px;width:100%;background-color:#eee !important;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAABZklEQVR4nO3bMQ7CMBBEUV8xFR0VHVIaWkTFcROuEC5guVjZnsnmF9MwBeFpIy2GlMdnP2pZ1q36+sju/t6rUVxLtCtOFwMooIACCujFQZd1O0i/DJnQ5/dXjds0DZlQQAG17gAF1LsDtDeoes3IlnKWZTo69bdXPaPeD1BAAQUUUEB9QNVrRrZMPw+NTsxZOkAB9e4ABdS7A7Q3qHrNyJbwhGaftPCEAgqodQcooN4doL1B1WtGtlj9+67Vtc4nR5zpRu9AQAEFFFBAAfUBVa8Z2WL1M7LTtUQ7QAHVowEKqP5aADXpWJs6p7nYX/nhg/CEAgqodQcooN4doL1B1WtGtgw5D539E/PsBxNaX0AABRRQQAEF1AdUvWZkS3hCM5xdjvh8gAIKqC0aoIDqYaaDqteMbCmzzzyzn7ECCqh3Byig3h2gvUHVa0a28Kxn4PO17jJAAQXUFg1QQPUw00HVa0a2/AGTwTetiDfnHAAAAABJRU5ErkJggg==) !important;">
   <div class="mdc-top-app-bar__row">
     <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
       <a href="#" style="color:white" class="demo-menu material-icons mdc-top-app-bar__navigation-icon">menu</a>
@@ -192,11 +256,14 @@
         <a href="/"><img id="logoimg" class="logoiimage" src="https://images.unjobs.org/org/logo.gif" style=""></a>
       </div>
     </section>
-    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-      <a href="#" style="color:white;" class="srchlink material-icons mdc-top-app-bar__action-item" aria-label="Search" alt="Search">search</a>
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar" style="z-index:2147483647;position:relative;">
+      <a href="/search" style="color:white;" class="srchlink material-icons mdc-top-app-bar__action-item" aria-label="Search" alt="Search">search</a>
     </section>
   </div>
 </header>
+
+  <div class="mdc-drawer-scrim"></div>
+  <div class="mdc-drawer-app-content" style="width:100%;">
 
     <main id="main-content" class="main-content" style="margin:0;">
       <div class="mdc-top-app-bar--fixed-adjust">
@@ -245,14 +312,14 @@
   <div style="min-height:150px;position:relative;width:100%;max-width:1200px;margin-right:8px;background:0;margin:0;">
 
     <div id="ppp" class="pagination" style="position:relative;margin:0px 8px 4px 8px;padding:8px 0 8px 0;display:flex;max-height:16px;">
-    <table class="pag" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+    <table class="pag" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="table-layout:fixed;max-width:100%;box-sizing:border-box;">
   <tbody>
     <tr>
       <td class="nv fp-first-page-button" style="width:15%;color:#999;">«&nbsp;First</td>
       <td class="nv fp-prev-page-button"  style="width:15%;color:#999;">&lt;&nbsp;Prev</td>
       <td class="nc">
         <span style="color:#333;font-size:13px;">
-          1&nbsp;–&nbsp;20 of 30
+          1&nbsp;–&nbsp;20 of 35
         </span>
       </td>
       <td class="nv fp-next-page-button"  style="width:15%;cursor:pointer;">Next&nbsp;&gt;</td>
@@ -267,9 +334,9 @@
 
       
 
-      <div id="j1782833569168" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+      <div id="j1783209555068" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -282,10 +349,10 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782833569168">AI Guideline and Operations Consultant, Remote</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783209555068">IDB Invest - Knowledge Management  Analyst Consultant, United States Washington D.C.</a>
 
   <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">AI Guideline and Operations Consultant City: Asuncion, Belize City, Bogotá, Brasilia, Buenos Aires, Christ Church, Georgetown, Guatemala City, Kingston, La Paz, Lima, Mexico City, Montevideo, Nassau, Panamá, Paramaribo, Port of&hellip;</span>
+    <span style="font-style:italic;padding-top:2px;">IDB Invest - Knowledge Management Analyst Consultant City: Washington DC Company: IDB Invest Posting End Date: 7/10/2026 11:59 PM EST We improve lives IDB Invest is the private&hellip;</span>
   </div>
 
   <div style="margin:0;" class="jobdetails">
@@ -299,9 +366,9 @@
   </div>
 
 </div>
-<div id="j1782833564647" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+<div id="j1783209549965" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -314,10 +381,10 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782833564647">Infrastructure Operations Consultant, United States Washington D.C.</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783209549965">IDB Invest - Lead Officer - Infrastructure &amp; Energy - Central America &amp; Caribbean, Dominican Republic Santo Domingo</a>
 
   <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Infrastructure Operations Consultant City: Washington DC Company: IDB Posting End Date: July 14th, 2026 We improve lives The IDB Group is a community of diverse, versatile, and passionate people who&hellip;</span>
+    <span style="font-style:italic;padding-top:2px;">IDB Invest - Lead Officer - Infrastructure & Energy - Central America & Caribbean City: Santo Domingo Company: IDB Invest Posting End Date: 7/10/2026 11:59 PM EST We improve lives IDB Invest&hellip;</span>
   </div>
 
   <div style="margin:0;" class="jobdetails">
@@ -340,9 +407,9 @@
        data-full-width-responsive="true"></ins>
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-<div id="j1782833559808" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+<div id="j1783209545183" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -355,10 +422,10 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782833559808">AI Solutions Engineer Consultant, United States Washington D.C.</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783209545183">IDB Invest - Director of Distribution &amp; Investor Relations, United States Washington D.C.</a>
 
   <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">AI Solutions Engineer Consultant City: Washington DC Company: IDB Posting End Date: 6 July 2026 We improve lives The IDB Group is a community of diverse, versatile, and passionate people&hellip;</span>
+    <span style="font-style:italic;padding-top:2px;">IDB Invest - Director of Distribution & Investor Relations City: Washington DC Company: IDB Invest Posting End Date: 7/17/2026 11:59 PM EST Location Post of duty: Washington, District of&hellip;</span>
   </div>
 
   <div style="margin:0;" class="jobdetails">
@@ -372,9 +439,9 @@
   </div>
 
 </div>
-<div id="j1782833555018" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+<div id="j1783209540277" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -387,15 +454,449 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782833555018">Research Assistant Consultant, United States Washington D.C.</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783209540277">Resource Planning and Administration Associate / Senior Associate, United States Washington D.C.</a>
 
   <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Research Assistant Consultant City: Washington DC Company: IDB Posting End Date: July 2, 2026 We improve lives The IDB Group is a community of diverse, versatile, and passionate people who&hellip;</span>
+    <span style="font-style:italic;padding-top:2px;">Resource Planning and Administration Associate / Senior Associate City: Washington DC Company: IDB Posting End Date: 7/13/2026 11:59 PM EST We improve lives The IDB Group is a&hellip;</span>
   </div>
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">3h</span> ago
+      Updated <span class="fp-time">2h</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div id="j1783209535649" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        IDB
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783209535649">Language Technology Consultant, United States Washington D.C.</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">Language Technology Consultant City: Washington DC Company: IDB Posting End Date: July 12th, 2026 We improve lives The IDB Group is a community of diverse, versatile, and passionate people who&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">2h</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div id="j1783209530427" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        IDB
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783209530427">Consultor de apoyo en gestión financiera, Peru Lima</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">Consultor de apoyo en gestión financiera City: Lima Company: IDB Posting End Date: 7/12/2026 11:59 PM EST Mejoramos vidas El Grupo BID es una comunidad diversa de&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">2h</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div id="j1783025503724" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        IDB
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783025503724">IDB Invest - Credit Risk Business Analyst Management Consultant, United States Washington D.C.</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">IDB Invest - Credit Risk Business Analyst Management Consultant City: Washington DC Company: IDB Invest Posting End Date: 7/6/2026 11:59 PM EST We improve lives IDB Invest is&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">3d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div id="j1783025494363" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        IDB
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783025494363">Sector Senior Associate or Specialist - Health, Barbados Christ Church</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">Sector Senior Associate or Specialist - Health City: Christ Church Company: IDB Posting End Date: 7/10/2026 11:59 PM EST Location Post of duty: Christ Church, Barbados. We improve&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">3d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div id="j1783025483006" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        IDB
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783025483006">IDB Invest- Market Risk Consultant, United States Washington D.C.</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">IDB Invest- Market Risk Consultant City: Washington DC Company: IDB Invest Posting End Date: 7/8/2026 11:59 PM EST We improve lives DB Invest is the private sector&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">3d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div id="j1783025478425" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        IDB
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783025478425">Country Representative - Haiti, Haiti</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">Country Representative - Haiti City: Cap-Haïtien Company: IDB Posting End Date: 7/31/2026 11:59 PM EST We improve lives The IDB Group is a community of diverse, versatile&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">3d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div id="j1783025473677" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        IDB
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783025473677">Capital Adequacy &amp; Credit Risk Management Senior Associate, Panama Panamá</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">Capital Adequacy & Credit Risk Management Senior Associate City: Panamá, Bogotá Company: IDB Posting End Date: . We improve lives The IDB Group is a community of diverse, versatile, and passionate people&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">3d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div id="j1783025468924" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        IDB
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783025468924">Country Economist Colombia (Economics Senior Specialist), Bogotá</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">Country Economist Colombia (Economics Senior Specialist) City: Bogotá Company: IDB Posting End Date: 7/14/2026 11:59 PM EST About this position We are looking for an experienced Economist&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">3d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div class="job ad-slot-inline" style="margin:12px 0;padding:0;border-bottom:0;width:100%;break-inside:auto;">
+  <ins class="adsbygoogle"
+       style="display:block;min-height:100px;"
+       data-ad-client="ca-pub-9196538889333991"
+       data-ad-slot="4504822997"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div id="j1783025464206" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        IDB
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783025464206">Consultor de Apoyo en Gestión Financiera, Ecuador Quito</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">Consultor de Apoyo en Gestión Financiera City: Quito Company: IDB Posting End Date: 7/8/2026 11:59 PM EST Mejoramos vidas El Grupo BID es una comunidad diversa de&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">3d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div id="j1783025457239" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        IDB
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1783025457239">Digital Transformation Consultant, United States Washington D.C.</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">Digital Transformation Consultant City: Washington DC Company: IDB Posting End Date: 7/12/2026 11:59 PM EST We improve lives The IDB Group is a community of diverse, versatile&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">3d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div id="j1782833569168" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        IDB
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782833569168">AI Guideline and Operations Consultant, Remote</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">AI Guideline and Operations Consultant City: Asuncion, Belize City, Bogotá, Brasilia, Buenos Aires, Christ Church, Georgetown, Guatemala City, Kingston, La Paz, Lima, Mexico City, Montevideo, Nassau, Panamá, Paramaribo, Port of&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">5d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div class="job ad-slot-inline" style="margin:12px 0;padding:0;border-bottom:0;width:100%;break-inside:auto;">
+  <ins class="adsbygoogle"
+       style="display:block;min-height:100px;"
+       data-ad-client="ca-pub-9196538889333991"
+       data-ad-slot="4504822997"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<div id="j1782833564647" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        IDB
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782833564647">Infrastructure Operations Consultant, United States Washington D.C.</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">Infrastructure Operations Consultant City: Washington DC Company: IDB Posting End Date: July 14th, 2026 We improve lives The IDB Group is a community of diverse, versatile, and passionate people who&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">5d</span> ago
+    </div>
+  </div>
+
+  <div style="margin:0 0 8px 0;" class="expdt">
+    Closing date: ongoing
+  </div>
+
+</div>
+<div id="j1782833559808" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
+
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
+    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
+       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
+      <div class="fp-avatar"
+           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
+      </div>
+      <div class="fp-username fp-orgname mdl-color-text--black"
+           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
+        IDB
+      </div>
+    </a>
+  </div>
+
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782833559808">AI Solutions Engineer Consultant, United States Washington D.C.</a>
+
+  <div class="jobsnippet">
+    <span style="font-style:italic;padding-top:2px;">AI Solutions Engineer Consultant City: Washington DC Company: IDB Posting End Date: 6 July 2026 We improve lives The IDB Group is a community of diverse, versatile, and passionate people&hellip;</span>
+  </div>
+
+  <div style="margin:0;" class="jobdetails">
+    <div style="margin:0;" class="jobupdated">
+      Updated <span class="fp-time">5d</span> ago
     </div>
   </div>
 
@@ -406,7 +907,7 @@
 </div>
 <div id="j1782833550336" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -419,7 +920,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782833550336">Manager&#39;s Office Administrative Support Consultant, United States Washington D.C.</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782833550336">Manager&#39;s Office Administrative Support Consultant, United States Washington D.C.</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Manager's Office Administrative Support Consultant City: Washington DC Company: IDB Posting End Date: July 4, 2026 We improve lives The IDB Group is a community of diverse, versatile, and&hellip;</span>
@@ -427,7 +928,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">3h</span> ago
+      Updated <span class="fp-time">5d</span> ago
     </div>
   </div>
 
@@ -438,7 +939,7 @@
 </div>
 <div id="j1782833543784" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -451,7 +952,7 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782833543784">Consultoría Técnica y Operativa en Energía, Costa Rica San Jose</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782833543784">Consultoría Técnica y Operativa en Energía, Costa Rica San Jose</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Consultoría Técnica y Operativa en Energía City: San Jose Company: IDB Posting End Date: 6 de Julio 2026 Mejoramos vidas El Grupo BID es una comunidad diversa de personas versátiles&hellip;</span>
@@ -459,7 +960,7 @@
 
   <div style="margin:0;" class="jobdetails">
     <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">3h</span> ago
+      Updated <span class="fp-time">5d</span> ago
     </div>
   </div>
 
@@ -470,7 +971,7 @@
 </div>
 <div id="j1782833537420" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
 
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
+  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0;margin:0 0 4px 0;height:34px;">
     <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
        style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
       <div class="fp-avatar"
@@ -483,444 +984,10 @@
     </a>
   </div>
 
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782833537420">Full-Stack Engineer Consultant - Emerging Technologies, Asuncion, Belize City, Bogotá, Brasilia, Buenos Aires, Christ Church, Georgetown, Guatemala City, Kingston, La Paz, Lima, Managua, Mexico City, Montevideo, Nassau, Panamá, Paramaribo, Port of Spain, Quito, San Jose, San Salvador, Santiago, Santo Domingo, Sao Paulo, Tegucigalpa</a>
+  <a style="margin-top:0;" class="jtitle" href="/vacancies/1782833537420">Full-Stack Engineer Consultant - Emerging Technologies, Asuncion, Belize City, Bogotá, Brasilia, Buenos Aires, Christ Church, Georgetown, Guatemala City, Kingston, La Paz, Lima, Managua, Mexico City, Montevideo, Nassau, Panamá, Paramaribo, Port of Spain, Quito, San Jose, San Salvador, Santiago, Santo Domingo, Sao Paulo, Tegucigalpa</a>
 
   <div class="jobsnippet">
     <span style="font-style:italic;padding-top:2px;">Full-Stack Engineer Consultant - Emerging Technologies City: Asuncion, Belize City, Bogotá, Brasilia, Buenos Aires, Christ Church, Georgetown, Guatemala City, Kingston, La Paz, Lima, Managua, Mexico City, Montevideo, Nassau, Panamá, Paramaribo&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">3h</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div id="j1782833532797" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        IDB
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782833532797">Consultoria em Operações, Brazil Brasilia</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Consultoria em Operações City: Brasilia Company: IDB Posting End Date: 7/3/2026 11:59 PM EST Melhoramos vidas O Grupo BID é uma comunidade de pessoas diversificadas, versáteis e&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">3h</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div id="j1782758373940" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        IDB
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782758373940">Financial Sector Senior Specialist, Colombia Bogotá</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Financial Sector Senior Specialist City: Bogotá, Lima, Washington DC Company: IDB Posting End Date: 7/3/2026 11:59 PM EST We improve lives The IDB Group is a community&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">1d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div id="j1782758369490" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        IDB
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782758369490">PEC Consultant - Penitentiary and Security Infrastructure Design, Remote</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">PEC Consultant - Penitentiary and Security Infrastructure Design City: Washington DC Company: IDB Posting End Date: 7/1/2026 We improve lives The IDB Group is a community of diverse, versatile&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">1d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div id="j1782496893330" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        IDB
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782496893330">IDB Invest - Risk Management Senior Associates or Officers - Talent Pool, Kingston</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">IDB Invest - Risk Management Senior Associates or Officers - Talent Pool City: Kingston, Nassau, Georgetown, Paramaribo, Port of Spain, Christ Church Company: IDB Posting End Date: 10/23/2026 11:59&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">2d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div id="j1782496888420" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        IDB
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782496888420">IDB Invest - IT Senior Associates or Officers - Talent Pool, Jamaica Kingston</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">IDB Invest - IT Senior Associates or Officers - Talent Pool City: Kingston, Nassau, Georgetown, Paramaribo, Port of Spain, Christ Church Company: IDB Posting End Date: 10/23/2026 11:59 PM&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">2d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div class="job ad-slot-inline" style="margin:12px 0;padding:0;border-bottom:0;width:100%;break-inside:auto;">
-  <ins class="adsbygoogle"
-       style="display:block;min-height:100px;"
-       data-ad-client="ca-pub-9196538889333991"
-       data-ad-slot="4504822997"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-<div id="j1782496878527" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        IDB
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782496878527">IDB Invest - Legal Senior Associates or Officers - Talent Pool, Jamaica Kingston</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">IDB Invest - Legal Senior Associates or Officers - Talent Pool City: Kingston, Nassau, Georgetown, Paramaribo, Port of Spain, Christ Church Company: IDB Posting End Date: 10/23/2026 11:59 PM&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">2d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div id="j1782496868514" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        IDB
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782496868514">Operations Principal Specialist - South Connection Regional Program Co-Coordinator, Washington D.C.</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Operations Principal Specialist - South Connection Regional Program Co-Coordinator City: Washington DC Company: IDB Posting End Date: 7/9/2026 11:59 PM EST Location Post of duty: Washington, District&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">2d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div id="j1782496863471" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        IDB
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782496863471">IDB Invest - Investment Management Analyst or Associates - Talent Pool, Kingston</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">IDB Invest - Investment Management Analyst or Associates - Talent Pool City: Kingston, Nassau, Georgetown, Paramaribo, Port of Spain, Christ Church Company: IDB Posting End Date: 10/23/2026 11:59 PM&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">2d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div class="job ad-slot-inline" style="margin:12px 0;padding:0;border-bottom:0;width:100%;break-inside:auto;">
-  <ins class="adsbygoogle"
-       style="display:block;min-height:100px;"
-       data-ad-client="ca-pub-9196538889333991"
-       data-ad-slot="4504822997"
-       data-ad-format="auto"
-       data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-</div>
-<div id="j1782673492221" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        IDB
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782673492221">IDB Invest - Legal Consultant - Financial Markets &amp; Products Division, Chile Santiago</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">IDB Invest - Legal Consultant - Financial Markets & Products Division City: Santiago, San Jose, Kingston, Port of Spain, Washington DC Company: IDB Invest Posting End Date: 7/10/2026 11:59 PM&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">2d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div id="j1782414045445" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        IDB
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782414045445">Operations Social Consultant, United States Washington D.C.</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Operations Social Consultant City: Washington DC Company: IDB Posting End Date: June 30, 2026 We improve lives The IDB Group is a community of diverse, versatile, and passionate people who&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">5d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div id="j1782414038593" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        IDB
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782414038593">Treasury and Risk Specialist - Sovereign Debt Management, United States Washington D.C.</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Treasury and Risk Specialist - Sovereign Debt Management City: Washington DC Company: IDB Posting End Date: 7/1/2026 11:59 PM EST We improve lives The IDB Group is a&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">5d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div id="j1782414024414" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        IDB
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782414024414">VHR Resource Planning and Administration Lead Specialist or Senior Specialist, Unknown</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">VHR Resource Planning and Administration Lead Specialist or Senior Specialist City: Washington DC Company: IDB Posting End Date: 7/8/2026 11:59 PM EST We improve lives The IDB&hellip;</span>
-  </div>
-
-  <div style="margin:0;" class="jobdetails">
-    <div style="margin:0;" class="jobupdated">
-      Updated <span class="fp-time">5d</span> ago
-    </div>
-  </div>
-
-  <div style="margin:0 0 8px 0;" class="expdt">
-    Closing date: ongoing
-  </div>
-
-</div>
-<div id="j1782414009860" style="width:100%;margin-left:0 !important;" class="ais-Hits-item">
-
-  <div class="fp-header" style="width:100%;display:flex;position:relative;padding:4px 0px;margin:-4px -4px 4px 0px;height:34px;">
-    <a class="fp-usernameLink mdl-button mdl-js-button" href="/organizations/idb"
-       style="width:fit-content;display:flex;height:34px;margin-left:-3px;padding:1px;border-radius:9999px;text-transform:none;white-space:nowrap;">
-      <div class="fp-avatar"
-           style="height:32px;width:32px;display:inline-block;background-size:32px 32px;border-radius:32px;border:2px solid #fff;margin:0;padding:0;background-image:url(&quot;https://images.unjobs.org/org/idb.jpg&quot;);">
-      </div>
-      <div class="fp-username fp-orgname mdl-color-text--black"
-           style="font-weight:400;text-align:left;padding:0 16px 0 8px;width:fit-content;margin-left:0;margin-top:-2px;display:block;">
-        IDB
-      </div>
-    </a>
-  </div>
-
-  <a style="margin-top:0px;" class="jtitle" href="/vacancies/1782414009860">Consultor PEC - Desarrollo de manual y guía de regularización concurrente para EPSAS (ERC), Remote</a>
-
-  <div class="jobsnippet">
-    <span style="font-style:italic;padding-top:2px;">Consultor PEC - Desarrollo de manual y guía de regularización concurrente para EPSAS (ERC) City: La Paz Company: IDB Posting End Date: 07/03/2026 We improve lives El Grupo BID&hellip;</span>
   </div>
 
   <div style="margin:0;" class="jobdetails">
@@ -938,14 +1005,14 @@
     </div>
 
     <div id="pp3" class="pagination" style="margin-bottom:50px;">
-      <table class="pag" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+      <table class="pag" width="100%" cellspacing="0" cellpadding="0" border="0" align="center" style="table-layout:fixed;max-width:100%;box-sizing:border-box;">
   <tbody>
     <tr>
       <td class="nv fp-first-page-button" style="width:15%;color:#999;">«&nbsp;First</td>
       <td class="nv fp-prev-page-button"  style="width:15%;color:#999;">&lt;&nbsp;Prev</td>
       <td class="nc">
         <span style="color:#333;font-size:13px;">
-          1&nbsp;–&nbsp;20 of 30
+          1&nbsp;–&nbsp;20 of 35
         </span>
       </td>
       <td class="nv fp-next-page-button"  style="width:15%;cursor:pointer;">Next&nbsp;&gt;</td>
@@ -965,7 +1032,7 @@ var pageOrgID   = "idb";
 var pageType    = "org";
 var isCgiarAll  = false;
 var cgiarTags      = [];
-var pageTotalHits  = 30;
+var pageTotalHits  = 35;
 
 $(document).ready(function () {
   var officeAdPushed = false;
@@ -999,8 +1066,139 @@ $(document).ready(function () {
 
       </div>
     </main>
+
   </div>
 
+<!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+<script type="text/javascript" async=true>
+(function() {
+  //var host = window.location.hostname;
+  var host = 'unjobs.org';
+  var element = document.createElement('script');
+  var firstScript = document.getElementsByTagName('script')[0];
+  var url = 'https://cmp.inmobi.com'
+    .concat('/choice/', 'N1sA5xfTskjLj', '/', host, '/choice.js?tag_version=V3');
+  var uspTries = 0;
+  var uspTriesLimit = 3;
+  element.async = true;
+  element.type = 'text/javascript';
+  element.src = url;
+  firstScript.parentNode.insertBefore(element, firstScript);
+
+  function makeStub() {
+    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+    var queue = [];
+    var win = window;
+    var cmpFrame;
+
+    function addFrame() {
+      var doc = win.document;
+      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+      if (!otherCMP) {
+        if (doc.body) {
+          var iframe = doc.createElement('iframe');
+          iframe.style.cssText = 'display:none';
+          iframe.name = TCF_LOCATOR_NAME;
+          doc.body.appendChild(iframe);
+        } else {
+          setTimeout(addFrame, 5);
+        }
+      }
+      return !otherCMP;
+    }
+
+    function tcfAPIHandler() {
+      var gdprApplies;
+      var args = arguments;
+      if (!args.length) {
+        return queue;
+      } else if (args[0] === 'setGdprApplies') {
+        if (args.length > 3 && args[2] === 2 && typeof args[3] === 'boolean') {
+          gdprApplies = args[3];
+          if (typeof args[2] === 'function') { args[2]('set', true); }
+        }
+      } else if (args[0] === 'ping') {
+        var retr = { gdprApplies: gdprApplies, cmpLoaded: false, cmpStatus: 'stub' };
+        if (typeof args[2] === 'function') { args[2](retr); }
+      } else {
+        if (args[0] === 'init' && typeof args[3] === 'object') {
+          args[3] = Object.assign(args[3], { tag_version: 'V3' });
+        }
+        queue.push(args);
+      }
+    }
+
+    function postMessageEventHandler(event) {
+      var msgIsString = typeof event.data === 'string';
+      var json = {};
+      try {
+        if (msgIsString) { json = JSON.parse(event.data); } else { json = event.data; }
+      } catch (ignore) {}
+      var payload = json.__tcfapiCall;
+      if (payload) {
+        window.__tcfapi(payload.command, payload.version, function(retValue, success) {
+          var returnMsg = { __tcfapiReturn: { returnValue: retValue, success: success, callId: payload.callId } };
+          if (msgIsString) { returnMsg = JSON.stringify(returnMsg); }
+          if (event && event.source && event.source.postMessage) {
+            event.source.postMessage(returnMsg, '*');
+          }
+        }, payload.parameter);
+      }
+    }
+
+    while (win) {
+      try {
+        if (win.frames[TCF_LOCATOR_NAME]) { cmpFrame = win; break; }
+      } catch (ignore) {}
+      if (win === window.top) { break; }
+      win = win.parent;
+    }
+    if (!cmpFrame) {
+      addFrame();
+      win.__tcfapi = tcfAPIHandler;
+      win.addEventListener('message', postMessageEventHandler, false);
+    }
+  }
+  makeStub();
+
+  var uspStubFunction = function() {
+    var arg = arguments;
+    if (typeof window.__uspapi !== uspStubFunction) {
+      setTimeout(function() {
+        if (typeof window.__uspapi !== 'undefined') {
+          window.__uspapi.apply(window.__uspapi, arg);
+        }
+      }, 500);
+    }
+  };
+  var checkIfUspIsReady = function() {
+    uspTries++;
+    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+      console.warn('USP is not accessible');
+    } else {
+      clearInterval(uspInterval);
+    }
+  };
+  if (typeof window.__uspapi === 'undefined') {
+    window.__uspapi = uspStubFunction;
+    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+  
+  // GPP (IAB Global Privacy Platform) stub — same rationale as the __uspapi
+  // stub above. Without this, any script (e.g. InMobi cmp2.js) that calls
+  // window.__gpp(...) before a real CMP has defined it throws a TypeError
+  // and aborts its own execution at that point.
+  if (typeof window.__gpp !== 'function') {
+    window.__gppQueue = window.__gppQueue || [];
+    window.__gpp = function() {
+      window.__gppQueue.push(arguments);
+    };
+  }  
+  
+})();
+</script>
+<!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9196538889333991" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
 <script>window.__algoliaV4 = algoliasearch;</script>
 <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.8.3/dist/instantsearch.production.min.js" integrity="sha256-LAGhRRdtVoD6RLo2qDQsU2mp+XVSciKRC8XPOBWmofM=" crossorigin="anonymous"></script>
@@ -1013,24 +1211,43 @@ $(document).ready(function () {
        data-callback="onTurnstileSuccess"
        data-error-callback="onTurnstileError"
        data-expired-callback="onTurnstileExpired"
-       data-size="flexible">
+       data-size="flexible"
+       data-appearance="interaction-only">
     </div>
     <script>
     var turnstilePassed = false;
     var TURNSTILE_TTL_HOURS = 24;
 
-    function setVerifiedCookie(hours) {
-      var expires = new Date(Date.now() + hours * 60 * 60 * 1000).toUTCString();
-      document.cookie = 'cf_verified=1; expires=' + expires + '; path=/; SameSite=Lax; Secure';
+    function isVerifiedStillValid() {
+      var expiry = parseInt(localStorage.getItem('cf_verified_until') || '0', 10);
+      return Date.now() < expiry;
+    }
+
+    function setVerifiedTTL(hours) {
+      var expiry = Date.now() + hours * 60 * 60 * 1000;
+      localStorage.setItem('cf_verified_until', expiry);
     }
 
     function onTurnstileSuccess(token) {
-      setVerifiedCookie(TURNSTILE_TTL_HOURS);
-      turnstilePassed = true;
+      fetch('/api/turnstile-verify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ token: token }),
+      })
+      .then(function(res) {
+        if (res.ok) {
+          setVerifiedTTL(TURNSTILE_TTL_HOURS);
+          turnstilePassed = true;
+        } else {
+          console.warn('Turnstile server verification failed');
+        }
+      })
+      .catch(function(err) {
+        console.warn('Turnstile verify error:', err);
+      });
     }
 
     function onTurnstileError() {
-      // Challenge failed — feed.js will silently suppress Algolia pagination.
       console.warn('Turnstile error — Algolia pagination suppressed.');
     }
 
@@ -1040,11 +1257,36 @@ $(document).ready(function () {
     }
 
     window.onload = function() {
-      turnstile.execute();
+      if (isVerifiedStillValid()) {
+        turnstilePassed = true;
+      } else {
+        turnstile.execute();
+      }
     };
     </script>
 <script src="/js/bundle2.js" async></script>
 
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a148193b08ff3287',t:'MTc4MjkzNzA5Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-</body>
+<script>
+window.addEventListener('load', function() {
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      mutation.addedNodes.forEach(function(node) {
+        if (node.nodeType !== 1) return;
+        if (node.id === 'iubenda-pp-overlay') {
+          node.style.setProperty('top', '55px', 'important');
+          node.style.setProperty('z-index', '2147483644', 'important');
+        }
+        if (node.id === 'iubenda-pp') {
+          node.style.setProperty('top', '55px', 'important');
+          node.style.setProperty('z-index', '2147483645', 'important');
+        }
+      });
+    });
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+});
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1714abb387aeb03',t:'MTc4MzM2OTAzNg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
