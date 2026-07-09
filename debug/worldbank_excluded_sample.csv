@@ -1,4 +1,9 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"ET Consultant, Washington, United States",https://unjobs.org/vacancies/1783540985671,,bank_exclude
+worldbank,"Senior Operations officer, Riyadh, Saudi Arabia",https://unjobs.org/vacancies/1783540999640,,bank_no_match
+worldbank,"Senior Infrastructure Specialist, Washington, United States",https://unjobs.org/vacancies/1783541053610,,bank_no_match
+worldbank,"Extended Term Consultant - Program Coordinator, Washington, United States",https://unjobs.org/vacancies/1783541067206,,bank_exclude
+worldbank,"Project Manager, International Real Estate, Nairobi, Kenya",https://unjobs.org/vacancies/1783541080732,,bank_no_match
 worldbank,"ET Consultant, Beijing, China",https://unjobs.org/vacancies/1783024555285,,bank_exclude
 worldbank,"Financial Officer, Washington, United States",https://unjobs.org/vacancies/1783024569724,,bank_no_match
 worldbank,"Program Officer (Ethics & Compliance Learning Experience Specialist), Washington, United States",https://unjobs.org/vacancies/1782832733442,,bank_no_match
