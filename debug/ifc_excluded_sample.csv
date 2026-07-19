@@ -1,4 +1,17 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+ifc,"WBG Pioneer, Montevideo, Uruguay",https://unjobs.org/vacancies/1784433091230,,bank_no_match
+ifc,"Operations Analyst - Business Developpment, Rome, Italy",https://unjobs.org/vacancies/1784433104746,,bank_no_match
+ifc,"WBG Pioneer - Blended Finance Data Analytics Intern, Washington, United States",https://unjobs.org/vacancies/1784433118276,,bank_exclude
+ifc,"WBG Pioneer - Finance intern, Washington, United States",https://unjobs.org/vacancies/1784433226738,,bank_exclude
+ifc,"WBG Pioneer - Environmental and Social Analyst Intern, Sao Paulo, Brazil",https://unjobs.org/vacancies/1784433335410,,bank_exclude
+ifc,"WBG Pioneer -  Operations Analyst Intern, Bujumbura, Burundi",https://unjobs.org/vacancies/1784433402777,,bank_exclude
+ifc,"WBG Pioneer - CAO Dispute Resolution Intern, Washington, United States",https://unjobs.org/vacancies/1784433537169,,bank_exclude
+ifc,"(Associate) Investment Officer, Financial Institutions Group, Quito, Ecuador",https://unjobs.org/vacancies/1784433550697,,bank_no_match
+ifc,"WBG Pioneer - Research and Data Analysis Intern, Almaty, Kazakhstan",https://unjobs.org/vacancies/1784433645567,,bank_exclude
+ifc,"Investment Analyst - FIG, Manila, Philippines",https://unjobs.org/vacancies/1784433754369,,bank_no_match
+ifc,"WBG Pioneer  - Environmental and Social Analyst intern, Sao Paulo, Brazil",https://unjobs.org/vacancies/1784433809023,,bank_exclude
+ifc,"WBG Pioneer - Country Office Intern, Berlin, Germany",https://unjobs.org/vacancies/1784433890956,,bank_exclude
+ifc,"WBG Pioneer - Investment Analyst Intern, Douala, Cameroon",https://unjobs.org/vacancies/1784433931899,,bank_exclude
 ifc,"WBG Pioneer - AgriConnect Europe Intern, Europe",https://unjobs.org/vacancies/1784145558191,,bank_exclude
 ifc,"WBG Pioneer - Regional Jobs & Skills Intern, Europe",https://unjobs.org/vacancies/1784145462848,,bank_exclude
 ifc,"WBG Pioneer - Private Sector Engagements Intern, Kuwait City",https://unjobs.org/vacancies/1784145408151,,bank_exclude
@@ -22,8 +35,3 @@ ifc,"Senior Industry Specialist - Climate Finance Specialist, Johannesburg, Sout
 ifc,"Investment Analyst - FIG, Mumbai, India",https://unjobs.org/vacancies/1783541013269,,bank_no_match
 ifc,"Extended Term Consultant - Operations Officer, Conakry, Guinea",https://unjobs.org/vacancies/1783541026881,,bank_exclude
 ifc,"Extended Term Consultant - Legal Analyst, Washington, United States",https://unjobs.org/vacancies/1783541094322,,bank_exclude
-ifc,"Investment Analyst - Manufacturing, Agribusiness & Services, Almaty, Kazakhstan",https://unjobs.org/vacancies/1783208799565,,bank_no_match
-ifc,"Extended Term Consultant -  Environmental and Social Development Specialist, Washington, United States",https://unjobs.org/vacancies/1783208813650,,bank_exclude
-ifc,"Investment Analyst - Private Equity Funds, South Asia, Mumbai, India",https://unjobs.org/vacancies/1783208827506,,bank_no_match
-ifc,"Associate Operations Officer - Advisory Services, Rabat, Morocco",https://unjobs.org/vacancies/1783024541100,,bank_no_match
-ifc,"Risk Officer, Market Risk & Local Currency, Washington, United States",https://unjobs.org/vacancies/1782496100764,,bank_no_match
