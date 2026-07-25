@@ -1,4 +1,11 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"Extended Term Consultant, Nairobi, Kenya",https://unjobs.org/vacancies/1784905721271,,bank_exclude
+worldbank,"WBG Pioneer - AI Engineer Intern, Washington, United States",https://unjobs.org/vacancies/1784905735425,,bank_exclude
+worldbank,"Knowledge Management and Learning Officer, Washington, United States",https://unjobs.org/vacancies/1784905749182,,bank_no_match
+worldbank,"WBG Pioneer - Data Analysis Intern, Washington, United States",https://unjobs.org/vacancies/1784905762625,,bank_exclude
+worldbank,"Extended Term Consultant, Thimphu, Bhutan",https://unjobs.org/vacancies/1784905776241,,bank_exclude
+worldbank,"Finance Associate, Conakry, Guinea",https://unjobs.org/vacancies/1784905789793,,bank_no_match
+worldbank,"WBG Pioneer - Financial Inclusion and Infrastructure Intern, Washington, United States",https://unjobs.org/vacancies/1784905803626,,bank_exclude
 worldbank,"WBG Pioneer - Research Intern, Washington, United States",https://unjobs.org/vacancies/1784812542934,,bank_exclude
 worldbank,"Extended Term Consultant, Gaborone, Botswana",https://unjobs.org/vacancies/1784812570219,,bank_exclude
 worldbank,"WBG Pioneer - LSMS Survey Innovation Fellow, Washington, United States",https://unjobs.org/vacancies/1784812584060,,bank_no_match
@@ -42,10 +49,3 @@ worldbank,"WBG Pioneer - Data Analyst/Engineer Intern, Washington, United States
 worldbank,"WBG Pioneer - Disabilities Intern, Washington, United States",https://unjobs.org/vacancies/1784433267590,,bank_exclude
 worldbank,"WBG Pioneer - Real Estate Program Review Intern, Washington, United States",https://unjobs.org/vacancies/1784433281207,,bank_exclude
 worldbank,"WBG Pioneer - Intake and assessment Intern, Washington, United States",https://unjobs.org/vacancies/1784433295149,,bank_exclude
-worldbank,"Financial and Risk Management Analyst, Washington, United States",https://unjobs.org/vacancies/1784433308454,,bank_no_match
-worldbank,"WBG Pioneer - ITSFD - Program Management & Operations Intern, Washington, United States",https://unjobs.org/vacancies/1784433322052,,bank_exclude
-worldbank,"WBG Pioneer - Portfolio Analytics and Business Intelligence Intern, Almaty, Kazakhstan",https://unjobs.org/vacancies/1784433348959,,bank_exclude
-worldbank,"WBG Pioneer - Construction and Project Management Intern, Washington, United States",https://unjobs.org/vacancies/1784433362486,,bank_exclude
-worldbank,"WBG Pioneer - Indigenous_AfroDescendant_LatinAmerica (Post Graduate), Washington, United States",https://unjobs.org/vacancies/1784433375864,,bank_no_match
-worldbank,"WBG Pioneer - Trade Intern, Washington, United States",https://unjobs.org/vacancies/1784433389446,,bank_exclude
-worldbank,"WBG Pioneer - Change Management and Institutional Engagement  Intern, Washington, United States",https://unjobs.org/vacancies/1784433416216,,bank_exclude
