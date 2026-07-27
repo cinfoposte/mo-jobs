@@ -1,4 +1,5 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+ifc,"Principal Investment Officer, Financial Institutions Group, Kyiv, Ukraine",https://unjobs.org/vacancies/1785109213866,,bank_no_match
 ifc,"Upstream & Advisory Manager Manufacturing & Services (M&S) - Africa, Dar es Salaam, Tanzania",https://unjobs.org/vacancies/1784812529028,,bank_no_match
 ifc,"Senior Investment Officer - Manufacturing, Agribusiness & Services (MAS) Europe, Upstream & Advisory, Vienna, Austria",https://unjobs.org/vacancies/1784812556527,,bank_no_match
 ifc,"Investment Analyst - Manufacturing and Services, Washington, United States",https://unjobs.org/vacancies/1784812666761,,bank_no_match
@@ -30,9 +31,6 @@ ifc,"Extended Term Consultant, Investment Analyst, Financial Institutions Group,
 ifc,"Investment Analyst - Infrastructure, Bucharest, Romania",https://unjobs.org/vacancies/1784145245418,,bank_no_match
 ifc,"WBG Pioneer - Water Sector Industry Analyst Intern, Washington, United States",https://unjobs.org/vacancies/1784145285782,,bank_exclude
 ifc,"WBG Pioneer - Environmental / Biodiversity Intern, Johannesburg, South Africa",https://unjobs.org/vacancies/1784145394647,,bank_exclude
-ifc,"Manager, Legal, Washington, United States",https://unjobs.org/vacancies/1784145544610,,bank_no_match
 ifc,"WBG Pioneer - E&S Data Analytics and Portfolio Support Interns, Lagos, Nigeria",https://unjobs.org/vacancies/1784145654408,,bank_no_match
 ifc,"WBG Pioneer - Trade Finance Intern, Washington, United States",https://unjobs.org/vacancies/1784145763343,,bank_exclude
-ifc,"Associate Operations Officer - Sustainable Infrastructure Advisory, Conakry, Guinea",https://unjobs.org/vacancies/1783895553105,,bank_no_match
 ifc,"Extended Term Consultant - Legal Analyst, Istanbul, Türkiye",https://unjobs.org/vacancies/1783895608221,,bank_exclude
-ifc,"Senior Industry Specialist - Climate Finance Specialist, Johannesburg, South Africa",https://unjobs.org/vacancies/1783895649020,,bank_no_match
