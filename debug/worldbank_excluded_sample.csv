@@ -1,4 +1,22 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"Associate Senior Enterprise Architect, Washington, United States",https://unjobs.org/vacancies/1785482165046,,bank_no_match
+worldbank,"Enterprise AI Engineer (Associate AI Solutions Officer), Washington, United States",https://unjobs.org/vacancies/1785482178720,,bank_no_match
+worldbank,"ET Consultant - Mining Specialist, Tashkent, Uzbekistan",https://unjobs.org/vacancies/1785482192122,,bank_exclude
+worldbank,"Operations Adviser, Washington, United States",https://unjobs.org/vacancies/1785482219270,,bank_no_match
+worldbank,"Associate Product Owner, Data Platforms, Sofia, Bulgaria",https://unjobs.org/vacancies/1785482233092,,bank_no_match
+worldbank,"Lead Economist, Manila, Philippines",https://unjobs.org/vacancies/1785482246639,,bank_no_match
+worldbank,"E T Temporary, Recruitment, Chennai, India",https://unjobs.org/vacancies/1785482260118,,bank_no_match
+worldbank,"Project Manager, Real Estate, Nairobi, Kenya",https://unjobs.org/vacancies/1785482273892,,bank_no_match
+worldbank,"Procurement Specialist, Bishkek, Kyrgyzstan",https://unjobs.org/vacancies/1785482287600,,bank_no_match
+worldbank,"Associate Data Engineer, Enterprise Data Engineering, Sofia, Bulgaria",https://unjobs.org/vacancies/1785482301269,,bank_no_match
+worldbank,"Product Manager, Washington, United States",https://unjobs.org/vacancies/1785482314871,,bank_no_match
+worldbank,"Associate Senior Data Engineer, Washington, United States",https://unjobs.org/vacancies/1785482355979,,bank_no_match
+worldbank,"Extended Term Temporary (ETT), Sydney, Australia",https://unjobs.org/vacancies/1785482369890,,bank_no_match
+worldbank,"Platform Engineer, Sofia, Bulgaria",https://unjobs.org/vacancies/1785482383463,,bank_no_match
+worldbank,"Finance & Budget Officer, Washington, United States",https://unjobs.org/vacancies/1785503689863,,bank_no_match
+worldbank,"Data Officer, Washington, United States",https://unjobs.org/vacancies/1785503732994,,bank_no_match
+worldbank,"Monitoring and Evaluation Specialist, Washington, United States",https://unjobs.org/vacancies/1785503746445,,bank_no_match
+worldbank,"Data Analyst, Washington, United States",https://unjobs.org/vacancies/1785503759837,,bank_no_match
 worldbank,"Senior Water Specialist, Governance and Regulation, Washington, United States",https://unjobs.org/vacancies/1785109227789,,bank_no_match
 worldbank,"Extended Term Consultant - Intake Officer, Washington, United States",https://unjobs.org/vacancies/1785109241394,,bank_exclude
 worldbank,"Finance Associate, Cairo, Egypt",https://unjobs.org/vacancies/1785109254293,,bank_no_match
@@ -31,21 +49,3 @@ worldbank,"Procurement Specialist (Category Manager), Washington, United States"
 worldbank,"Manager, Systems, Data & Reporting, Washington, United States",https://unjobs.org/vacancies/1784675310941,,bank_no_match
 worldbank,"Extended Term Consultant - Senior Partnerships and Stakeholder Relations Consultant, Washington, United States",https://unjobs.org/vacancies/1784675324552,,bank_exclude
 worldbank,"Procurement Analyst (Category Analyst), Sofia, Bulgaria",https://unjobs.org/vacancies/1784675338187,,bank_no_match
-worldbank,"Senior Procurement Specialist (Category Head - Corporate Services and Real Estate), Washington, United States",https://unjobs.org/vacancies/1784675352257,,bank_no_match
-worldbank,"WBG Pioneer -  B-READY Internship, Washington, United States",https://unjobs.org/vacancies/1784675366173,,bank_no_match
-worldbank,"Procurement Specialist (Category Manager - Technology Sourcing), Sofia, Bulgaria",https://unjobs.org/vacancies/1784675379880,,bank_no_match
-worldbank,"Procurement Specialist (Technology and Data Management Lead), Sofia, Bulgaria",https://unjobs.org/vacancies/1784675434527,,bank_no_match
-worldbank,"Lead Transport Specialist, New Delhi, India",https://unjobs.org/vacancies/1784433036502,,bank_no_match
-worldbank,"Program Officer, Washington, United States",https://unjobs.org/vacancies/1784433050459,,bank_no_match
-worldbank,"WBG Pioneer - Accountability Mechanism Dispute Resolution Service Intern, Washington, United States",https://unjobs.org/vacancies/1784433064133,,bank_exclude
-worldbank,"WBG Pioneer -TVET and Skills Development Intern, Kampala, Uganda",https://unjobs.org/vacancies/1784433077750,,bank_exclude
-worldbank,"Program Assistant, Washington, United States",https://unjobs.org/vacancies/1784433131678,,bank_no_match
-worldbank,"WBG Pioneer - AI Data Engineer Intern, Washington, United States",https://unjobs.org/vacancies/1784433145015,,bank_exclude
-worldbank,"WBG Pioneer -Enterprise Architecture Intern, Washington, United States",https://unjobs.org/vacancies/1784433158934,,bank_exclude
-worldbank,"Lead Energy Specialist, New Delhi, India",https://unjobs.org/vacancies/1784433172583,,bank_no_match
-worldbank,"WBG Pioneer - Communications Intern, Dar es Salaam, Tanzania",https://unjobs.org/vacancies/1784433186283,,bank_exclude
-worldbank,"WBG Pioneer - Facilities Capital Management Intern, Washington, United States",https://unjobs.org/vacancies/1784433199863,,bank_exclude
-worldbank,"WBG Pioneer - Product Analyst Intern, Washington, United States",https://unjobs.org/vacancies/1784433213310,,bank_exclude
-worldbank,"WBG Pioneer -Storytelling & Communications Intern, Muscat, Oman",https://unjobs.org/vacancies/1784433240253,,bank_exclude
-worldbank,"WBG Pioneer - Data Analyst/Engineer Intern, Washington, United States",https://unjobs.org/vacancies/1784433254118,,bank_exclude
-worldbank,"WBG Pioneer - Disabilities Intern, Washington, United States",https://unjobs.org/vacancies/1784433267590,,bank_exclude
