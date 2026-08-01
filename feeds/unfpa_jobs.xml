@@ -5,132 +5,34 @@
     <link>https://unjobs.org/organizations/unfpa</link>
     <description>Latest job vacancies for UNFPA – United Nations Population Fund sourced from UNjobs.org. JPO positions are excluded.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 01 Aug 2026 09:42:44 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2026 20:44:32 +0000</lastBuildDate>
     <atom:link href="https://cinfoposte.github.io/mo-jobs/feeds/unfpa_jobs.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Deputy Representative, Freetown, Sierra Leone, P-4, Freetown, Sierra Leone</title>
-      <link>https://unjobs.org/vacancies/1785517209627</link>
-      <guid isPermaLink="false">2623fad5a312453b3394028cf685ec4d</guid>
-      <pubDate>Sat, 01 Aug 2026 09:42:44 +0000</pubDate>
-      <description />
-    </item>
-    <item>
-      <title>International Operations Manager (IOM), Yaoundé, Cameroon, P-4, Yaounde, Cameroon</title>
-      <link>https://unjobs.org/vacancies/1785517246052</link>
-      <guid isPermaLink="false">1dec6569a03b310c64fcf1f6bd4ddadf</guid>
-      <pubDate>Sat, 01 Aug 2026 09:42:44 +0000</pubDate>
-      <description />
-    </item>
-    <item>
-      <title>International Operations Manager (IOM), Kingston, Jamaica, P-3, Kingston, Jamaica</title>
-      <link>https://unjobs.org/vacancies/1785517259184</link>
-      <guid isPermaLink="false">a3e79203dd98b9e93e497e56af890597</guid>
-      <pubDate>Sat, 01 Aug 2026 09:42:44 +0000</pubDate>
-      <description />
-    </item>
-    <item>
-      <title>Representative, Cote d'Ivoire, D1, Abidjan, Cote d'Ivoire</title>
-      <link>https://unjobs.org/vacancies/1785517391624</link>
-      <guid isPermaLink="false">3a9ff58539164e9839dbf99a2280bab4</guid>
-      <pubDate>Sat, 01 Aug 2026 09:42:44 +0000</pubDate>
-      <description />
-    </item>
-    <item>
-      <title>Deputy Representative, Damascus, Syria, P-5, Damascus, Syria</title>
-      <link>https://unjobs.org/vacancies/1785517416706</link>
-      <guid isPermaLink="false">db4ce555ee873e03dbd85aec2884dfbf</guid>
-      <pubDate>Sat, 01 Aug 2026 09:42:44 +0000</pubDate>
-      <description />
-    </item>
-    <item>
-      <title>Deputy Representative, Monrovia, Liberia, P-4, Monrovia, Liberia</title>
-      <link>https://unjobs.org/vacancies/1785517429256</link>
-      <guid isPermaLink="false">fe1a24e495f0fd5b2a9a60b98bc6cb72</guid>
-      <pubDate>Sat, 01 Aug 2026 09:42:44 +0000</pubDate>
-      <description />
-    </item>
-    <item>
-      <title>International Operations Manager (IOM), Nairobi, Kenya, P-4, Nairobi, Kenya</title>
-      <link>https://unjobs.org/vacancies/1785517454467</link>
-      <guid isPermaLink="false">2404915ebfcb57a661116e3d98ce5fc9</guid>
-      <pubDate>Sat, 01 Aug 2026 09:42:44 +0000</pubDate>
-      <description />
-    </item>
-    <item>
-      <title>International Operations Manager (IOM), Damascus, Syria, P-4, Damascus, Syria</title>
-      <link>https://unjobs.org/vacancies/1785517466691</link>
-      <guid isPermaLink="false">e781f0e186cc4c56749c2c7b44bfe7bf</guid>
-      <pubDate>Sat, 01 Aug 2026 09:42:44 +0000</pubDate>
-      <description />
-    </item>
-    <item>
-      <title>International Operations Manager (IOM), Kampala, Uganda, P-4, Kampala, Uganda</title>
-      <link>https://unjobs.org/vacancies/1785517477799</link>
-      <guid isPermaLink="false">c951f62db8f06047be0190fe1b34f546</guid>
-      <pubDate>Sat, 01 Aug 2026 09:42:44 +0000</pubDate>
-      <description />
-    </item>
-    <item>
-      <title>Deputy Representative, Jamaica SRO, Bridgetown, Barbados, P-5, Bridgetown, Barbados</title>
-      <link>https://unjobs.org/vacancies/1785517489307</link>
-      <guid isPermaLink="false">014118bd7b7c6598058b9f625c9e8d65</guid>
-      <pubDate>Sat, 01 Aug 2026 09:42:44 +0000</pubDate>
-      <description />
-    </item>
-    <item>
-      <title>Deputy Representative, Maputo, Mozambique, P-5, Maputo, Mozambique</title>
-      <link>https://unjobs.org/vacancies/1785517500628</link>
-      <guid isPermaLink="false">8de2a040c7aed5cd0050258d368ac58f</guid>
-      <pubDate>Sat, 01 Aug 2026 09:42:44 +0000</pubDate>
-      <description />
-    </item>
-    <item>
-      <title>International Operations Manager (IOM), Dakar, Senegal, P-4, Dakar, Senegal</title>
-      <link>https://unjobs.org/vacancies/1785517512158</link>
-      <guid isPermaLink="false">f4c833c53c57bbd179ad5958a102b325</guid>
-      <pubDate>Sat, 01 Aug 2026 09:42:44 +0000</pubDate>
-      <description />
-    </item>
-    <item>
-      <title>Deputy Representative, Niamey, Niger, P-5, Niamey, Niger</title>
-      <link>https://unjobs.org/vacancies/1785517524740</link>
-      <guid isPermaLink="false">efbd21e75a3662bdf4139fbdee39ed5b</guid>
-      <pubDate>Sat, 01 Aug 2026 09:42:44 +0000</pubDate>
-      <description />
-    </item>
-    <item>
-      <title>Deputy Representative, Abidjan, Cote d'Ivoire, P-4, Abidjan, Cote d'Ivoire</title>
-      <link>https://unjobs.org/vacancies/1785517535870</link>
-      <guid isPermaLink="false">78a95247731ec516f0ffb5b47bdd9864</guid>
-      <pubDate>Sat, 01 Aug 2026 09:42:44 +0000</pubDate>
-      <description />
-    </item>
     <item>
       <title>Knowledge Management &amp; Research Analyst, ESARO, Johannesburg, P-2, Johannesburg, South Africa</title>
       <link>https://unjobs.org/vacancies/1785438609743</link>
       <guid isPermaLink="false">04ace319cf91a903c618ea554c7208d0</guid>
-      <pubDate>Sat, 01 Aug 2026 09:42:44 +0000</pubDate>
+      <pubDate>Sat, 01 Aug 2026 20:44:32 +0000</pubDate>
       <description />
     </item>
     <item>
       <title>Individual consultant for 2025 Census Thematic Report - Fertility &amp; Nuptiality Report, Population and Development (PD), Vientiane, Laos PDR, P4, Lao People's Democratic Republic</title>
       <link>https://unjobs.org/vacancies/1785140316291</link>
       <guid isPermaLink="false">f75c12e61845bf28792dd83e11f376ca</guid>
-      <pubDate>Sat, 01 Aug 2026 09:42:44 +0000</pubDate>
+      <pubDate>Sat, 01 Aug 2026 20:44:32 +0000</pubDate>
       <description />
     </item>
     <item>
       <title>Individual consultant for 2025 Census Thematic Report - Mortality Report, Population and Development (PD), Vientiane City, Lao PDR, P4, Vientiane, Lao PDR</title>
       <link>https://unjobs.org/vacancies/1785140290555</link>
       <guid isPermaLink="false">dc79342544f25b72516c24a49e80ab6b</guid>
-      <pubDate>Sat, 01 Aug 2026 09:42:44 +0000</pubDate>
+      <pubDate>Sat, 01 Aug 2026 20:44:32 +0000</pubDate>
       <description />
     </item>
     <item>
       <title>Individual consultant for Development of The Bottom-UP Costed Action Plan for LAO PDR's National Demographic Dividend Roadmap (DDR 2025-2030), Population and Development (PD), Vientiane City, Lao PDR, P4, Vientiane, Lao PDR</title>
       <link>https://unjobs.org/vacancies/1785140305197</link>
       <guid isPermaLink="false">0c5015d7f315ef5ee9c37b5e4c6ea3f0</guid>
-      <pubDate>Sat, 01 Aug 2026 09:42:44 +0000</pubDate>
+      <pubDate>Sat, 01 Aug 2026 20:44:32 +0000</pubDate>
       <description />
     </item>
   </channel>
