@@ -1,4 +1,9 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"Associate IT Program Officer (Business Management Officer), Sofia, Bulgaria",https://unjobs.org/vacancies/1785849481497,,bank_no_match
+worldbank,"Program Assistant, Tokyo, Japan",https://unjobs.org/vacancies/1785849495496,,bank_no_match
+worldbank,"Associate Senior Service Management Officer (Agentic AI & Hyperautomation Portfolio Lead), Washington, United States",https://unjobs.org/vacancies/1785849509602,,bank_no_match
+worldbank,"Solutions Architect, Washington, United States",https://unjobs.org/vacancies/1785849523572,,bank_no_match
+worldbank,"Director General, WBG Independent Accountability Mechanism, Washington, United States",https://unjobs.org/vacancies/1785849551076,,bank_no_match
 worldbank,"Product Manager, Washington, United States",https://unjobs.org/vacancies/1785816835666,,bank_no_match
 worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1785816849315,,bank_exclude
 worldbank,"Extended Term Consultant - Flood Risk Modeling & Management, Brussels, Belgium",https://unjobs.org/vacancies/1785816862724,,bank_exclude
@@ -9,7 +14,6 @@ worldbank,"Program Assistant, Djibouti",https://unjobs.org/vacancies/17858169169
 worldbank,"Associate Senior Enterprise Architect, Washington, United States",https://unjobs.org/vacancies/1785482165046,,bank_no_match
 worldbank,"Enterprise AI Engineer (Associate AI Solutions Officer), Washington, United States",https://unjobs.org/vacancies/1785482178720,,bank_no_match
 worldbank,"ET Consultant - Mining Specialist, Tashkent, Uzbekistan",https://unjobs.org/vacancies/1785482192122,,bank_exclude
-worldbank,"Operations Adviser, Washington, United States",https://unjobs.org/vacancies/1785482219270,,bank_no_match
 worldbank,"Associate Product Owner, Data Platforms, Sofia, Bulgaria",https://unjobs.org/vacancies/1785482233092,,bank_no_match
 worldbank,"Lead Economist, Manila, Philippines",https://unjobs.org/vacancies/1785482246639,,bank_no_match
 worldbank,"E T Temporary, Recruitment, Chennai, India",https://unjobs.org/vacancies/1785482260118,,bank_no_match
@@ -45,7 +49,3 @@ worldbank,"Manager - Procurement Operations & Advisory (WBPPS), Washington, Unit
 worldbank,"ET Consultant - Senior Evaluation Officer, Washington, United States",https://unjobs.org/vacancies/1784812763480,,bank_exclude
 worldbank,"Receptionist, Tashkent, Uzbekistan",https://unjobs.org/vacancies/1784812790667,,bank_no_match
 worldbank,"Team Assistant, Sydney, Australia",https://unjobs.org/vacancies/1784812818280,,bank_no_match
-worldbank,"WBG Pioneer - Kuwait Public Sector Engagements Intern, Kuwait City",https://unjobs.org/vacancies/1784675393687,,bank_exclude
-worldbank,"WBG Pioneer - Kuwait Country Operations Intern, Kuwait City",https://unjobs.org/vacancies/1784675282133,,bank_exclude
-worldbank,"Senior Procurement Specialist (Technology and Data Management Head), Sofia, Bulgaria",https://unjobs.org/vacancies/1784675185160,,bank_no_match
-worldbank,"Senior Procurement Specialist, Kinshasa, Democratic Republic of Congo",https://unjobs.org/vacancies/1784675199046,,bank_no_match
