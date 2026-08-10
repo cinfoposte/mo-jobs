@@ -1,4 +1,12 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"Lead Digital Specialist, Jakarta, Indonesia",https://unjobs.org/vacancies/1786295642329,,bank_no_match
+worldbank,"Associate Senior Product Owner - Operations Procurement, Washington, United States",https://unjobs.org/vacancies/1786295656312,,bank_no_match
+worldbank,"Senior Energy Specialist, Colombo, Sri Lanka",https://unjobs.org/vacancies/1786295683613,,bank_no_match
+worldbank,"Senior Financial Management Specialist, Jakarta, Indonesia",https://unjobs.org/vacancies/1786295710860,,bank_no_match
+worldbank,"Senior Health Specialist, Washington, United States",https://unjobs.org/vacancies/1786295724657,,bank_no_match
+worldbank,"Associate Product Manager, Washington, United States",https://unjobs.org/vacancies/1786295738349,,bank_no_match
+worldbank,"Extended Term Consultant  - Agile Coach, Washington, United States",https://unjobs.org/vacancies/1786295766315,,bank_exclude
+worldbank,"Associate Senior Product Owner, Chennai, India",https://unjobs.org/vacancies/1786295779770,,bank_no_match
 worldbank,"Extended Term Consultant (Regional Engagement Analyst ), Nairobi, Kenya",https://unjobs.org/vacancies/1786025543395,,bank_exclude
 worldbank,"Digital & AI Specialist, Dhaka, Bangladesh",https://unjobs.org/vacancies/1786025557451,,bank_no_match
 worldbank,"Extended Term Consultant (Associate Platform Engineer), Washington, United States",https://unjobs.org/vacancies/1786025585096,,bank_exclude
@@ -41,11 +49,3 @@ worldbank,"Senior Water Specialist, Governance and Regulation, Washington, Unite
 worldbank,"WBG Pioneer - AI Engineer Intern, Washington, United States",https://unjobs.org/vacancies/1784905735425,,bank_exclude
 worldbank,"WBG Pioneer - Data Analysis Intern, Washington, United States",https://unjobs.org/vacancies/1784905762625,,bank_exclude
 worldbank,"WBG Pioneer - Financial Inclusion and Infrastructure Intern, Washington, United States",https://unjobs.org/vacancies/1784905803626,,bank_exclude
-worldbank,"WBG Pioneer - Research Intern, Washington, United States",https://unjobs.org/vacancies/1784812542934,,bank_exclude
-worldbank,"Extended Term Consultant, Gaborone, Botswana",https://unjobs.org/vacancies/1784812570219,,bank_exclude
-worldbank,"WBG Pioneer - LSMS Survey Innovation Fellow, Washington, United States",https://unjobs.org/vacancies/1784812584060,,bank_no_match
-worldbank,"Manager - Procurement Operations & Advisory (WBPPS), Washington, United States",https://unjobs.org/vacancies/1784812721956,,bank_no_match
-worldbank,"ET Consultant - Senior Evaluation Officer, Washington, United States",https://unjobs.org/vacancies/1784812763480,,bank_exclude
-worldbank,"Team Assistant, Sydney, Australia",https://unjobs.org/vacancies/1784812818280,,bank_no_match
-worldbank,"WBG Pioneer - Kuwait Public Sector Engagements Intern, Kuwait City",https://unjobs.org/vacancies/1784675393687,,bank_exclude
-worldbank,"WBG Pioneer - Kuwait Country Operations Intern, Kuwait City",https://unjobs.org/vacancies/1784675282133,,bank_exclude
