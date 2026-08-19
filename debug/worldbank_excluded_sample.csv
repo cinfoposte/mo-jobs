@@ -1,4 +1,5 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"WBG Manager, Operational Risk, Washington, United States",https://unjobs.org/vacancies/1787154235869,,bank_no_match
 worldbank,"Facilities Manager, International Real Estate, Kabul, Afghanistan",https://unjobs.org/vacancies/1787059568549,,bank_no_match
 worldbank,"Senior Mining Specialist, New Delhi, India",https://unjobs.org/vacancies/1787059582610,,bank_no_match
 worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1786991675848,,bank_exclude
@@ -48,4 +49,3 @@ worldbank,"Senior Economist, New Delhi, India",https://unjobs.org/vacancies/1786
 worldbank,"Extended Term Consultant, Seoul, Republic of Korea",https://unjobs.org/vacancies/1786560472312,,bank_exclude
 worldbank,"Senior External Affairs Officer, Media Partnerships, New York, United States",https://unjobs.org/vacancies/1786560486124,,bank_no_match
 worldbank,"Senior Conference Assistant, Washington, United States",https://unjobs.org/vacancies/1786560499792,,bank_no_match
-worldbank,"Communications and External Relations Officer, Gaborone, Botswana",https://unjobs.org/vacancies/1786560513436,,bank_no_match
