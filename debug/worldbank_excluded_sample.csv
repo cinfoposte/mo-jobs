@@ -1,4 +1,6 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"Senior Procurement Specialist, Luanda, Angola",https://unjobs.org/vacancies/1788359834724,,bank_no_match
+worldbank,"Financial Officer, Paris, France",https://unjobs.org/vacancies/1788359848665,,bank_no_match
 worldbank,"Economist, Maputo, Mozambique",https://unjobs.org/vacancies/1788268140848,,bank_no_match
 worldbank,"Extended Term Consultant- Geospatial Data Scientist, Washington, United States",https://unjobs.org/vacancies/1788268155310,,bank_exclude
 worldbank,"WBG Young Professional, Washington, United States",https://unjobs.org/vacancies/1788268169251,,bank_no_match
@@ -47,5 +49,3 @@ worldbank,"Associate Solutions Architect, Washington, United States",https://unj
 worldbank,"Extended Term Consultant, Jakarta, Indonesia",https://unjobs.org/vacancies/1787502479085,,bank_exclude
 worldbank,"Extended Term Consultant, Jakarta, Indonesia",https://unjobs.org/vacancies/1787502492766,,bank_exclude
 worldbank,"Extended Term Consultant - Evaluation & Learning Officer, Washington, United States",https://unjobs.org/vacancies/1787502506191,,bank_exclude
-worldbank,"Associate Senior Solutions Engineer, Washington, United States",https://unjobs.org/vacancies/1787502519627,,bank_no_match
-worldbank,"WBG Manager, Operational Risk, Washington, United States",https://unjobs.org/vacancies/1787154235869,,bank_no_match
