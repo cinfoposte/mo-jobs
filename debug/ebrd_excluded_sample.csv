@@ -1,4 +1,8 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+ebrd,"Intern, Digital Device, Sofia, Bulgaria",https://unjobs.org/vacancies/1789566796512,,bank_exclude
+ebrd,"Intern, London, United Kingdom",https://unjobs.org/vacancies/1789566817875,,bank_exclude
+ebrd,"Driver, Dakar, Senegal",https://unjobs.org/vacancies/1789566823610,,bank_no_match
+ebrd,"Administrative Assistant, Dakar, Senegal",https://unjobs.org/vacancies/1789566829312,,bank_exclude
 ebrd,"Officer, London, United Kingdom",https://unjobs.org/vacancies/1789414010041,,bank_no_match
 ebrd,"Assistant Analyst, Portfolio Manager, London, United Kingdom",https://unjobs.org/vacancies/1789414020805,,bank_exclude
 ebrd,"Junior Social Video Producer, London, United Kingdom",https://unjobs.org/vacancies/1789221017707,,bank_no_match
