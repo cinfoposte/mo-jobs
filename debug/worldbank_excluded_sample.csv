@@ -1,4 +1,7 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"Economist, Dhaka, Bangladesh",https://unjobs.org/vacancies/1789652342604,,bank_no_match
+worldbank,"Extended Term Consultant - Regional Statistical Team, Washington, United States",https://unjobs.org/vacancies/1789652356786,,bank_exclude
+worldbank,"Senior Health Specialist - Health Services, Washington, United States",https://unjobs.org/vacancies/1789652370493,,bank_no_match
 worldbank,"Economist, Togo",https://unjobs.org/vacancies/1789565758478,,bank_no_match
 worldbank,"Engagement Analyst, Washington, United States",https://unjobs.org/vacancies/1789565743530,,bank_no_match
 worldbank,"Senior Digital Specialist, Islamabad, Pakistan",https://unjobs.org/vacancies/1789565772904,,bank_no_match
@@ -18,16 +21,12 @@ worldbank,"Platform Engineer (SAP BW and Data Platforms), Chennai, India",https:
 worldbank,"Extended Term Consultant, Chennai, India",https://unjobs.org/vacancies/1788964960757,,bank_exclude
 worldbank,"Extended Term Consultant for Digital Health Transformation, Nairobi, Kenya",https://unjobs.org/vacancies/1788964974178,,bank_exclude
 worldbank,"Deputy Chief Executive Officer, GPE, Washington, United States",https://unjobs.org/vacancies/1788964988240,,bank_no_match
-worldbank,"Lead Digital Specialist, Pretoria, South Africa",https://unjobs.org/vacancies/1788965002009,,bank_no_match
 worldbank,"Team Assistant, Cap Haitien, Haiti",https://unjobs.org/vacancies/1788965015733,,bank_no_match
 worldbank,"Program Analyst, Washington, United States",https://unjobs.org/vacancies/1788965029292,,bank_no_match
 worldbank,"E T Temporary, Djibouti, Djibouti",https://unjobs.org/vacancies/1788965042783,,bank_no_match
 worldbank,"ET Consultant, Washington, United States",https://unjobs.org/vacancies/1788965056462,,bank_exclude
 worldbank,"WBG Young Professional, Washington, United States",https://unjobs.org/vacancies/1788446218622,,bank_no_match
-worldbank,"Extended Term Consultant (Associate Data Engineer), Sofia, Bulgaria",https://unjobs.org/vacancies/1788446232938,,bank_exclude
-worldbank,"Senior Outcomes Specialist, Washington, United States",https://unjobs.org/vacancies/1788446247031,,bank_no_match
 worldbank,"Senior HR Specialist - Talent Management, Washington, United States",https://unjobs.org/vacancies/1788446260841,,bank_no_match
-worldbank,"Senior Procurement Specialist, Luanda, Angola",https://unjobs.org/vacancies/1788359834724,,bank_no_match
 worldbank,"Economist, Maputo, Mozambique",https://unjobs.org/vacancies/1788268140848,,bank_no_match
 worldbank,"WBG Young Professional, Washington, United States",https://unjobs.org/vacancies/1788268169251,,bank_no_match
 worldbank,"WBG Young Professional, Washington, United States",https://unjobs.org/vacancies/1788268183160,,bank_no_match
@@ -49,3 +48,4 @@ worldbank,"WBG Young Professional, Washington, United States",https://unjobs.org
 worldbank,"WBG Young Professional, Washington, United States",https://unjobs.org/vacancies/1788268458870,,bank_no_match
 worldbank,"WBG Young Professional, Washington, United States",https://unjobs.org/vacancies/1788268472405,,bank_no_match
 worldbank,"WBG Young Professional, Washington, United States",https://unjobs.org/vacancies/1788268486200,,bank_no_match
+worldbank,"WBG Young Professional, Washington, United States",https://unjobs.org/vacancies/1788268499584,,bank_no_match
