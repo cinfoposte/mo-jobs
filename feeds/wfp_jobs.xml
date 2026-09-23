@@ -5,7 +5,14 @@
     <link>https://unjobs.org/organizations/wfp</link>
     <description>Latest job vacancies for WFP – World Food Programme sourced from UNjobs.org. JPO positions are excluded.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 23 Sep 2026 13:14:21 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 22:55:25 +0000</lastBuildDate>
     <atom:link href="https://cinfoposte.github.io/mo-jobs/feeds/wfp_jobs.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Legal Officer P2, LEGA (2 positions), Rome, Italy</title>
+      <link>https://unjobs.org/vacancies/1790154327122</link>
+      <guid isPermaLink="false">c889f63eb61db3779f43b21451b6cb3c</guid>
+      <pubDate>Wed, 23 Sep 2026 22:55:25 +0000</pubDate>
+      <description />
+    </item>
   </channel>
 </rss>
