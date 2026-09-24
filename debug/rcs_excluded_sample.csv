@@ -1,12 +1,17 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
-rcs,"ECONOMIST, NOC",https://unjobs.org/vacancies/1790186478529,,intern_consultant
-rcs,"ECONOMIST, NOC",https://unjobs.org/vacancies/1790186477605,,intern_consultant
-rcs,"PARTNERSHIPS OFFICER, NOC",https://unjobs.org/vacancies/1790179305666,,intern_consultant
-rcs,"PARTNERSHIPS OFFICER, NOC",https://unjobs.org/vacancies/1790179304662,,intern_consultant
-rcs,"ASSOCIATE COMMUNICATIONS OFFICER, NOB",https://unjobs.org/vacancies/1790179305223,,intern_consultant
-rcs,"ASSOCIATE DATA SPECIALIST, NOB",https://unjobs.org/vacancies/1790179304157,,intern_consultant
-rcs,"PARTNERSHIPS OFFICER, NOC",https://unjobs.org/vacancies/1790179303721,,intern_consultant
-rcs,"ECONOMIST, NOC",https://unjobs.org/vacancies/1790164867993,,intern_consultant
+rcs,"DATA SPECIALIST, NOC",https://unjobs.org/vacancies/1790251329780,,intern_consultant
+rcs,"Associate Communications Officer, NOB",https://unjobs.org/vacancies/1790251329350,,intern_consultant
+rcs,"PARTNERSHIPS OFFICER, Manama",https://unjobs.org/vacancies/1790236976476,,no_grade
+rcs,"PROGRAMME MANAGEMENT OFFICER, New York",https://unjobs.org/vacancies/1790229710632,,no_grade
+rcs,"PARTNERSHIPS OFFICER, Ulaanbaatar, Mongolia",https://unjobs.org/vacancies/1790208064603,,no_grade
+rcs,"Chief of Section, Programme Management (Partnerships), New York",https://unjobs.org/vacancies/1790208064936,,no_grade
+rcs,"ECONOMIST, Libreville",https://unjobs.org/vacancies/1790186478529,,no_grade
+rcs,"ECONOMIST, Asunción",https://unjobs.org/vacancies/1790186477605,,no_grade
+rcs,"PARTNERSHIPS OFFICER, Praia",https://unjobs.org/vacancies/1790179304662,,no_grade
+rcs,"ASSOCIATE COMMUNICATIONS OFFICER, Praia",https://unjobs.org/vacancies/1790179305223,,no_grade
+rcs,"ASSOCIATE DATA SPECIALIST, Bangkok",https://unjobs.org/vacancies/1790179304157,,no_grade
+rcs,"PARTNERSHIPS OFFICER, Riyadh",https://unjobs.org/vacancies/1790179303721,,no_grade
+rcs,"ECONOMIST, Praia",https://unjobs.org/vacancies/1790164867993,,no_grade
 rcs,"ECONOMIST, Yaoundé",https://unjobs.org/vacancies/1790100073667,,no_grade
 rcs,"ECONOMIST, Jakarta",https://unjobs.org/vacancies/1790092882819,,no_grade
 rcs,"ECONOMIST, Pristina",https://unjobs.org/vacancies/1790078487767,,no_grade
@@ -28,13 +33,9 @@ rcs,"Intern - Strategic Communications and Advocacy, Bangkok",https://unjobs.org
 rcs,"Associate Communications Officer, Dili",https://unjobs.org/vacancies/1789833622454,,no_grade
 rcs,"ASSOCIATE DATA SPECIALIST, Launda",https://unjobs.org/vacancies/1789833621592,,no_grade
 rcs,"Associate Communications Officer, Pohnpei",https://unjobs.org/vacancies/1789747229941,,no_grade
-rcs,"ADMINISTRATIVE ASSISTANT, Pohnpei, Federated States of Micronesia",https://unjobs.org/vacancies/1789660842616,,no_grade
 rcs,"ASSOCIATE DATA SPECIALIST, Montevideo",https://unjobs.org/vacancies/1789664503651,,no_grade
-rcs,"Intern – Communications and Storytelling, Asmara",https://unjobs.org/vacancies/1789664501333,,intern_consultant
 rcs,"ECONOMIST, Montevideo",https://unjobs.org/vacancies/1789664500212,,no_grade
-rcs,"DATA SPECIALIST, Apia",https://unjobs.org/vacancies/1789660841967,,no_grade
 rcs,"ASSOCIATE DATA SPECIALIST, Libreville",https://unjobs.org/vacancies/1789660839943,,no_grade
-rcs,"Associate Communications Officer, Conakry",https://unjobs.org/vacancies/1789640989759,,no_grade
 rcs,"DRIVER, Bangui",https://unjobs.org/vacancies/1789640989085,,no_grade
 rcs,"ECONOMIST, Hanoi",https://unjobs.org/vacancies/1789640985825,,no_grade
 rcs,"ECONOMIST, Colombo",https://unjobs.org/vacancies/1789640984535,,no_grade
@@ -48,4 +49,3 @@ rcs,"ECONOMIST, San Salvador, El Salvador",https://unjobs.org/vacancies/17895786
 rcs,"ECONOMIST, Freetown, Sierra Leone",https://unjobs.org/vacancies/1789578651540,,no_grade
 rcs,"DATA SPECIALIST, Georgetown, Guyana",https://unjobs.org/vacancies/1789578652937,,no_grade
 rcs,"DATA SPECIALIST, Ouagadougou, Burkina Faso",https://unjobs.org/vacancies/1789578654399,,no_grade
-rcs,"ECONOMIST, San Jose, Costa Rica",https://unjobs.org/vacancies/1789578657243,,no_grade
