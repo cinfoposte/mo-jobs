@@ -5,7 +5,14 @@
     <link>https://unjobs.org/organizations/rcs</link>
     <description>Latest job vacancies for RCS – Resident Coordinator System sourced from UNjobs.org. JPO positions are excluded.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 25 Sep 2026 23:22:14 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2026 13:16:53 +0000</lastBuildDate>
     <atom:link href="https://cinfoposte.github.io/mo-jobs/feeds/rcs_jobs.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chief, Regional Coordination and Intergovernmental Affairs, P5</title>
+      <link>https://unjobs.org/vacancies/1790380886832</link>
+      <guid isPermaLink="false">758a1d0d494304bb3e608d21cdab9219</guid>
+      <pubDate>Sat, 26 Sep 2026 13:16:53 +0000</pubDate>
+      <description />
+    </item>
   </channel>
 </rss>
