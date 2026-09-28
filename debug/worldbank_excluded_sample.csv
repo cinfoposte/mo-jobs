@@ -1,4 +1,6 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"Team Assistant, Chile",https://unjobs.org/vacancies/1790369498835,,bank_no_match
+worldbank,"E T Temporary - Junior Service Delivery Analyst, Saudi Arabia",https://unjobs.org/vacancies/1790369484938,,bank_no_match
 worldbank,"Senior Digital Specialist, Tunis, Tunisia",https://unjobs.org/vacancies/1790433285386,,bank_no_match
 worldbank,"Chief Counsel, Corporate Finance, Washington, United States",https://unjobs.org/vacancies/1790433300006,,bank_no_match
 worldbank,"Governance Specialist, Manila, Philippines",https://unjobs.org/vacancies/1790369386923,,bank_no_match
@@ -7,7 +9,7 @@ worldbank,"WBG Resident Representative, Guyana and Suriname, Georgetown, Guyana"
 worldbank,"Extended Term Consultant 1 - AI Engineer, Washington, United States",https://unjobs.org/vacancies/1790369429074,,bank_exclude
 worldbank,"Manager - E&S Risk Management, Washington, United States",https://unjobs.org/vacancies/1790369456916,,bank_no_match
 worldbank,"Extended Term Consultant, Chennai, India",https://unjobs.org/vacancies/1790369471090,,bank_exclude
-worldbank,"Finance Analyst, CTRCS Zagreb, Zagreb, Croatia",https://unjobs.org/vacancies/1790369512673,,bank_no_match
+worldbank,"Finance Analyst, Zagreb, Croatia",https://unjobs.org/vacancies/1790369512673,,bank_no_match
 worldbank,"Senior Program Officer, Washington, United States",https://unjobs.org/vacancies/1790369540067,,bank_no_match
 worldbank,"Mining Specialist, Nouakchott, Mauritania",https://unjobs.org/vacancies/1790369567510,,bank_no_match
 worldbank,"ET Consultant - Governance & Public Administration, Washington, United States",https://unjobs.org/vacancies/1790369580997,,bank_exclude
@@ -47,5 +49,3 @@ worldbank,"WBG Young Professional, Washington, United States",https://unjobs.org
 worldbank,"WBG Young Professional, Washington, United States",https://unjobs.org/vacancies/1788268251767,,bank_no_match
 worldbank,"WBG Young Professional, Washington, United States",https://unjobs.org/vacancies/1788268279837,,bank_no_match
 worldbank,"WBG Young Professional, Washington, United States",https://unjobs.org/vacancies/1788268293601,,bank_no_match
-worldbank,"WBG Young Professional, Washington, United States",https://unjobs.org/vacancies/1788268321190,,bank_no_match
-worldbank,"WBG Young Professional, Washington, United States",https://unjobs.org/vacancies/1788268349094,,bank_no_match
