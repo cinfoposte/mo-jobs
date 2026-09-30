@@ -5,7 +5,28 @@
     <link>https://unjobs.org/organizations/wfp</link>
     <description>Latest job vacancies for WFP – World Food Programme sourced from UNjobs.org. JPO positions are excluded.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 29 Sep 2026 14:32:10 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2026 23:49:40 +0000</lastBuildDate>
     <atom:link href="https://cinfoposte.github.io/mo-jobs/feeds/wfp_jobs.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Legal Officer P2, LEGM, Rome, Italy</title>
+      <link>https://unjobs.org/vacancies/1790716711929</link>
+      <guid isPermaLink="false">2516a6e7a1aa9d1006571efb6b7e1a9f</guid>
+      <pubDate>Tue, 29 Sep 2026 23:49:40 +0000</pubDate>
+      <description />
+    </item>
+    <item>
+      <title>Director, Technology, D2, Rome, Italy</title>
+      <link>https://unjobs.org/vacancies/1790716726855</link>
+      <guid isPermaLink="false">fa97b0479bfe90dded68d6cc0ed16fd9</guid>
+      <pubDate>Tue, 29 Sep 2026 23:49:40 +0000</pubDate>
+      <description />
+    </item>
+    <item>
+      <title>Director D2, Private Sector Partnerships (Chief Fundraising Officer), Rome, Italy</title>
+      <link>https://unjobs.org/vacancies/1790716765460</link>
+      <guid isPermaLink="false">3daff9d3a687914c88285e284dac2d78</guid>
+      <pubDate>Tue, 29 Sep 2026 23:49:40 +0000</pubDate>
+      <description />
+    </item>
   </channel>
 </rss>
