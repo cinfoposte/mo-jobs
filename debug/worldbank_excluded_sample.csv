@@ -1,4 +1,6 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"Senior Digital Specialist - Trustworthy AI (with Cybersecurity), Washington, United States",https://unjobs.org/vacancies/1791038154656,,bank_no_match
+worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1791038168766,,bank_exclude
 worldbank,"Investment Officer, Washington, United States",https://unjobs.org/vacancies/1790951815067,,bank_no_match
 worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1790865467661,,bank_exclude
 worldbank,"Financial Officer, Chennai, India",https://unjobs.org/vacancies/1790865481741,,bank_no_match
@@ -32,7 +34,6 @@ worldbank,"Finance Analyst, Zagreb, Croatia",https://unjobs.org/vacancies/179036
 worldbank,"Senior Program Officer, Washington, United States",https://unjobs.org/vacancies/1790369540067,,bank_no_match
 worldbank,"Mining Specialist, Nouakchott, Mauritania",https://unjobs.org/vacancies/1790369567510,,bank_no_match
 worldbank,"Senior Mining Specialist, Conakry, Guinea",https://unjobs.org/vacancies/1790369594982,,bank_no_match
-worldbank,"Extended Term Consultant, Rabat, Morocco",https://unjobs.org/vacancies/1790369609470,,bank_exclude
 worldbank,"Extended Term Consultant, Chennai, India",https://unjobs.org/vacancies/1790369623289,,bank_exclude
 worldbank,"Data Scientist, Washington, United States",https://unjobs.org/vacancies/1790369664358,,bank_no_match
 worldbank,"Extended Term Consultant - Infrastructure Engineer, AV/VC Integration, Washington, United States",https://unjobs.org/vacancies/1790369677727,,bank_exclude
