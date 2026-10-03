@@ -1,4 +1,5 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"Investment Officer, Washington, United States",https://unjobs.org/vacancies/1790951815067,,bank_no_match
 worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1790865467661,,bank_exclude
 worldbank,"Financial Officer, Chennai, India",https://unjobs.org/vacancies/1790865481741,,bank_no_match
 worldbank,"Extended Term Consultant - Senior Finance Officer, Washington, United States",https://unjobs.org/vacancies/1790865496116,,bank_exclude
@@ -37,9 +38,7 @@ worldbank,"Data Scientist, Washington, United States",https://unjobs.org/vacanci
 worldbank,"Extended Term Consultant - Infrastructure Engineer, AV/VC Integration, Washington, United States",https://unjobs.org/vacancies/1790369677727,,bank_exclude
 worldbank,"Extended Term Consultant, Ankara, Türkiye",https://unjobs.org/vacancies/1790369691322,,bank_exclude
 worldbank,"Project Manager, Integrated Workplace Management System, Washington, United States",https://unjobs.org/vacancies/1789738553508,,bank_no_match
-worldbank,"Senior Investment Officer - Global Energy, Washington, United States",https://unjobs.org/vacancies/1789738567999,,bank_no_match
 worldbank,"Disaster Risk Management Specialist, Washington, United States",https://unjobs.org/vacancies/1789738609697,,bank_no_match
-worldbank,"ET Temporary - Senior Accounting Assistant, Chennai, India",https://unjobs.org/vacancies/1789738652291,,bank_no_match
 worldbank,"Senior Health Specialist - Health Services, Washington, United States",https://unjobs.org/vacancies/1789652370493,,bank_no_match
 worldbank,"Senior Industry Specialist - Clean Technology Products (Battery & Rare Earth Minerals Manufacturing), Washington, United States",https://unjobs.org/vacancies/1789565800840,,bank_no_match
 worldbank,"Senior Investment Officer - Chemicals and Fertilizer Sector Lead, Washington, United States",https://unjobs.org/vacancies/1789565814455,,bank_no_match
