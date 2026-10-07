@@ -5,7 +5,14 @@
     <link>https://unjobs.org/organizations/rcs</link>
     <description>Latest job vacancies for RCS – Resident Coordinator System sourced from UNjobs.org. JPO positions are excluded.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 06 Oct 2026 15:23:13 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2026 00:17:30 +0000</lastBuildDate>
     <atom:link href="https://cinfoposte.github.io/mo-jobs/feeds/rcs_jobs.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Special Assistant, P4</title>
+      <link>https://unjobs.org/vacancies/1791331282645</link>
+      <guid isPermaLink="false">c204a13bbd94f1bc4f5c208e40de75f2</guid>
+      <pubDate>Wed, 07 Oct 2026 00:17:30 +0000</pubDate>
+      <description />
+    </item>
   </channel>
 </rss>
