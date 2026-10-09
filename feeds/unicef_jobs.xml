@@ -5,13 +5,20 @@
     <link>https://unjobs.org/organizations/unicef</link>
     <description>Latest job vacancies for UNICEF – United Nations Children's Fund sourced from UNjobs.org. JPO positions are excluded.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 08 Oct 2026 23:47:41 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 13:48:52 +0000</lastBuildDate>
     <atom:link href="https://cinfoposte.github.io/mo-jobs/feeds/unicef_jobs.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chief Risk Management (P-5), FT, #00118980, Kabul, Afghanistan - APRO</title>
+      <link>https://unjobs.org/vacancies/1791540044677</link>
+      <guid isPermaLink="false">3e3cac428d6cf7de65aac85a7f2c4d43</guid>
+      <pubDate>Fri, 09 Oct 2026 13:48:52 +0000</pubDate>
+      <description />
+    </item>
     <item>
       <title>UNV Especialista - Suministros y Logística, Caracas</title>
       <link>https://unjobs.org/vacancies/1791496878299</link>
       <guid isPermaLink="false">87996a67dab0bf3b4d8276ad2489c46e</guid>
-      <pubDate>Thu, 08 Oct 2026 23:47:41 +0000</pubDate>
+      <pubDate>Fri, 09 Oct 2026 13:48:52 +0000</pubDate>
       <description />
     </item>
   </channel>
