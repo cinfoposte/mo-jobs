@@ -1,4 +1,15 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1791556580753,,bank_exclude
+worldbank,"Extended Term Consultant - Security Specialist Colombia, Bogota, Colombia",https://unjobs.org/vacancies/1791556594772,,bank_exclude
+worldbank,"Extended Term Consultant (Information Architect), Washington, United States",https://unjobs.org/vacancies/1791556608718,,bank_exclude
+worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1791556636079,,bank_exclude
+worldbank,"Financial Management Specialist, Luanda, Angola",https://unjobs.org/vacancies/1791556649959,,bank_no_match
+worldbank,"(Associate) Operations Officer - Transport Strategy & Knowledge, Washington, United States",https://unjobs.org/vacancies/1791556677596,,bank_no_match
+worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1791556718814,,bank_exclude
+worldbank,"Extended Term Consultant (Device Experience and Insights Analyst), Washington, United States",https://unjobs.org/vacancies/1791556746125,,bank_exclude
+worldbank,"E T Temporary (Junior Service Delivery Analyst), Kuwait, Kuwait",https://unjobs.org/vacancies/1791556759826,,bank_no_match
+worldbank,"Extended Term Consultant - Water Economist, Washington, United States",https://unjobs.org/vacancies/1791556773741,,bank_exclude
+worldbank,"Senior Energy Specialist, Washington, United States",https://unjobs.org/vacancies/1791556801129,,bank_no_match
 worldbank,"Senior Partnership Specialist, Washington, United States",https://unjobs.org/vacancies/1791394616734,,bank_no_match
 worldbank,"Extended Term Consultant, Sofia, Bulgaria",https://unjobs.org/vacancies/1791394644639,,bank_exclude
 worldbank,"Senior Urban Development Specialist, New Delhi, India",https://unjobs.org/vacancies/1791394658435,,bank_no_match
@@ -17,7 +28,6 @@ worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.o
 worldbank,"Investment Officer, Washington, United States",https://unjobs.org/vacancies/1790951815067,,bank_no_match
 worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1790865467661,,bank_exclude
 worldbank,"Financial Officer, Chennai, India",https://unjobs.org/vacancies/1790865481741,,bank_no_match
-worldbank,"Extended Term Consultant - Senior Finance Officer, Washington, United States",https://unjobs.org/vacancies/1790865496116,,bank_exclude
 worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1790865523595,,bank_exclude
 worldbank,"Senior Mining Specialist, Lima, Peru",https://unjobs.org/vacancies/1790779046068,,bank_no_match
 worldbank,"Associate Senior Service Delivery Officer (Regional Partner & Technology  Advocate), New Delhi, India",https://unjobs.org/vacancies/1790779059961,,bank_no_match
@@ -36,11 +46,5 @@ worldbank,"Senior Financial Officer (Engagement Manager), Washington, United Sta
 worldbank,"E T Temporary - Junior Service Delivery Analyst, Saudi Arabia",https://unjobs.org/vacancies/1790369484938,,bank_no_match
 worldbank,"Senior Digital Specialist, Tunis, Tunisia",https://unjobs.org/vacancies/1790433285386,,bank_no_match
 worldbank,"Chief Counsel, Corporate Finance, Washington, United States",https://unjobs.org/vacancies/1790433300006,,bank_no_match
-worldbank,"Governance Specialist, Manila, Philippines",https://unjobs.org/vacancies/1790369386923,,bank_no_match
 worldbank,"WBG Resident Representative, Guyana and Suriname, Georgetown, Guyana",https://unjobs.org/vacancies/1790369415034,,bank_no_match
-worldbank,"Finance Analyst, Zagreb, Croatia",https://unjobs.org/vacancies/1790369512673,,bank_no_match
-worldbank,"Senior Program Officer, Washington, United States",https://unjobs.org/vacancies/1790369540067,,bank_no_match
-worldbank,"Mining Specialist, Nouakchott, Mauritania",https://unjobs.org/vacancies/1790369567510,,bank_no_match
-worldbank,"Extended Term Consultant - Infrastructure Engineer, AV/VC Integration, Washington, United States",https://unjobs.org/vacancies/1790369677727,,bank_exclude
-worldbank,"Extended Term Consultant, Ankara, Türkiye",https://unjobs.org/vacancies/1790369691322,,bank_exclude
 worldbank,"Senior Health Specialist - Health Services, Washington, United States",https://unjobs.org/vacancies/1789652370493,,bank_no_match

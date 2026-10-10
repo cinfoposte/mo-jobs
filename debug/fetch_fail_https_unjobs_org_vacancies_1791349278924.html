@@ -1134,129 +1134,109 @@ Juba</a>
 
 
 
-  
-
+ 
         
    
  
 
    <p>
-  
-
+ 
         <strong>External Software Developer (SafePass360)</strong></p>
    
  
 
    <p>
-  
-
+ 
         <strong>1. Background & Context</strong></p>
    
  
 
    <p>
-  
-
+ 
         Sexual Exploitation and Abuse (SEA) is a zero-tolerance area for the United Nations Population Fund. In South Sudan, where SEA risks remain high, frontline humanitarian workers often lack access to continuous PSEA learning due to low internet connectivity and ad-hoc training availability.</p>
    
  
 
    <p>
-  
-
+ 
         UNFPA South Sudan, as a finalist in the 2026 PSEA Ideation Challenge, is developing <strong>SafePass360</strong>—an offline-first, zero-data digital safeguarding companion. Designed for aid workers in low-connectivity, high-risk deep-field zones (piloting in Renk and Yambio), SafePass360 provides AI-based, interactive PSEA guidance. The platform hosts localized, quantized Small Language Models (SLMs) and audio-visual scenarios directly on shared devices (Android, iOS, Windows, Linux) without requiring internet access or transmitting Personally Identifiable Information (PII).</p>
    
  
 
    <p>
-  
-
+ 
         <strong>2. Objective of the Consultancy</strong></p>
    
  
 
    <p>
-  
-
+ 
         The consultant will engineer, test, and optimize the core application codebase for SafePass360. This includes integrating quantized SLM runtimes into a Flutter framework, implementing zero-PII local data management with AES-256 encryption, building multi-lingual audio/narrative decision engines, and establishing an opportunistic synchronization layer for anonymous analytics.</p>
    
  
 
    <p>
-  
-
-        
-<strong>3. Scope of Work & Technical Requirements</strong>  fhU7BHO DKOhoF</p>
-
-      
+ 
+            <strong>3. Scope of Work & Technical Requirements</strong>  fhU7BHO XcO8Q</p>
+         
  
 
    <p>
-  
-
+ 
         Under the technical supervision of the UNFPA ICT & Innovation Analyst, the consultant will deliver:</p>
    
  
 
    <p>
-  
-
+ 
         <strong>A. Core Architecture & Local AI Integration (Flutter ONNX GGUF)</strong></p><ul><li>Develop a clean, cross-platform Flutter application shell targeting Android, Windows, and Linux.</li><li>Integrate and benchmark runtime bindings (e.g., ONNX Runtime Mobile or llama.cpp) to run 4-bit quantized SLMs (e.g., Phi-3-mini or Qwen-1.5B) alongside lightweight offline Voice-to-Text (STT) and Text-to-Speech (TTS) engines entirely on-device without active network traffic.</li><li>Optimize memory consumption to ensure stable inference on legacy hardware (down to 4GB RAM) without crashes.</li></ul>
    
  
 
    <p>
-  
-
+ 
         <strong>B. Scenario Engine, Media Integration & Localization</strong></p><ul><li>Implement a JSON-driven state machine to execute 15 localized interactive PSEA scenarios (provided by UNFPA).</li><li>Integrate dynamic multi-lingual UI and audio playback toggles for English and Juba Arabic voice tracks.</li><li>Render lightweight avatar animations (Lottie/Rive framework) to keep the app binary under 150MB.</li></ul>
    
  
 
    <p>
-  
-
+ 
         <strong>C. Security Architecture & Zero-PII Data Engine</strong></p><ul><li>Implement local NoSQL storage (Hive/ObjectBox) protected by AES-256 encryption.</li><li>Hardcode strict Zero-PII memory management ensuring AI chat context is strictly volatile in RAM and completely wiped upon session closure.</li><li>Build offline logic for generating cryptographically signed QR codes for the Safeguard Credit System.</li></ul>
    
  
 
    <p>
-  
-
+ 
         <strong>D. Opportunistic Synchronization & CMS Integration</strong></p><ul><li>Program a background connectivity listener to detect authorized local Wi-Fi networks.</li><li>Build a synchronization pipeline that securely batches encrypted, anonymous usage telemetry to the central Juba CMS dashboard when online.</li></ul>
    
  
 
    <p>
-  
-
+ 
         <strong>4. Key Deliverables & Payment Schedule</strong></p>
    
  
 
    <p>
-  
-
+ 
         Payments are milestone-based:</p><ul><li><strong>Milestone 1 (Due November 07, 2026 - 30% / $1,200):</strong> Functional cross-platform Flutter app repository; Quantized local SLM + offline STT/TTS engine running on low-spec hardware; Zero-PII sandboxed local execution workspace verified.</li><li><strong>Milestone 2 (Due November 20, 2026 - 40% / $1,600):</strong> 15 interactive decision tree scenarios integrated; English & Juba Arabic text/audio asset bundle synced; Renk & Yambio hardcoded directories operational; AES-256 encrypted registry & scannable QR badge engine live.</li><li><strong>Milestone 3 (Due November 31, 2026 - 30% / $1,200):</strong> Opportunistic background sync pipeline verified against Juba CMS; Beta builds cleared following field deployment; Final clean codebase & documentation uploaded to shared global repository.</li></ul>
    
  
 
    <p>
-  
-
+ 
         <strong>5. Required Qualifications & Experience</strong></p><ul><li><strong>Education:</strong> Bachelor’s degree in Computer Science, Software Engineering, Information Technology, or a related technical discipline.</li><li><strong>Core Technical Competencies:</strong></li><li>Minimum 4 years of proven software engineering experience with strong proficiency in Flutter / Dart.</li><li>Demonstrated experience in Edge-AI compilation and integrating localized machine learning runtimes (ONNX Runtime, llama.cpp, TensorFlow Lite, or PyTorch Mobile) on mobile/desktop platforms.</li><li>Strong expertise in local mobile databases (Hive, ObjectBox, or SQLite) with built-in AES-256 encryption.</li><li>Proficient with audio/media streaming controllers and state management patterns (BLoC, Provider, or Riverpod) in Flutter.</li><li><strong>Language & Soft Skills:</strong></li><li>Excellent written and verbal communication skills in English.</li><li>Experience of gender and sexual exploitation and abuse is an added advantage.</li><li>Experience working on humanitarian, open-source, or field-oriented software projects in low-resource environments is an added advantage.</li></ul>
    
  
 
    <p>
-  
-
+ 
         How to Apply</p>
    
  
 
    <p>
-  
-
+ 
         Interested candidates' cover letters must include detailed relevant technical experience (especially Edge-AI and Flutter), and links to relevant code repositories (e.g., GitHub) by <strong>October 9, 2026.</strong></p>
    
  
@@ -1337,9 +1317,9 @@ The recruiting organization, UNFPA - United Nations Population Fund, has not spe
 Because such positions may remain open, they are listed here until removed from the recruiting organization's website.
 Click the button below to verify its current status.
 </div>
-<input type="hidden" name="item"  value="833522932090422454127791393231229888186188">
-<input type="hidden" name="iitem" value="930223028790422357331188189931229888186188">
-<input type="hidden" name="oitem" value="930223028790422454127791489931133188089488">
+<input type="hidden" name="item"  value="833426328790422454031188189931133091486188">
+<input type="hidden" name="iitem" value="833523028887122454031091393327929888186188">
+<input type="hidden" name="oitem" value="833523028887219154031091489931229888186188">
 
 <button type="submit" id="more-info-button" class="btn btn-raised btn-primary" data-toggle="" data-target="">More Information and Application Details</button>
 </form>
@@ -1559,8 +1539,8 @@ function restorePreview(outer) {
 -->
 <script src="https://www.youtube.com/iframe_api"></script>
 
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","spa":2}' crossorigin="anonymous"></script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a47ddadc584ef7fc',t:'MTc5MTU1MzgzMg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4810cce8a3d07ef',t:'MTc5MTU4NzMzNQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","spa":2}' crossorigin="anonymous"></script>
+</body>
 </html>
 
 
