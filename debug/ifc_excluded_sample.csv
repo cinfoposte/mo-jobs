@@ -1,4 +1,6 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+ifc,"Investment Analyst - Manufacturing, Agribusiness and Services (MAS) Europe, Vienna, Austria",https://unjobs.org/vacancies/1791642931312,,bank_no_match
+ifc,"Associate Investment Officer, Manufacturing, Agribusiness and Services, Bolivia, La Paz, Bolivia",https://unjobs.org/vacancies/1791642958774,,bank_no_match
 ifc,"E T Temporary Administrative Support, Bogota, Colombia",https://unjobs.org/vacancies/1791556622398,,bank_no_match
 ifc,"Associate IT Officer, Data and Information Management (Associate Data Engineer), Washington, United States",https://unjobs.org/vacancies/1791556691273,,bank_no_match
 ifc,"Extended Term Consultant - Syndicated Loans and Mobilization, Washington, United States",https://unjobs.org/vacancies/1791556705432,,bank_exclude
@@ -7,7 +9,6 @@ ifc,"Principal Investment Officer - Manufacturing, Agribusiness and Services (MA
 ifc,"Investment Analyst, Private Equity and Venture Capital, Mumbai, India",https://unjobs.org/vacancies/1791297395439,,bank_no_match
 ifc,"Principal Investment Officer, Infrastructure, Andean Region, Bogota, Colombia",https://unjobs.org/vacancies/1791297478969,,bank_no_match
 ifc,"Extended Term Consultant Sustainable Finance and Capital Markets, Latin America and Caribbean Region, Mexico City, Mexico",https://unjobs.org/vacancies/1791038126437,,bank_exclude
-ifc,"Extended Term Consultant - Corporate Governance Advisory, LAC Region, Bogota, Colombia",https://unjobs.org/vacancies/1791038140595,,bank_exclude
 ifc,"Finance Analyst, Dakar, Senegal",https://unjobs.org/vacancies/1790951800997,,bank_no_match
 ifc,"Extended Term Consultant - Employer Branding, Digital Engagement, and Candidate Experience Specialist, Washington, United States",https://unjobs.org/vacancies/1790865537650,,bank_exclude
 ifc,"Regional Industry Manager,  Agribusiness and Forestry, MAS, South Asia, Mumbai, India",https://unjobs.org/vacancies/1790779087669,,bank_no_match

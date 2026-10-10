@@ -1,4 +1,7 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"Special Assistant, Washington, United States",https://unjobs.org/vacancies/1791642902656,,bank_no_match
+worldbank,"Junior Information Management Analyst, Jakarta, Indonesia",https://unjobs.org/vacancies/1791642917485,,bank_no_match
+worldbank,"ET Consultant - Data Scientist/Applied Economist, Accra, Ghana",https://unjobs.org/vacancies/1791642945089,,bank_exclude
 worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1791556580753,,bank_exclude
 worldbank,"Extended Term Consultant - Security Specialist, Bogota, Colombia",https://unjobs.org/vacancies/1791556594772,,bank_exclude
 worldbank,"Extended Term Consultant (Information Architect), Washington, United States",https://unjobs.org/vacancies/1791556608718,,bank_exclude
@@ -44,7 +47,4 @@ worldbank,"Extended Term Consultant - Product Adoption, Sofia, Bulgaria",https:/
 worldbank,"Driver, La Paz, Bolivia",https://unjobs.org/vacancies/1790779280639,,bank_no_match
 worldbank,"Senior Financial Officer (Engagement Manager), Washington, United States",https://unjobs.org/vacancies/1790779294888,,bank_no_match
 worldbank,"E T Temporary - Junior Service Delivery Analyst, Saudi Arabia",https://unjobs.org/vacancies/1790369484938,,bank_no_match
-worldbank,"Senior Digital Specialist, Tunis, Tunisia",https://unjobs.org/vacancies/1790433285386,,bank_no_match
-worldbank,"Chief Counsel, Corporate Finance, Washington, United States",https://unjobs.org/vacancies/1790433300006,,bank_no_match
-worldbank,"WBG Resident Representative, Guyana and Suriname, Georgetown, Guyana",https://unjobs.org/vacancies/1790369415034,,bank_no_match
 worldbank,"Senior Health Specialist - Health Services, Washington, United States",https://unjobs.org/vacancies/1789652370493,,bank_no_match
