@@ -30,30 +30,7 @@
   <!DOCTYPE html>
    <html lang='en'>
     <head>
-<script>
-const originalFetch = window.fetch;
 
-window.fetch = async function(...args) {
-    const response = await originalFetch.apply(this, args);
-
-    const url = String(args[0]?.url || args[0]);
-
-    if (url.includes('cmp.inmobi.com/geoip')) {
-        console.log('InMobi GeoIP request detected!');
-
-        response.clone().json().then(location => {
-            console.log('InMobi GeoIP response:', location);
-            console.log('Country:', location.country);
-            console.log('Region:', location.region);
-            console.log('City:', location.city);
-
-            window.visitorLocation = location;
-        }).catch(console.error);
-    }
-
-    return response;
-};
-</script>
 <meta name=viewport content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <base href="https://unjobs.org/" />
@@ -1555,9 +1532,9 @@ The recruiting organization, UNDP - United Nations Development Programme, has no
 Because such positions may remain open, they are listed here until removed from the recruiting organization's website.
 Click the button below to verify its current status.
 </div>
-<input type="hidden" name="item"  value="930222932091387520121031186157391024051287">
-<input type="hidden" name="iitem" value="930126328791387423421127886157294227254587">
-<input type="hidden" name="oitem" value="930222932188087520024427886157294227254587">
+<input type="hidden" name="item"  value="930222932188184220121031089554091023954587">
+<input type="hidden" name="iitem" value="930126328888087520024331089554091024051287">
+<input type="hidden" name="oitem" value="833426232188184220024427789553994227254587">
 
 <button type="submit" id="more-info-button" class="btn btn-raised btn-primary" data-toggle="" data-target="">More Information and Application Details</button>
 </form>
@@ -1777,8 +1754,8 @@ function restorePreview(outer) {
 -->
 <script src="https://www.youtube.com/iframe_api"></script>
 
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","spa":2}' crossorigin="anonymous"></script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4bec398688f52e4',t:'MTc5MjIzNDQ1Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4c22095ce0515dd',t:'MTc5MjI2OTcxOQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","spa":2}' crossorigin="anonymous"></script>
+</body>
 </html>
 
 
