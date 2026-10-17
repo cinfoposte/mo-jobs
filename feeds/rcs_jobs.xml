@@ -5,7 +5,14 @@
     <link>https://unjobs.org/organizations/rcs</link>
     <description>Latest job vacancies for RCS – Resident Coordinator System sourced from UNjobs.org. JPO positions are excluded.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 16 Oct 2026 22:43:20 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 12:25:50 +0000</lastBuildDate>
     <atom:link href="https://cinfoposte.github.io/mo-jobs/feeds/rcs_jobs.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Administrative Officer (Regional Management and Efficiencies), P3</title>
+      <link>https://unjobs.org/vacancies/1792195266807</link>
+      <guid isPermaLink="false">2d93cb78fc4348572bf2f65332b007e3</guid>
+      <pubDate>Sat, 17 Oct 2026 12:25:50 +0000</pubDate>
+      <description />
+    </item>
   </channel>
 </rss>

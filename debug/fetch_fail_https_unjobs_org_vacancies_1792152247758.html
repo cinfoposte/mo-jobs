@@ -30,7 +30,30 @@
   <!DOCTYPE html>
    <html lang='en'>
     <head>
+<script>
+const originalFetch = window.fetch;
 
+window.fetch = async function(...args) {
+    const response = await originalFetch.apply(this, args);
+
+    const url = String(args[0]?.url || args[0]);
+
+    if (url.includes('cmp.inmobi.com/geoip')) {
+        console.log('InMobi GeoIP request detected!');
+
+        response.clone().json().then(location => {
+            console.log('InMobi GeoIP response:', location);
+            console.log('Country:', location.country);
+            console.log('Region:', location.region);
+            console.log('City:', location.city);
+
+            window.visitorLocation = location;
+        }).catch(console.error);
+    }
+
+    return response;
+};
+</script>
 <meta name=viewport content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <base href="https://unjobs.org/" />
@@ -56,6 +79,7 @@
 			  crossorigin="anonymous"></script>
 		
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 <!-- <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script> -->
 <!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
 <script type="text/javascript" async=true>
@@ -1134,337 +1158,393 @@ Panama City</a>
 
 
 
- 
+  
+
         
    
  
 
    <p>
- 
+  
+
         <strong>Tiered Approach</strong></p>
    
  
 
    <p>
- 
+  
+
         In line with the commitment to safeguard capacity and support personnel already in the Organization, a majority of UNDP UNCDF/UNV vacancies are advertised using a tiered application process whereby:</p><ul><li><strong>Tier 0</strong>: UNDP/UNCDF/UNV IP staff holding permanent (PA) and fixed-term (FTA) appointments, whose posts will be abolished, or contracts will be terminated or not renewed during 2026.</li><li><strong>Tier 1</strong>: Other UNDP/UNCDF/UNV staff holding permanent (PA) and fixed-term (FTA) appointments</li><li><strong>Tier 2</strong>: UNDP/UNCDF/UNV staff holding temporary appointments (TA), personnel on regular PSA contracts, and Expert and Specialist UN Volunteers</li><li><strong>Tier 3 or no tier indicated</strong>: All other contract types from UNDP/UNCDF/UNV and other agencies, and other external candidates</li></ul>
    
  
 
    <p>
- 
+  
+
         Please make note of the Tier(s) indicated in the vacancy title, if any, and ensure that you satisfy the eligibility to apply.</p>
    
  
 
    <p>
- 
+  
+
         <strong>Background</strong></p>
    
  
 
    <p>
- 
+  
+
         The Office of Audit and Investigations (OAI) reports to the Administrator and is responsible for internal audit and investigations services to UNDP and its affiliated entities. It is comprised of the Audit Section and the Investigations Section. The Investigations Section (OAI/IS) is charged with conducting misconduct investigations and with compliance review of UNDP’s social and environmental policies and procedures and has sole responsibility for the conduct of all investigations within UNDP.</p>
    
  
 
    <p>
- 
+  
+
         In its performance of misconduct investigations, OAI/IS addresses allegations of misconduct, such as fraud, theft and embezzlement, corruption, abuse of privileges and immunities, sexual exploitation and sexual abuse, workplace harassment and abuse of authority, retaliation, or other acts or omissions in conflict with the general obligations and policies that govern the conduct of UNDP staff and other personnel. OAI also investigates allegations of fraud and other financial irregularities committed by contractors, implementing partners and other third parties, deemed to be detrimental to UNDP. OAI’s capacity includes specialized SEAH, IT forensics, Artificial Intelligence (AI), data analytics, and proactive investigations units and resources.</p>
    
  
 
    <p>
- 
+  
+
         As the provider of a professional, secure and reliable mechanism that responds to and addresses reports of possible misconduct or fraud, OAI is the sole and centralized custodian of a unique dataset of information regarding possible irregularities across UNDP’s operations. As such, OAI has a role to play in providing real-time and data-supported advice to management on wrongdoing risks, controls, lessons and mitigation strategies, and to use this information to develop intelligence-led detection, diversion and proactive investigation strategies that prevent and deter wrongdoing without relying solely on received reports.</p>
    
  
 
    <p>
- 
+  
+
         OAI conducts misconduct investigations in accordance with the Uniform Principles and Guidelines for Investigations endorsed by the 10th Conference of International Investigators, with the UNDP Legal Framework for Addressing Non-Compliance with the United Nations Standards of Conduct, and with the OAI Investigation Guidelines.</p>
    
  
 
    <p>
- 
+  
+
         OAI’s Investigations Section has established Units, under the supervision of Investigation Chiefs, that are comprised of (a) functionally specialized teams and (b) regionally focused misconduct investigation teams. This structure facilitates the accessibility of specialized functions to the entirety of the Investigations Section under the guidance and leadership of a manager and ensures close and rigorous oversight of investigation matters, also under the appropriate level of leadership.</p>
    
  
 
    <p>
- 
+  
+
         <strong>Position Purpose</strong></p>
    
  
 
    <p>
- 
+  
+
         The Investigations Team Lead (HQ/LAC) functionally reports to the Chief, Investigations, Unit 1, under the overall supervision of the Deputy Director (Investigations). Under the supervision of the Chief, Investigations, Unit 1, the primary role of the Team Lead (HQ/LAC) is to oversee, supervise and conduct investigations into alleged misconduct that falls within OAI’s mandate, as outlined in ‘Organizational Context’ above, and that relates to UNDP Headquarters and the Latin America and Caribbean region.</p>
    
  
 
    <p>
- 
+  
+
         The Investigations Team Lead (HQ/LAC) will supervise the work of the team, including but not limited to Investigators at the P3 level and all other personnel assigned to the investigation team covering UNDP Headquarters and the Latin America and Caribbean, and will complete their annual performance appraisals.</p>
    
  
 
    <p>
- 
+  
+
         UNDP adopts a portfolio approach to accommodate changing business needs and leverage linkages across interventions to achieve its strategic goals. Therefore, UNDP personnel are expected to work across units, functions, teams, and projects in multidisciplinary teams in order to enhance and enable horizontal collaboration.</p>
    
  
 
    <p>
- 
+  
+
         <strong>Duties and Responsibilities</strong></p>
    
  
 
    <p>
- 
+  
+
         <strong>Lead investigations management and lead and manage Headquarters / Latin America and Caribbean (HQ/LAC) team</strong></p><ul><li>Under the overall supervision of the Chief, Investigations, provides day‑to‑day operational leadership of the HQ/LAC Investigations Team, ensuring the effective delivery of investigative activities in line with OAI priorities, policies, and performance expectations.</li><li>Manages the assigned investigative portfolio, including allocation of cases, prioritization of workstreams, workload balancing, and monitoring of progress to ensure investigations are completed timely, efficiently, and to a high professional standard, escalating risks and capacity issues to the Chief as appropriate.</li><li>Overseas and directs investigations, ensuring that appropriate investigative strategies are developed, all relevant lines of inquiry are pursued, and investigative resources are deployed proportionately and effectively.</li><li>Reviews and edits of investigation reports prepared by team investigators and other relevant documents to ensure they are of a high standard, providing an objective and factual summary of the investigation, with soundly based conclusions and recommendations.</li><li>Leads and personally conduct investigations only in complex, high‑risk, or sensitive matters, while otherwise providing technical direction, oversight, and quality assurance to investigations conducted by team members.</li><li>Provides first line managerial and functional supervision to investigators and other personnel assigned to the team, including setting expectations, clarifying priorities, and ensuring alignment with OAI standards and values.</li><li>Conducts regular and structured case and performance reviews with team members to assess investigative progress, identify quality or procedural gaps, and provide corrective direction where necessary.</li><li>Holds direct accountability for the quality, timeliness, and defensibility of investigative outputs produced by the team prior to submission to the Chief, including investigation reports, findings, and recommendations.</li><li>Identifies and addresses underperformance, skills gaps, or conduct issues at first instance through coaching, feedback, and performance management measures, escalating matters to the Chief in accordance with UNDP procedures where required.</li><li>Ensures that investigations conducted by the team comply with international investigative standards, UNDP legal and policy frameworks, and OAI Investigation Guidelines and Standard Operating Procedures.</li><li>Ensures due process, confidentiality, information security, and victim‑centered approaches are consistently applied, particularly in sensitive cases involving sexual misconduct, retaliation, or abuse of authority.</li><li>Oversee the collection, handling, analysis, and safeguarding of evidence, ensuring proper chain of custody and appropriate handling of physical, digital, and testimonial evidence.</li><li>Identifies investigative, procedural, or institutional risks emerging from casework and escalates systemic or high‑risk issues to the Chief to inform broader oversight, mitigation, or proactive responses.</li><li>Oversees and promotes the effective use of investigative technologies, including case management systems, analytical software, open‑source intelligence tools, and artificial intelligence–enabled solutions, to enhance investigative efficiency, accuracy, and timeliness.</li><li>Guides team members in the responsible and ethical use of AI and advanced analytics, ensuring compliance with confidentiality, due process, and information security requirements.</li><li>Identifies opportunities to streamline investigative processes, improve workflows, and contribute to continuous improvement initiatives under the strategic direction of the Chief.</li><li>Acts as a key operational interlocutor with internal stakeholders (including legal services, HR, ethics, procurement, and management) on investigative matters, escalating sensitive or high‑impact issues to the Chief as appropriate.</li><li>Ensures that case records, databases, and documentation for matters under the team’s responsibility are accurate, complete, and up to date, supporting institutional accountability and auditability.</li><li>Formulates and recommends case closure decisions, including assessments of evidentiary sufficiency and proportionality, for review and approval by the Chief.</li><li>Supports the Chief through the provision of operational briefings, trend information, and case‑related inputs relevant to regional or functional oversight.</li><li>Undertakes and, where appropriate, leads investigative missions to UNDP offices worldwide, including in hardship or hazardous duty locations, providing on‑site leadership and oversight for investigative activities.</li><li>Sets the appropriate professional tone and workplace culture within the team, leading by example through ethical conduct, collaboration, and respect; fosters a culture of constructive, collective problem‑solving, open dialogue, and shared accountability; and actively models and reinforces behaviors that support teamwork, learning, and continuous improvement.</li><li>Performs other duties within the functional profile as required for the effective functioning of the Investigations Section and the Office.</li><li>Plans the work of the HQ/LAC Team and distributes workload among the HQ/LAC Team appropriately.</li><li>Provides senior expertise and advice to the HQ/LAC Team so that the work of the HQ/LAC Team is performed in the most professional, efficient and timely manner.</li><li>Appraises the performance of the HQ/LAC personnel.</li><li>Recruit personnel for the HQ/LAC Team as necessary.</li><li>Leads by example, setting the tone for the HQ/LAC Team. Consciously builds a supportive, collegiate and positive team culture within the HQ/LAC Team.</li><li>Works collectively and professionally with peers to provide thought leadership and constructive challenge to ensure that the HQ/LAC Team is a dynamic, reflective unit that keeps pace with best practice.</li><li>Actively engages and promotes discussions aimed at continued improvement of the HQ/LAC Team and the investigation function, ensuring highest impact and efficient, effective practices.</li><li>Supervises staff and non-staff personnel in the HQ/LAC Team and provides clear, fair, support, and balanced performance feedback and reviews.</li><li>Engages productively, professionally, collaboratively and efficiently with peers, team members, and parties internal and external to the Section to problem-solve as necessary, seek solutions and achieve positive and impactful collective outputs.</li><li>Actively employs management techniques that ensure balance in prioritizing quality output of a high standard and a healthy workplace culture.</li><li>Ensure field work and mission travel, which are mandatory for the position.</li></ul>
    
  
 
    <p>
- 
+  
+
         <strong>Ensure efficient Client Services</strong>.</p><ul><li>Maintains a role as a visible, active and accessible team leader, including by liaising with senior officials within the region and bureau; sharing insights from the caseload with senior managers; receiving and considering feedback on OAI investigation services; participating in regional or country level conferences or meetings to raise awareness of fraud and other control risk mitigation services.</li><li>Liaises with the Office of Legal Services (OLS), the Ethics Office, Regional Offices and counterparts, and other relevant offices in UNDP.</li><li>Liaises with the investigation sections of other international organizations and with national anti-corruption and law enforcement agencies as appropriate.</li><li>Where appropriate, provides advisory support to policy managers to help strengthen risk controls within UNDP, drawing on insights gleaned from the caseload.</li></ul>
    
  
 
    <p>
- 
+  
+
         <strong>Facilitate knowledge management and other tasks</strong></p><ul><li>Contributes to the ongoing development of professional practices within OAI.</li><li>Assesses the potential for misconduct in UNDP offices and operations.</li><li>Contributes to risk assessment planning.</li><li>Participates in the implementation of his/her personal learning and training development plan.</li><li>Keeps abreast of the jurisprudence of the United Nations Dispute Tribunal (UNDT) and United Nations Appeals Tribunal (UNAT).</li><li>Performs other assignments or tasks as determined by the Chief, Investigations, Unit 1 and/or Deputy Director (Investigations).</li><li>Contributes to knowledge‑sharing, lessons‑learned, and capacity‑building initiatives within OAI, supporting the strengthening of investigative practice across the Section.</li></ul>
    
  
 
    <p>
- 
+  
+
         The incumbent performs other duties within their functional profile as deemed necessary for the efficient functioning of the Office and the Organization.</p>
    
  
 
    <p>
- 
+  
+
         <strong>Supervisory/Managerial Responsibilities:</strong> Supervise and manage Investigation Specialists and support staff, Non-personnel, Interns.</p>
    
  
 
    <p>
- 
+  
+
         <strong>Competencies</strong></p><ul><li><strong>Core Competencies: </strong></li></ul>
    
  
 
    <p>
- 
+  
+
         <strong>Achieve Results: </strong>LEVEL 3: Set and align challenging, achievable objectives for multiple projects, have lasting impact.</p>
    
  
 
    <p>
- 
+  
+
         <strong>Think Innovatively: </strong>LEVEL 3: Proactively mitigate potential risks, develop new ideas to solve complex problems.</p>
    
  
 
    <p>
- 
+  
+
         <strong>Learn Continuously: </strong>LEVEL 3: Create and act on opportunities to expand horizons, diversify experiences.</p>
    
  
 
    <p>
- 
+  
+
         <strong>Adapt with Agility: </strong>LEVEL 3: Proactively initiate and champion change, manage multiple competing demands.</p>
    
  
 
    <p>
- 
+  
+
         <strong>Act with Determination: </strong>LEVEL 3: Think beyond immediate task/barriers and take action to achieve greater results.</p>
    
  
 
    <p>
- 
-            <strong>Engage and Partner: </strong>LEVEL 3: Political savvy, navigate complex landscape, champion inter-agency collaboration.  fiNSL9c Xcbwl</p>
-         
+  
+
+        <strong>Engage and Partner: </strong>LEVEL 3: Political savvy, navigate complex landscape, champion inter-agency collaboration. 
+      
  
 
    <p>
- 
+  
+
         <strong>Enable Diversity and Inclusion: </strong>LEVEL 3: Appreciate benefits of diverse workforce and champion inclusivity.</p><ul><li><strong>People Management:</strong></li></ul>
    
  
 
    <p>
- 
+  
+
         <strong>UNDP People Management Competencies can be found in the dedicated </strong> <strong>site</strong> <strong>. </strong></p><ul><li><strong>Cross Functional and Technical Competencies:</strong></li></ul>
    
  
 
    <p>
- 
+  
+
         <strong>Audit & Investigation - Investigation - Investigation management and investigative techniques:</strong> The ability to manage an investigation, choose avenues of inquiry and apply different techniques during an investigation, including investigative interviewing; seizure of documentary and electronic evidence; identification, collection, review and analysis of all types of evidence, including project, procurement and commercial business documentation and electronic communications; forensic analysis; verification site visits; open-source research.</p>
    
  
 
    <p>
- 
+  
+
         <strong>Audit & Investigation - Investigation -</strong> <strong>Collection and analysis of evidence:</strong> Ability to extract and analyse all relevant types of evidence and be able to draw reasonable inferences and conclusions.</p>
    
  
 
    <p>
- 
+  
+
         <strong>Audit & Investigation - Investigation - Investigative Interviewing: </strong>Ability to conduct investigative interviews with all types of investigation participants, including witnesses and subjects, using an approach tailored to the interviewee and the investigation.</p>
    
  
 
    <p>
- 
+  
+
         <strong>Audit & Investigation - Investigation - Technology tools and applications for investigations:</strong> Ability to understand key application and system software, IT infrastructure, IT Control frameworks and the use of forensic investigation software.</p>
    
  
 
    <p>
- 
+  
+
         <strong>Business Management - Communication: </strong></p><ul><li>Ability to communicate in a clear, concise and unambiguous manner both through written and verbal communication; to tailor messages and choose communication methods depending on the audience.</li><li>Ability to manage communications internally and externally, through media, social media and other appropriate channels.</li><li>Ability to manage communications internally and externally, through media, social media and other appropriate channels.</li></ul>
    
  
 
    <p>
- 
+  
+
         <strong>Business Direction & Strategy - System Thinking:</strong> Ability to use objective problem analysis and judgement to understand how interrelated elements coexist within an overall process or system, and to consider how altering one element can impact on other parts of the system.</p>
    
  
 
    <p>
- 
+  
+
         <strong>Business Management - Portfolio Management:</strong></p><ul><li>Ability to select, prioritise and control the organization's programmes and projects in line with its strategic objectives and capacity.</li><li>Ability to balance the implementation of change initiatives with regular activities for optimal return on investment.</li><li>Knowledge and understanding of key principles of project, programme, and portfolio management.</li></ul>
    
  
 
    <p>
- 
+  
+
         <strong>Required Skills and Experience</strong></p>
    
  
 
    <p>
- 
+  
+
         <strong>Education:</strong></p><ul><li>Advanced university degree (master’s degree or equivalent) in Criminal Justice or Investigations-related Specialization; Law; Management; Finance; or related field is required; or</li><li>A first-level university degree (bachelor’s degree) in the areas stated above, with an additional 2 years’ experience, which will be given due considerationin lieu of the advanced university degree.</li><li>Formal professional training in a comprehensive range of investigation-related areas, e.g., from a national law enforcement or investigations academy, is an advantage.</li></ul>
    
  
 
    <p>
- 
+  
+
         <strong>Experience:</strong></p><ul><li>A minimum of seven (7) years (with a master’s degree) or nine (9) years (with a bachelor’s degree) of progressively responsible professional experience in complex criminal and/or administrative investigations, including experience leading or overseeing investigative workstreams, acting as investigator or in an equivalent role is required.</li><li>Demonstrated experience in conducting and overseeing investigations into administrative misconduct and/or criminal offences, including fraud and other financial crimes, sexual misconduct, and workplace standards of conduct violations, from intake through final reporting, is required.</li><li>Demonstrated experience in providing technical and functional leadership in an investigative context, including guiding less experienced investigators, coordinating multidisciplinary teams, prioritizing workloads, and ensuring quality and timeliness of investigative outputs, is required.</li><li>Demonstrated experience in addressing underperformance or misconduct within investigative teams, including providing corrective feedback, documenting performance concerns, supporting improvement, and escalating issues when required, is desirable.</li><li>Specialized training in core investigative techniques, including interviewing, evidence handling, evidence analysis, and investigative report writing, is required.</li><li>Specialized training and/or demonstrated experience in advanced investigative skills, such as interviewing vulnerable victims and witnesses, handling sensitive cases, digital forensics, and complex evidence analysis, is desirable.</li><li>Demonstrated experience in leveraging investigative technologies, data analytics, and artificial intelligence tools to improve efficiency, accuracy, or timeliness of investigative processes (e.g., evidence review, pattern identification, case management, or reporting), while ensuring due process, confidentiality, and ethical use, is desirable.</li><li>Demonstrated ability to communicate clearly, persuasively, and with sound judgment in complex and sensitive situations, including conducting difficult interviews, managing challenging stakeholders, and briefing senior management on investigative findings, risks, and recommendations, is required.</li><li>Experience in conducting risk assessments related to investigations, integrity risks, or misconduct trends is an advantage.</li><li>At least one (1) year of experience in an international or multicultural investigative environment is desirable.</li></ul>
    
  
 
    <p>
- 
+  
+
         <strong>Language:</strong></p><ul><li>Fluency in English is required.</li><li>Fluency in Spanish is desirable.</li><li>Working knowledge of French and Portuguese is an asset.</li><li>Knowledge of another United Nations official languages is an asset.</li></ul>
    
  
 
    <p>
- 
+  
+
         <strong>Equal opportunity</strong></p>
    
  
 
    <p>
- 
+  
+
         As an equal opportunity employer, UNDP values diversity as an expression of the multiplicity of nations and cultures where we operate and, as such, we encourage qualified applicants from all backgrounds to apply for roles in the organization. Our employment decisions are based on merit and suitability for the role, without discrimination.</p>
    
  
 
    <p>
- 
+  
+
         UNDP is also committed to creating an inclusive workplace where all personnel are empowered to contribute to our mission, are valued, can thrive, and benefit from career opportunities that are open to all.</p>
    
  
 
    <p>
- 
+  
+
         <strong>Sexual harassment, exploitation, and abuse of authority</strong></p>
    
  
 
    <p>
- 
+  
+
         UNDP does not tolerate harassment, sexual harassment, exploitation, discrimination and abuse of authority. All selected candidates, therefore, undergo relevant checks and are expected to adhere to the respective standards and principles.</p>
    
  
 
    <p>
- 
+  
+
         <strong>Probation</strong></p>
    
  
 
    <p>
- 
+  
+
         For all new UNDP fixed term appointments (FTA), including for staff members being transferred or seconded to UNDP under the Inter-Organization Agreement concerning Transfer, Secondment or Loan of Staff, on an appointment of more than one year, continuation of the appointment beyond the initial 12 months is contingent upon the successful completion of a probationary period.</p>
    
  
 
    <p>
- 
+  
+
         <strong>Right to select multiple candidates</strong></p>
    
  
 
    <p>
- 
+  
+
         UNDP reserves the right to select one or more candidates from this vacancy announcement. We may also retain applications and consider candidates applying to this post for other similar positions with UNDP at the same grade level and with similar job description, experience and educational requirements.</p>
    
  
 
    <p>
- 
+  
+
         <strong>Use of AI by candidates</strong></p>
    
  
 
    <p>
- 
+  
+
         Applicants are invited to  read UNDP’s guidance for candidates on using AI responsibly in UNDP recruitment and selection </p>
    
  
 
    <p>
- 
+  
+
         <strong>Scam alert</strong></p>
    
  
 
    <p>
- 
+  
+
         UNDP does not charge a fee at any stage of its recruitment process. For further information, please see www.undp.org/scam-alert.</p>
    
  
 
    <p>
- 
+  
+
         <strong>Data Privacy</strong></p>
    
  
 
    <p>
- 
+  
+
         Please click  here  to view UNDP Data Privacy Statement</p>
    
  
 
    <p>
- 
+  
+
         <strong>#LI-DNI</strong></p>
    
  
@@ -1545,9 +1625,9 @@ The recruiting organization, UNDP - United Nations Development Programme, has no
 Because such positions may remain open, they are listed here until removed from the recruiting organization's website.
 Click the button below to verify its current status.
 </div>
-<input type="hidden" name="item"  value="833426328791387424289388487123928323092990">
-<input type="hidden" name="iitem" value="833522932091387424289485187027325022996290">
-<input type="hidden" name="oitem" value="930223028888184221086088487027324926392990">
+<input type="hidden" name="item"  value="833522932091484124289485090424024926392990">
+<input type="hidden" name="iitem" value="833522932091387424386088390327325022996290">
+<input type="hidden" name="oitem" value="833523028888184221086088487124025023092990">
 
 <button type="submit" id="more-info-button" class="btn btn-raised btn-primary" data-toggle="" data-target="">More Information and Application Details</button>
 </form>
@@ -1767,8 +1847,8 @@ function restorePreview(outer) {
 -->
 <script src="https://www.youtube.com/iframe_api"></script>
 
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","spa":2}' crossorigin="anonymous"></script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4ba12796fedaef8',t:'MTc5MjE4NTI1NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4bec2ffef6652e4',t:'MTc5MjIzNDQyOQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","spa":2}' crossorigin="anonymous"></script>
+</body>
 </html>
 
 

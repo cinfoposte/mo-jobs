@@ -1,4 +1,15 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"Data Analyst, Washington, DC",https://unjobs.org/vacancies/1792213283862,,bank_no_match
+worldbank,"E T Consultant, Washington, DC",https://unjobs.org/vacancies/1792213282945,,bank_exclude
+worldbank,"E T Consultant, Chennai, India",https://unjobs.org/vacancies/1792213281229,,bank_exclude
+worldbank,"Associate Senior Solutions Architect, Chennai, India",https://unjobs.org/vacancies/1792213282482,,bank_no_match
+worldbank,"E T Consultant, Washington, DC",https://unjobs.org/vacancies/1792213280127,,bank_exclude
+worldbank,"E T Temporary, Washington, DC",https://unjobs.org/vacancies/1792213281670,,bank_no_match
+worldbank,"E T Temporary, Chennai, India",https://unjobs.org/vacancies/1792213279304,,bank_no_match
+worldbank,"Associate Senior AI Solutions Officer, Washington, DC",https://unjobs.org/vacancies/1792213278387,,bank_no_match
+worldbank,"Associate Product Owner, Washington, DC",https://unjobs.org/vacancies/1792213277465,,bank_no_match
+worldbank,"Associate Senior Solutions Architect, Washington, DC",https://unjobs.org/vacancies/1792213275605,,bank_no_match
+worldbank,"E T Consultant - Urban Analyst, Tokyo",https://unjobs.org/vacancies/1792213274827,,bank_exclude
 worldbank,"Associate Senior Product Owner, Cambodia",https://unjobs.org/vacancies/1792126887775,,bank_no_match
 worldbank,"Team Assistant, Addis Ababa",https://unjobs.org/vacancies/1792126887192,,bank_no_match
 worldbank,"E T Consutant, Washington, DC",https://unjobs.org/vacancies/1792126886565,,bank_no_match
@@ -38,14 +49,3 @@ worldbank,"Senior Energy Specialist, Washington, United States",https://unjobs.o
 worldbank,"Senior Partnership Specialist, Washington, United States",https://unjobs.org/vacancies/1791394616734,,bank_no_match
 worldbank,"Extended Term Consultant, Sofia, Bulgaria",https://unjobs.org/vacancies/1791394644639,,bank_exclude
 worldbank,"Senior Urban Development Specialist, New Delhi, India",https://unjobs.org/vacancies/1791394658435,,bank_no_match
-worldbank,"HR Analyst, Leadership and Staff Development, Washington, United States",https://unjobs.org/vacancies/1791297353308,,bank_no_match
-worldbank,"Senior Energy Specialist, Singapore, Singapore",https://unjobs.org/vacancies/1791297367884,,bank_no_match
-worldbank,"Senior Energy Specialist, Singapore, Singapore",https://unjobs.org/vacancies/1791297381807,,bank_no_match
-worldbank,"Extended Term Consultant - Readiness Support, Washington, United States",https://unjobs.org/vacancies/1791297409467,,bank_exclude
-worldbank,"Senior Digital Specialist, Seoul, Republic of Korea",https://unjobs.org/vacancies/1791297423419,,bank_no_match
-worldbank,"Operational Due Diligence Officer, Washington, United States",https://unjobs.org/vacancies/1791297437486,,bank_no_match
-worldbank,"Financial Officer, Washington, United States",https://unjobs.org/vacancies/1791297451000,,bank_no_match
-worldbank,"Extended Term Consultant, Maputo, Mozambique",https://unjobs.org/vacancies/1791297464740,,bank_exclude
-worldbank,"Extended Term Consultant, Seoul, Republic of Korea",https://unjobs.org/vacancies/1791297492887,,bank_exclude
-worldbank,"Extended Term Consultant, Quito, Ecuador",https://unjobs.org/vacancies/1791210906986,,bank_exclude
-worldbank,"Senior Digital Specialist - Trustworthy AI (with Cybersecurity), Washington, United States",https://unjobs.org/vacancies/1791038154656,,bank_no_match

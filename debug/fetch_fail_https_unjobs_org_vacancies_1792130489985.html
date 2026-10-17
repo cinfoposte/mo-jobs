@@ -30,7 +30,30 @@
   <!DOCTYPE html>
    <html lang='en'>
     <head>
+<script>
+const originalFetch = window.fetch;
 
+window.fetch = async function(...args) {
+    const response = await originalFetch.apply(this, args);
+
+    const url = String(args[0]?.url || args[0]);
+
+    if (url.includes('cmp.inmobi.com/geoip')) {
+        console.log('InMobi GeoIP request detected!');
+
+        response.clone().json().then(location => {
+            console.log('InMobi GeoIP response:', location);
+            console.log('Country:', location.country);
+            console.log('Region:', location.region);
+            console.log('City:', location.city);
+
+            window.visitorLocation = location;
+        }).catch(console.error);
+    }
+
+    return response;
+};
+</script>
 <meta name=viewport content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <base href="https://unjobs.org/" />
@@ -56,6 +79,7 @@
 			  crossorigin="anonymous"></script>
 		
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 <!-- <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script> -->
 <!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
 <script type="text/javascript" async=true>
@@ -1430,9 +1454,7 @@ Kinshasa</a>
    <p>
   
 
-        
-Manages overall document lifecycle including storage, archiving, and retention policies.  fiLy3xn Xcbwl</p>
-
+        Manages overall document lifecycle including storage, archiving, and retention policies. 
       
  
 
@@ -1820,9 +1842,9 @@ The recruiting organization, UNDP - United Nations Development Programme, has no
 Because such positions may remain open, they are listed here until removed from the recruiting organization's website.
 Click the button below to verify its current status.
 </div>
-<input type="hidden" name="item"  value="833522932188087519053456426929800195826455">
-<input type="hidden" name="iitem" value="833426328888184219150156330229800099126455">
-<input type="hidden" name="oitem" value="930222932188087519053456330133196799126455">
+<input type="hidden" name="item"  value="833426328791484219053553030133100099126455">
+<input type="hidden" name="iitem" value="930223028791387422353553126833100099223155">
+<input type="hidden" name="oitem" value="930222932188087422353456330133196799223155">
 
 <button type="submit" id="more-info-button" class="btn btn-raised btn-primary" data-toggle="" data-target="">More Information and Application Details</button>
 </form>
@@ -2042,8 +2064,8 @@ function restorePreview(outer) {
 -->
 <script src="https://www.youtube.com/iframe_api"></script>
 
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","spa":2}' crossorigin="anonymous"></script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4ba13de99ecaef8',t:'MTc5MjE4NTMxMw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4bec4691b4c52e4',t:'MTc5MjIzNDQ4Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"5b57fc46e5d74fffad4c49f63e3bc3f7","spa":2}' crossorigin="anonymous"></script>
+</body>
 </html>
 
 
