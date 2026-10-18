@@ -5,7 +5,14 @@
     <link>https://unjobs.org/organizations/wfp</link>
     <description>Latest job vacancies for WFP – World Food Programme sourced from UNjobs.org. JPO positions are excluded.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 17 Oct 2026 22:03:21 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2026 12:41:33 +0000</lastBuildDate>
     <atom:link href="https://cinfoposte.github.io/mo-jobs/feeds/wfp_jobs.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aviation Quality Assurance Officer P3, Rome</title>
+      <link>https://unjobs.org/vacancies/1792299714395</link>
+      <guid isPermaLink="false">7710ff573793c6d25ad6e6d6ed23cb2f</guid>
+      <pubDate>Sun, 18 Oct 2026 12:41:33 +0000</pubDate>
+      <description />
+    </item>
   </channel>
 </rss>
