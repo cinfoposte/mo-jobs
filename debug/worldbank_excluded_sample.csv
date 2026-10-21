@@ -1,4 +1,7 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"Adviser, Washington, DC",https://unjobs.org/vacancies/1792558912730,,bank_no_match
+worldbank,"Driver, Kinshasa",https://unjobs.org/vacancies/1792558912196,,bank_no_match
+worldbank,"(Senior) Social Development Specialist, Washington, DC",https://unjobs.org/vacancies/1792558910183,,bank_no_match
 worldbank,"Senior Digital Specialist - SME, Jobs, and Digital Transformation, Washington, DC",https://unjobs.org/vacancies/1792472449240,,bank_no_match
 worldbank,"Digital & AI Skills Specialist, Washington, DC",https://unjobs.org/vacancies/1792472448483,,bank_no_match
 worldbank,"E T Consultant, Washington, DC",https://unjobs.org/vacancies/1792472447404,,bank_exclude
@@ -46,6 +49,3 @@ worldbank,"Financial Management Specialist, Luanda, Angola",https://unjobs.org/v
 worldbank,"(Associate) Operations Officer - Transport Strategy & Knowledge, Washington, United States",https://unjobs.org/vacancies/1791556677596,,bank_no_match
 worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1791556718814,,bank_exclude
 worldbank,"Extended Term Consultant (Device Experience and Insights Analyst), Washington, United States",https://unjobs.org/vacancies/1791556746125,,bank_exclude
-worldbank,"E T Temporary (Junior Service Delivery Analyst), Kuwait",https://unjobs.org/vacancies/1791556759826,,bank_no_match
-worldbank,"Extended Term Consultant - Water Economist, Washington, United States",https://unjobs.org/vacancies/1791556773741,,bank_exclude
-worldbank,"Senior Energy Specialist, Washington, United States",https://unjobs.org/vacancies/1791556801129,,bank_no_match
