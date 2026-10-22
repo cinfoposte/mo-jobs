@@ -1,4 +1,7 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"Platform Engineer, Sofia",https://unjobs.org/vacancies/1792645281576,,bank_no_match
+worldbank,"Economist, Washington, DC",https://unjobs.org/vacancies/1792645280069,,bank_no_match
+worldbank,"Associate IT Program Officer, Washington, DC",https://unjobs.org/vacancies/1792645282493,,bank_no_match
 worldbank,"Adviser, Washington, DC",https://unjobs.org/vacancies/1792558912730,,bank_no_match
 worldbank,"Driver, Kinshasa",https://unjobs.org/vacancies/1792558912196,,bank_no_match
 worldbank,"(Senior) Social Development Specialist, Washington, DC",https://unjobs.org/vacancies/1792558910183,,bank_no_match
@@ -42,10 +45,7 @@ worldbank,"Special Assistant, Washington, United States",https://unjobs.org/vaca
 worldbank,"Junior Information Management Analyst, Jakarta, Indonesia",https://unjobs.org/vacancies/1791642917485,,bank_no_match
 worldbank,"ET Consultant - Data Scientist/Applied Economist, Accra, Ghana",https://unjobs.org/vacancies/1791642945089,,bank_exclude
 worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1791556580753,,bank_exclude
-worldbank,"Extended Term Consultant - Security Specialist, Bogota, Colombia",https://unjobs.org/vacancies/1791556594772,,bank_exclude
-worldbank,"Extended Term Consultant (Information Architect), Washington, United States",https://unjobs.org/vacancies/1791556608718,,bank_exclude
 worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1791556636079,,bank_exclude
 worldbank,"Financial Management Specialist, Luanda, Angola",https://unjobs.org/vacancies/1791556649959,,bank_no_match
 worldbank,"(Associate) Operations Officer - Transport Strategy & Knowledge, Washington, United States",https://unjobs.org/vacancies/1791556677596,,bank_no_match
 worldbank,"Extended Term Consultant, Washington, United States",https://unjobs.org/vacancies/1791556718814,,bank_exclude
-worldbank,"Extended Term Consultant (Device Experience and Insights Analyst), Washington, United States",https://unjobs.org/vacancies/1791556746125,,bank_exclude
