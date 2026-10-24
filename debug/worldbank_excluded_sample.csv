@@ -1,9 +1,14 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"E T Consultant, Washington, DC",https://unjobs.org/vacancies/1792818076290,,bank_exclude
+worldbank,"Urban Transport Specialist, New Delhi",https://unjobs.org/vacancies/1792818075886,,bank_no_match
+worldbank,"Transport Specialist, Thimphu",https://unjobs.org/vacancies/1792818075096,,bank_no_match
+worldbank,"Private Sector Specialist, Manila",https://unjobs.org/vacancies/1792818074365,,bank_no_match
+worldbank,"E T Temporary, Washington, DC",https://unjobs.org/vacancies/1792818071404,,bank_no_match
+worldbank,"Financial Officer, Washington, DC",https://unjobs.org/vacancies/1792818073574,,bank_no_match
 worldbank,"Associate Product Owner, United States",https://unjobs.org/vacancies/1792731670925,,bank_no_match
 worldbank,"Driver, Nairobi",https://unjobs.org/vacancies/1792731670125,,bank_no_match
 worldbank,"Extended Term Consultant, Washington, DC",https://unjobs.org/vacancies/1792731669312,,bank_exclude
 worldbank,"Associate Senior IT Program Officer, Washington, DC",https://unjobs.org/vacancies/1792731668479,,bank_no_match
-worldbank,"Extended Term Consultant - Energy Modeler, Washington, DC",https://unjobs.org/vacancies/1792731667647,,bank_exclude
 worldbank,"Team Assistant, Nuku'Alofa",https://unjobs.org/vacancies/1792731666864,,bank_no_match
 worldbank,"E T Temporary - Program Assistant, Washington, DC",https://unjobs.org/vacancies/1792731666036,,bank_no_match
 worldbank,"E T Consultant, Chennai, India",https://unjobs.org/vacancies/1792731665291,,bank_exclude
@@ -44,8 +49,3 @@ worldbank,"Product Owner, Washington, DC",https://unjobs.org/vacancies/179204046
 worldbank,"Adviser (Lead Environmental Specialist), Washington, DC",https://unjobs.org/vacancies/1792040465532,,bank_no_match
 worldbank,"Associate Senior Solutions Architect, Chennai, India",https://unjobs.org/vacancies/1792040461709,,bank_no_match
 worldbank,"E T Consultant - Climate and Sustainable Finance, Washington, DC",https://unjobs.org/vacancies/1792040459295,,bank_exclude
-worldbank,"Senior AI Architect, Singapore",https://unjobs.org/vacancies/1791954071439,,bank_no_match
-worldbank,"Senior Administrative Assistant, Manila",https://unjobs.org/vacancies/1791954070660,,bank_no_match
-worldbank,"E T Consultant (IT Workforce Development & Engagement), Washington, DC",https://unjobs.org/vacancies/1791954069385,,bank_exclude
-worldbank,"E T Consultant, Chennai, India",https://unjobs.org/vacancies/1791954068611,,bank_exclude
-worldbank,"Senior Resource Mobilization Specialist, Washington, DC",https://unjobs.org/vacancies/1791867669770,,bank_no_match
