@@ -1,4 +1,12 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"E T Consultant, Washington, DC",https://unjobs.org/vacancies/1793250080929,,bank_exclude
+worldbank,"E T Temporary, Honiara",https://unjobs.org/vacancies/1793250080050,,bank_no_match
+worldbank,"Senior Education Finance Specialist, Washington, DC",https://unjobs.org/vacancies/1793250078342,,bank_no_match
+worldbank,"Associate Senior Solutions Architect, Washington, DC",https://unjobs.org/vacancies/1793250079183,,bank_no_match
+worldbank,"E T Consultant (Associate Software Engineer), Washington, DC",https://unjobs.org/vacancies/1793250077456,,bank_exclude
+worldbank,"QA Analyst, Sofia",https://unjobs.org/vacancies/1793250075817,,bank_no_match
+worldbank,"E T Consultant – Research Analyst, Washington, DC",https://unjobs.org/vacancies/1793250076639,,bank_exclude
+worldbank,"E T Consultant (IT Workforce Development, Job Architecture, Skills Assessment), Washington, DC",https://unjobs.org/vacancies/1793250074735,,bank_exclude
 worldbank,"E T Consultant, Washington, DC",https://unjobs.org/vacancies/1793163719309,,bank_exclude
 worldbank,"E T Consultant- Economist, Washington, DC",https://unjobs.org/vacancies/1793163718531,,bank_exclude
 worldbank,"Extended Term Consultant - Senior Trade Facilitation and SPS Expert, Washington, DC",https://unjobs.org/vacancies/1793163717460,,bank_exclude
@@ -40,12 +48,4 @@ worldbank,"Senior Digital Specialist - SME, Jobs, and Digital Transformation, Wa
 worldbank,"Digital & AI Skills Specialist, Washington, DC",https://unjobs.org/vacancies/1792472448483,,bank_no_match
 worldbank,"E T Consultant, Washington, DC",https://unjobs.org/vacancies/1792472447404,,bank_exclude
 worldbank,"Data Analyst, Washington, DC",https://unjobs.org/vacancies/1792213283862,,bank_no_match
-worldbank,"E T Consultant, Washington, DC",https://unjobs.org/vacancies/1792213282945,,bank_exclude
 worldbank,"E T Consultant, Chennai, India",https://unjobs.org/vacancies/1792213281229,,bank_exclude
-worldbank,"Associate Senior Solutions Architect, Chennai, India",https://unjobs.org/vacancies/1792213282482,,bank_no_match
-worldbank,"E T Consultant, Washington, DC",https://unjobs.org/vacancies/1792213280127,,bank_exclude
-worldbank,"E T Temporary, Washington, DC",https://unjobs.org/vacancies/1792213281670,,bank_no_match
-worldbank,"E T Temporary, Chennai, India",https://unjobs.org/vacancies/1792213279304,,bank_no_match
-worldbank,"Associate Senior AI Solutions Officer, Washington, DC",https://unjobs.org/vacancies/1792213278387,,bank_no_match
-worldbank,"Associate Product Owner, Washington, DC",https://unjobs.org/vacancies/1792213277465,,bank_no_match
-worldbank,"Associate Senior Solutions Architect, Washington, DC",https://unjobs.org/vacancies/1792213275605,,bank_no_match
