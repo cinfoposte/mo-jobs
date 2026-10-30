@@ -1,4 +1,9 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"E T Consultant, Guatemala City",https://unjobs.org/vacancies/1793336478157,,bank_exclude
+worldbank,"E T Consultant, Maseru",https://unjobs.org/vacancies/1793336475506,,bank_exclude
+worldbank,"Driver, Dakar",https://unjobs.org/vacancies/1793336477571,,bank_no_match
+worldbank,"Principal Environmental Specialist, Washington, DC",https://unjobs.org/vacancies/1793336476689,,bank_no_match
+worldbank,"E T Consultant - Corporate Governance Advisory, Dhaka",https://unjobs.org/vacancies/1793336474861,,bank_exclude
 worldbank,"E T Consultant, Washington, DC",https://unjobs.org/vacancies/1793250080929,,bank_exclude
 worldbank,"E T Temporary, Honiara",https://unjobs.org/vacancies/1793250080050,,bank_no_match
 worldbank,"Senior Education Finance Specialist, Washington, DC",https://unjobs.org/vacancies/1793250078342,,bank_no_match
@@ -35,9 +40,7 @@ worldbank,"Driver, Nairobi",https://unjobs.org/vacancies/1792731670125,,bank_no_
 worldbank,"Extended Term Consultant, Washington, DC",https://unjobs.org/vacancies/1792731669312,,bank_exclude
 worldbank,"Associate Senior IT Program Officer, Washington, DC",https://unjobs.org/vacancies/1792731668479,,bank_no_match
 worldbank,"Team Assistant, Nuku'Alofa",https://unjobs.org/vacancies/1792731666864,,bank_no_match
-worldbank,"E T Temporary - Program Assistant, Washington, DC",https://unjobs.org/vacancies/1792731666036,,bank_no_match
 worldbank,"E T Consultant, Chennai, India",https://unjobs.org/vacancies/1792731665291,,bank_exclude
-worldbank,"E T Consultant, Washington, DC",https://unjobs.org/vacancies/1792731664283,,bank_exclude
 worldbank,"Platform Engineer, Sofia",https://unjobs.org/vacancies/1792645281576,,bank_no_match
 worldbank,"Economist, Washington, DC",https://unjobs.org/vacancies/1792645280069,,bank_no_match
 worldbank,"Associate IT Program Officer, Washington, DC",https://unjobs.org/vacancies/1792645282493,,bank_no_match
@@ -46,6 +49,3 @@ worldbank,"Driver, Kinshasa",https://unjobs.org/vacancies/1792558912196,,bank_no
 worldbank,"(Senior) Social Development Specialist, Washington, DC",https://unjobs.org/vacancies/1792558910183,,bank_no_match
 worldbank,"Senior Digital Specialist - SME, Jobs, and Digital Transformation, Washington, DC",https://unjobs.org/vacancies/1792472449240,,bank_no_match
 worldbank,"Digital & AI Skills Specialist, Washington, DC",https://unjobs.org/vacancies/1792472448483,,bank_no_match
-worldbank,"E T Consultant, Washington, DC",https://unjobs.org/vacancies/1792472447404,,bank_exclude
-worldbank,"Data Analyst, Washington, DC",https://unjobs.org/vacancies/1792213283862,,bank_no_match
-worldbank,"E T Consultant, Chennai, India",https://unjobs.org/vacancies/1792213281229,,bank_exclude
