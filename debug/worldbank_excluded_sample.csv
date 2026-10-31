@@ -1,4 +1,7 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"E T Temporary - Senior Executive Assistant, Washington, DC",https://unjobs.org/vacancies/1793422870569,,bank_no_match
+worldbank,"E T Consultant, Washington, DC",https://unjobs.org/vacancies/1793422869736,,bank_exclude
+worldbank,"E T Consultant, Washington, DC",https://unjobs.org/vacancies/1793422868644,,bank_exclude
 worldbank,"E T Consultant, Guatemala City",https://unjobs.org/vacancies/1793336478157,,bank_exclude
 worldbank,"E T Consultant, Maseru",https://unjobs.org/vacancies/1793336475506,,bank_exclude
 worldbank,"Driver, Dakar",https://unjobs.org/vacancies/1793336477571,,bank_no_match
@@ -29,7 +32,6 @@ worldbank,"Junior Service Delivery Analyst, Dushanbe",https://unjobs.org/vacanci
 worldbank,"E T Temporary, Washington, DC",https://unjobs.org/vacancies/1793077260846,,bank_no_match
 worldbank,"E T Consultant - Business Integrity, Washington, DC",https://unjobs.org/vacancies/1793077259591,,bank_exclude
 worldbank,"Senior Communications and External Affairs Officer, Dubai, United Arab Emirates",https://unjobs.org/vacancies/1793077260328,,bank_no_match
-worldbank,"E T Consultant, Washington, DC",https://unjobs.org/vacancies/1792818076290,,bank_exclude
 worldbank,"Urban Transport Specialist, New Delhi",https://unjobs.org/vacancies/1792818075886,,bank_no_match
 worldbank,"Transport Specialist, Thimphu",https://unjobs.org/vacancies/1792818075096,,bank_no_match
 worldbank,"Private Sector Specialist, Manila",https://unjobs.org/vacancies/1792818074365,,bank_no_match
@@ -47,5 +49,3 @@ worldbank,"Associate IT Program Officer, Washington, DC",https://unjobs.org/vaca
 worldbank,"Adviser, Washington, DC",https://unjobs.org/vacancies/1792558912730,,bank_no_match
 worldbank,"Driver, Kinshasa",https://unjobs.org/vacancies/1792558912196,,bank_no_match
 worldbank,"(Senior) Social Development Specialist, Washington, DC",https://unjobs.org/vacancies/1792558910183,,bank_no_match
-worldbank,"Senior Digital Specialist - SME, Jobs, and Digital Transformation, Washington, DC",https://unjobs.org/vacancies/1792472449240,,bank_no_match
-worldbank,"Digital & AI Skills Specialist, Washington, DC",https://unjobs.org/vacancies/1792472448483,,bank_no_match
