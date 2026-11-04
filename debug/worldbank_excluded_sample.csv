@@ -1,4 +1,9 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"HR Specialist, Recruitment, Bogota",https://unjobs.org/vacancies/1793768482144,,bank_no_match
+worldbank,"HR Specialist, Recruitment, Manila",https://unjobs.org/vacancies/1793768481332,,bank_no_match
+worldbank,"HR Specialist, Recruitment, Nairobi",https://unjobs.org/vacancies/1793768480510,,bank_no_match
+worldbank,"Sr HR Specialist, Recruitment, Singapore",https://unjobs.org/vacancies/1793768479661,,bank_no_match
+worldbank,"HR Analyst, Global Mobility & Benefits, Dakar",https://unjobs.org/vacancies/1793768479214,,bank_no_match
 worldbank,"Senior Executive Assistant, Amman",https://unjobs.org/vacancies/1793682074734,,bank_no_match
 worldbank,"E T Consultant (Murex Front Office Product Owner), Washington, DC",https://unjobs.org/vacancies/1793682073584,,bank_exclude
 worldbank,"E T Temporary - Senior Executive Assistant, Washington, DC",https://unjobs.org/vacancies/1793422870569,,bank_no_match
@@ -43,9 +48,4 @@ worldbank,"Extended Term Consultant, Washington, DC",https://unjobs.org/vacancie
 worldbank,"Associate Senior IT Program Officer, Washington, DC",https://unjobs.org/vacancies/1792731668479,,bank_no_match
 worldbank,"Team Assistant, Nuku'Alofa",https://unjobs.org/vacancies/1792731666864,,bank_no_match
 worldbank,"E T Consultant, Chennai, India",https://unjobs.org/vacancies/1792731665291,,bank_exclude
-worldbank,"Platform Engineer, Sofia",https://unjobs.org/vacancies/1792645281576,,bank_no_match
 worldbank,"Economist, Washington, DC",https://unjobs.org/vacancies/1792645280069,,bank_no_match
-worldbank,"Associate IT Program Officer, Washington, DC",https://unjobs.org/vacancies/1792645282493,,bank_no_match
-worldbank,"Adviser, Washington, DC",https://unjobs.org/vacancies/1792558912730,,bank_no_match
-worldbank,"Driver, Kinshasa",https://unjobs.org/vacancies/1792558912196,,bank_no_match
-worldbank,"(Senior) Social Development Specialist, Washington, DC",https://unjobs.org/vacancies/1792558910183,,bank_no_match
