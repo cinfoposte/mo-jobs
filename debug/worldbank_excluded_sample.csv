@@ -1,4 +1,7 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"Extended Term Consultant, Washington, DC",https://unjobs.org/vacancies/1794373284681,,bank_exclude
+worldbank,"Procurement Specialist, Brasilia",https://unjobs.org/vacancies/1794373283811,,bank_no_match
+worldbank,"Conference Associate, Washington, DC",https://unjobs.org/vacancies/1794373280569,,bank_no_match
 worldbank,"ET Temporary - IT Support, Santo Domingo",https://unjobs.org/vacancies/1794027672052,,bank_no_match
 worldbank,"Infrastructure Engineering Analyst (Firewall Engineering), Bulgaria",https://unjobs.org/vacancies/1794027670789,,bank_no_match
 worldbank,"E T Consultant (EC1), Washington, DC",https://unjobs.org/vacancies/1794027669037,,bank_exclude
@@ -32,15 +35,6 @@ worldbank,"Senior Education Finance Specialist, Washington, DC",https://unjobs.o
 worldbank,"Associate Senior Solutions Architect, Washington, DC",https://unjobs.org/vacancies/1793250079183,,bank_no_match
 worldbank,"E T Consultant (Associate Software Engineer), Washington, DC",https://unjobs.org/vacancies/1793250077456,,bank_exclude
 worldbank,"QA Analyst, Sofia",https://unjobs.org/vacancies/1793250075817,,bank_no_match
-worldbank,"E T Consultant – Research Analyst, Washington, DC",https://unjobs.org/vacancies/1793250076639,,bank_exclude
 worldbank,"E T Consultant (IT Workforce Development, Job Architecture, Skills Assessment), Washington, DC",https://unjobs.org/vacancies/1793250074735,,bank_exclude
-worldbank,"E T Consultant, Washington, DC",https://unjobs.org/vacancies/1793163719309,,bank_exclude
-worldbank,"E T Consultant- Economist, Washington, DC",https://unjobs.org/vacancies/1793163718531,,bank_exclude
 worldbank,"Extended Term Consultant - Senior Trade Facilitation and SPS Expert, Washington, DC",https://unjobs.org/vacancies/1793163717460,,bank_exclude
-worldbank,"ET Consultant (Digital Specialist), Dili",https://unjobs.org/vacancies/1793163717032,,bank_exclude
-worldbank,"E T Consultant, Washington, DC",https://unjobs.org/vacancies/1793163716231,,bank_exclude
-worldbank,"E T Consultant, Washington, DC",https://unjobs.org/vacancies/1793163714960,,bank_exclude
-worldbank,"E T Consultant - Product Owner, Washington, DC",https://unjobs.org/vacancies/1793163713185,,bank_exclude
-worldbank,"E T Consultant (Data Analyst Transformation), Buenos Aires",https://unjobs.org/vacancies/1793163712386,,bank_exclude
 worldbank,"Senior Social Protection Specialist-Senior Economist, Abuja",https://unjobs.org/vacancies/1793077264085,,bank_no_match
-worldbank,"Associate Senior Product Owner, Cambodia",https://unjobs.org/vacancies/1792126887775,,bank_no_match
