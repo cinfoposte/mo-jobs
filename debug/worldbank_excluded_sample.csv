@@ -1,4 +1,9 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"E T Consultant -Analyst Communications DECEA, Washington, DC",https://unjobs.org/vacancies/1794546072549,,bank_exclude
+worldbank,"E T Consultant- Analyst, Washington, DC",https://unjobs.org/vacancies/1794546071602,,bank_exclude
+worldbank,"E T Temporary (Junior Service Delivery Analyst), Vienna",https://unjobs.org/vacancies/1794546070726,,bank_no_match
+worldbank,"Digital Technology Insight Analyst, Washington, DC",https://unjobs.org/vacancies/1794546068622,,bank_no_match
+worldbank,"Manager, Data, Information & AI Governance, Washington, DC",https://unjobs.org/vacancies/1794546069768,,bank_no_match
 worldbank,"Senior Disaster Risk Management Specialist, Washington, DC",https://unjobs.org/vacancies/1794459671824,,bank_no_match
 worldbank,"Operating Engineer, Plant Operations, Washington, DC",https://unjobs.org/vacancies/1794459670476,,bank_no_match
 worldbank,"E T Consultant, United States",https://unjobs.org/vacancies/1794459670004,,bank_exclude
@@ -28,10 +33,7 @@ worldbank,"HR Analyst, Global Mobility & Benefits, Dakar",https://unjobs.org/vac
 worldbank,"Senior Executive Assistant, Amman",https://unjobs.org/vacancies/1793682074734,,bank_no_match
 worldbank,"E T Consultant (Murex Front Office Product Owner), Washington, DC",https://unjobs.org/vacancies/1793682073584,,bank_exclude
 worldbank,"E T Temporary - Senior Executive Assistant, Washington, DC",https://unjobs.org/vacancies/1793422870569,,bank_no_match
-worldbank,"E T Consultant, Washington, DC",https://unjobs.org/vacancies/1793422869736,,bank_exclude
 worldbank,"E T Consultant, Washington, DC",https://unjobs.org/vacancies/1793422868644,,bank_exclude
-worldbank,"E T Consultant, Maseru",https://unjobs.org/vacancies/1793336475506,,bank_exclude
-worldbank,"E T Consultant - Corporate Governance Advisory, Dhaka",https://unjobs.org/vacancies/1793336474861,,bank_exclude
 worldbank,"Senior Education Finance Specialist, Washington, DC",https://unjobs.org/vacancies/1793250078342,,bank_no_match
 worldbank,"Extended Term Consultant - Senior Trade Facilitation and SPS Expert, Washington, DC",https://unjobs.org/vacancies/1793163717460,,bank_exclude
 worldbank,"Senior Social Protection Specialist-Senior Economist, Abuja",https://unjobs.org/vacancies/1793077264085,,bank_no_match
