@@ -1,4 +1,9 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"E T Consultant, Washington, DC",https://unjobs.org/vacancies/1794891689503,,bank_exclude
+worldbank,"ETT - Administrative Assistant, Chennai, India",https://unjobs.org/vacancies/1794891688653,,bank_no_match
+worldbank,"Senior Executive Assistant, Riyadh",https://unjobs.org/vacancies/1794891686520,,bank_no_match
+worldbank,"Senior Mining Specialist, Kinshasa",https://unjobs.org/vacancies/1794891685556,,bank_no_match
+worldbank,"Senior Financial Management Specialist, Tunis",https://unjobs.org/vacancies/1794891687334,,bank_no_match
 worldbank,"E T Consultant, MCLEAN, VA",https://unjobs.org/vacancies/1794459667554,,bank_exclude
 worldbank,"Senior Agriculture Economist, Brazzaville",https://unjobs.org/vacancies/1794632864670,,bank_no_match
 worldbank,"E T Consultant - Environmental Engineer, Dhaka",https://unjobs.org/vacancies/1794718859986,,bank_exclude
@@ -38,8 +43,5 @@ worldbank,"HR Specialist, Recruitment, Manila",https://unjobs.org/vacancies/1793
 worldbank,"HR Specialist, Recruitment, Nairobi",https://unjobs.org/vacancies/1793768480510,,bank_no_match
 worldbank,"Sr HR Specialist, Recruitment, Singapore",https://unjobs.org/vacancies/1793768479661,,bank_no_match
 worldbank,"HR Analyst, Global Mobility & Benefits, Dakar",https://unjobs.org/vacancies/1793768479214,,bank_no_match
-worldbank,"Senior Executive Assistant, Amman",https://unjobs.org/vacancies/1793682074734,,bank_no_match
-worldbank,"E T Consultant (Murex Front Office Product Owner), Washington, DC",https://unjobs.org/vacancies/1793682073584,,bank_exclude
 worldbank,"E T Temporary - Senior Executive Assistant, Washington, DC",https://unjobs.org/vacancies/1793422870569,,bank_no_match
 worldbank,"Senior Education Finance Specialist, Washington, DC",https://unjobs.org/vacancies/1793250078342,,bank_no_match
-worldbank,"Extended Term Consultant - Senior Trade Facilitation and SPS Expert, Washington, DC",https://unjobs.org/vacancies/1793163717460,,bank_exclude
