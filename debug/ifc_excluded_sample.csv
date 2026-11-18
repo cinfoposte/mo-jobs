@@ -1,4 +1,16 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+ifc,"Principal Investment Officer, Client Coverage, Seoul",https://unjobs.org/vacancies/1794978078456,,bank_no_match
+ifc,"Principal Investment Officer, Investor Relations, Seoul",https://unjobs.org/vacancies/1794978080404,,bank_no_match
+ifc,"Principal Investment Officer, Client Coverage, Tokyo",https://unjobs.org/vacancies/1794978081122,,bank_no_match
+ifc,"(Associate) Investment Officer, Venture Capital, Mumbai, India",https://unjobs.org/vacancies/1794978081596,,bank_no_match
+ifc,"(Senior) Operations Officer - Business Development, the Nordics, Berlin",https://unjobs.org/vacancies/1794978075020,,bank_no_match
+ifc,"E T Consultant - Senior Operations Officer, Business Development, Brussels",https://unjobs.org/vacancies/1794978076746,,bank_exclude
+ifc,"(Associate) Operations Officer - Business Development, Geneva",https://unjobs.org/vacancies/1794978074123,,bank_no_match
+ifc,"Principal Investment Officer, Client Coverage, Tokyo",https://unjobs.org/vacancies/1794978079531,,bank_no_match
+ifc,"Principal Investment Officer, Investor Relations, Sydney, Australia",https://unjobs.org/vacancies/1794978077580,,bank_no_match
+ifc,"(Senior) Operations Officer - Business Development, Milan, Rome",https://unjobs.org/vacancies/1794978075990,,bank_no_match
+ifc,"Country Advisory and Economics Manager, East Asia and Pacific, Singapore",https://unjobs.org/vacancies/1794978072138,,bank_no_match
+ifc,"(Associate) Operations Officer - Business Development, Spain, Paris",https://unjobs.org/vacancies/1794978075499,,bank_no_match
 ifc,"Global Client Engagement Leads, New York",https://unjobs.org/vacancies/1794891684670,,bank_no_match
 ifc,"Manager, Investor Relations, New York",https://unjobs.org/vacancies/1794891683033,,bank_no_match
 ifc,"Manager, Investor Relations, London",https://unjobs.org/vacancies/1794891681755,,bank_no_match
@@ -15,5 +27,3 @@ ifc,"(Senior) Investment Officer, Manufacturing, Agribusiness and Services (MAS)
 ifc,"E T Consultant - Crosscutting Advisory and Upstream, Washington, DC",https://unjobs.org/vacancies/1794286863385,,bank_exclude
 ifc,"Salesforce Solutions Architect (Associate Solutions Architect), Washington, DC",https://unjobs.org/vacancies/1794027672466,,bank_no_match
 ifc,"ET Consultant - Corporate Governance Advisory, Cairo",https://unjobs.org/vacancies/1794027671223,,bank_exclude
-ifc,"Associate Investment Officer-Manufacturing Industry, Dakar",https://unjobs.org/vacancies/1793768478324,,bank_no_match
-ifc,"Principal Investment Officer, Manufacturing & Services, East and Southern Africa (GH1), Luanda",https://unjobs.org/vacancies/1793768477494,,bank_no_match
