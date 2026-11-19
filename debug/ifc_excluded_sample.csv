@@ -1,4 +1,7 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+ifc,"Investment Officer - MAS, Seoul",https://unjobs.org/vacancies/1795064474202,,bank_no_match
+ifc,"Executive Assistant to Regional Vice President, Nairobi",https://unjobs.org/vacancies/1795064470129,,bank_no_match
+ifc,"E T Consultant - Investment Analyst, Financial Institutions Group, Asuncion",https://unjobs.org/vacancies/1795064469295,,bank_exclude
 ifc,"Principal Investment Officer, Client Coverage, Seoul",https://unjobs.org/vacancies/1794978078456,,bank_no_match
 ifc,"Principal Investment Officer, Investor Relations, Seoul",https://unjobs.org/vacancies/1794978080404,,bank_no_match
 ifc,"Principal Investment Officer, Client Coverage, Tokyo",https://unjobs.org/vacancies/1794978081122,,bank_no_match
