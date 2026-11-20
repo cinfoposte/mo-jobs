@@ -1,4 +1,13 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"Senior Investment Officer, Washington, DC",https://unjobs.org/vacancies/1795150879229,,bank_no_match
+worldbank,"Program Analyst, Chennai, India",https://unjobs.org/vacancies/1795150876948,,bank_no_match
+worldbank,"Business Solutions Analyst, Washington, DC",https://unjobs.org/vacancies/1795150876065,,bank_no_match
+worldbank,"Financial Analyst, Washington, DC",https://unjobs.org/vacancies/1795150878341,,bank_no_match
+worldbank,"Finance Officer, Nairobi",https://unjobs.org/vacancies/1795150875577,,bank_no_match
+worldbank,"Program Analyst, Fleet Management, Washington, DC",https://unjobs.org/vacancies/1795150877439,,bank_no_match
+worldbank,"Finance Officer, Riyadh",https://unjobs.org/vacancies/1795150874743,,bank_no_match
+worldbank,"E T Consultant, Chennai, India",https://unjobs.org/vacancies/1795150871295,,bank_exclude
+worldbank,"Director, Strategy and Operations, Washington, DC",https://unjobs.org/vacancies/1795150870235,,bank_no_match
 worldbank,"E T Consultant - Pollution Management Specialist, Dhaka",https://unjobs.org/vacancies/1795064476100,,bank_exclude
 worldbank,"E T Consultant (Associate Solutions Engineer), Washington, DC",https://unjobs.org/vacancies/1795064475275,,bank_exclude
 worldbank,"E T Consultant, Accra",https://unjobs.org/vacancies/1795064473351,,bank_exclude
@@ -37,14 +46,6 @@ worldbank,"Procurement Specialist, Brasilia",https://unjobs.org/vacancies/179437
 worldbank,"Conference Associate, Washington, DC",https://unjobs.org/vacancies/1794373280569,,bank_no_match
 worldbank,"ET Temporary - IT Support, Santo Domingo",https://unjobs.org/vacancies/1794027672052,,bank_no_match
 worldbank,"Infrastructure Engineering Analyst (Firewall Engineering), Bulgaria",https://unjobs.org/vacancies/1794027670789,,bank_no_match
-worldbank,"E T Consultant (EC1), Washington, DC",https://unjobs.org/vacancies/1794027669037,,bank_exclude
-worldbank,"E T Consultant, Chennai, India",https://unjobs.org/vacancies/1794027668222,,bank_exclude
 worldbank,"Operations Analyst, Dakar",https://unjobs.org/vacancies/1793941276193,,bank_no_match
-worldbank,"E T Consultant (Associate Software Engineer), Chennai, India",https://unjobs.org/vacancies/1793941274891,,bank_exclude
-worldbank,"Associate Senior Information Management Officer - Data, Information & AI Governance, Washington, DC",https://unjobs.org/vacancies/1793941274049,,bank_no_match
 worldbank,"Practice Manager, Washington, DC",https://unjobs.org/vacancies/1793941273190,,bank_no_match
-worldbank,"Senior MBS Portfolio Manager (Senior Portfolio Officer), Washington, DC",https://unjobs.org/vacancies/1793941272332,,bank_no_match
-worldbank,"Network Automation/DDI Engineer (Associate Infrastructure Engineer), Chennai, India",https://unjobs.org/vacancies/1793941271511,,bank_no_match
-worldbank,"Associate Information Management Officer - Data, Information & AI Governance, Washington, DC",https://unjobs.org/vacancies/1793941270456,,bank_no_match
 worldbank,"E T Consultant - Data Scientist, Washington, DC",https://unjobs.org/vacancies/1793854862068,,bank_exclude
-worldbank,"E T Temporary - Senior Executive Assistant, Washington, DC",https://unjobs.org/vacancies/1793422870569,,bank_no_match
