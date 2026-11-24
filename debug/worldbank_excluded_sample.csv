@@ -1,4 +1,11 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+worldbank,"Driver, Lima",https://unjobs.org/vacancies/1795496477488,,bank_no_match
+worldbank,"E T Consultant (IT Policy & Compliance), Washington, DC",https://unjobs.org/vacancies/1795496476620,,bank_exclude
+worldbank,"E T Consultant, Washington, DC",https://unjobs.org/vacancies/1795496475727,,bank_exclude
+worldbank,"Accounting Analyst, Chennai, India",https://unjobs.org/vacancies/1795496474347,,bank_no_match
+worldbank,"E T Consultant (Lead Solution Architect – OutSystems Platform), Sofia",https://unjobs.org/vacancies/1795496473480,,bank_exclude
+worldbank,"Health Specialist, Prevention and Health Promotion, Chennai, India",https://unjobs.org/vacancies/1795496472614,,bank_no_match
+worldbank,"E T Consultant, Port Moresby",https://unjobs.org/vacancies/1795496471714,,bank_exclude
 worldbank,"E T Consultant, Washington, DC",https://unjobs.org/vacancies/1795323665255,,bank_exclude
 worldbank,"Extended Term Consultant – PPP Transaction Advisory Services, Pristina, Kosovo",https://unjobs.org/vacancies/1795323664648,,bank_exclude
 worldbank,"Senior Investment Officer, Washington, DC",https://unjobs.org/vacancies/1795150879229,,bank_no_match
@@ -42,10 +49,3 @@ worldbank,"E T Temporary (Junior Service Delivery Analyst), Vienna",https://unjo
 worldbank,"Manager, Data, Information & AI Governance, Washington, DC",https://unjobs.org/vacancies/1794546069768,,bank_no_match
 worldbank,"Senior Disaster Risk Management Specialist, Washington, DC",https://unjobs.org/vacancies/1794459671824,,bank_no_match
 worldbank,"Operating Engineer, Plant Operations, Washington, DC",https://unjobs.org/vacancies/1794459670476,,bank_no_match
-worldbank,"E T Consultant, United States",https://unjobs.org/vacancies/1794459670004,,bank_exclude
-worldbank,"E T Consultant, Tegucigalpa",https://unjobs.org/vacancies/1794459669447,,bank_exclude
-worldbank,"Procurement Specialist, Brasilia",https://unjobs.org/vacancies/1794373283811,,bank_no_match
-worldbank,"Conference Associate, Washington, DC",https://unjobs.org/vacancies/1794373280569,,bank_no_match
-worldbank,"ET Temporary - IT Support, Santo Domingo",https://unjobs.org/vacancies/1794027672052,,bank_no_match
-worldbank,"Practice Manager, Washington, DC",https://unjobs.org/vacancies/1793941273190,,bank_no_match
-worldbank,"E T Consultant - Data Scientist, Washington, DC",https://unjobs.org/vacancies/1793854862068,,bank_exclude
