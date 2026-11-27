@@ -1,4 +1,7 @@
 org_key,title,unjobs_url,original_url,exclusion_reason
+ifc,"Senior Executive Assistant, Dubai, United Arab Emirates",https://unjobs.org/vacancies/1795755691759,,bank_no_match
+ifc,"E T Consultant, Blended Finance Investment Officer, Brussels",https://unjobs.org/vacancies/1795755690875,,bank_exclude
+ifc,"E T Consultant – Infrastructure Investment, Kyiv",https://unjobs.org/vacancies/1795755690002,,bank_exclude
 ifc,"(Associate) Investment Officer – Manufacturing & Services, East and Southern Africa, Nairobi",https://unjobs.org/vacancies/1795669275225,,bank_no_match
 ifc,"(Senior) Counsel, LAC Region, Bogota",https://unjobs.org/vacancies/1795669268407,,bank_no_match
 ifc,"E T Consultant, Investment Analyst, Infrastructure, Panama",https://unjobs.org/vacancies/1795669267163,,bank_exclude
@@ -11,7 +14,6 @@ ifc,"Regional Industry Director, FIG- West, Central and North Africa, Abidjan",h
 ifc,"Associate Strategy Officer, Washington, DC",https://unjobs.org/vacancies/1795323663399,,bank_no_match
 ifc,"Senior Investor Relations Officer, London",https://unjobs.org/vacancies/1795323662784,,bank_no_match
 ifc,"Senior Investor Relations Officer, New York",https://unjobs.org/vacancies/1795323661497,,bank_no_match
-ifc,"E T Consultant, Corporate Finance, Almaty, Kazakhstan",https://unjobs.org/vacancies/1795150873877,,bank_exclude
 ifc,"(Senior) Operations Officer, Business Development, Brussels",https://unjobs.org/vacancies/1795150873029,,bank_no_match
 ifc,"(Senior) Operations Officer - Business Development, Madrid",https://unjobs.org/vacancies/1795150872115,,bank_no_match
 ifc,"Investment Officer - MAS, Seoul",https://unjobs.org/vacancies/1795064474202,,bank_no_match
@@ -28,4 +30,3 @@ ifc,"Country Advisory and Economics Manager, East Asia and Pacific, Singapore",h
 ifc,"Manager, Investor Relations, New York",https://unjobs.org/vacancies/1794891683033,,bank_no_match
 ifc,"Manager, Investor Relations, London",https://unjobs.org/vacancies/1794891681755,,bank_no_match
 ifc,"Principal Investor Relations Officer, Dubai, United Arab Emirates",https://unjobs.org/vacancies/1794891680827,,bank_no_match
-ifc,"(Associate) Investment Officer, Infrastructure, Guatemala City",https://unjobs.org/vacancies/1794546067672,,bank_no_match
