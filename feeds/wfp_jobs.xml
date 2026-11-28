@@ -5,7 +5,14 @@
     <link>https://unjobs.org/organizations/wfp</link>
     <description>Latest job vacancies for WFP – World Food Programme sourced from UNjobs.org. JPO positions are excluded.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 28 Nov 2026 02:43:38 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 16:52:11 +0000</lastBuildDate>
     <atom:link href="https://cinfoposte.github.io/mo-jobs/feeds/wfp_jobs.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chief Information Officer and Director, Technology Division, D2, Rome</title>
+      <link>https://unjobs.org/vacancies/1795842128212</link>
+      <guid isPermaLink="false">1253b9cb8bcabdf174b96459c6a92041</guid>
+      <pubDate>Sat, 28 Nov 2026 16:52:11 +0000</pubDate>
+      <description />
+    </item>
   </channel>
 </rss>
